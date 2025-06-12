@@ -3579,7 +3579,11 @@ PX_FORCE_INLINE Vec4V V4SplatElement(Vec4V a)
 #else
 	if(index < 2)
 	{
-		return vdupq_lane_f32(vget_low_f32(a), index);
+#if PX_IOS
+        return vdupq_laneq_f32(a, index);
+#else
+        return vdupq_lane_f32(vget_low_f32(a), index);
+#endif
 	}
 #endif
 	else if(index == 2)

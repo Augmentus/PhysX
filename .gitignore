@@ -1,0 +1,4 @@
+.DS_Store
+physx/compiler
+!physx/public
+physx/bin

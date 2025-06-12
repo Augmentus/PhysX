@@ -318,6 +318,10 @@ class CMakePreset:
             outString = outString + ' -DTARGET_BUILD_PLATFORM=mac'
             outString = outString + ' -DPX_OUTPUT_ARCH=x86'
             return outString
+        elif self.targetPlatform == 'mac-universal':
+            outString = outString + ' -DTARGET_BUILD_PLATFORM=mac-universal'
+            outString = outString + ' -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64"'
+            return outString
         elif self.targetPlatform == 'ios64':
             outString = outString + ' -DTARGET_BUILD_PLATFORM=ios'
             outString = outString + ' -DCMAKE_TOOLCHAIN_FILE=\"' + \
@@ -366,7 +370,7 @@ def presetProvided(pName):
     cmakeParams = cmakeParams + ' ' + getCommonParams()
     cmakeParams = cmakeParams + ' ' + parsedPreset.getCMakeSwitches()
     cmakeParams = cmakeParams + ' ' + parsedPreset.getCMakeParams()
-    # print(cmakeParams)
+    print(cmakeParams)
 
     if os.path.isfile(os.environ['PHYSX_ROOT_DIR'] + '/compiler/internal/CMakeLists.txt'):
         cmakeMasterDir = 'internal'

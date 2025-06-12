@@ -25,11 +25,7 @@
 ##
 ## Copyright (c) 2008-2021 NVIDIA Corporation. All rights reserved.
 
-IF(TARGET_BUILD_PLATFORM STREQUAL "mac" OR TARGET_BUILD_PLATFORM STREQUAL "ios")
-	cmake_minimum_required(VERSION 3.12)
-ELSE()
-	cmake_minimum_required(VERSION 3.11)
-ENDIF()
+cmake_minimum_required(VERSION 3.12)
 
 project(PhysXSDK C CXX)
 

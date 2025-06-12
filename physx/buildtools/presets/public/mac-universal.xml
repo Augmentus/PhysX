@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preset name="mac-universal" comment="macOS Universal Fat Xcode PhysX general settings">
+  <platform targetPlatform="mac-universal" compiler="xcode" />
+  <CMakeSwitches>
+    <cmakeSwitch name="PX_BUILDSNIPPETS" value="True" comment="Generate the snippets" />
+    <cmakeSwitch name="PX_GENERATE_STATIC_LIBRARIES" value="True" comment="Generate static libraries" />
+  </CMakeSwitches>
+  <CMakeParams>
+    <cmakeParam name="CMAKE_INSTALL_PREFIX" value="install/mac-universal/PhysX" comment="Install path relative to PhysX SDK root" />
+    <cmakeParam name="CMAKE_OSX_ARCHITECTURES" value="x86_64;arm64" />
+    <cmakeParam name="CMAKE_BUILD_TYPE" value="Release" />
+  </CMakeParams>
+</preset>
