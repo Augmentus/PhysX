@@ -326,6 +326,7 @@ class CMakePreset:
             outString = outString + ' -DTARGET_BUILD_PLATFORM=ios'
             outString = outString + ' -DCMAKE_TOOLCHAIN_FILE=\"' + \
                 os.environ['PM_CMakeModules_PATH'] + '/ios/ios.toolchain.cmake\"'
+            outString = outString + ' -DPLATFORM=OS64'
             outString = outString + ' -DPX_OUTPUT_ARCH=arm'
             return outString
         return ''
