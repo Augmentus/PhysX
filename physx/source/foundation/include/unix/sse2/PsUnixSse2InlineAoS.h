@@ -170,8 +170,8 @@ PX_FORCE_INLINE PxU32 FiniteTestEq(const Vec4V a, const Vec4V b)
 }
 
 #if !PX_EMSCRIPTEN
-const PX_ALIGN(16, PxF32 gMaskXYZ[4]) = { physx::PxUnionCast<PxF32>(0xffffffff), physx::PxUnionCast<PxF32>(0xffffffff),
-	                                      physx::PxUnionCast<PxF32>(0xffffffff), 0 };
+const PX_ALIGN(16, PxF32 gMaskXYZ[4]) = { augphysx::PxUnionCast<PxF32>(0xffffffff), augphysx::PxUnionCast<PxF32>(0xffffffff),
+    augphysx::PxUnionCast<PxF32>(0xffffffff), 0 };
 #else
 // emscripten doesn't like the PxUnionCast data structure
 // the following is what windows and xbox does -- using these for emscripten
@@ -269,7 +269,7 @@ PX_FORCE_INLINE bool allElementsNearEqualVec4V(const Vec4V a, const Vec4V b)
 PX_FORCE_INLINE bool isFiniteFloatV(const FloatV a)
 {
 	PxF32 badNumber =
-	    physx::PxUnionCast<PxF32, PxU32>(PX_FPCLASS_SNAN | PX_FPCLASS_QNAN | PX_FPCLASS_NINF | PX_FPCLASS_PINF);
+    augphysx::PxUnionCast<PxF32, PxU32>(PX_FPCLASS_SNAN | PX_FPCLASS_QNAN | PX_FPCLASS_NINF | PX_FPCLASS_PINF);
 	const FloatV vBadNum = FLoad(badNumber);
 	const BoolV vMask = BAnd(vBadNum, a);
 	return internalUnitSSE2Simd::FiniteTestEq(vMask, BFFFF()) == 1;
@@ -278,7 +278,7 @@ PX_FORCE_INLINE bool isFiniteFloatV(const FloatV a)
 PX_FORCE_INLINE bool isFiniteVec3V(const Vec3V a)
 {
 	PxF32 badNumber =
-	    physx::PxUnionCast<PxF32, PxU32>(PX_FPCLASS_SNAN | PX_FPCLASS_QNAN | PX_FPCLASS_NINF | PX_FPCLASS_PINF);
+    augphysx::PxUnionCast<PxF32, PxU32>(PX_FPCLASS_SNAN | PX_FPCLASS_QNAN | PX_FPCLASS_NINF | PX_FPCLASS_PINF);
 	const Vec3V vBadNum = V3Load(badNumber);
 	const BoolV vMask = BAnd(BAnd(vBadNum, a), BTTTF());
 	return internalUnitSSE2Simd::FiniteTestEq(vMask, BFFFF()) == 1;
@@ -295,7 +295,7 @@ PX_FORCE_INLINE bool isFiniteVec4V(const Vec4V a)
 	        && PxIsFinite(f[3]);*/
 
 	PxF32 badNumber =
-	    physx::PxUnionCast<PxF32, PxU32>(PX_FPCLASS_SNAN | PX_FPCLASS_QNAN | PX_FPCLASS_NINF | PX_FPCLASS_PINF);
+    augphysx::PxUnionCast<PxF32, PxU32>(PX_FPCLASS_SNAN | PX_FPCLASS_QNAN | PX_FPCLASS_NINF | PX_FPCLASS_PINF);
 	const Vec4V vBadNum = V4Load(badNumber);
 	const BoolV vMask = BAnd(vBadNum, a);
 

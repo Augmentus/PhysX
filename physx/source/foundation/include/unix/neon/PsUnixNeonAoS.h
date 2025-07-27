@@ -39,7 +39,7 @@
 // only ARM NEON compatible platforms should reach this
 #include <arm_neon.h>
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
