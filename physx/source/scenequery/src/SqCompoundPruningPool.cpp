@@ -35,7 +35,7 @@
 #include "SqPruningPool.h"
 #include "GuBVHStructure.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Sq;
 using namespace Cm;

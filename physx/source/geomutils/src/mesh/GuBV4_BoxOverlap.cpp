@@ -28,13 +28,13 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "GuBV4.h"
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #if PX_INTEL_FAMILY  && !defined(PX_SIMD_DISABLED)
 
 #include "PsVecMath.h"
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 #include "GuInternal.h"
 #include "GuDistancePointSegment.h"

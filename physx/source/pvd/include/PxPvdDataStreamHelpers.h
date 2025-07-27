@@ -33,7 +33,7 @@
 #include "PxPvdObjectModelBaseTypes.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {

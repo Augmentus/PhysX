@@ -40,7 +40,7 @@
 
 #include "PxPvdObjectModelBaseTypes.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
@@ -132,7 +132,7 @@ class RawMemoryBuffer
 		uint32_t writeSize = inLength * sizeof(TDataType);
 		if(inValue && inLength)
 		{
-			physx::intrinsics::memCopy(growBuf(writeSize), inValue, writeSize);
+			augphysx::intrinsics::memCopy(growBuf(writeSize), inValue, writeSize);
 		}
 		if(inLength && !inValue)
 		{
@@ -157,7 +157,7 @@ class RawMemoryBuffer
 	{
 		uint32_t offset = size();
 		growBuf(inAmount);
-		physx::intrinsics::memZero(begin() + offset, inAmount);
+		augphysx::intrinsics::memZero(begin() + offset, inAmount);
 	}
 	void reserve(uint32_t newSize)
 	{
@@ -168,7 +168,7 @@ class RawMemoryBuffer
 			uint8_t* newData = static_cast<uint8_t*>(PX_ALLOC(newDataSize, mBufDataName));
 			if(mBegin)
 			{
-				physx::intrinsics::memCopy(newData, mBegin, currentSize);
+				augphysx::intrinsics::memCopy(newData, mBegin, currentSize);
 				PX_FREE(mBegin);
 			}
 			mBegin = newData;

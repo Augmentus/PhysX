@@ -35,7 +35,7 @@
 #include "PsInlineArray.h"
 #include "CmPhysXCommon.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PxBounds3*	PxRigidActorExt::getRigidActorShapeLocalBoundsList(const PxRigidActor& actor, PxU32& numBounds)
 {

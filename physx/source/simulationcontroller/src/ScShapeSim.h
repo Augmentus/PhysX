@@ -35,7 +35,7 @@
 #include "ScRigidSim.h"
 #include "PxsShapeSim.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxsTransformCache;
 namespace Gu

@@ -39,7 +39,7 @@
 #include "PsArray.h"
 #include "PsHashMap.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	/**
 	\brief Helper struct to encapsulate the user allocator callback
@@ -225,7 +225,7 @@ namespace physx { namespace profile {
 
 } }
 
-#define PX_PROFILE_NEW( allocator, dtype ) new (physx::profile::PxProfileAllocate<dtype>( allocator, __FILE__, __LINE__ )) dtype
-#define PX_PROFILE_DELETE( allocator, obj ) physx::profile::PxProfileDeleteAndDeallocate( allocator, obj );
+#define PX_PROFILE_NEW( allocator, dtype ) new (augphysx::profile::PxProfileAllocate<dtype>( allocator, __FILE__, __LINE__ )) dtype
+#define PX_PROFILE_DELETE( allocator, obj ) augphysx::profile::PxProfileDeleteAndDeallocate( allocator, obj );
 
 #endif // PXPVDSDK_PXPROFILEALLOCATORWRAPPER_H

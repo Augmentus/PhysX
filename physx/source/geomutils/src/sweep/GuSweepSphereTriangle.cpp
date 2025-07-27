@@ -36,7 +36,7 @@
 #include "PsUtilities.h"
 #include "GuDistancePointTriangle.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 // PT: using GU_CULLING_EPSILON_RAY_TRIANGLE fails here, in capsule-vs-mesh's triangle extrusion, when

@@ -39,7 +39,7 @@
 // midphase-related entry points, dispatching calls to the proper implementations depending on the triangle mesh's type. The rest of it
 // is simply classes & structs shared by all implementations.
 
-namespace physx
+namespace augphysx
 {
 	class PxMeshScale;
 	class PxTriangleMeshGeometry;

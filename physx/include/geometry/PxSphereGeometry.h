@@ -36,7 +36,7 @@
 #include "geometry/PxGeometry.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -86,7 +86,7 @@ PX_INLINE bool PxSphereGeometry::isValid() const
 }
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

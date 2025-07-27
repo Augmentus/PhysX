@@ -48,7 +48,7 @@
 #include "PsUtilities.h"
 #include "PsInlineArray.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace shdfnd;
 
 namespace
@@ -63,7 +63,7 @@ bool isDynamicGeometry(PxGeometryType::Enum type)
 }
 }
 
-namespace physx
+namespace augphysx
 {
 PxRigidDynamic* PxCreateDynamic(PxPhysics& sdk, 
 								const PxTransform& transform, 
@@ -252,7 +252,7 @@ namespace
 				to.attachShape(*s);
 			else
 			{
-				PxShape* newShape = physx::PxCloneShape(physics, *s, true);
+				PxShape* newShape = augphysx::PxCloneShape(physics, *s, true);
 				to.attachShape(*newShape);
 				newShape->release();		
 			}

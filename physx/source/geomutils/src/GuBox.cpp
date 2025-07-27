@@ -35,7 +35,7 @@
 #include "CmMatrix34.h"
 #include "PsMathUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 
 void Gu::Box::create(const Gu::Capsule& capsule)
 {

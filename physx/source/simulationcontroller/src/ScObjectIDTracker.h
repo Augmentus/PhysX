@@ -36,7 +36,7 @@
 #include "CmBitMap.h"
 #include "PsUserAllocated.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

@@ -38,7 +38,7 @@
 #include "BpSAPTasks.h"
 #include "PsUserAllocated.h"
 
-namespace physx
+namespace augphysx
 {
 
 // Forward declarations
@@ -117,8 +117,8 @@ public:
 	// BroadPhase
 	virtual	PxBroadPhaseType::Enum		getType()					const	{ return PxBroadPhaseType::eSAP;	}
 	virtual	void						destroy();
-	virtual	void						update(const PxU32 numCpuTasks, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, physx::PxBaseTask* continuation, physx::PxBaseTask* narrowPhaseUnblockTask);
-	virtual void						fetchBroadPhaseResults(physx::PxBaseTask*) {}
+	virtual	void						update(const PxU32 numCpuTasks, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, augphysx::PxBaseTask* continuation, augphysx::PxBaseTask* narrowPhaseUnblockTask);
+	virtual void						fetchBroadPhaseResults(augphysx::PxBaseTask*) {}
 	virtual PxU32						getNbCreatedPairs()		const		{ return mCreatedPairsSize;		}
 	virtual BroadPhasePair*				getCreatedPairs()					{ return mCreatedPairsArray;	}
 	virtual PxU32						getNbDeletedPairs()		const		{ return mDeletedPairsSize;		}

@@ -33,7 +33,7 @@
 #include "PsArray.h"
 #include "PxPvdFoundation.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {

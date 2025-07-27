@@ -46,7 +46,7 @@
 #define FEATHERSTONE_DEBUG 0
 #endif
 
-namespace physx
+namespace augphysx
 {
 
 class PxContactJoint;

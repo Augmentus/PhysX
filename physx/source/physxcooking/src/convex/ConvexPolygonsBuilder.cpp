@@ -42,7 +42,7 @@
 #include "ConvexPolygonsBuilder.h"
 
 
-using namespace physx;
+using namespace augphysx;
 
 #define USE_PRECOMPUTED_HULL_PROJECTION
 

@@ -35,7 +35,7 @@
 #include "PxcMaterialMethodImpl.h"
 #include "PxcNpCache.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxsRigidCore;
 struct PxsShapeCore;

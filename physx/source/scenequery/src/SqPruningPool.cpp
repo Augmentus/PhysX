@@ -32,7 +32,7 @@
 #include "foundation/PxMemory.h"
 #include "SqPruningPool.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Cm;
 

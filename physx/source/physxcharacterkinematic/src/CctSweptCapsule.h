@@ -32,7 +32,7 @@
 
 #include "CctSweptVolume.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cct
 {

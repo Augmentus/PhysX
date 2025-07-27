@@ -37,7 +37,7 @@
 #include "PsUserAllocated.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct PxvSimStats;

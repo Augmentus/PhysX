@@ -42,7 +42,7 @@
 #include "PsHashSet.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct PxFilterData;

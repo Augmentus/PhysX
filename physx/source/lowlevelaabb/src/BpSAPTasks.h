@@ -32,7 +32,7 @@
 
 #include "CmTask.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Bp

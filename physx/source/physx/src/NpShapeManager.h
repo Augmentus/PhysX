@@ -40,7 +40,7 @@
 #include "CmRenderOutput.h"
 #endif
 
-namespace physx
+namespace augphysx
 {
 
 namespace Sq

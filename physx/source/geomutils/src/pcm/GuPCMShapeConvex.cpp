@@ -33,10 +33,10 @@
 #include "GuPCMContactGen.h"
 #include "CmRenderOutput.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

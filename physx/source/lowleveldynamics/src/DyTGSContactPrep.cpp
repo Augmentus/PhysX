@@ -48,7 +48,7 @@
 #include "DyFeatherstoneArticulationLink.h"
 #include "DyFeatherstoneArticulationJointData.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 
@@ -69,7 +69,7 @@ using namespace Gu;
 #include "CmPhysXCommon.h"
 using namespace Ps::aos;
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {
@@ -825,7 +825,7 @@ namespace Dy
 
 					const PxReal magnitude = temp.normalize();
 
-					PxReal angle = PxAtan(physx::intrinsics::fsel(magnitude - 1e-6f, temp.dot(PxQuat(nTemp.x, nTemp.y, nTemp.z, 0.f)) / temp.w, 0.f));
+					PxReal angle = PxAtan(augphysx::intrinsics::fsel(magnitude - 1e-6f, temp.dot(PxQuat(nTemp.x, nTemp.y, nTemp.z, 0.f)) / temp.w, 0.f));
 
 					//OK. We have old relative quat and new relative quat. Now find difference
 
@@ -1283,7 +1283,7 @@ namespace Dy
 
 					const PxReal magnitude = temp.normalize();
 
-					PxReal angle = PxAtan(physx::intrinsics::fsel(magnitude - 1e-6f, temp.dot(PxQuat(nTemp.x, nTemp.y, nTemp.z, 0.f)) / temp.w, 0.f));
+					PxReal angle = PxAtan(augphysx::intrinsics::fsel(magnitude - 1e-6f, temp.dot(PxQuat(nTemp.x, nTemp.y, nTemp.z, 0.f)) / temp.w, 0.f));
 
 					//OK. We have old relative quat and new relative quat. Now find difference
 
@@ -1368,7 +1368,7 @@ namespace Dy
 #if PX_CHECKED
 		if (overflow)
 		{
-			Ps::getFoundation().error(physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__,
+			Ps::getFoundation().error(augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__,
 				"Dropping contacts in solver because we exceeded limit of 32 friction patches.");
 		}
 #endif

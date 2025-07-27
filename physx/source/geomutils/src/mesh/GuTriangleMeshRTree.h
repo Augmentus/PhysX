@@ -32,7 +32,7 @@
 
 #include "GuTriangleMesh.h"
 
-namespace physx
+namespace augphysx
 {
 class GuMeshFactory;
 

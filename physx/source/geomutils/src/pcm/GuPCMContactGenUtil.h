@@ -41,7 +41,7 @@
 //The largest epsilon we will permit (scaled by PxTolerancesScale.length)
 #define	PCM_WITNESS_POINT_UPPER_EPS		5e-2f
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu
@@ -459,6 +459,6 @@ namespace Gu
 	}
 
 }//Gu
-}//physx
+}//augphysx
 
 #endif

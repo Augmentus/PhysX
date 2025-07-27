@@ -32,22 +32,22 @@
 // run.  You can find the most recent version of clang metadata generator by contacting
 // Chris Nuernberger <chrisn@nvidia.com> or Dilip or Adam.
 // The source code for the generate was at one time checked into:
-// physx/PhysXMetaDataGenerator/llvm/tools/clang/lib/Frontend/PhysXMetaDataAction.cpp
+// augphysx/PhysXMetaDataGenerator/llvm/tools/clang/lib/Frontend/PhysXMetaDataAction.cpp
 #define THERE_IS_NO_INCLUDE_GUARD_HERE_FOR_A_REASON
 
 #define PX_PROPERTY_INFO_NAME PxExtensionsPropertyInfoName
 	static PxU32ToName g_physx__PxJointActorIndex__EnumConversion[] = {
-		{ "eACTOR0", static_cast<PxU32>( physx::PxJointActorIndex::eACTOR0 ) },
-		{ "eACTOR1", static_cast<PxU32>( physx::PxJointActorIndex::eACTOR1 ) },
+		{ "eACTOR0", static_cast<PxU32>( augphysx::PxJointActorIndex::eACTOR0 ) },
+		{ "eACTOR1", static_cast<PxU32>( augphysx::PxJointActorIndex::eACTOR1 ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxJointActorIndex::Enum > { PxEnumTraits() : NameConversion( g_physx__PxJointActorIndex__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxJointActorIndex::Enum > { PxEnumTraits() : NameConversion( g_physx__PxJointActorIndex__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxJoint;
 	struct PxJointGeneratedValues
 	{
 		PxRigidActor * Actors[2];
-		PxTransform LocalPose[physx::PxJointActorIndex::COUNT];
+		PxTransform LocalPose[augphysx::PxJointActorIndex::COUNT];
 		PxTransform RelativeTransform;
 		PxVec3 RelativeLinearVelocity;
 		PxVec3 RelativeAngularVelocity;
@@ -148,39 +148,39 @@ template<> struct PxEnumTraits< physx::PxJointActorIndex::Enum > { PxEnumTraits(
 	};
 
 	static PxU32ToName g_physx__PxD6Axis__EnumConversion[] = {
-		{ "eX", static_cast<PxU32>( physx::PxD6Axis::eX ) },
-		{ "eY", static_cast<PxU32>( physx::PxD6Axis::eY ) },
-		{ "eZ", static_cast<PxU32>( physx::PxD6Axis::eZ ) },
-		{ "eTWIST", static_cast<PxU32>( physx::PxD6Axis::eTWIST ) },
-		{ "eSWING1", static_cast<PxU32>( physx::PxD6Axis::eSWING1 ) },
-		{ "eSWING2", static_cast<PxU32>( physx::PxD6Axis::eSWING2 ) },
+		{ "eX", static_cast<PxU32>( augphysx::PxD6Axis::eX ) },
+		{ "eY", static_cast<PxU32>( augphysx::PxD6Axis::eY ) },
+		{ "eZ", static_cast<PxU32>( augphysx::PxD6Axis::eZ ) },
+		{ "eTWIST", static_cast<PxU32>( augphysx::PxD6Axis::eTWIST ) },
+		{ "eSWING1", static_cast<PxU32>( augphysx::PxD6Axis::eSWING1 ) },
+		{ "eSWING2", static_cast<PxU32>( augphysx::PxD6Axis::eSWING2 ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxD6Axis::Enum > { PxEnumTraits() : NameConversion( g_physx__PxD6Axis__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxD6Axis::Enum > { PxEnumTraits() : NameConversion( g_physx__PxD6Axis__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxD6Motion__EnumConversion[] = {
-		{ "eLOCKED", static_cast<PxU32>( physx::PxD6Motion::eLOCKED ) },
-		{ "eLIMITED", static_cast<PxU32>( physx::PxD6Motion::eLIMITED ) },
-		{ "eFREE", static_cast<PxU32>( physx::PxD6Motion::eFREE ) },
+		{ "eLOCKED", static_cast<PxU32>( augphysx::PxD6Motion::eLOCKED ) },
+		{ "eLIMITED", static_cast<PxU32>( augphysx::PxD6Motion::eLIMITED ) },
+		{ "eFREE", static_cast<PxU32>( augphysx::PxD6Motion::eFREE ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxD6Motion::Enum > { PxEnumTraits() : NameConversion( g_physx__PxD6Motion__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxD6Motion::Enum > { PxEnumTraits() : NameConversion( g_physx__PxD6Motion__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxD6Drive__EnumConversion[] = {
-		{ "eX", static_cast<PxU32>( physx::PxD6Drive::eX ) },
-		{ "eY", static_cast<PxU32>( physx::PxD6Drive::eY ) },
-		{ "eZ", static_cast<PxU32>( physx::PxD6Drive::eZ ) },
-		{ "eSWING", static_cast<PxU32>( physx::PxD6Drive::eSWING ) },
-		{ "eTWIST", static_cast<PxU32>( physx::PxD6Drive::eTWIST ) },
-		{ "eSLERP", static_cast<PxU32>( physx::PxD6Drive::eSLERP ) },
+		{ "eX", static_cast<PxU32>( augphysx::PxD6Drive::eX ) },
+		{ "eY", static_cast<PxU32>( augphysx::PxD6Drive::eY ) },
+		{ "eZ", static_cast<PxU32>( augphysx::PxD6Drive::eZ ) },
+		{ "eSWING", static_cast<PxU32>( augphysx::PxD6Drive::eSWING ) },
+		{ "eTWIST", static_cast<PxU32>( augphysx::PxD6Drive::eTWIST ) },
+		{ "eSLERP", static_cast<PxU32>( augphysx::PxD6Drive::eSLERP ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxD6Drive::Enum > { PxEnumTraits() : NameConversion( g_physx__PxD6Drive__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxD6Drive::Enum > { PxEnumTraits() : NameConversion( g_physx__PxD6Drive__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxD6Joint;
 	struct PxD6JointGeneratedValues
 		: PxJointGeneratedValues	{
-		PxD6Motion::Enum Motion[physx::PxD6Axis::eCOUNT];
+		PxD6Motion::Enum Motion[augphysx::PxD6Axis::eCOUNT];
 		PxReal TwistAngle;
 		PxReal Twist;
 		PxReal SwingYAngle;
@@ -190,7 +190,7 @@ template<> struct PxEnumTraits< physx::PxD6Drive::Enum > { PxEnumTraits() : Name
 		PxJointAngularLimitPair TwistLimit;
 		PxJointLimitCone SwingLimit;
 		PxJointLimitPyramid PyramidSwingLimit;
-		PxD6JointDrive Drive[physx::PxD6Drive::eCOUNT];
+		PxD6JointDrive Drive[augphysx::PxD6Drive::eCOUNT];
 		PxTransform DrivePosition;
 		PxReal ProjectionLinearTolerance;
 		PxReal ProjectionAngularTolerance;
@@ -286,13 +286,13 @@ template<> struct PxEnumTraits< physx::PxD6Drive::Enum > { PxEnumTraits() : Name
 	};
 
 	static PxU32ToName g_physx__PxDistanceJointFlag__EnumConversion[] = {
-		{ "eMAX_DISTANCE_ENABLED", static_cast<PxU32>( physx::PxDistanceJointFlag::eMAX_DISTANCE_ENABLED ) },
-		{ "eMIN_DISTANCE_ENABLED", static_cast<PxU32>( physx::PxDistanceJointFlag::eMIN_DISTANCE_ENABLED ) },
-		{ "eSPRING_ENABLED", static_cast<PxU32>( physx::PxDistanceJointFlag::eSPRING_ENABLED ) },
+		{ "eMAX_DISTANCE_ENABLED", static_cast<PxU32>( augphysx::PxDistanceJointFlag::eMAX_DISTANCE_ENABLED ) },
+		{ "eMIN_DISTANCE_ENABLED", static_cast<PxU32>( augphysx::PxDistanceJointFlag::eMIN_DISTANCE_ENABLED ) },
+		{ "eSPRING_ENABLED", static_cast<PxU32>( augphysx::PxDistanceJointFlag::eSPRING_ENABLED ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxDistanceJointFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxDistanceJointFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxDistanceJointFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxDistanceJointFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxDistanceJoint;
 	struct PxDistanceJointGeneratedValues
 		: PxJointGeneratedValues	{
@@ -506,11 +506,11 @@ template<> struct PxEnumTraits< physx::PxDistanceJointFlag::Enum > { PxEnumTrait
 	};
 
 	static PxU32ToName g_physx__PxPrismaticJointFlag__EnumConversion[] = {
-		{ "eLIMIT_ENABLED", static_cast<PxU32>( physx::PxPrismaticJointFlag::eLIMIT_ENABLED ) },
+		{ "eLIMIT_ENABLED", static_cast<PxU32>( augphysx::PxPrismaticJointFlag::eLIMIT_ENABLED ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxPrismaticJointFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxPrismaticJointFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxPrismaticJointFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxPrismaticJointFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxPrismaticJoint;
 	struct PxPrismaticJointGeneratedValues
 		: PxJointGeneratedValues	{
@@ -588,13 +588,13 @@ template<> struct PxEnumTraits< physx::PxPrismaticJointFlag::Enum > { PxEnumTrai
 	};
 
 	static PxU32ToName g_physx__PxRevoluteJointFlag__EnumConversion[] = {
-		{ "eLIMIT_ENABLED", static_cast<PxU32>( physx::PxRevoluteJointFlag::eLIMIT_ENABLED ) },
-		{ "eDRIVE_ENABLED", static_cast<PxU32>( physx::PxRevoluteJointFlag::eDRIVE_ENABLED ) },
-		{ "eDRIVE_FREESPIN", static_cast<PxU32>( physx::PxRevoluteJointFlag::eDRIVE_FREESPIN ) },
+		{ "eLIMIT_ENABLED", static_cast<PxU32>( augphysx::PxRevoluteJointFlag::eLIMIT_ENABLED ) },
+		{ "eDRIVE_ENABLED", static_cast<PxU32>( augphysx::PxRevoluteJointFlag::eDRIVE_ENABLED ) },
+		{ "eDRIVE_FREESPIN", static_cast<PxU32>( augphysx::PxRevoluteJointFlag::eDRIVE_FREESPIN ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxRevoluteJointFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxRevoluteJointFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxRevoluteJointFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxRevoluteJointFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxRevoluteJoint;
 	struct PxRevoluteJointGeneratedValues
 		: PxJointGeneratedValues	{
@@ -684,11 +684,11 @@ template<> struct PxEnumTraits< physx::PxRevoluteJointFlag::Enum > { PxEnumTrait
 	};
 
 	static PxU32ToName g_physx__PxSphericalJointFlag__EnumConversion[] = {
-		{ "eLIMIT_ENABLED", static_cast<PxU32>( physx::PxSphericalJointFlag::eLIMIT_ENABLED ) },
+		{ "eLIMIT_ENABLED", static_cast<PxU32>( augphysx::PxSphericalJointFlag::eLIMIT_ENABLED ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxSphericalJointFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxSphericalJointFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxSphericalJointFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxSphericalJointFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxSphericalJoint;
 	struct PxSphericalJointGeneratedValues
 		: PxJointGeneratedValues	{
@@ -1162,11 +1162,11 @@ template<> struct PxEnumTraits< physx::PxSphericalJointFlag::Enum > { PxEnumTrai
 	};
 
 	static PxU32ToName g_physx__PxD6JointDriveFlag__EnumConversion[] = {
-		{ "eACCELERATION", static_cast<PxU32>( physx::PxD6JointDriveFlag::eACCELERATION ) },
+		{ "eACCELERATION", static_cast<PxU32>( augphysx::PxD6JointDriveFlag::eACCELERATION ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxD6JointDriveFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxD6JointDriveFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxD6JointDriveFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxD6JointDriveFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxD6JointDrive;
 	struct PxD6JointDriveGeneratedValues
 		: PxSpringGeneratedValues	{

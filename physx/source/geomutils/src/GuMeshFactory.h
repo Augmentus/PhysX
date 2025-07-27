@@ -43,7 +43,7 @@
 #include "PsUserAllocated.h"
 #include "PsHashSet.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxHeightFieldDesc;

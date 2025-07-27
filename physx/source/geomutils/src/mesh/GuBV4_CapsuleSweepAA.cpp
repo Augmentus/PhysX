@@ -29,13 +29,13 @@
 
 #include "GuBV4.h"
 #include "GuSweepSphereTriangle.h"
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #if PX_INTEL_FAMILY  && !defined(PX_SIMD_DISABLED)
 
 #include "PsVecMath.h"
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 #include "GuBV4_Common.h"
 #include "GuInternal.h"

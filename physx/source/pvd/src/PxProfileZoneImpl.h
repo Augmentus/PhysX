@@ -38,7 +38,7 @@
 #include "PxProfileEventBufferAtomic.h"
 #include "PsMutex.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	/**
 	\brief Simple event filter that enables all events.

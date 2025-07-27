@@ -32,7 +32,7 @@
 
 #include "foundation/PxPreprocessor.h"
 
-namespace physx
+namespace augphysx
 {
 	struct NvPhysXToDrv_Data_V1_;
 

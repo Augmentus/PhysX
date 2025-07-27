@@ -43,14 +43,14 @@
 #include "GuAABBTreeQuery.h"
 #include "GuBounds.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Sq;
 using namespace Cm;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-IncrementalPruner* physx::Sq::createAABBPruner(bool incrementalRebuild)
+IncrementalPruner* augphysx::Sq::createAABBPruner(bool incrementalRebuild)
 {
 	return PX_NEW(Sq::AABBPruner)(incrementalRebuild, 0);
 }

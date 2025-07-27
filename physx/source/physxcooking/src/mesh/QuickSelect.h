@@ -33,7 +33,7 @@
 #include "foundation/PxSimpleTypes.h"
 
 // Google "wikipedia QuickSelect" for algorithm explanation
-namespace physx { namespace quickSelect {
+namespace augphysx { namespace quickSelect {
 
 
 	#define SWAP32(x, y) { PxU32 tmp = y; y = x; x = tmp; }

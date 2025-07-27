@@ -33,7 +33,7 @@
 
 #include "GuMeshData.h"
 
-namespace physx
+namespace augphysx
 {
 	class MeshBulider
 	{

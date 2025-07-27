@@ -38,7 +38,7 @@
 
 #define USE_INCREMENTAL_PRUNER 1
 
-namespace physx
+namespace augphysx
 {
 namespace Sq
 {

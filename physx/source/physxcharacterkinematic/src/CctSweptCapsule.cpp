@@ -30,7 +30,7 @@
 #include "CctSweptCapsule.h"
 #include "CctCharacterController.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cct;
 
 SweptCapsule::SweptCapsule()

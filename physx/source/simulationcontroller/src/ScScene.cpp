@@ -88,10 +88,10 @@
 #include "DyArticulation.h"
 #include "DyFeatherstoneArticulation.h"
 
-using namespace physx;
-using namespace physx::shdfnd;
-using namespace physx::Cm;
-using namespace physx::Dy;
+using namespace augphysx;
+using namespace augphysx::shdfnd;
+using namespace augphysx::Cm;
+using namespace augphysx::Dy;
 
 static PX_FORCE_INLINE Sc::ArticulationSim* getArticulationSim(const IG::IslandSim& islandSim, IG::NodeIndex nodeIndex)
 {
@@ -100,7 +100,7 @@ static PX_FORCE_INLINE Sc::ArticulationSim* getArticulationSim(const IG::IslandS
 }
 
 // slightly ugly, but we don't want a compile-time dependency on DY_ARTICULATION_MAX_SIZE in the ScScene.h header
-namespace physx { 
+namespace augphysx { 
 namespace Sc {
 
 class LLArticulationPool: public Ps::Pool<Articulation, Ps::AlignedAllocator<DY_ARTICULATION_MAX_SIZE> > 
@@ -665,7 +665,7 @@ Sc::Scene::Scene(const PxSceneDesc& desc, PxU64 contextID) :
 
 	mSqBoundsManager = PX_NEW(SqBoundsManager);
 
-	mTaskManager = physx::PxTaskManager::createTaskManager(Ps::getFoundation().getErrorCallback(), desc.cpuDispatcher);
+	mTaskManager = augphysx::PxTaskManager::createTaskManager(Ps::getFoundation().getErrorCallback(), desc.cpuDispatcher);
 	mCudaContextManager = desc.cudaContextManager;
 
 	for(PxU32 i=0; i<PxGeometryType::eGEOMETRY_COUNT; i++)
@@ -861,7 +861,7 @@ Sc::Scene::Scene(const PxSceneDesc& desc, PxU64 contextID) :
 	mLLContext->createTransformCache(*allocatorCallback);
 	mLLContext->setContactDistance(mContactDistance);
 
-	mCCDContext = physx::PxsCCDContext::create(mLLContext, mDynamicsContext->getThresholdStream(), *mLLContext->getNphaseImplementationContext(),
+	mCCDContext = augphysx::PxsCCDContext::create(mLLContext, mDynamicsContext->getThresholdStream(), *mLLContext->getNphaseImplementationContext(),
 		desc.ccdThreshold);
 	
 	setSolverBatchSize(desc.solverBatchSize);
@@ -5533,7 +5533,7 @@ Sc::ConstraintCore*const * Sc::Scene::getConstraints()
 
 PxU32 Sc::Scene::createAggregate(void* userData, bool selfCollisions)
 {
-	const physx::Bp::BoundsIndex index = getElementIDPool().createID();
+	const augphysx::Bp::BoundsIndex index = getElementIDPool().createID();
 	mBoundsArray->initEntry(index);
 #ifdef BP_USE_AGGREGATE_GROUP_TAIL
 	return mAABBManager->createAggregate(index, Bp::FilterGroup::eINVALID, userData, selfCollisions);

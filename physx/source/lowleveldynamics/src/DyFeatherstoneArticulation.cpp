@@ -60,7 +60,7 @@
 // articulation has to be aligned, which in an aligned pool means we need to size it
 // appropriately
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

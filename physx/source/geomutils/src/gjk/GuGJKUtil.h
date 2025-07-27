@@ -36,7 +36,7 @@
 /*
 	This file is used to avoid the inner loop cross DLL calls
 */
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -71,6 +71,6 @@ public:
 };
 
 }//Gu
-}//physx
+}//augphysx
 
 #endif

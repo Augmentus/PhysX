@@ -37,7 +37,7 @@
 
 #include <stdio.h>
 
-namespace physx
+namespace augphysx
 {
 namespace sn
 {
@@ -55,13 +55,13 @@ PX_INLINE PxI32 fopen_s(FILE** file, const char* name, const char* mode)
 };
 
 } // namespace sn
-} // namespace physx
+} // namespace augphysx
 
 #elif PX_UNIX_FAMILY || PX_PS4 || PX_SWITCH
 
 #include <stdio.h>
 
-namespace physx
+namespace augphysx
 {
 namespace sn
 {
@@ -76,7 +76,7 @@ PX_INLINE PxI32 fopen_s(FILE** file, const char* name, const char* mode)
 	return -1;
 }
 } // namespace sn
-} // namespace physx
+} // namespace augphysx
 #else
 #error "Platform not supported!"
 #endif

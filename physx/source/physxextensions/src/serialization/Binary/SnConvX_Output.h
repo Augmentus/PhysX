@@ -30,7 +30,7 @@
 
 #include "foundation/PxSimpleTypes.h"
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 
 	struct PxMetaDataEntry;
 	class ConvX;

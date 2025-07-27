@@ -32,7 +32,7 @@
 
 #include "Ps.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

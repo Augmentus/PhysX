@@ -36,7 +36,7 @@
 #include "PsMathUtils.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 Gu::EdgeList::EdgeList()

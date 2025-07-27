@@ -101,7 +101,7 @@ https://developercommunity.visualstudio.com/content/problem/66047/possible-compi
 // Changing these parameters requires recompilation of the SDK
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 	class PxCollection;
@@ -117,7 +117,7 @@ namespace physx
 	typedef PxU16 PxMaterialTableIndex;
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

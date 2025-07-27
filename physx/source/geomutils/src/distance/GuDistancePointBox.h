@@ -32,7 +32,7 @@
 
 #include "GuBox.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

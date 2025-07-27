@@ -30,7 +30,7 @@
 #ifndef GU_INTERSECTION_SPHERE_BOX_H
 #define GU_INTERSECTION_SPHERE_BOX_H
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

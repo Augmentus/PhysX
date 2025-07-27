@@ -35,9 +35,9 @@
 #include "GuSweepSphereTriangle.h"
 #include "GuInternal.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 #define COLINEARITY_EPSILON 0.00001f
 

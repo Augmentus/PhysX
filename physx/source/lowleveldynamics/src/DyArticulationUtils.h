@@ -39,7 +39,7 @@
 #include "DyArticulation.h"
 #include "DyArticulationHelper.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

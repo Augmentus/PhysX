@@ -38,7 +38,7 @@
 #include "PsMutex.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
@@ -59,8 +59,8 @@ class ObjectRegistrar
 	void clear();
 
   private:
-	physx::shdfnd::HashMap<const void*, uint32_t> mRefCountMap;
-	physx::shdfnd::Mutex mRefCountMapLock;
+	augphysx::shdfnd::HashMap<const void*, uint32_t> mRefCountMap;
+	augphysx::shdfnd::Mutex mRefCountMapLock;
 };
 #if !PX_DOXYGEN
 } // pvdsdk

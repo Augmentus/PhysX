@@ -46,13 +46,13 @@
 #include "DyTGSDynamics.h"
 #include "common/PxProfileZone.h"
 
-using namespace physx;
+using namespace augphysx;
 
 // we encode articulation link handles in the lower bits of the pointer, so the
 // articulation has to be aligned, which in an aligned pool means we need to size it
 // appropriately
 
-namespace physx
+namespace augphysx
 {
 	namespace Dy
 	{

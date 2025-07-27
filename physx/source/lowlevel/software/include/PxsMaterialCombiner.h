@@ -33,7 +33,7 @@
 
 #include "PxsMaterialCore.h"
 
-namespace physx
+namespace augphysx
 {
 
 	class PxsMaterialCombiner
@@ -92,7 +92,7 @@ namespace physx
 				//isotropic case
 				const PxReal fDynFriction = PxMax(dynFriction, 0.f);
 
-				const PxReal fStaFriction = physx::intrinsics::fsel(staFriction - fDynFriction, staFriction*mStaticFrictionScaling, fDynFriction);
+				const PxReal fStaFriction = augphysx::intrinsics::fsel(staFriction - fDynFriction, staFriction*mStaticFrictionScaling, fDynFriction);
 				/*dest.dynFriction = fDynFriction;
 				dest.staFriction = fStaFriction;*/
 

@@ -32,7 +32,7 @@
 
 #include "foundation/PxPlane.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

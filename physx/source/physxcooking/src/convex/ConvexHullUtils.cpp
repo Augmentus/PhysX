@@ -38,7 +38,7 @@
 #include "GuBox.h"
 #include "GuConvexMeshData.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Ps::aos;
 
 namespace local
@@ -398,7 +398,7 @@ PxU32 ConvexHull::maxNumVertsPerFace() const
 
 //////////////////////////////////////////////////////////////////////////
 // slice the input convexHull with the slice plane
-ConvexHull* physx::convexHullCrop(const ConvexHull& convex, const PxPlane& slice, float planeTestEpsilon)
+ConvexHull* augphysx::convexHullCrop(const ConvexHull& convex, const PxPlane& slice, float planeTestEpsilon)
 {
 	static const PxU8 invalidIndex = PxU8(-1);
 	PxU32 i;
@@ -819,7 +819,7 @@ ConvexHull* physx::convexHullCrop(const ConvexHull& convex, const PxPlane& slice
 	return punder;
 }
 
-bool physx::computeOBBFromConvex(const PxConvexMeshDesc& desc, PxVec3& sides, PxTransform& matrix)
+bool augphysx::computeOBBFromConvex(const PxConvexMeshDesc& desc, PxVec3& sides, PxTransform& matrix)
 {
 	PxIntegrals integrals;
 	// using the centroid of the convex for the volume integration solved accuracy issues in cases where the inertia tensor

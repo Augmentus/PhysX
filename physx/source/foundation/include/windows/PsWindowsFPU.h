@@ -30,7 +30,7 @@
 #ifndef PSFOUNDATION_PSWINDOWSFPU_H
 #define PSFOUNDATION_PSWINDOWSFPU_H
 
-PX_INLINE physx::shdfnd::SIMDGuard::SIMDGuard()
+PX_INLINE augphysx::shdfnd::SIMDGuard::SIMDGuard()
 {
 #if !PX_ARM && !PX_A64
 	mControlWord = _mm_getcsr();
@@ -39,7 +39,7 @@ PX_INLINE physx::shdfnd::SIMDGuard::SIMDGuard()
 #endif
 }
 
-PX_INLINE physx::shdfnd::SIMDGuard::~SIMDGuard()
+PX_INLINE augphysx::shdfnd::SIMDGuard::~SIMDGuard()
 {
 #if !PX_ARM && !PX_A64
 	// restore control word and clear any exception flags

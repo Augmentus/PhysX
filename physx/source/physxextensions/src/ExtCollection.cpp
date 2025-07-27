@@ -45,7 +45,7 @@
 
 #include "PsArray.h"
 
-using namespace physx;
+using namespace augphysx;
 
 void PxCollectionExt::releaseObjects(PxCollection& collection, bool releaseExclusiveShapes)
 {

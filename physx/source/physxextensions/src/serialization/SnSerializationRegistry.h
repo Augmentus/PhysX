@@ -38,7 +38,7 @@
 #include "PsArray.h"
 #include "PsHashMap.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Cm { class Collection; }
@@ -84,7 +84,7 @@ namespace Sn {
 	void  sortCollection(Cm::Collection& collection,  SerializationRegistry& sr, bool isRepx);
 } // Sn
 
-} // physx
+} // augphysx
 
 
 

@@ -44,7 +44,7 @@
 
 #define EPA_DEBUG	0
 
-namespace physx
+namespace augphysx
 {
 #define MaxEdges 32
 #define MaxFacets 64

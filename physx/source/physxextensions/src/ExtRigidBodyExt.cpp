@@ -52,7 +52,7 @@
 
 #include "CmUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 static bool computeMassAndDiagInertia(Ext::InertiaTensorComputer& inertiaComp, 

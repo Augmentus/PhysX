@@ -40,7 +40,7 @@
 #include "GuPCMContactGen.h"
 #include "GuPCMShapeConvex.h"
 
-namespace physx
+namespace augphysx
 {
 
 using namespace Ps::aos;
@@ -263,4 +263,4 @@ bool pcmContactCapsuleConvex(GU_CONTACT_METHOD_ARGS)
 }
 
 }//Gu
-}//physx
+}//augphysx

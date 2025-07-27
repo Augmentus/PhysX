@@ -38,7 +38,7 @@
 #include "PsUtilities.h"
 #include "CmRefCountable.h"
 
-namespace physx
+namespace augphysx
 {
 
 // Compared to other objects, materials are special since they belong to the SDK and not to scenes

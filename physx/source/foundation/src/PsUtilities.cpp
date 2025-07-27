@@ -34,7 +34,7 @@
 #include "PsUserAllocated.h"
 #include "PsFPU.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

@@ -30,7 +30,7 @@
 #include "PxcConstraintBlockStream.h"
 #include "PxcNpThreadContext.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PxcNpThreadContext::PxcNpThreadContext(PxcNpContext* params) : 
 	mRenderOutput						(params->mRenderBuffer),

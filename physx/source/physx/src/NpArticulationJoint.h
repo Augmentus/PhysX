@@ -39,7 +39,7 @@
 #include "CmRenderOutput.h"
 #endif
 
-namespace physx
+namespace augphysx
 {
 
 class NpScene;

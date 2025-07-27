@@ -35,7 +35,7 @@
 #include "foundation/PxAssert.h"
 #include "PsAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

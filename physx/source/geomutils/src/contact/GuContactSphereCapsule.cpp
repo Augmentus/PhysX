@@ -34,7 +34,7 @@
 #include "GuInternal.h"
 #include "GuGeometryUnion.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -80,4 +80,4 @@ bool contactSphereCapsule(GU_CONTACT_METHOD_ARGS)
 	return true;
 }
 }//Gu
-}//physx
+}//augphysx

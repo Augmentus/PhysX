@@ -40,7 +40,7 @@
 
 #define LOCK()  shdfnd::Mutex::ScopedLock __lock__(mMutex)
 
-namespace physx
+namespace augphysx
 {
     const int EOL = -1;
 	typedef shdfnd::HashMap<const char *, PxTaskID> PxTaskNameToIDMap;

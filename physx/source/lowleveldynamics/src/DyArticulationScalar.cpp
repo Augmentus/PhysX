@@ -33,7 +33,7 @@
 #include "DyArticulationReference.h"
 #include "DyArticulationFnsDebug.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

@@ -29,7 +29,7 @@
 
 #include "PxPvdDefaultSocketTransport.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {

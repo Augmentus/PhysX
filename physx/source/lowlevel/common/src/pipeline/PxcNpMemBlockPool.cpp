@@ -34,7 +34,7 @@
 #include "PsInlineArray.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PxcNpMemBlockPool::PxcNpMemBlockPool(PxcScratchAllocator& allocator):
   mConstraints(PX_DEBUG_EXP("PxcNpMemBlockPool::mConstraints")),

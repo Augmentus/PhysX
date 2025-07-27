@@ -35,7 +35,7 @@
 #include "ScShapeSim.h"
 #include "GuOverlapTests.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

@@ -30,7 +30,7 @@
 
 #include "foundation/Px.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 	/**
 	\brief A event id structure. Optionally includes information about
 	if the event was enabled at compile time.

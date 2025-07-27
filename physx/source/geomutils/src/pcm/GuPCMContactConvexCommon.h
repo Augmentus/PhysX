@@ -38,7 +38,7 @@
 #include "GuTriangleCache.h"
 #include "PsInlineArray.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu

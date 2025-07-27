@@ -36,7 +36,7 @@
 #error Do not include anymore!
 #endif
 
-namespace physx
+namespace augphysx
 {
 	class MeshCleaner
 	{

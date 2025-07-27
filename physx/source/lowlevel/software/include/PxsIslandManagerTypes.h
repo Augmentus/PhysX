@@ -33,7 +33,7 @@
 
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxsContactManager;

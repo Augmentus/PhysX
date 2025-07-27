@@ -34,7 +34,7 @@
 #include "CmPhysXCommon.h"
 #include "PsFPU.h"
 
-namespace physx
+namespace augphysx
 {
 
 	enum CubeIndex

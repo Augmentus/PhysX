@@ -36,9 +36,9 @@
 #include "GuVecPlane.h"
 #include "PsMathUtils.h"
 #include "PsVecMath.h"
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
-using namespace physx;
+using namespace augphysx;
 
 /**
 Computes the aabb points.

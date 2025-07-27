@@ -39,7 +39,7 @@
 #include "geometry/PxConvexMesh.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -144,7 +144,7 @@ PX_INLINE bool PxConvexMeshGeometry::isValid() const
 }
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

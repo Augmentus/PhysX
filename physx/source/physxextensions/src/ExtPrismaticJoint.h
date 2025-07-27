@@ -36,7 +36,7 @@
 #include "ExtJoint.h"
 #include "CmUtils.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxPrismaticJointGeneratedValues;
 namespace Ext

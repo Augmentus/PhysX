@@ -38,7 +38,7 @@
 #include "PsArray.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 	struct PxRaycastHit;
 

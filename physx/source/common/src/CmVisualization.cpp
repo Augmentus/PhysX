@@ -32,7 +32,7 @@
 #include "CmRenderOutput.h"
 #include "CmVisualization.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 void Cm::visualizeJointFrames(RenderOutput& out, PxReal scale, const PxTransform& parent, const PxTransform& child)

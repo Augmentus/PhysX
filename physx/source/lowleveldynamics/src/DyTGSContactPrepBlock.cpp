@@ -46,7 +46,7 @@
 #include "PsFoundation.h"
 #include "DyTGSDynamics.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 
@@ -62,7 +62,7 @@ using namespace Gu;
 
 #include "DySolverContext.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

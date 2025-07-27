@@ -38,7 +38,7 @@
 #include "CmBlockArray.h"
 #include "PxsIslandNodeIndex.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy
@@ -445,7 +445,7 @@ class IslandSim
 
 	Ps::Array<PartitionEdge*>* mFirstPartitionEdges;
 	Cm::BlockArray<NodeIndex>& mEdgeNodeIndices;
-	Ps::Array<physx::PartitionEdge*>* mDestroyedPartitionEdges;
+	Ps::Array<augphysx::PartitionEdge*>* mDestroyedPartitionEdges;
 
 	PxU32* mNpIndexPtr;
 	

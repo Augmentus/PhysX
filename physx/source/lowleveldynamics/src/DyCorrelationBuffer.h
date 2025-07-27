@@ -41,7 +41,7 @@
 #include "PxvConfig.h"
 #include "DyFrictionPatch.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct PxcNpWorkUnit;

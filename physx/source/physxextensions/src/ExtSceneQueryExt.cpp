@@ -29,7 +29,7 @@
 
 #include "extensions/PxSceneQueryExt.h"
 
-using namespace physx;
+using namespace augphysx;
 
 bool PxSceneQueryExt::raycastAny(	const PxScene& scene,
 									const PxVec3& origin, const PxVec3& unitDir, const PxReal distance,

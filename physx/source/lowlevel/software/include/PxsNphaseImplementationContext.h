@@ -35,7 +35,7 @@
 #include "PxsContactManagerState.h"
 #include "PxcNpCache.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct PxsContactManagers : PxsContactManagerBase

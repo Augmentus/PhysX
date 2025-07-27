@@ -31,7 +31,7 @@
 #include "GuSphere.h"
 #include "GuBox.h"
 
-using namespace physx;
+using namespace augphysx;
 
 bool Gu::intersectSphereBox(const Sphere& sphere, const Box& box)
 {

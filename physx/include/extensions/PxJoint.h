@@ -39,7 +39,7 @@
 #include "common/PxBase.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -396,7 +396,7 @@ public:
 
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** \brief Helper function to setup a joint's global frame
@@ -413,7 +413,7 @@ public:
 	\param[in,out] joint Joint having its global frame set.
 */
 
-PX_C_EXPORT void PX_CALL_CONV PxSetJointGlobalFrame(physx::PxJoint& joint, const physx::PxVec3* wsAnchor, const physx::PxVec3* wsAxis);
+PX_C_EXPORT void PX_CALL_CONV PxSetJointGlobalFrame(augphysx::PxJoint& joint, const augphysx::PxVec3* wsAnchor, const augphysx::PxVec3* wsAxis);
 
 /** @} */
 #endif

@@ -33,7 +33,7 @@
 
 #include "foundation/Px.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	//Converts datatypes without using type punning.
 	struct BlockParserDataConverter

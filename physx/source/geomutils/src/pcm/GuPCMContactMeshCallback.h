@@ -36,7 +36,7 @@
 #include "GuTriangleCache.h"
 #include "GuConvexEdgeFlags.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu
@@ -203,6 +203,6 @@ protected:
 };
 
 }//Gu
-}//physx
+}//augphysx
 
 #endif

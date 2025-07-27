@@ -32,7 +32,7 @@
 #include "NpWriteCheck.h"
 #include "NpReadCheck.h"
 
-namespace physx
+namespace augphysx
 {
 // PX_SERIALIZATION
 

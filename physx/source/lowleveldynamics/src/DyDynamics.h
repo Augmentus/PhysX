@@ -44,7 +44,7 @@
 #include "PxvNphaseImplementationContext.h"
 #include "solver/PxSolverDefs.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Cm

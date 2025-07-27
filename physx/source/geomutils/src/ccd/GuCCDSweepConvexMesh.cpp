@@ -48,7 +48,7 @@
 
 
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -108,7 +108,7 @@ public:
 														   PxU32 numTrigsInGroup, 
 														   PxU32* trigIndexDestBuffer);//trigIndexDestBuffer should be at least  numTrigsInGroup long.
 
-	void						getBounds(PxBounds3& bounds, const physx::PxTransform& transform)							const;
+	void						getBounds(PxBounds3& bounds, const augphysx::PxTransform& transform)							const;
 
 	//non-virtuals:
 	PX_FORCE_INLINE	const TriangleMesh*					getMeshData() const			{ return shapeMesh.meshData; }
@@ -118,7 +118,7 @@ public:
 
 private:
 	ConvexTriangles& operator=(const ConvexTriangles&);
-	void calcCenterAndBounds(const physx::PxTransform& transform) const;
+	void calcCenterAndBounds(const augphysx::PxTransform& transform) const;
 
 	const PxTriangleMeshGeometryLL&		shapeMesh;
 	const Cm::FastVertex2ShapeScaling&	mVertex2ShapeSkew;
@@ -140,13 +140,13 @@ ConvexTriangles::ConvexTriangles(const PxTriangleMeshGeometryLL& md,
 }
 
 
-void ConvexTriangles::getBounds(PxBounds3& b, const physx::PxTransform& transform) const
+void ConvexTriangles::getBounds(PxBounds3& b, const augphysx::PxTransform& transform) const
 {
 	calcCenterAndBounds(transform);
 	b = bounds;
 }
 
-void ConvexTriangles::calcCenterAndBounds(const physx::PxTransform& transform) const	//computes bounds in shape space
+void ConvexTriangles::calcCenterAndBounds(const augphysx::PxTransform& transform) const	//computes bounds in shape space
 {
 	//NOTE: we have code that does this in a loop inside PxcContactHullMeshPenetrationFallback --  a relatively expensive weighted average of the faces.
 	//see if we really need to be that expensive!
@@ -207,7 +207,7 @@ PxVec3 ConvexTriangles::getPolygonNormal(PxU32 index) const
 PxReal SweepAnyShapeHeightfield(GU_SWEEP_METHOD_ARGS)
 {
 	PX_UNUSED(toiEstimate);
-	HeightFieldUtil hfUtil(shape1.mGeometry->get<const physx::PxHeightFieldGeometryLL>());
+	HeightFieldUtil hfUtil(shape1.mGeometry->get<const augphysx::PxHeightFieldGeometryLL>());
 
 	Ps::InlineArray<PxU32,64> tempContainer;
 
@@ -373,7 +373,7 @@ PxReal SweepAnyShapeHeightfield(GU_SWEEP_METHOD_ARGS)
 
 PxReal SweepEstimateAnyShapeHeightfield(GU_SWEEP_ESTIMATE_ARGS)
 {
-	HeightFieldUtil hfUtil(shape1.mGeometry->get<const physx::PxHeightFieldGeometryLL>());
+	HeightFieldUtil hfUtil(shape1.mGeometry->get<const augphysx::PxHeightFieldGeometryLL>());
 
 	Ps::InlineArray<PxU32,64> tempContainer;
 	

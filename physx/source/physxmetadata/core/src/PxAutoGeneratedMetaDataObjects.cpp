@@ -35,7 +35,7 @@
 // physx/PhysXMetaDataGenerator/llvm/tools/clang/lib/Frontend/PhysXMetaDataAction.cpp
 #include "PxMetaDataObjects.h"
 #include "PxMetaDataCppPrefix.h"
-using namespace physx;
+using namespace augphysx;
 const PxTolerancesScale getPxPhysics_TolerancesScale( const PxPhysics* inObj ) { return inObj->getTolerancesScale(); }
 PxU32 getPxPhysics_TriangleMeshes( const PxPhysics* inObj, PxTriangleMesh ** outBuffer, PxU32 inBufSize ) { return inObj->getTriangleMeshes( outBuffer, inBufSize ); }
 PxU32 getNbPxPhysics_TriangleMeshes( const PxPhysics* inObj ) { return inObj->getNbTriangleMeshes(  ); }
@@ -402,7 +402,7 @@ PX_PHYSX_CORE_API PxArticulationJointReducedCoordinateGeneratedValues::PxArticul
 		,MaxJointVelocity( getPxArticulationJointReducedCoordinate_MaxJointVelocity( inSource ) )
 {
 	PX_UNUSED(inSource);
-		for ( PxU32 idx = 0; idx < static_cast<PxU32>( physx::PxArticulationAxis::eCOUNT ); ++idx )
+		for ( PxU32 idx = 0; idx < static_cast<PxU32>( augphysx::PxArticulationAxis::eCOUNT ); ++idx )
 		Motion[idx] = getPxArticulationJointReducedCoordinate_Motion( inSource, static_cast< PxArticulationAxis::Enum >( idx ) );
 }
 PxScene * getPxArticulationBase_Scene( const PxArticulationBase* inObj ) { return inObj->getScene(); }

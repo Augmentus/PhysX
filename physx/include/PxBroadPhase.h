@@ -38,7 +38,7 @@
 #include "foundation/PxBounds3.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 

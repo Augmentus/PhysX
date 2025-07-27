@@ -37,7 +37,7 @@
 #include "ScArticulationSim.h"
 #include "DyArticulation.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::ArticulationCore::ArticulationCore(bool reducedCoordinate) :
 	mSim(NULL), 

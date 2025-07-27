@@ -35,7 +35,7 @@
 #include "PxConstraint.h"
 #include "ScbConstraint.h"
 
-namespace physx
+namespace augphysx
 {
 
 class NpScene;

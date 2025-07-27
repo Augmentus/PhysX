@@ -36,7 +36,7 @@
 
 #include "foundation/PxVec3.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

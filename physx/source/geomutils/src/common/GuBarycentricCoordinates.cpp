@@ -30,7 +30,7 @@
 
 #include "GuBarycentricCoordinates.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Ps::aos;
 
 void Gu::barycentricCoordinates(const Vec3VArg p, const Vec3VArg a, const Vec3VArg b, FloatV& v)

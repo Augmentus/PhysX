@@ -36,7 +36,7 @@
 #include "GuConvexMeshData.h"
 #include "PsUserAllocated.h"
 
-namespace physx
+namespace augphysx
 {
 	struct PxHullPolygon;
 	class ConvexHullLib;

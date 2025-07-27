@@ -30,7 +30,7 @@
 #include "windows/PsWindowsInclude.h"
 #include "PsAtomic.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

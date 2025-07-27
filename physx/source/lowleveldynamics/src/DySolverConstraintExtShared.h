@@ -42,7 +42,7 @@
 #include "PxsMaterialManager.h"
 #include "PxsMaterialCombiner.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Dy
 	{

@@ -34,7 +34,7 @@
 #include "PsMutex.h"
 #include "PxProfileZoneManager.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
@@ -65,7 +65,7 @@ class PvdProfileZoneClient : public PvdClient, public profile::PxProfileZoneHand
 	shdfnd::Mutex mMutex; // zoneAdded can called from different threads
 	PvdImpl& mSDKPvd;
 	PvdDataStream* mPvdDataStream;	
-	physx::shdfnd::Array<ProfileZoneClient*> mProfileZoneClients;
+	augphysx::shdfnd::Array<ProfileZoneClient*> mProfileZoneClients;
 	bool mIsConnected;
 };
 

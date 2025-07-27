@@ -43,7 +43,7 @@
 // threading
 #include "PsSync.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Scb
 {

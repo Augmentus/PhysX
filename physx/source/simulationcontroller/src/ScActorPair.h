@@ -34,7 +34,7 @@
 #include "ScContactStream.h"
 #include "ScNPhaseCore.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

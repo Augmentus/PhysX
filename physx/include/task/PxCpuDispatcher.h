@@ -31,7 +31,7 @@
 #include "task/PxTaskDefine.h"
 #include "foundation/PxSimpleTypes.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxBaseTask;

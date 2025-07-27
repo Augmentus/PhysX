@@ -43,7 +43,7 @@
 #include "GuHillClimbing.h"
 #include "GuGJK.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 using namespace Gu;
 
@@ -72,7 +72,7 @@ static PxVec3 projectHull_(	const ConvexHullData& hull,
 		while(NbVerts--)
 		{
 			const float dp = (*Verts).dot(vertexSpaceDir);
-			min_ = physx::intrinsics::selectMin(min_, dp);
+			min_ = augphysx::intrinsics::selectMin(min_, dp);
 			if(dp > max_)	{ max_ = dp; bestVert = Verts; }
 
 			Verts++;
@@ -162,7 +162,7 @@ static bool intersectBoxConvex(const PxBoxGeometry& boxGeom, const PxTransform& 
 								const ConvexMesh& mesh, const PxMeshScale& meshScale, const PxTransform& convexGlobalPose,
 								PxVec3*)
 {
-	// AP: see archived non-GJK version in //sw/physx/dev/pterdiman/graveyard/contactConvexBox.cpp
+	// AP: see archived non-GJK version in //sw/augphysx/dev/pterdiman/graveyard/contactConvexBox.cpp
 	using namespace Ps::aos;
 	const Vec3V zeroV = V3Zero();
 	const ConvexHullData* hull = &mesh.getHull();

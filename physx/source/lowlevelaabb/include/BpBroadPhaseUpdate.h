@@ -36,7 +36,7 @@
 #include "PxBroadPhase.h"
 #include "Ps.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Bp
 {
@@ -305,7 +305,7 @@ public:
 	*/
 	PX_FORCE_INLINE void shift(const PxVec3& shift)
 	{
-		::physx::PxBounds3 elemBounds;
+		::augphysx::PxBounds3 elemBounds;
 		decode(elemBounds);
 		elemBounds.minimum -= shift;
 		elemBounds.maximum -= shift;

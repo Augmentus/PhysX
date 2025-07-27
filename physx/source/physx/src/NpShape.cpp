@@ -33,7 +33,7 @@
 #include "ScbNpDeps.h"
 #include "GuBounds.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 
 static PX_FORCE_INLINE void updatePvdProperties(const Scb::Shape& shape)
@@ -686,7 +686,7 @@ NpScene* NpShape::getAPIScene()	const
 
 ///////////////////////////////////////////////////////////////////////////////
 
-namespace physx
+namespace augphysx
 {
 Sc::RigidCore* NpShapeGetScRigidObjectFromScbSLOW(const Scb::Shape& scb)
 {

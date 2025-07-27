@@ -30,7 +30,7 @@
 #include "CmCollection.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 void Collection::add(PxBase& object, PxSerialObjectId id)
@@ -40,7 +40,7 @@ void Collection::add(PxBase& object, PxSerialObjectId id)
 	{
 		if( originId != id)
 		{
-			 physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__,
+			 augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__,
 		        "PxCollection::add called for an object that has an associated id already present in the collection!");
 		}
 		return;		   
@@ -50,7 +50,7 @@ void Collection::add(PxBase& object, PxSerialObjectId id)
 	{		
 		if(!mIds.insert(id, &object))
 		{
-		   physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__,
+		   augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__,
 		        "PxCollection::add called with an id which is already used in the collection");
 		   return;	
 		}

@@ -77,7 +77,7 @@ PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxSetPhysXGpuLoadHook(const PxGp
  * PhysX.  Returns -1 if no PhysX capable GPU is found or GPU PhysX has
  * been disabled.
  */
-PX_C_EXPORT PX_PHYSX_CORE_API int PX_CALL_CONV PxGetSuggestedCudaDeviceOrdinal(physx::PxErrorCallback& errc);
+PX_C_EXPORT PX_PHYSX_CORE_API int PX_CALL_CONV PxGetSuggestedCudaDeviceOrdinal(augphysx::PxErrorCallback& errc);
 
 /**
  * \brief Allocate a CUDA Context manager, complete with heaps.
@@ -89,7 +89,7 @@ PX_C_EXPORT PX_PHYSX_CORE_API int PX_CALL_CONV PxGetSuggestedCudaDeviceOrdinal(p
 
  @see PxGetProfilerCallback()
  */
-PX_C_EXPORT PX_PHYSX_CORE_API physx::PxCudaContextManager* PX_CALL_CONV PxCreateCudaContextManager(physx::PxFoundation& foundation, const physx::PxCudaContextManagerDesc& desc, physx::PxProfilerCallback* profilerCallback = NULL);
+PX_C_EXPORT PX_PHYSX_CORE_API augphysx::PxCudaContextManager* PX_CALL_CONV PxCreateCudaContextManager(augphysx::PxFoundation& foundation, const augphysx::PxCudaContextManagerDesc& desc, augphysx::PxProfilerCallback* profilerCallback = NULL);
 
 #endif // PX_SUPPORT_GPU_PHYSX
 

@@ -41,7 +41,7 @@
 #include <float.h>
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 namespace intrinsics
 {

@@ -50,7 +50,7 @@
 #include "foundation/PxSharedAssert.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -317,7 +317,7 @@ PX_CUDA_CALLABLE PX_FORCE_INLINE float PxCeil(float a)
 
 PX_CUDA_CALLABLE PX_FORCE_INLINE float PxSign(float a)
 {
-	return physx::intrinsics::sign(a);
+	return augphysx::intrinsics::sign(a);
 }
 
 PX_CUDA_CALLABLE PX_FORCE_INLINE float PxPow(float x, float y)

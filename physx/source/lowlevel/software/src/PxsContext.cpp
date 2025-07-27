@@ -53,8 +53,8 @@
 #include "PxcNpCache.h"
 
 
-using namespace physx;
-using namespace physx::shdfnd;
+using namespace augphysx;
+using namespace augphysx::shdfnd;
 
 #define PXS_CONTACTMANAGER_SLABSIZE 1024
 #define PXS_MAX_CONTACTMANAGER_SLABS 64
@@ -99,7 +99,7 @@ PxsContext::~PxsContext()
 }
 
 // =========================== Create methods
-namespace physx
+namespace augphysx
 {
 	bool gEnablePCMCaching[PxGeometryType::eGEOMETRY_COUNT][PxGeometryType::eGEOMETRY_COUNT] =
 	{

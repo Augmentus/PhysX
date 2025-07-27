@@ -35,7 +35,7 @@
 #include "foundation/Px.h"
 #include "GuTriangle32.h"
 
-namespace physx
+namespace augphysx
 {
 
 #ifdef MSH_ADJACENCIES_INCLUDE_CONVEX_BITS

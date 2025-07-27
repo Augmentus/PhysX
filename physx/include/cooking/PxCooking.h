@@ -45,7 +45,7 @@
 #include "geometry/PxBVHStructure.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -555,9 +555,9 @@ You should pass the same foundation object to all instances of the cooking inter
 \param[in] params the parameters for this instance of the cooking interface
 \return true on success.
 */
-PX_C_EXPORT PX_PHYSX_COOKING_API physx::PxCooking* PX_CALL_CONV PxCreateCooking(physx::PxU32 version,
-																				physx::PxFoundation& foundation,
-																				const physx::PxCookingParams& params);
+PX_C_EXPORT PX_PHYSX_COOKING_API augphysx::PxCooking* PX_CALL_CONV PxCreateCooking(augphysx::PxU32 version,
+																				augphysx::PxFoundation& foundation,
+																				const augphysx::PxCookingParams& params);
 
 /** @} */
 #endif

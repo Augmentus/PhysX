@@ -40,7 +40,7 @@
 #include "PsArray.h"
 #include "PsMathUtils.h"
 
-namespace physx
+namespace augphysx
 {
 
 	//////////////////////////////////////////////////////////////////////////

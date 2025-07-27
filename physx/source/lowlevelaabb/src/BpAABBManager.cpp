@@ -44,7 +44,7 @@
 #include "common/PxProfileZone.h"
 //#include <stdio.h>
 
-using namespace physx;
+using namespace augphysx;
 using namespace Bp;
 using namespace Cm;
 using namespace Ps::aos;
@@ -68,7 +68,7 @@ static const bool gSingleThreaded = false;
 	static const bool gUnrollLoop = false;			// true to use "version 14" in box pruning series
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace Bp
 {

@@ -30,7 +30,7 @@
 #include "ScbBase.h"
 #include "ScbNpDeps.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Scb;
 
 void Base::destroy()

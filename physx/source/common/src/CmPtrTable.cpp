@@ -34,7 +34,7 @@
 #include "CmUtils.h"
 #include "PsBitUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 PtrTable::PtrTable()

@@ -31,7 +31,7 @@
 #include "PsMathUtils.h"
 #include "CmPhysXCommon.h"
 
-using namespace physx;
+using namespace augphysx;
 
 bool Gu::intersectEdgeEdge(const PxVec3& p1, const PxVec3& p2, const PxVec3& dir, const PxVec3& p3, const PxVec3& p4, PxReal& dist, PxVec3& ip)
 {

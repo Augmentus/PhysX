@@ -35,7 +35,7 @@
 #include "DyArticulationUtils.h"
 #include "DySolverConstraint1D.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

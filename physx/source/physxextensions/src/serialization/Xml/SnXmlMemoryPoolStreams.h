@@ -34,7 +34,7 @@
 #include "SnXmlMemoryPool.h"
 #include "CmPhysXCommon.h"
 
-namespace physx {
+namespace augphysx {
 
 	template<typename TDataType>
 	struct XmlDefaultValue

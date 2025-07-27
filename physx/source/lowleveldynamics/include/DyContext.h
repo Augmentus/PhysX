@@ -40,7 +40,7 @@
 
 #define DY_MAX_VELOCITY_COUNT 4
 
-namespace physx
+namespace augphysx
 {
 
 class PxsIslandManager;

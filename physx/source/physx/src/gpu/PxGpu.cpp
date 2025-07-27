@@ -38,13 +38,13 @@ namespace grid
 	class ClientContextPredictionManager;
 }
 
-namespace physx
+namespace augphysx
 {
 	//forward declare stuff from PxPhysXGpuModuleLoader.cpp
 	void PxLoadPhysxGPUModule(const char* appGUID);
-	typedef physx::PxCudaContextManager* (PxCreateCudaContextManager_FUNC)(physx::PxFoundation& foundation, const physx::PxCudaContextManagerDesc& desc, physx::PxProfilerCallback* profilerCallback);
-	typedef int (PxGetSuggestedCudaDeviceOrdinal_FUNC)(physx::PxErrorCallback& errc);
-	typedef grid::ClientContextPredictionManager* (PxCreateClientContextManager_FUNC)(grid::Server* server, physx::PxU32 maxNbSleepMsg);
+	typedef augphysx::PxCudaContextManager* (PxCreateCudaContextManager_FUNC)(augphysx::PxFoundation& foundation, const augphysx::PxCudaContextManagerDesc& desc, augphysx::PxProfilerCallback* profilerCallback);
+	typedef int (PxGetSuggestedCudaDeviceOrdinal_FUNC)(augphysx::PxErrorCallback& errc);
+	typedef grid::ClientContextPredictionManager* (PxCreateClientContextManager_FUNC)(grid::Server* server, augphysx::PxU32 maxNbSleepMsg);
 	extern PxCreateCudaContextManager_FUNC*  g_PxCreateCudaContextManager_Func;
 	extern PxGetSuggestedCudaDeviceOrdinal_FUNC* g_PxGetSuggestedCudaDeviceOrdinal_Func;
 	extern PxCreateClientContextManager_FUNC* g_CreateClientContextManager_Func;
@@ -53,37 +53,37 @@ namespace physx
 
 
 
-physx::PxCudaContextManager* PxCreateCudaContextManager(physx::PxFoundation& foundation, const physx::PxCudaContextManagerDesc& desc, physx::PxProfilerCallback* profilerCallback)
+augphysx::PxCudaContextManager* PxCreateCudaContextManager(augphysx::PxFoundation& foundation, const augphysx::PxCudaContextManagerDesc& desc, augphysx::PxProfilerCallback* profilerCallback)
 {
-	if (!physx::g_PxCreateCudaContextManager_Func)
-		physx::PxLoadPhysxGPUModule(desc.appGUID);
+	if (!augphysx::g_PxCreateCudaContextManager_Func)
+		augphysx::PxLoadPhysxGPUModule(desc.appGUID);
 
-	if (physx::g_PxCreateCudaContextManager_Func)
-		return physx::g_PxCreateCudaContextManager_Func(foundation, desc, profilerCallback);
+	if (augphysx::g_PxCreateCudaContextManager_Func)
+		return augphysx::g_PxCreateCudaContextManager_Func(foundation, desc, profilerCallback);
 	else
 		return NULL;
 }
 
-int PxGetSuggestedCudaDeviceOrdinal(physx::PxErrorCallback& errc)
+int PxGetSuggestedCudaDeviceOrdinal(augphysx::PxErrorCallback& errc)
 {
-	if (!physx::g_PxGetSuggestedCudaDeviceOrdinal_Func)
-		physx::PxLoadPhysxGPUModule(NULL);
+	if (!augphysx::g_PxGetSuggestedCudaDeviceOrdinal_Func)
+		augphysx::PxLoadPhysxGPUModule(NULL);
 
-	if (physx::g_PxGetSuggestedCudaDeviceOrdinal_Func)
-		return physx::g_PxGetSuggestedCudaDeviceOrdinal_Func(errc);
+	if (augphysx::g_PxGetSuggestedCudaDeviceOrdinal_Func)
+		return augphysx::g_PxGetSuggestedCudaDeviceOrdinal_Func(errc);
 	else
 		return -1;
 }
 
-PX_C_EXPORT PX_PHYSX_CORE_API grid::ClientContextPredictionManager* PX_CALL_CONV PxCreateCudaClientContextManager(grid::Server* server, physx::PxU32 maxNbSleepMsg);
+PX_C_EXPORT PX_PHYSX_CORE_API grid::ClientContextPredictionManager* PX_CALL_CONV PxCreateCudaClientContextManager(grid::Server* server, augphysx::PxU32 maxNbSleepMsg);
 
-grid::ClientContextPredictionManager* PxCreateCudaClientContextManager(grid::Server* server, physx::PxU32 maxNbSleepMsg)
+grid::ClientContextPredictionManager* PxCreateCudaClientContextManager(grid::Server* server, augphysx::PxU32 maxNbSleepMsg)
 {
-	if (!physx::g_CreateClientContextManager_Func)
-		physx::PxLoadPhysxGPUModule(NULL);
+	if (!augphysx::g_CreateClientContextManager_Func)
+		augphysx::PxLoadPhysxGPUModule(NULL);
 
-	if (physx::g_CreateClientContextManager_Func)
-		return physx::g_CreateClientContextManager_Func(server, maxNbSleepMsg);
+	if (augphysx::g_CreateClientContextManager_Func)
+		return augphysx::g_CreateClientContextManager_Func(server, maxNbSleepMsg);
 	else
 		return NULL;
 }

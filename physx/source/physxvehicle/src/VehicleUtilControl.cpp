@@ -34,7 +34,7 @@
 #include "PsUtilities.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 #if PX_CHECKED

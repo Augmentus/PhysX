@@ -42,7 +42,7 @@
 #include <string.h>	// For strcmp
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -194,7 +194,7 @@ protected:
 };
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

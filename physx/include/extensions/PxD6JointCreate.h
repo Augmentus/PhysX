@@ -37,7 +37,7 @@
 */
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -248,7 +248,7 @@ PxJoint* PxD6JointCreate_Pyramid(PxPhysics& physics, PxRigidActor* actor0, const
 
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

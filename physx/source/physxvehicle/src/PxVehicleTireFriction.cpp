@@ -33,7 +33,7 @@
 #include "CmPhysXCommon.h"
 #include "PsFoundation.h"
 
-namespace physx
+namespace augphysx
 {
 
 PX_FORCE_INLINE PxU32 computeByteSize(const PxU32 maxNbTireTypes, const PxU32 maxNbSurfaceTypes)

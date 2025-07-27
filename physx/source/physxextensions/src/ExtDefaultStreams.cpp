@@ -41,7 +41,7 @@
 
 #include <errno.h>
 
-using namespace physx;
+using namespace augphysx;
 
 PxDefaultMemoryOutputStream::PxDefaultMemoryOutputStream(PxAllocatorCallback &allocator) 
 :	mAllocator	(allocator)	

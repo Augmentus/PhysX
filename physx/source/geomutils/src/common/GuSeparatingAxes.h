@@ -33,7 +33,7 @@
 #include "foundation/PxVec3.h"
 #include "common/PxPhysXCommonConfig.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

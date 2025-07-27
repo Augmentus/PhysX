@@ -30,7 +30,7 @@
 #ifndef GU_SWEEP_MTD_H
 #define GU_SWEEP_MTD_H
 
-namespace physx
+namespace augphysx
 {
 	class PxConvexMeshGeometry;
 	class PxTriangleMeshGeometry;

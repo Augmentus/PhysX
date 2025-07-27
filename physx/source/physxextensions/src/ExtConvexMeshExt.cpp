@@ -33,11 +33,11 @@
 #include "geometry/PxConvexMesh.h"
 #include "extensions/PxConvexMeshExt.h"
 
-using namespace physx;
+using namespace augphysx;
 
 static const PxReal gEpsilon = .01f;
 
-PxU32 physx::PxFindFaceIndex(const PxConvexMeshGeometry& convexGeom, const PxTransform& pose, 
+PxU32 augphysx::PxFindFaceIndex(const PxConvexMeshGeometry& convexGeom, const PxTransform& pose, 
 	const PxVec3& impactPos, const PxVec3& unitDir)
 {
 	PX_ASSERT(unitDir.isFinite());

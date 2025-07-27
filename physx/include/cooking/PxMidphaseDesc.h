@@ -39,7 +39,7 @@
 #include "cooking/PxBVH34MidphaseDesc.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 

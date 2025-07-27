@@ -43,7 +43,7 @@
 #include "PsAtomic.h"
 #include "DySolverConstraintsShared.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy
@@ -683,7 +683,7 @@ void solveContactBlockWriteBack(const PxSolverConstraintDesc* PX_RESTRICT desc, 
 	if(cache.mThresholdStreamIndex > (cache.mThresholdStreamLength - 4))
 	{
 		//Write back to global buffer
-		PxI32 threshIndex = physx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
+		PxI32 threshIndex = augphysx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
 		for(PxU32 a = 0; a < cache.mThresholdStreamIndex; ++a)
 		{
 			cache.mSharedThresholdStream[a + threshIndex] = cache.mThresholdStream[a];
@@ -739,7 +739,7 @@ void solveContact_BStaticBlockWriteBack(const PxSolverConstraintDesc* PX_RESTRIC
 	{
 		//Not enough space to write 4 more thresholds back!
 		//Write back to global buffer
-		PxI32 threshIndex = physx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
+		PxI32 threshIndex = augphysx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
 		for(PxU32 a = 0; a < cache.mThresholdStreamIndex; ++a)
 		{
 			cache.mSharedThresholdStream[a + threshIndex] = cache.mThresholdStream[a];
@@ -1218,7 +1218,7 @@ void solveExtContactBlockWriteBack(const PxSolverConstraintDesc* PX_RESTRICT des
 	{
 		//Not enough space to write 4 more thresholds back!
 		//Write back to global buffer
-		PxI32 threshIndex = physx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
+		PxI32 threshIndex = augphysx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
 		for(PxU32 a = 0; a < cache.mThresholdStreamIndex; ++a)
 		{
 			cache.mSharedThresholdStream[a + threshIndex] = cache.mThresholdStream[a];

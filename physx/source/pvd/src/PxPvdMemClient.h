@@ -37,7 +37,7 @@
 #include "PxProfileEventBufferClient.h"
 #include "PxProfileMemory.h"
 
-namespace physx
+namespace augphysx
 {
 class PvdDataStream;
 

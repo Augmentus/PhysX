@@ -43,17 +43,17 @@ namespace
 	const char* gSdkName = "PhysXSDK";
 }
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
 
-class CmEventNameProvider : public physx::profile::PxProfileNameProvider
+class CmEventNameProvider : public augphysx::profile::PxProfileNameProvider
 {
 public:
-	physx::profile::PxProfileNames getProfileNames() const
+	augphysx::profile::PxProfileNames getProfileNames() const
 	{
-		physx::profile::PxProfileNames  ret;
+		augphysx::profile::PxProfileNames  ret;
 		ret.eventCount = 0;
 		return ret;
 	}
@@ -90,7 +90,7 @@ PvdImpl::PvdImpl()
 , mProfileClient(NULL)
 , mProfileZone(NULL)
 {
-	mProfileZoneManager = &physx::profile::PxProfileZoneManager::createProfileZoneManager(&physx::shdfnd::getAllocator());
+	mProfileZoneManager = &augphysx::profile::PxProfileZoneManager::createProfileZoneManager(&augphysx::shdfnd::getAllocator());
 	mProfileClient = PVD_NEW(PvdProfileZoneClient)(*this);
 }
 
@@ -117,7 +117,7 @@ bool PvdImpl::connect(PxPvdTransport& transport, PxPvdInstrumentationFlags flags
 {
 	if(mIsConnected)
 	{
-		physx::shdfnd::getFoundation().error(PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "PxPvd::connect - recall connect! Should call disconnect before re-connect.");
+		augphysx::shdfnd::getFoundation().error(PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "PxPvd::connect - recall connect! Should call disconnect before re-connect.");
 	    return false;
 	}
 
@@ -144,7 +144,7 @@ bool PvdImpl::connect(PxPvdTransport& transport, PxPvdInstrumentationFlags flags
 		if((mFlags & PxPvdInstrumentationFlag::ePROFILE) && mProfileZoneManager)
 		{			
 			mPvdClients.pushBack(mProfileClient);
-			mProfileZone = &physx::profile::PxProfileZone::createProfileZone(&physx::shdfnd::getAllocator(),gSdkName,gProfileNameProvider.getProfileNames());
+			mProfileZone = &augphysx::profile::PxProfileZone::createProfileZone(&augphysx::shdfnd::getAllocator(),gSdkName,gProfileNameProvider.getProfileNames());
 		}
 
 		for(uint32_t i = 0; i < mPvdClients.size(); i++)

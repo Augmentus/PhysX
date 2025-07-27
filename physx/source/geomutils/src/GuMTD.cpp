@@ -59,7 +59,7 @@
 #include "PsVecTransform.h"
 #include "PsMathUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 static PX_FORCE_INLINE PxF32 manualNormalize(PxVec3& mtd, const PxVec3& normal, PxReal lenSq)
@@ -332,7 +332,7 @@ static bool PxcTestAxis(const PxVec3& axis, const Segment& segment, PxReal radiu
 	PX_ASSERT(d0>=0.0f);
 	const PxReal d1 = Max1 - min0;
 	PX_ASSERT(d1>=0.0f);
-	depth = physx::intrinsics::selectMin(d0, d1);
+	depth = augphysx::intrinsics::selectMin(d0, d1);
 	return true;
 }
 
@@ -439,7 +439,7 @@ static bool PxcTestAxis(const PxVec3& axis, const Box& box0, const Box& box1, Px
 	PX_ASSERT(d0>=0.0f);
 	const PxReal d1 = Max1 - min0;
 	PX_ASSERT(d1>=0.0f);
-	depth = physx::intrinsics::selectMin(d0, d1);
+	depth = augphysx::intrinsics::selectMin(d0, d1);
 	return true;
 }
 
@@ -501,7 +501,7 @@ static bool computeMTD_BoxBox(PxVec3& _mtd, PxF32& _depth, const Box& box0, cons
 
 ///////////////////////////////////////////////////////////////////////////////
 
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 bool pointConvexDistance(PxVec3& normal_, PxVec3& closestPoint_, PxReal& sqDistance, const PxVec3& pt, const ConvexMesh* convexMesh, const PxMeshScale& meshScale, const PxTransform& convexPose)
 {
@@ -799,7 +799,7 @@ static bool computeMTD_PlaneBox(PxVec3& mtd, PxF32& depth, const PxPlane& plane,
 	for(PxU32 i=1;i<8;i++)
 	{
 		const PxReal d = plane.distance(pts[i]);
-		dmin = physx::intrinsics::selectMin(dmin, d);
+		dmin = augphysx::intrinsics::selectMin(dmin, d);
 	}
 	if(dmin>0.0f)
 		return false;
@@ -813,7 +813,7 @@ static bool computeMTD_PlaneCapsule(PxVec3& mtd, PxF32& depth, const PxPlane& pl
 {
 	const PxReal d0 = plane.distance(capsule.p0);
 	const PxReal d1 = plane.distance(capsule.p1);
-	const PxReal dmin = physx::intrinsics::selectMin(d0, d1) - capsule.radius;
+	const PxReal dmin = augphysx::intrinsics::selectMin(d0, d1) - capsule.radius;
 	if(dmin>0.0f)
 		return false;
 
@@ -832,7 +832,7 @@ static bool computeMTD_PlaneConvex(PxVec3& mtd, PxF32& depth, const PxPlane& pla
 	for(PxU32 i=1;i<nbVerts;i++)
 	{
 		const PxReal d = plane.distance(convexPose.transform(verts[i]));
-		dmin = physx::intrinsics::selectMin(dmin, d);
+		dmin = augphysx::intrinsics::selectMin(dmin, d);
 	}
 	if(dmin>0.0f)
 		return false;

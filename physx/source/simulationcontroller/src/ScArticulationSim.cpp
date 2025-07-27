@@ -46,8 +46,8 @@
 #include "ScShapeSim.h"
 #include "PxsSimulationController.h"
 
-using namespace physx;
-using namespace physx::Dy;
+using namespace augphysx;
+using namespace augphysx::Dy;
 
 Sc::ArticulationSim::ArticulationSim(ArticulationCore& core, Scene& scene, BodyCore& root) : 
 	mLLArticulation	(NULL),

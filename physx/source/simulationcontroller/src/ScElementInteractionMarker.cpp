@@ -30,7 +30,7 @@
 #include "ScElementInteractionMarker.h"
 #include "ScNPhaseCore.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::ElementInteractionMarker::~ElementInteractionMarker()
 {

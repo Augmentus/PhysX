@@ -38,7 +38,7 @@ Alignment must be a power of 2!
 -- should be templated by a base allocator
 */
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

@@ -34,7 +34,7 @@
 
 #include "DyArticulation.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxsBodyCore;
 struct PxSolverConstraintDesc;

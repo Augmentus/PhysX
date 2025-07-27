@@ -40,7 +40,7 @@
 #pragma warning(push)
 #pragma warning(disable : 4127) // conditional expression is constant
 #endif
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

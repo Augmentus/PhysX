@@ -33,7 +33,7 @@
 #include "common/PxMetaData.h"
 #include "GuBigConvexData.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxSerializationContext;
 	class PxDeserializationContext;

@@ -36,7 +36,7 @@
 #include "PxvConfig.h"
 #include "PxcNpMemBlockPool.h"
 
-namespace physx
+namespace augphysx
 {
 
 static const PxU32 PXC_NPCACHE_BLOCK_SIZE = 16384;

@@ -36,7 +36,7 @@
 #include "GuDistanceSegmentSegment.h"
 #include "GuIntersectionRayCapsule.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #define LOCAL_EPSILON 0.00001f	// PT: this value makes the 'basicAngleTest' pass. Fails because of a ray almost parallel to a triangle

@@ -79,7 +79,7 @@
 #include "PsVecMathAoSScalar.h"
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

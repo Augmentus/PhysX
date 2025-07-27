@@ -37,7 +37,7 @@
 
 #define IG_SANITY_CHECKS 0
 
-namespace physx
+namespace augphysx
 {
 namespace IG
 {

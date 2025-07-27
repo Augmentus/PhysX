@@ -34,7 +34,7 @@
 #include "foundation/PxPlane.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxTriangle;
 	

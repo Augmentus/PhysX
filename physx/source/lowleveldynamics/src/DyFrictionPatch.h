@@ -36,7 +36,7 @@
 #include "foundation/PxVec3.h"
 #include "PxvConfig.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

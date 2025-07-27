@@ -31,7 +31,7 @@
 #include "PsUserAllocated.h"
 #include "PsSync.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

@@ -39,7 +39,7 @@
 #include "foundation/PxSimpleTypes.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -53,7 +53,7 @@ namespace physx
 */
 PX_FORCE_INLINE void* PxMemZero(void* dest, PxU32 count)
 {
-	return physx::intrinsics::memZero(dest, count);
+	return augphysx::intrinsics::memZero(dest, count);
 }
 
 /**
@@ -67,7 +67,7 @@ PX_FORCE_INLINE void* PxMemZero(void* dest, PxU32 count)
 */
 PX_FORCE_INLINE void* PxMemSet(void* dest, PxI32 c, PxU32 count)
 {
-	return physx::intrinsics::memSet(dest, c, count);
+	return augphysx::intrinsics::memSet(dest, c, count);
 }
 
 /**
@@ -83,7 +83,7 @@ PX_FORCE_INLINE void* PxMemSet(void* dest, PxI32 c, PxU32 count)
 */
 PX_FORCE_INLINE void* PxMemCopy(void* dest, const void* src, PxU32 count)
 {
-	return physx::intrinsics::memCopy(dest, src, count);
+	return augphysx::intrinsics::memCopy(dest, src, count);
 }
 
 /**
@@ -99,7 +99,7 @@ PX_FORCE_INLINE void* PxMemCopy(void* dest, const void* src, PxU32 count)
 */
 PX_FORCE_INLINE void* PxMemMove(void* dest, const void* src, PxU32 count)
 {
-	return physx::intrinsics::memMove(dest, src, count);
+	return augphysx::intrinsics::memMove(dest, src, count);
 }
 
 #if !PX_DOXYGEN

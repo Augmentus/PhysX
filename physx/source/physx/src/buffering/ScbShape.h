@@ -39,7 +39,7 @@
 #include "ScRigidCore.h"
 #include "ScbDefs.h"
 
-namespace physx
+namespace augphysx
 {
 #if PX_SUPPORT_PVD
 	#define UPDATE_PVD_MATERIALS()									\

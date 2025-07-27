@@ -61,9 +61,9 @@
 #define DEBUG_RENDER_CCD_ATOM_PTR			0
 #define DEBUG_RENDER_CCD_NORMAL				1
 
-using namespace physx;
-using namespace physx::shdfnd;
-using namespace physx::Dy;
+using namespace augphysx;
+using namespace augphysx::shdfnd;
+using namespace augphysx::Dy;
 using namespace Gu;
 
 static PX_FORCE_INLINE void verifyCCDPair(const PxsCCDPair& /*pair*/)
@@ -200,7 +200,7 @@ static inline void flushCCDLog()
 
 #else
 
-namespace physx
+namespace augphysx
 {
 
 void printShape(PxsRigidBody* /*atom0*/, PxGeometryType::Enum /*g0*/, const char* /*annotation*/, PxReal /*dt*/, PxU32 /*pass*/, bool printPtr = true)
@@ -235,7 +235,7 @@ namespace
 	}
 }
 
-namespace physx
+namespace augphysx
 {
 	PxsCCDContext::PxsCCDContext(PxsContext* context, Dy::ThresholdStream& thresholdStream, PxvNphaseImplementationContext& nPhaseContext,
 		PxReal ccdThreshold) :

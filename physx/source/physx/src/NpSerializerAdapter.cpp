@@ -48,9 +48,9 @@
 #include "NpMaterial.h"
 #include "NpAggregate.h"
 
-namespace physx
+namespace augphysx
 {
-	using namespace physx::Gu;
+	using namespace augphysx::Gu;
 
 	template<>
 	void PxSerializerDefaultAdapter<NpMaterial>::registerReferences(PxBase& obj, PxSerializationContext& context) const
@@ -69,7 +69,7 @@ namespace physx
 
 		struct RequiresCallback : public PxProcessPxBaseCallback
 		{
-			RequiresCallback(physx::PxSerializationContext& c) : context(c) {}
+			RequiresCallback(augphysx::PxSerializationContext& c) : context(c) {}
 			RequiresCallback& operator=(const RequiresCallback&) { PX_ASSERT(0); return *this; } //PX_NOCOPY doesn't work for local classes
 			void process(PxBase& base)
 			{
@@ -97,7 +97,7 @@ namespace physx
 
 		struct RequiresCallback : public PxProcessPxBaseCallback
 		{
-			RequiresCallback(physx::PxSerializationContext& c) : context(c) {}
+			RequiresCallback(augphysx::PxSerializationContext& c) : context(c) {}
 			RequiresCallback &operator=(const RequiresCallback&) { PX_ASSERT(0); return *this; } //PX_NOCOPY doesn't work for local classes
 			void process(PxBase& base)
 			{
@@ -134,7 +134,7 @@ namespace physx
 
 }
 
-using namespace physx;
+using namespace augphysx;
 
 void PxRegisterPhysicsSerializers(PxSerializationRegistry& sr)
 {

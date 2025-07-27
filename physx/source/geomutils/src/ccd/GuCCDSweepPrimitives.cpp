@@ -36,7 +36,7 @@
 #include "GuCCDSweepConvexMesh.h"
 #include "GuGJKType.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

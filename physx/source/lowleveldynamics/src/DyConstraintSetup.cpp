@@ -38,7 +38,7 @@
 #include "DyArticulationContactPrep.h"
 #include "PsFoundation.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

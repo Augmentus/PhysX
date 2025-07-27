@@ -29,7 +29,7 @@
 #define PXPVDSDK_PXPVDBYTESTREAMS_H
 #include "PxPvdObjectModelBaseTypes.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {

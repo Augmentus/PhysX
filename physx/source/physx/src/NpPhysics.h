@@ -51,7 +51,7 @@
 
 #include "PsPvd.h"
 
-namespace physx
+namespace augphysx
 {
 #if PX_SUPPORT_PVD
 namespace Vd
@@ -97,7 +97,7 @@ class NpPhysics : public PxPhysics, public Ps::UserAllocated
 									NpPhysics(	const PxTolerancesScale& scale, 
 												const PxvOffsetTable& pxvOffsetTable,
 												bool trackOutstandingAllocations, 
-                                                physx::pvdsdk::PsPvd* pvd);
+                                                augphysx::pvdsdk::PsPvd* pvd);
 	virtual							~NpPhysics();
 
 public:
@@ -106,7 +106,7 @@ public:
 													PxFoundation& foundation, 
 													const PxTolerancesScale& scale,
 													bool trackOutstandingAllocations,
-													physx::pvdsdk::PsPvd* pvd);
+													augphysx::pvdsdk::PsPvd* pvd);
 
 	static		PxU32			releaseInstance();
 
@@ -225,7 +225,7 @@ private:
 				Ps::Mutex			mPhysXIndicatorMutex;
 #endif
 #if PX_SUPPORT_PVD	
-				physx::pvdsdk::PsPvd*  mPvd;
+				augphysx::pvdsdk::PsPvd*  mPvd;
                 Vd::PvdPhysicsClient*   mPvdPhysicsClient;
 #endif
 

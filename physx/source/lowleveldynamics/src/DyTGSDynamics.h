@@ -45,7 +45,7 @@
 #include "solver/PxSolverDefs.h"
 #include "PxsIslandSim.h"
 
-namespace physx
+namespace augphysx
 {
 
 	namespace Cm

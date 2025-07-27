@@ -33,7 +33,7 @@
 #include "SqTypedef.h"
 #include "PsArray.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sq
 {

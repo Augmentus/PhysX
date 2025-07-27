@@ -35,7 +35,7 @@
 #include "PxQueryReport.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 	// PT: TODO: why is PxHitFlag::eMESH_MULTIPLE used in the ray-vs-hf function, but not in the ray-vs-mesh function?
 

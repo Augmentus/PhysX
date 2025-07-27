@@ -40,11 +40,11 @@
 #include "GuPCMContactConvexCommon.h"
 #include "GuPCMContactMeshCallback.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
-namespace physx
+namespace augphysx
 {
 
 struct PCMSphereVsHeightfieldContactGenerationCallback :  PCMHeightfieldContactGenerationCallback<PCMSphereVsHeightfieldContactGenerationCallback>

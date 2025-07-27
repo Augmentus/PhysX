@@ -41,7 +41,7 @@
 #include "CmUtils.h"
 #include "NpArticulationTemplate.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PX_FORCE_INLINE void setAggregate(NpAggregate* aggregate, PxActor& actor)
 {

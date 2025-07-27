@@ -40,7 +40,7 @@
 /**
 \brief Represents a sphere defined by its center point and radius.
 */
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

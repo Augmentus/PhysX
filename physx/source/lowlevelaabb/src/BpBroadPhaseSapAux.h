@@ -39,7 +39,7 @@
 #include "CmBitMap.h"
 #include "PxcScratchAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Bp
 {

@@ -33,7 +33,7 @@
 #include "PxcNpWorkUnit.h"
 #include "PxvDynamics.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #include "PxsMaterialManager.h"
@@ -44,7 +44,7 @@ using namespace Gu;
 #include "PxsContactManagerState.h"
 
 #include "PsVecMath.h"
-using namespace physx;
+using namespace augphysx;
 using namespace Ps::aos;
 
 static PX_FORCE_INLINE void copyContactPoint(PxContact* PX_RESTRICT point, const Gu::ContactPoint* PX_RESTRICT cp)
@@ -66,7 +66,7 @@ struct StridePatch
 	bool isRoot;
 };
 
-PxU32 physx::writeCompressedContact(const Gu::ContactPoint* const PX_RESTRICT contactPoints, const PxU32 numContactPoints, PxcNpThreadContext* threadContext,
+PxU32 augphysx::writeCompressedContact(const Gu::ContactPoint* const PX_RESTRICT contactPoints, const PxU32 numContactPoints, PxcNpThreadContext* threadContext,
 									PxU8& writtenContactCount, PxU8*& outContactPatches, PxU8*& outContactPoints, PxU16& compressedContactSize, PxReal*& outContactForces, PxU32 contactForceByteSize,
 									const PxsMaterialManager* materialManager, bool hasModifiableContacts, bool forceNoResponse, PxsMaterialInfo* PX_RESTRICT pMaterial, PxU8& numPatches,
 									PxU32 additionalHeaderSize,  PxsConstraintBlockManager* manager, PxcConstraintBlockStream* blockStream, bool insertAveragePoint,

@@ -33,9 +33,9 @@
 #include "GuConvexEdgeFlags.h"
 #endif
 
-using namespace physx;
+using namespace augphysx;
 
-namespace physx
+namespace augphysx
 {
 
 Gu::RTreeTriangleMesh::RTreeTriangleMesh(GuMeshFactory& factory, TriangleMeshData& d)
@@ -147,4 +147,4 @@ PxBounds3 Gu::RTreeTriangleMesh::refitBVH()
 }
 #endif
 
-} // namespace physx
+} // namespace augphysx

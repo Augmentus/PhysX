@@ -35,7 +35,7 @@
 #include "ScConstraintSim.h"
 #include "ScConstraintInteraction.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::ConstraintGroupNode::ConstraintGroupNode(BodySim& b) : 
 	body(&b),

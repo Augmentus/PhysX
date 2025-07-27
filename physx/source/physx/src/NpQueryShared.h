@@ -33,7 +33,7 @@
 
 #include "foundation/PxMemory.h"
 
-namespace physx
+namespace augphysx
 {
 
 using namespace Cm;

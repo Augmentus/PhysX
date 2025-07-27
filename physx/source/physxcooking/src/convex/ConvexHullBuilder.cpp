@@ -49,9 +49,9 @@
 // 7: added mHullDataFacesByVertices8
 // 8: added mEdges
 // 9: removed duplicite 'C', 'V', 'H', 'L' header
-static const physx::PxU32 gVersion = 9;
+static const augphysx::PxU32 gVersion = 9;
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Ps::aos;
 
@@ -608,7 +608,7 @@ bool ConvexHullBuilder::createEdgeList(bool doValidation, PxU32 nbEdges)
 			bool flipped = vRef0>vRef1;
 
 			if (flipped)
-				physx::shdfnd::swap(vRef0, vRef1);
+				augphysx::shdfnd::swap(vRef0, vRef1);
 
 			*run0++ = vRef0;
 			*run1++ = vRef1;
@@ -683,7 +683,7 @@ bool ConvexHullBuilder::createEdgeList(bool doValidation, PxU32 nbEdges)
 
 			//feodorb:restore the original order of VRefs (tail and head)
 			if (flipped)
-				physx::shdfnd::swap(sortedRef0, sortedRef1);
+				augphysx::shdfnd::swap(sortedRef0, sortedRef1);
 
 			*edgeVertOutput++ = Ps::to16(sortedRef0);
 			*edgeVertOutput++ = Ps::to16(sortedRef1);

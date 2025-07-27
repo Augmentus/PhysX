@@ -38,7 +38,7 @@
 #include "PsUtilities.h"
 #include "PsFoundation.h"
 
-namespace physx
+namespace augphysx
 {
 #define PX_INVALID_INTERACTION_ACTOR_ID 0xffffffff
 #define PX_INVALID_INTERACTION_SCENE_ID 0xffffffff

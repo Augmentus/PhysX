@@ -47,7 +47,7 @@
 #error "Platform not supported!"
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

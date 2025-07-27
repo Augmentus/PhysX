@@ -38,7 +38,7 @@
 #include "PsBasicTemplates.h"
 #include "PxActor.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxMaterial;

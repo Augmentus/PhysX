@@ -29,7 +29,7 @@
 
 #include "PxsDefaultMemoryManager.h"
 
-namespace physx
+namespace augphysx
 {
 
 	PxsDefaultMemoryManager::~PxsDefaultMemoryManager()

@@ -36,7 +36,7 @@
 // an exception for setting the thread name in Microsoft debuggers
 #define NS_MS_VC_EXCEPTION 0x406D1388
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
@@ -149,7 +149,7 @@ uint32_t ThreadImpl::getNbPhysicalCores()
 		}
 		else
 		{
-			physx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
+			augphysx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
 			                                     "Error querying buffer size for number of physical processors");
 			return 0;
 		}
@@ -158,7 +158,7 @@ uint32_t ThreadImpl::getNbPhysicalCores()
 		rc = (DWORD)glpi(buffer, &returnLength);
 		if(rc != TRUE)
 		{
-			physx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
+			augphysx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
 			                                     "Error querying number of physical processors");
 			return 0;
 		}
@@ -230,7 +230,7 @@ void ThreadImpl::start(uint32_t stackSize, Runnable* runnable)
 	    CreateThread(NULL, stackSize, PxThreadStart, (LPVOID) this, CREATE_SUSPENDED, &getThread(this)->threadID);
 	if(!getThread(this)->thread)
 	{
-		physx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
+		augphysx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
 			                                    "PsWindowsThread::start: Failed to create thread.");
 		getThread(this)->state = _ThreadImpl::NotStarted;
 		return;
@@ -246,7 +246,7 @@ void ThreadImpl::start(uint32_t stackSize, Runnable* runnable)
 	DWORD rc = ResumeThread(getThread(this)->thread);
 	if(rc == DWORD(-1))
 	{
-		physx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
+		augphysx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
 			                                    "PsWindowsThread::start: Failed to resume thread.");
 		getThread(this)->state = _ThreadImpl::NotStarted;
 		return;
@@ -363,7 +363,7 @@ void ThreadImpl::setPriority(ThreadPriority::Enum prio)
 	}
 	if(!rc)
 	{
-		physx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
+		augphysx::shdfnd::getFoundation().error(PxErrorCode::eINTERNAL_ERROR, __FILE__, __LINE__,
 			"PsWindowsThread::setPriority: Failed to set thread priority.");
 	}
 }

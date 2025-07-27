@@ -42,7 +42,7 @@
 #include "CmPhysXCommon.h"
 #include "CmUtils.h"
 
-namespace physx
+namespace augphysx
 {
 
 extern PxF32 gToleranceScaleLength;

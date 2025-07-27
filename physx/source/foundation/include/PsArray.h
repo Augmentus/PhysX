@@ -35,7 +35,7 @@
 #include "PsAllocator.h"
 #include "PsBasicTemplates.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

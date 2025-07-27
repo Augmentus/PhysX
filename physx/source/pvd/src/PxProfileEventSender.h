@@ -30,7 +30,7 @@
 
 #include "foundation/Px.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	/**
 	\brief Tagging interface to indicate an object that is capable of flushing a profile

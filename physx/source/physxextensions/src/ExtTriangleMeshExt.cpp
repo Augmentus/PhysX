@@ -38,7 +38,7 @@
 
 #include "PsAllocator.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PxMeshOverlapUtil::PxMeshOverlapUtil() : mResultsMemory(mResults), mNbResults(0), mMaxNbResults(256)
 {
@@ -148,7 +148,7 @@ bool computeMeshPenetrationT(PxVec3& direction,
 }
 }
 
-bool physx::PxComputeTriangleMeshPenetration(PxVec3& direction, 
+bool augphysx::PxComputeTriangleMeshPenetration(PxVec3& direction, 
 											PxReal& depth,
 											const PxGeometry& geom, 
 											const PxTransform& geomPose, 
@@ -160,7 +160,7 @@ bool physx::PxComputeTriangleMeshPenetration(PxVec3& direction,
 	return computeMeshPenetrationT(direction, depth, geom, geomPose, meshGeom, meshPose, maxIter, nbIter);
 }
 
-bool physx::PxComputeHeightFieldPenetration(PxVec3& direction, 
+bool augphysx::PxComputeHeightFieldPenetration(PxVec3& direction, 
 										    PxReal& depth,
 											const PxGeometry& geom, 
 											const PxTransform& geomPose, 

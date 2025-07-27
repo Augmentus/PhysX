@@ -46,7 +46,7 @@
 #include "GuTriangleMeshRTree.h"
 #include "GuHeightField.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -485,7 +485,7 @@ static void getBinaryMetaData_PxMeshScale(PxOutputStream& stream)
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-namespace physx
+namespace augphysx
 {
 void getBinaryMetaData_PxBase(PxOutputStream& stream)
 {

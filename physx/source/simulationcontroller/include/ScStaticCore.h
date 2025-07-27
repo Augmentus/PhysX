@@ -34,7 +34,7 @@
 #include "ScRigidCore.h"
 #include "PxvDynamics.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

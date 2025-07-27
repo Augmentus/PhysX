@@ -34,7 +34,7 @@
 #include "GuContactMethodImpl.h"
 #include "GuPersistentContactManifold.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -215,4 +215,4 @@ bool pcmContactPlaneBox(GU_CONTACT_METHOD_ARGS)
 }
 
 }//Gu
-}//physx
+}//augphysx

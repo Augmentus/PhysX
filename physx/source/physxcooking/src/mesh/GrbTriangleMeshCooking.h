@@ -34,7 +34,7 @@
 #include "GuMeshData.h"
 #include "cooking/PxCooking.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Gu
 	{

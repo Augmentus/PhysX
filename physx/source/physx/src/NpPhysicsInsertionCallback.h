@@ -38,7 +38,7 @@
 #include "NpFactory.h"
 #include "PsFoundation.h"
 
-namespace physx
+namespace augphysx
 {
 	class NpPhysicsInsertionCallback: public PxPhysicsInsertionCallback
 	{

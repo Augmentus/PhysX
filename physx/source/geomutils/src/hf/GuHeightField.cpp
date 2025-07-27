@@ -39,7 +39,7 @@
 #include "CmBitMap.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -178,8 +178,8 @@ bool Gu::HeightField::modifySamples(PxI32 startCol, PxI32 startRow, const PxHeig
 
 			// grow (but not shrink) the height extents
 			const PxReal h = getHeight(vertexIndex);
-			minHeight = physx::intrinsics::selectMin(h, minHeight);
-			maxHeight = physx::intrinsics::selectMax(h, maxHeight);
+			minHeight = augphysx::intrinsics::selectMin(h, minHeight);
+			maxHeight = augphysx::intrinsics::selectMax(h, maxHeight);
 		}
 	}
 
@@ -193,8 +193,8 @@ bool Gu::HeightField::modifySamples(PxI32 startCol, PxI32 startRow, const PxHeig
 		{
 				// update height extents
 				const PxReal h = getHeight(vertexIndex);
-				minHeight = physx::intrinsics::selectMin(h, minHeight);
-				maxHeight = physx::intrinsics::selectMax(h, maxHeight);
+				minHeight = augphysx::intrinsics::selectMin(h, minHeight);
+				maxHeight = augphysx::intrinsics::selectMax(h, maxHeight);
 		}
 	}
 	mMinHeight = minHeight;
@@ -376,7 +376,7 @@ PX_PHYSX_COMMON_API void Gu::HeightField::releaseMemory()
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // PT: TODO: use those faster functions everywhere
-namespace physx
+namespace augphysx
 {
 
 PX_PHYSX_COMMON_API PxU32 getVertexEdgeIndices(const Gu::HeightField& heightfield, PxU32 vertexIndex, PxU32 row, PxU32 column, EdgeData edgeIndices[8])
@@ -681,7 +681,7 @@ bool Gu::HeightField::isCollisionVertexPreca(PxU32 vertexIndex, PxU32 row, PxU32
 // it would most likely be better to stay in cell coords instead, since fractional vertex coords just do not make any sense
 PxU32 Gu::HeightField::computeCellCoordinates(PxReal x, PxReal z, PxReal& fracX, PxReal& fracZ) const
 {
-	namespace i = physx::intrinsics;
+	namespace i = augphysx::intrinsics;
 
 	x = i::selectMax(x, 0.0f);
 	z = i::selectMax(z, 0.0f);

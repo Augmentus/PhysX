@@ -37,7 +37,7 @@
 #include "PxPvdDataStream.h"
 #include "PsMutex.h"
 
-namespace physx
+namespace augphysx
 {
 namespace profile
 {

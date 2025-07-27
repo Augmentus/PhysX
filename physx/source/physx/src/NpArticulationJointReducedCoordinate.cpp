@@ -33,7 +33,7 @@
 #include "NpReadCheck.h"
 #include "NpArticulationJointReducedCoordinate.h"
 
-namespace physx
+namespace augphysx
 {
 	//PX_SERIALIZATION
 

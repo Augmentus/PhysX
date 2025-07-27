@@ -47,11 +47,11 @@
 #include <stdio.h>
 #endif
 
-using namespace physx::Gu;
-using namespace physx::shdfnd;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::Gu;
+using namespace augphysx::shdfnd;
+using namespace augphysx::shdfnd::aos;
 
-namespace physx
+namespace augphysx
 {
 
 // Intermediate non-quantized representation for RTree node in a page (final format is SIMD transposed page)

@@ -38,7 +38,7 @@
 
 #define PCM_LOW_LEVEL_DEBUG 0
 
-namespace physx
+namespace augphysx
 {
 
 #define VISUALIZE_PERSISTENT_CONTACT 1
@@ -159,7 +159,7 @@ public:
 
 	PersistentContactManifold(PersistentContact* contactPointsBuff, PxU8 capacity): mNumContacts(0), mCapacity(capacity), mNumWarmStartPoints(0), mContactPoints(contactPointsBuff)
 	{
-		using namespace physx::shdfnd::aos;
+		using namespace augphysx::shdfnd::aos;
 		mRelativeTransform.Invalidate();
 		mQuatA = QuatIdentity();
 		mQuatB = QuatIdentity();
@@ -884,6 +884,6 @@ void addManifoldPoint(PersistentContact* manifoldContacts, PersistentContactMani
 	const Ps::aos::PsMatTransformV& aToB, const Ps::aos::FloatV replaceBreakingThreshold);
 
 }//Gu
-}//physx
+}//augphysx
 
 #endif

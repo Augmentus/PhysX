@@ -33,7 +33,7 @@
 #include "PsUserAllocated.h"
 #include "CmTask.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxcScratchAllocator;
 

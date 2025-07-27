@@ -38,7 +38,7 @@
 #include "ScStaticSim.h"
 #include "ScBodySim.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxShape;
 

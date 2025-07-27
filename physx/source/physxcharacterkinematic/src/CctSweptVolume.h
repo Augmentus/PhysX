@@ -32,7 +32,7 @@
 
 #include "CctUtils.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cct
 {

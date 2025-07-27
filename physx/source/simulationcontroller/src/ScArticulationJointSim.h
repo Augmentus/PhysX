@@ -34,7 +34,7 @@
 #include "ScInteraction.h"
 #include "DyArticulation.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

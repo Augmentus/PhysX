@@ -47,10 +47,10 @@
 
 // This file contains code specific to the RTree midphase.
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 using namespace Gu;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 struct MeshRayCollider
 {
@@ -401,7 +401,7 @@ private:
 	RayMeshColliderCallback& operator=(const RayMeshColliderCallback&);
 };
 
-PxU32 physx::Gu::raycast_triangleMesh_RTREE(const TriangleMesh* mesh, const PxTriangleMeshGeometry& meshGeom, const PxTransform& pose,
+PxU32 augphysx::Gu::raycast_triangleMesh_RTREE(const TriangleMesh* mesh, const PxTriangleMeshGeometry& meshGeom, const PxTransform& pose,
 											const PxVec3& rayOrigin, const PxVec3& rayDir, PxReal maxDist,
 											PxHitFlags hitFlags, PxU32 maxHits, PxRaycastHit* PX_RESTRICT hits)
 {
@@ -732,28 +732,28 @@ static bool intersectAnyVsMesh(
 		return intersectAnyVsMeshT<tSCB, false>(worldSphere, worldCapsule, worldOBB, triMesh, meshTransform, meshScale, results);
 }
 
-bool physx::Gu::intersectSphereVsMesh_RTREE(const Sphere& sphere, const TriangleMesh& triMesh, const PxTransform& meshTransform, const PxMeshScale& meshScale, LimitedResults* results)
+bool augphysx::Gu::intersectSphereVsMesh_RTREE(const Sphere& sphere, const TriangleMesh& triMesh, const PxTransform& meshTransform, const PxMeshScale& meshScale, LimitedResults* results)
 {
 	return intersectAnyVsMesh<eSPHERE>(&sphere, NULL, NULL, triMesh, meshTransform, meshScale, results);
 }
 
-bool physx::Gu::intersectBoxVsMesh_RTREE(const Box& box, const TriangleMesh& triMesh, const PxTransform& meshTransform, const PxMeshScale& meshScale, LimitedResults* results)
+bool augphysx::Gu::intersectBoxVsMesh_RTREE(const Box& box, const TriangleMesh& triMesh, const PxTransform& meshTransform, const PxMeshScale& meshScale, LimitedResults* results)
 {
 	return intersectAnyVsMesh<eBOX>(NULL, NULL, &box, triMesh, meshTransform, meshScale, results);
 }
 
-bool physx::Gu::intersectCapsuleVsMesh_RTREE(const Capsule& capsule, const TriangleMesh& triMesh, const PxTransform& meshTransform, const PxMeshScale& meshScale, LimitedResults* results)
+bool augphysx::Gu::intersectCapsuleVsMesh_RTREE(const Capsule& capsule, const TriangleMesh& triMesh, const PxTransform& meshTransform, const PxMeshScale& meshScale, LimitedResults* results)
 {
 	return intersectAnyVsMesh<eCAPSULE>(NULL, &capsule, NULL, triMesh, meshTransform, meshScale, results);
 }
 
-void physx::Gu::intersectOBB_RTREE(const TriangleMesh* mesh, const Box& obb, MeshHitCallback<PxRaycastHit>& callback, bool bothTriangleSidesCollide, bool checkObbIsAligned)
+void augphysx::Gu::intersectOBB_RTREE(const TriangleMesh* mesh, const Box& obb, MeshHitCallback<PxRaycastHit>& callback, bool bothTriangleSidesCollide, bool checkObbIsAligned)
 {
 	MeshRayCollider::collideOBB(obb, bothTriangleSidesCollide, static_cast<const RTreeTriangleMesh*>(mesh), callback, checkObbIsAligned);
 }
 
 // PT: TODO: refactor/share bits of this
-bool physx::Gu::sweepCapsule_MeshGeom_RTREE(const TriangleMesh* mesh, const PxTriangleMeshGeometry& triMeshGeom, const PxTransform& pose,
+bool augphysx::Gu::sweepCapsule_MeshGeom_RTREE(const TriangleMesh* mesh, const PxTriangleMeshGeometry& triMeshGeom, const PxTransform& pose,
 											const Capsule& lss, const PxVec3& unitDir, const PxReal distance,
 											PxSweepHit& sweepHit, PxHitFlags hitFlags, const PxReal inflation)
 {
@@ -796,7 +796,7 @@ bool physx::Gu::sweepCapsule_MeshGeom_RTREE(const TriangleMesh* mesh, const PxTr
 #include "GuSweepSharedTests.h"
 
 // PT: TODO: refactor/share bits of this
-bool physx::Gu::sweepBox_MeshGeom_RTREE(const TriangleMesh* mesh, const PxTriangleMeshGeometry& triMeshGeom, const PxTransform& pose,
+bool augphysx::Gu::sweepBox_MeshGeom_RTREE(const TriangleMesh* mesh, const PxTriangleMeshGeometry& triMeshGeom, const PxTransform& pose,
 										const Box& box, const PxVec3& unitDir, const PxReal distance,
 										PxSweepHit& sweepHit, PxHitFlags hitFlags, const PxReal inflation)
 {
@@ -874,7 +874,7 @@ bool physx::Gu::sweepBox_MeshGeom_RTREE(const TriangleMesh* mesh, const PxTriang
 }
 
 #include "GuInternal.h"
-void physx::Gu::sweepConvex_MeshGeom_RTREE(const TriangleMesh* mesh, const Box& hullBox, const PxVec3& localDir, const PxReal distance, SweepConvexMeshHitCallback& callback, bool)
+void augphysx::Gu::sweepConvex_MeshGeom_RTREE(const TriangleMesh* mesh, const Box& hullBox, const PxVec3& localDir, const PxReal distance, SweepConvexMeshHitCallback& callback, bool)
 {
 	PX_ASSERT(mesh->getConcreteType()==PxConcreteType::eTRIANGLE_MESH_BVH33);
 	const RTreeTriangleMesh* meshData = static_cast<const RTreeTriangleMesh*>(mesh);

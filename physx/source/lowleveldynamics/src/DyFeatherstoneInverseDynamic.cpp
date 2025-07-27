@@ -48,7 +48,7 @@
 #include "DyConstraintPrep.h"
 #include "DySolverContext.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy
@@ -1492,7 +1492,7 @@ namespace Dy
 
 		AllocationPage* currentPage;
 
-		physx::shdfnd::Array<AllocationPage*> mAllocatedBlocks;
+		augphysx::shdfnd::Array<AllocationPage*> mAllocatedBlocks;
 		PxU32 mCurrentIndex;
 
 	public:

@@ -41,7 +41,7 @@
 #include <assert.h>
 #include <float.h>
 
-namespace physx
+namespace augphysx
 {
 namespace general_string_parsing2
 {

@@ -43,7 +43,7 @@
 #include "CmRefCountable.h"
 #include "CmRenderOutput.h"
 
-namespace physx
+namespace augphysx
 {
 
 class GuMeshFactory;

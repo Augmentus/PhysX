@@ -33,12 +33,12 @@
 #include "CmPhysXCommon.h"
 #include "GuBoxConversion.h"
 
-namespace physx
+namespace augphysx
 {
-PX_FORCE_INLINE void computeWorldToBoxMatrix(physx::Cm::Matrix34& worldToBox, const physx::Gu::Box& box)
+PX_FORCE_INLINE void computeWorldToBoxMatrix(augphysx::Cm::Matrix34& worldToBox, const augphysx::Gu::Box& box)
 {
-	physx::Cm::Matrix34 boxToWorld;
-	physx::buildMatrixFromBox(boxToWorld, box);
+	augphysx::Cm::Matrix34 boxToWorld;
+	augphysx::buildMatrixFromBox(boxToWorld, box);
 	worldToBox = boxToWorld.getInverseRT();
 }
 

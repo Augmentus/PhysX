@@ -32,9 +32,9 @@
 #include "ExtTaskQueueHelper.h"
 #include "PsString.h"
 
-using namespace physx;
+using namespace augphysx;
 
-PxDefaultCpuDispatcher* physx::PxDefaultCpuDispatcherCreate(PxU32 numThreads, PxU32* affinityMasks)
+PxDefaultCpuDispatcher* augphysx::PxDefaultCpuDispatcherCreate(PxU32 numThreads, PxU32* affinityMasks)
 {
 	return PX_NEW(Ext::DefaultCpuDispatcher)(numThreads, affinityMasks);
 }

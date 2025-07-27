@@ -35,7 +35,7 @@
 #include "ScbActor.h"
 #include "ScbRigidObject.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Scb
 {

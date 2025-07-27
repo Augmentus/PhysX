@@ -29,7 +29,7 @@
 
 #include "GuSeparatingAxes.h"
 
-using namespace physx;
+using namespace augphysx;
 
 union FloatInt
 {

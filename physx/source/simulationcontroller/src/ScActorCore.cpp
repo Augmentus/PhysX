@@ -33,7 +33,7 @@
 #include "ScShapeSim.h"
 #include "ScBodySim.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::ActorCore::ActorCore(PxActorType::Enum actorType, PxU8 actorFlags, PxClientID owner, PxDominanceGroup dominanceGroup) :
 	mSim					(NULL),

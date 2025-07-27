@@ -39,7 +39,7 @@
 Combination of two R3 vectors.
 */
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

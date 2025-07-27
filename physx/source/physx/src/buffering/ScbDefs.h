@@ -139,7 +139,7 @@ template<PxU32 Dummy> struct Fns<1<<(_val),Dummy>											\
 	static PX_FORCE_INLINE void setCore(Core& core, Arg v) { core.set##_name(v);}			\
 };
 
-namespace physx
+namespace augphysx
 {
 namespace Scb
 {

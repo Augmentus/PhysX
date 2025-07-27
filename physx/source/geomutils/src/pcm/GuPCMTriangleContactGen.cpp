@@ -41,11 +41,11 @@
 #define EDGE_EDGE_GAUSS_MAP  0
 #define BRUTE_FORCE_EDGE_EDGE	0
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Ps::aos;
 
-namespace physx
+namespace augphysx
 {
 	static bool testPolyFaceNormal(const Gu::TriangleV& triangle, const PolygonalData& polyData, SupportLocalImpl<TriangleV>* triMap, SupportLocal* polyMap,  const FloatVArg contactDist, 
 		FloatV& minOverlap, PxU32& feature, Vec3V& faceNormal, const FeatureStatus faceStatus, FeatureStatus& status)
@@ -1251,4 +1251,4 @@ namespace physx
 	}
 
 
-}//physx
+}//augphysx

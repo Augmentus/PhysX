@@ -35,7 +35,7 @@
 #include "PxProfileEventSender.h"
 #include "PsBroadcast.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	/**
 	\brief Record events so a late-connecting client knows about

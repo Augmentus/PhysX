@@ -65,7 +65,7 @@
 #include "switch/NpMiddlewareInfo.h"
 #endif
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 bool		NpPhysics::apiReentryLock	= false;
@@ -420,7 +420,7 @@ NpMaterial* NpPhysics::addMaterial(NpMaterial* m)
 	}
 	else
 	{
-		physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+		augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 			"PxPhysics::createMaterial: limit of 64K materials reached.");
 		m->release();
 		return NULL;

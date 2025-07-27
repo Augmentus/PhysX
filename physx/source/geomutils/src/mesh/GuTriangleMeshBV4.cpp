@@ -30,9 +30,9 @@
 #include "GuTriangleMesh.h"
 #include "GuTriangleMeshBV4.h"
 
-using namespace physx;
+using namespace augphysx;
 
-namespace physx
+namespace augphysx
 {
 
 Gu::BV4TriangleMesh::BV4TriangleMesh(GuMeshFactory& factory, TriangleMeshData& d)
@@ -72,4 +72,4 @@ void Gu::BV4TriangleMesh::importExtraData(PxDeserializationContext& context)
 	mBV4Tree.mMeshInterface = &mMeshInterface;
 }
 
-} // namespace physx
+} // namespace augphysx

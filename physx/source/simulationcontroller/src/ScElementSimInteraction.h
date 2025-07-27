@@ -34,7 +34,7 @@
 #include "ScInteraction.h"
 #include "ScElementSim.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

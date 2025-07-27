@@ -34,7 +34,7 @@
 #include "ScScene.h"
 #include "ScPhysics.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sc;
 
 static ShapeSim& getSimForShape(const ShapeCore& core, const ActorSim& actorSim)

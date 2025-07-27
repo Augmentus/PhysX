@@ -30,7 +30,7 @@
 #include "GuIntersectionCapsuleTriangle.h"
 #include "GuDistancePointSegment.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 bool Gu::intersectCapsuleTriangle(const PxVec3& N, const PxVec3& p0, const PxVec3& p1, const PxVec3& p2, const Gu::Capsule& capsule, const CapsuleTriangleOverlapData& params)

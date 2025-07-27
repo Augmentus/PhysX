@@ -30,7 +30,7 @@
 #include "GuSweepSphereSphere.h"
 #include "PsUtilities.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 // Adapted from Gamasutra (Gomez article)

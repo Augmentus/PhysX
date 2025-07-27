@@ -93,11 +93,11 @@
 	};
 
 	static PxU32ToName g_physx__PxEMPTYConversion[] = {
-		{ "PxEmpty", static_cast<PxU32>( physx::PxEmpty ) },
+		{ "PxEmpty", static_cast<PxU32>( augphysx::PxEmpty ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< const physx::PxEMPTY > { PxEnumTraits() : NameConversion( g_physx__PxEMPTYConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< const augphysx::PxEMPTY > { PxEnumTraits() : NameConversion( g_physx__PxEMPTYConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxVehicleEngineData;
 	struct PxVehicleEngineDataGeneratedValues
 	{
@@ -177,46 +177,46 @@ template<> struct PxEnumTraits< const physx::PxEMPTY > { PxEnumTraits() : NameCo
 	};
 
 	static PxU32ToName g_physx__PxVehicleGearsData__EnumConversion[] = {
-		{ "eREVERSE", static_cast<PxU32>( physx::PxVehicleGearsData::eREVERSE ) },
-		{ "eNEUTRAL", static_cast<PxU32>( physx::PxVehicleGearsData::eNEUTRAL ) },
-		{ "eFIRST", static_cast<PxU32>( physx::PxVehicleGearsData::eFIRST ) },
-		{ "eSECOND", static_cast<PxU32>( physx::PxVehicleGearsData::eSECOND ) },
-		{ "eTHIRD", static_cast<PxU32>( physx::PxVehicleGearsData::eTHIRD ) },
-		{ "eFOURTH", static_cast<PxU32>( physx::PxVehicleGearsData::eFOURTH ) },
-		{ "eFIFTH", static_cast<PxU32>( physx::PxVehicleGearsData::eFIFTH ) },
-		{ "eSIXTH", static_cast<PxU32>( physx::PxVehicleGearsData::eSIXTH ) },
-		{ "eSEVENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eSEVENTH ) },
-		{ "eEIGHTH", static_cast<PxU32>( physx::PxVehicleGearsData::eEIGHTH ) },
-		{ "eNINTH", static_cast<PxU32>( physx::PxVehicleGearsData::eNINTH ) },
-		{ "eTENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eTENTH ) },
-		{ "eELEVENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eELEVENTH ) },
-		{ "eTWELFTH", static_cast<PxU32>( physx::PxVehicleGearsData::eTWELFTH ) },
-		{ "eTHIRTEENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eTHIRTEENTH ) },
-		{ "eFOURTEENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eFOURTEENTH ) },
-		{ "eFIFTEENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eFIFTEENTH ) },
-		{ "eSIXTEENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eSIXTEENTH ) },
-		{ "eSEVENTEENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eSEVENTEENTH ) },
-		{ "eEIGHTEENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eEIGHTEENTH ) },
-		{ "eNINETEENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eNINETEENTH ) },
-		{ "eTWENTIETH", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTIETH ) },
-		{ "eTWENTYFIRST", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTYFIRST ) },
-		{ "eTWENTYSECOND", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTYSECOND ) },
-		{ "eTWENTYTHIRD", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTYTHIRD ) },
-		{ "eTWENTYFOURTH", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTYFOURTH ) },
-		{ "eTWENTYFIFTH", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTYFIFTH ) },
-		{ "eTWENTYSIXTH", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTYSIXTH ) },
-		{ "eTWENTYSEVENTH", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTYSEVENTH ) },
-		{ "eTWENTYEIGHTH", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTYEIGHTH ) },
-		{ "eTWENTYNINTH", static_cast<PxU32>( physx::PxVehicleGearsData::eTWENTYNINTH ) },
-		{ "eTHIRTIETH", static_cast<PxU32>( physx::PxVehicleGearsData::eTHIRTIETH ) },
+		{ "eREVERSE", static_cast<PxU32>( augphysx::PxVehicleGearsData::eREVERSE ) },
+		{ "eNEUTRAL", static_cast<PxU32>( augphysx::PxVehicleGearsData::eNEUTRAL ) },
+		{ "eFIRST", static_cast<PxU32>( augphysx::PxVehicleGearsData::eFIRST ) },
+		{ "eSECOND", static_cast<PxU32>( augphysx::PxVehicleGearsData::eSECOND ) },
+		{ "eTHIRD", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTHIRD ) },
+		{ "eFOURTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eFOURTH ) },
+		{ "eFIFTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eFIFTH ) },
+		{ "eSIXTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eSIXTH ) },
+		{ "eSEVENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eSEVENTH ) },
+		{ "eEIGHTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eEIGHTH ) },
+		{ "eNINTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eNINTH ) },
+		{ "eTENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTENTH ) },
+		{ "eELEVENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eELEVENTH ) },
+		{ "eTWELFTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWELFTH ) },
+		{ "eTHIRTEENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTHIRTEENTH ) },
+		{ "eFOURTEENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eFOURTEENTH ) },
+		{ "eFIFTEENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eFIFTEENTH ) },
+		{ "eSIXTEENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eSIXTEENTH ) },
+		{ "eSEVENTEENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eSEVENTEENTH ) },
+		{ "eEIGHTEENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eEIGHTEENTH ) },
+		{ "eNINETEENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eNINETEENTH ) },
+		{ "eTWENTIETH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTIETH ) },
+		{ "eTWENTYFIRST", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTYFIRST ) },
+		{ "eTWENTYSECOND", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTYSECOND ) },
+		{ "eTWENTYTHIRD", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTYTHIRD ) },
+		{ "eTWENTYFOURTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTYFOURTH ) },
+		{ "eTWENTYFIFTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTYFIFTH ) },
+		{ "eTWENTYSIXTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTYSIXTH ) },
+		{ "eTWENTYSEVENTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTYSEVENTH ) },
+		{ "eTWENTYEIGHTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTYEIGHTH ) },
+		{ "eTWENTYNINTH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTWENTYNINTH ) },
+		{ "eTHIRTIETH", static_cast<PxU32>( augphysx::PxVehicleGearsData::eTHIRTIETH ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxVehicleGearsData::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleGearsData__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxVehicleGearsData::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleGearsData__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxVehicleGearsData;
 	struct PxVehicleGearsDataGeneratedValues
 	{
-		PxReal GearRatio[physx::PxVehicleGearsData::eGEARSRATIO_COUNT];
+		PxReal GearRatio[augphysx::PxVehicleGearsData::eGEARSRATIO_COUNT];
 		PxReal MFinalRatio;
 		PxU32 MNbRatios;
 		PxReal MSwitchTime;
@@ -277,8 +277,8 @@ template<> struct PxEnumTraits< physx::PxVehicleGearsData::Enum > { PxEnumTraits
 	struct PxVehicleAutoBoxDataGeneratedValues
 	{
 		PxReal Latency;
-		PxReal UpRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT];
-		PxReal DownRatios[physx::PxVehicleGearsData::eGEARSRATIO_COUNT];
+		PxReal UpRatios[augphysx::PxVehicleGearsData::eGEARSRATIO_COUNT];
+		PxReal DownRatios[augphysx::PxVehicleGearsData::eGEARSRATIO_COUNT];
 		  PxVehicleAutoBoxDataGeneratedValues( const PxVehicleAutoBoxData* inSource );
 	};
 	DEFINE_PROPERTY_TO_VALUE_STRUCT_MAP( PxVehicleAutoBoxData, Latency, PxVehicleAutoBoxDataGeneratedValues)
@@ -330,17 +330,17 @@ template<> struct PxEnumTraits< physx::PxVehicleGearsData::Enum > { PxEnumTraits
 	};
 
 	static PxU32ToName g_physx__PxVehicleDifferential4WData__EnumConversion[] = {
-		{ "eDIFF_TYPE_LS_4WD", static_cast<PxU32>( physx::PxVehicleDifferential4WData::eDIFF_TYPE_LS_4WD ) },
-		{ "eDIFF_TYPE_LS_FRONTWD", static_cast<PxU32>( physx::PxVehicleDifferential4WData::eDIFF_TYPE_LS_FRONTWD ) },
-		{ "eDIFF_TYPE_LS_REARWD", static_cast<PxU32>( physx::PxVehicleDifferential4WData::eDIFF_TYPE_LS_REARWD ) },
-		{ "eDIFF_TYPE_OPEN_4WD", static_cast<PxU32>( physx::PxVehicleDifferential4WData::eDIFF_TYPE_OPEN_4WD ) },
-		{ "eDIFF_TYPE_OPEN_FRONTWD", static_cast<PxU32>( physx::PxVehicleDifferential4WData::eDIFF_TYPE_OPEN_FRONTWD ) },
-		{ "eDIFF_TYPE_OPEN_REARWD", static_cast<PxU32>( physx::PxVehicleDifferential4WData::eDIFF_TYPE_OPEN_REARWD ) },
-		{ "eMAX_NB_DIFF_TYPES", static_cast<PxU32>( physx::PxVehicleDifferential4WData::eMAX_NB_DIFF_TYPES ) },
+		{ "eDIFF_TYPE_LS_4WD", static_cast<PxU32>( augphysx::PxVehicleDifferential4WData::eDIFF_TYPE_LS_4WD ) },
+		{ "eDIFF_TYPE_LS_FRONTWD", static_cast<PxU32>( augphysx::PxVehicleDifferential4WData::eDIFF_TYPE_LS_FRONTWD ) },
+		{ "eDIFF_TYPE_LS_REARWD", static_cast<PxU32>( augphysx::PxVehicleDifferential4WData::eDIFF_TYPE_LS_REARWD ) },
+		{ "eDIFF_TYPE_OPEN_4WD", static_cast<PxU32>( augphysx::PxVehicleDifferential4WData::eDIFF_TYPE_OPEN_4WD ) },
+		{ "eDIFF_TYPE_OPEN_FRONTWD", static_cast<PxU32>( augphysx::PxVehicleDifferential4WData::eDIFF_TYPE_OPEN_FRONTWD ) },
+		{ "eDIFF_TYPE_OPEN_REARWD", static_cast<PxU32>( augphysx::PxVehicleDifferential4WData::eDIFF_TYPE_OPEN_REARWD ) },
+		{ "eMAX_NB_DIFF_TYPES", static_cast<PxU32>( augphysx::PxVehicleDifferential4WData::eMAX_NB_DIFF_TYPES ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxVehicleDifferential4WData::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleDifferential4WData__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxVehicleDifferential4WData::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleDifferential4WData__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxVehicleDifferential4WData;
 	struct PxVehicleDifferential4WDataGeneratedValues
 	{
@@ -522,12 +522,12 @@ template<> struct PxEnumTraits< physx::PxVehicleDifferential4WData::Enum > { PxE
 	};
 
 	static PxU32ToName g_physx__PxVehicleClutchAccuracyMode__EnumConversion[] = {
-		{ "eESTIMATE", static_cast<PxU32>( physx::PxVehicleClutchAccuracyMode::eESTIMATE ) },
-		{ "eBEST_POSSIBLE", static_cast<PxU32>( physx::PxVehicleClutchAccuracyMode::eBEST_POSSIBLE ) },
+		{ "eESTIMATE", static_cast<PxU32>( augphysx::PxVehicleClutchAccuracyMode::eESTIMATE ) },
+		{ "eBEST_POSSIBLE", static_cast<PxU32>( augphysx::PxVehicleClutchAccuracyMode::eBEST_POSSIBLE ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxVehicleClutchAccuracyMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleClutchAccuracyMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxVehicleClutchAccuracyMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleClutchAccuracyMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxVehicleClutchData;
 	struct PxVehicleClutchDataGeneratedValues
 	{
@@ -1011,13 +1011,13 @@ template<> struct PxEnumTraits< physx::PxVehicleClutchAccuracyMode::Enum > { PxE
 	};
 
 	static PxU32ToName g_physx__PxVehicleWheelsSimFlag__EnumConversion[] = {
-		{ "eLIMIT_SUSPENSION_EXPANSION_VELOCITY", static_cast<PxU32>( physx::PxVehicleWheelsSimFlag::eLIMIT_SUSPENSION_EXPANSION_VELOCITY ) },
-		{ "eDISABLE_INTERNAL_CYLINDER_PLANE_INTERSECTION_TEST", static_cast<PxU32>( physx::PxVehicleWheelsSimFlag::eDISABLE_INTERNAL_CYLINDER_PLANE_INTERSECTION_TEST ) },
-		{ "eDISABLE_SUSPENSION_FORCE_PROJECTION", static_cast<PxU32>( physx::PxVehicleWheelsSimFlag::eDISABLE_SUSPENSION_FORCE_PROJECTION ) },
+		{ "eLIMIT_SUSPENSION_EXPANSION_VELOCITY", static_cast<PxU32>( augphysx::PxVehicleWheelsSimFlag::eLIMIT_SUSPENSION_EXPANSION_VELOCITY ) },
+		{ "eDISABLE_INTERNAL_CYLINDER_PLANE_INTERSECTION_TEST", static_cast<PxU32>( augphysx::PxVehicleWheelsSimFlag::eDISABLE_INTERNAL_CYLINDER_PLANE_INTERSECTION_TEST ) },
+		{ "eDISABLE_SUSPENSION_FORCE_PROJECTION", static_cast<PxU32>( augphysx::PxVehicleWheelsSimFlag::eDISABLE_SUSPENSION_FORCE_PROJECTION ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxVehicleWheelsSimFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleWheelsSimFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxVehicleWheelsSimFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleWheelsSimFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxVehicleWheelsSimData;
 	struct PxVehicleWheelsSimDataGeneratedValues
 	{
@@ -1573,12 +1573,12 @@ template<> struct PxEnumTraits< physx::PxVehicleWheelsSimFlag::Enum > { PxEnumTr
 	};
 
 	static PxU32ToName g_physx__PxVehicleDriveTankControlModel__EnumConversion[] = {
-		{ "eSTANDARD", static_cast<PxU32>( physx::PxVehicleDriveTankControlModel::eSTANDARD ) },
-		{ "eSPECIAL", static_cast<PxU32>( physx::PxVehicleDriveTankControlModel::eSPECIAL ) },
+		{ "eSTANDARD", static_cast<PxU32>( augphysx::PxVehicleDriveTankControlModel::eSTANDARD ) },
+		{ "eSPECIAL", static_cast<PxU32>( augphysx::PxVehicleDriveTankControlModel::eSPECIAL ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxVehicleDriveTankControlModel::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleDriveTankControlModel__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxVehicleDriveTankControlModel::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVehicleDriveTankControlModel__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxVehicleDriveTank;
 	struct PxVehicleDriveTankGeneratedValues
 		: PxVehicleDriveGeneratedValues	{

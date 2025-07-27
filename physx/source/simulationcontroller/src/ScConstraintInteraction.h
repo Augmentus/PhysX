@@ -32,7 +32,7 @@
 
 #include "ScInteraction.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

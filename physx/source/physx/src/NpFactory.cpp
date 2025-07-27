@@ -43,7 +43,7 @@
 #include "NpArticulationReducedCoordinate.h"
 #include "NpArticulationJointReducedCoordinate.h"
 
-using namespace physx;
+using namespace augphysx;
 
 NpFactory::NpFactory()
 : GuMeshFactory()
@@ -830,7 +830,7 @@ static void NpDestroyConstraint(Scb::Constraint& scb)
 	NpPhysics::getInstance().notifyDeletionListenersMemRelease(np, NULL);
 }
 
-namespace physx
+namespace augphysx
 {
 	void NpDestroy(Scb::Base& base)
 	{

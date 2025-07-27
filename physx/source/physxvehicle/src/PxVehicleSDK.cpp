@@ -43,7 +43,7 @@
 #include "PxVehicleSerialization.h"
 #include "SnRepXSerializerImpl.h"
 
-namespace physx
+namespace augphysx
 {
 
 void setVehicleToleranceScale(const PxTolerancesScale& ts);

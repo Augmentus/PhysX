@@ -39,7 +39,7 @@
 
 #define GU_EPSILON_SAME_DISTANCE 1e-3f
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

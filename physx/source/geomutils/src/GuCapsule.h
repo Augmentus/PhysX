@@ -36,7 +36,7 @@
 
 #include "GuSegment.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

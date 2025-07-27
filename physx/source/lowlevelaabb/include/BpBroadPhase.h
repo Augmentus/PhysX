@@ -35,7 +35,7 @@
 #include "PxBroadPhase.h"
 #include "BpAABBManager.h"
 
-namespace physx
+namespace augphysx
 {
 class PxcScratchAllocator;
 
@@ -250,12 +250,12 @@ public:
 	in these builds.
 	*/
 
-	virtual	void					update(const PxU32 numCpuTasks, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, physx::PxBaseTask* continuation, physx::PxBaseTask* nPhaseUnlockTask) = 0;
+	virtual	void					update(const PxU32 numCpuTasks, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, augphysx::PxBaseTask* continuation, augphysx::PxBaseTask* nPhaseUnlockTask) = 0;
 
 	/**
 	\brief Fetch the results of any asynchronous broad phase work.
 	*/
-	virtual	void					fetchBroadPhaseResults(physx::PxBaseTask* nPhaseUnlockTask) = 0;
+	virtual	void					fetchBroadPhaseResults(augphysx::PxBaseTask* nPhaseUnlockTask) = 0;
 
 	/*
 	\brief Return the number of created aabb overlap pairs computed in the execution of update() that has just completed.

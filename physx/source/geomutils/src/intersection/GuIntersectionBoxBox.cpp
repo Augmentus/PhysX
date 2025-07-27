@@ -29,7 +29,7 @@
 
 #include "GuIntersectionBoxBox.h"
 
-using namespace physx;
+using namespace augphysx;
 
 bool Gu::intersectOBBOBB(const PxVec3& e0, const PxVec3& c0, const PxMat33& r0, const PxVec3& e1, const PxVec3& c1, const PxMat33& r1, bool full_test)
 {

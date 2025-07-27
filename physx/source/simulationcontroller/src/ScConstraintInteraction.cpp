@@ -34,7 +34,7 @@
 #include "PxsRigidBody.h"
 #include "PxsSimpleIslandManager.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sc;
 
 ConstraintInteraction::ConstraintInteraction(ConstraintSim* constraint, RigidSim& r0, RigidSim& r1) :

@@ -34,7 +34,7 @@
 #include "CmPhysXCommon.h"
 #include "PxQueryReport.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxTriangle;
 

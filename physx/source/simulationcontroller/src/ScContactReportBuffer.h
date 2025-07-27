@@ -34,7 +34,7 @@
 #include "foundation/Px.h"
 #include "common/PxProfileZone.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Sc
 	{

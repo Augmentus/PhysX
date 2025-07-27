@@ -29,7 +29,7 @@
 
 #include "CctSweptVolume.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cct;
 
 SweptVolume::SweptVolume()

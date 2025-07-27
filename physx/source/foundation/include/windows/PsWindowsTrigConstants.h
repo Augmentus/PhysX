@@ -30,7 +30,7 @@
 #ifndef PSFOUNDATION_PSWINDOWSTRIGCONSTANTS_H
 #define PSFOUNDATION_PSWINDOWSTRIGCONSTANTS_H
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

@@ -40,9 +40,9 @@
 #include "PsIntrinsics.h"
 #include "GuBounds.h"
 
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Gu;
 using namespace Ps;

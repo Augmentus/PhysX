@@ -43,7 +43,7 @@
 #include "NpArticulationTemplate.h"
 #include "NpArticulationJoint.h"
 
-namespace physx
+namespace augphysx
 {
 
 class NpArticulationLink;

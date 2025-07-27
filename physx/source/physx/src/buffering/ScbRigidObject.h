@@ -36,7 +36,7 @@
 #include "ScbShape.h"
 #include "PsInlineArray.h"
 
-namespace physx
+namespace augphysx
 {
 
 // base class for dynamic and static rigid objects, so that shapes can have something to refer to

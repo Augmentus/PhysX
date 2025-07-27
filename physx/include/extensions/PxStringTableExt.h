@@ -34,7 +34,7 @@
 #include "common/PxStringTable.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -47,11 +47,11 @@ namespace physx
 class PxStringTableExt
 {
 public:
-	static PxStringTable& createStringTable( physx::PxAllocatorCallback& inAllocator );
+	static PxStringTable& createStringTable( augphysx::PxAllocatorCallback& inAllocator );
 };
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 #endif

@@ -34,7 +34,7 @@
 #include "foundation/PxAssert.h"
 #include "PsAtomic.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {
@@ -75,7 +75,7 @@ namespace Cm
 
 		void incRefCount()
 		{
-			physx::shdfnd::atomicIncrement(&mRefCount);
+			augphysx::shdfnd::atomicIncrement(&mRefCount);
 			// value better be greater than 1, or we've created a ref to an undefined object
 			PX_ASSERT(mRefCount>1);
 		}
@@ -83,7 +83,7 @@ namespace Cm
 		void decRefCount()
 		{
 			PX_ASSERT(mRefCount>0);
-			if(physx::shdfnd::atomicDecrement(&mRefCount) == 0)
+			if(augphysx::shdfnd::atomicDecrement(&mRefCount) == 0)
 				onRefCountZero();
 		}
 

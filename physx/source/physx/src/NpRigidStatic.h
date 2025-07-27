@@ -36,7 +36,7 @@
 #include "NpRigidActorTemplate.h"
 #include "ScbRigidStatic.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Scb

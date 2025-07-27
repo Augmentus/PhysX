@@ -40,7 +40,7 @@
 #include "foundation/PxMat33.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxSimpleTriangleMesh;

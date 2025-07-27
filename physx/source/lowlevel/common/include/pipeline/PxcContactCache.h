@@ -34,7 +34,7 @@
 #include "PxvConfig.h"
 #include "PxcContactMethodImpl.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxcNpThreadContext;
 

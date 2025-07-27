@@ -39,7 +39,7 @@
 #include "PsFoundation.h"
 #include "foundation/PxStrideIterator.h"
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 
 	template<typename TDataType>
 	inline void writeReference( XmlWriter& writer, PxCollection& inCollection, const char* inPropName, const TDataType* inDatatype )
@@ -559,12 +559,12 @@ namespace physx { namespace Sn {
 
 		void handleShapes( const PxRigidActorShapeCollection& inProp )
 		{
-			physx::Sn::handleShapes( *this, inProp );
+			augphysx::Sn::handleShapes( *this, inProp );
 		}
 
 		void handleShapeMaterials( const PxShapeMaterialsProperty& inProp )
 		{
-			physx::Sn::handleShapeMaterials( *this, inProp );
+			augphysx::Sn::handleShapeMaterials( *this, inProp );
 		}
 
 		void handleRigidActorGlobalPose(const PxRigidActorGlobalPosePropertyInfo& inProp)

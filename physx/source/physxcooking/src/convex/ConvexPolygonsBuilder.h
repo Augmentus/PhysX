@@ -33,7 +33,7 @@
 
 #include "ConvexHullBuilder.h"
 
-namespace physx
+namespace augphysx
 {
 	//////////////////////////////////////////////////////////////////////////
 	// extended convex hull builder for a case where we build polygons from input triangles

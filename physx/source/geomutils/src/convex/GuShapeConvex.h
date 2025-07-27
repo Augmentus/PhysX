@@ -33,7 +33,7 @@
 #include "GuConvexMeshData.h"
 #include "CmScaling.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

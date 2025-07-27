@@ -33,7 +33,7 @@
 #include "geomutils/GuContactPoint.h"
 #include "PxsMaterialManager.h"
 
-namespace physx
+namespace augphysx
 {
 
 

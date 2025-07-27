@@ -42,7 +42,7 @@
 
 #define CONVX_ZERO_BUFFER_SIZE	256
 
-namespace physx { 
+namespace augphysx { 
 	
 class PxSerializationRegistry;
 
@@ -75,7 +75,7 @@ namespace Sn {
 		Handle16Map	mData;
 	};
 
-	class ConvX : public physx::PxBinaryConverter, public shdfnd::UserAllocated
+	class ConvX : public augphysx::PxBinaryConverter, public shdfnd::UserAllocated
 	{
 		public:
 												ConvX();
@@ -170,7 +170,7 @@ namespace Sn {
 			// Errors
 						void					resetNbErrors();
 						int						getNbErrors()	const;
-						void					displayMessage(physx::PxErrorCode::Enum code, const char* format, ...);
+						void					displayMessage(augphysx::PxErrorCode::Enum code, const char* format, ...);
 						int						mNbErrors;
 						int						mNbWarnings;
 

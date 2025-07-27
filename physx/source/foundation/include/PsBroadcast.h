@@ -36,7 +36,7 @@
 #include "foundation/PxSimpleTypes.h"
 #include "foundation/PxErrorCallback.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
@@ -147,7 +147,7 @@ class Broadcast : public Base
 	{
 	}
 
-	physx::shdfnd::InlineArray<Listener*, MAX_NB_LISTENERS, physx::shdfnd::NonTrackingAllocator> mListeners;
+	augphysx::shdfnd::InlineArray<Listener*, MAX_NB_LISTENERS, augphysx::shdfnd::NonTrackingAllocator> mListeners;
 };
 
 /**

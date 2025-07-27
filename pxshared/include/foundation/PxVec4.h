@@ -42,7 +42,7 @@
 This is a 4-dimensional vector class with public data members.
 */
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 

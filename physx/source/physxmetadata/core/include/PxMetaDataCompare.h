@@ -180,8 +180,8 @@ struct EqualityOp
 	void compare( const PxReadOnlyFilteredCollectionPropertyInfo< TKey, TObjType, TFilterType, TCollectionType >& inProp, const PxU32ToName* inNames )
 	{
 		//Exaustively compare all items.
-		physx::shdfnd::InlineArray<TCollectionType*, 20> lhsArray;
-		physx::shdfnd::InlineArray<TCollectionType*, 20> rhsArray;
+		augphysx::shdfnd::InlineArray<TCollectionType*, 20> lhsArray;
+		augphysx::shdfnd::InlineArray<TCollectionType*, 20> rhsArray;
 		for ( const PxU32ToName* theName = inNames;
 			theName->mName != NULL && !hasFailed();
 			++theName )

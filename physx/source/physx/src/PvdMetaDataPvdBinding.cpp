@@ -54,12 +54,12 @@ PX_DUMMY_SYMBOL
 #include "PvdTypeNames.h"
 #include "PvdMetaDataPvdBinding.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sc;
 using namespace Vd;
 using namespace Sq;
 
-namespace physx
+namespace augphysx
 {
 namespace Vd
 {
@@ -173,7 +173,7 @@ static PX_FORCE_INLINE void registerPvdRaycast(PvdDataStream& inStream)
 	inStream.createClass<PvdRaycast>();
 	definePropertyEnums<PvdRaycast, SceneQueryIDConvertor, NameValuePair>(inStream, "type");
 	inStream.createProperty<PvdRaycast, PxFilterData>("filterData");
-	definePropertyFlags<PvdRaycast, PxEnumTraits<physx::PxQueryFlag::Enum>, PxU32ToName>(inStream, "filterFlags");
+	definePropertyFlags<PvdRaycast, PxEnumTraits<augphysx::PxQueryFlag::Enum>, PxU32ToName>(inStream, "filterFlags");
 	inStream.createProperty<PvdRaycast, PxVec3>("origin");
 	inStream.createProperty<PvdRaycast, PxVec3>("unitDir");
 	inStream.createProperty<PvdRaycast, PxF32>("distance");
@@ -186,7 +186,7 @@ static PX_FORCE_INLINE void registerPvdSweep(PvdDataStream& inStream)
 {
 	inStream.createClass<PvdSweep>();
 	definePropertyEnums<PvdSweep, SceneQueryIDConvertor, NameValuePair>(inStream, "type");
-	definePropertyFlags<PvdSweep, PxEnumTraits<physx::PxQueryFlag::Enum>, PxU32ToName>(inStream, "filterFlags");
+	definePropertyFlags<PvdSweep, PxEnumTraits<augphysx::PxQueryFlag::Enum>, PxU32ToName>(inStream, "filterFlags");
 	inStream.createProperty<PvdSweep, PxVec3>("unitDir");
 	inStream.createProperty<PvdSweep, PxF32>("distance");
 	inStream.createProperty<PvdSweep, String>("geom_arrayName");
@@ -208,7 +208,7 @@ static PX_FORCE_INLINE void registerPvdOverlap(PvdDataStream& inStream)
 	inStream.createClass<PvdOverlap>();
 	definePropertyEnums<PvdOverlap, SceneQueryIDConvertor, NameValuePair>(inStream, "type");
 	inStream.createProperty<PvdOverlap, PxFilterData>("filterData");
-	definePropertyFlags<PvdOverlap, PxEnumTraits<physx::PxQueryFlag::Enum>, PxU32ToName>(inStream, "filterFlags");
+	definePropertyFlags<PvdOverlap, PxEnumTraits<augphysx::PxQueryFlag::Enum>, PxU32ToName>(inStream, "filterFlags");
 	inStream.createProperty<PvdOverlap, PxTransform>("pose");
 	inStream.createProperty<PvdOverlap, String>("geom_arrayName");
 	inStream.createProperty<PvdOverlap, PxU32>("geom_baseIndex");
@@ -224,7 +224,7 @@ static PX_FORCE_INLINE void registerPvdSqHit(PvdDataStream& inStream)
 	inStream.createProperty<PvdSqHit, ObjectRef>("Shape");
 	inStream.createProperty<PvdSqHit, ObjectRef>("Actor");
 	inStream.createProperty<PvdSqHit, PxU32>("FaceIndex");
-	definePropertyFlags<PvdSqHit, PxEnumTraits<physx::PxHitFlag::Enum>, PxU32ToName>(inStream, "Flags");
+	definePropertyFlags<PvdSqHit, PxEnumTraits<augphysx::PxHitFlag::Enum>, PxU32ToName>(inStream, "Flags");
 	inStream.createProperty<PvdSqHit, PxVec3>("Impact");
 	inStream.createProperty<PvdSqHit, PxVec3>("Normal");
 	inStream.createProperty<PvdSqHit, PxF32>("Distance");
@@ -1570,7 +1570,7 @@ void PvdMetaDataBinding::sendSceneQueries(PvdDataStream& inStream, const PxScene
 	if(!inStream.isConnected())
 		return;
 
-	const physx::NpScene& scene = static_cast<const NpScene&>(inScene);
+	const augphysx::NpScene& scene = static_cast<const NpScene&>(inScene);
 	
 	for(PxU32 i = 0; i < 2; i++)
 	{

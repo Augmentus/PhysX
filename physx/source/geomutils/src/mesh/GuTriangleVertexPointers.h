@@ -33,7 +33,7 @@
 #include "geometry/PxTriangleMesh.h"
 #include "GuTriangleMesh.h"
 
-namespace physx {
+namespace augphysx {
 	namespace Gu {
 
 	// PT: TODO: replace with Gu::TriangleMesh::getLocalTriangle(...)
@@ -60,6 +60,6 @@ namespace physx {
 			} 
 		}
 	};
-} } // physx, Gu
+} } // augphysx, Gu
 
 #endif

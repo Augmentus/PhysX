@@ -44,7 +44,7 @@
 #include "GuSIMDHelpers.h"
 #include "GuBox.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #define DEBUG_RENDER_MESHCONTACTS 0
@@ -102,11 +102,11 @@ static bool PxcTestAxis(const PxVec3& axis, const Segment& segment, PxReal radiu
 	{
 		Min1 = Max1 = triVerts[0].dot(axis);
 		const PxReal dp1 = triVerts[1].dot(axis);
-		Min1 = physx::intrinsics::selectMin(Min1, dp1);
-		Max1 = physx::intrinsics::selectMax(Max1, dp1);
+		Min1 = augphysx::intrinsics::selectMin(Min1, dp1);
+		Max1 = augphysx::intrinsics::selectMax(Max1, dp1);
 		const PxReal dp2 = triVerts[2].dot(axis);
-		Min1 = physx::intrinsics::selectMin(Min1, dp2);
-		Max1 = physx::intrinsics::selectMax(Max1, dp2);
+		Min1 = augphysx::intrinsics::selectMin(Min1, dp2);
+		Max1 = augphysx::intrinsics::selectMax(Max1, dp2);
 	}
 
 	// Test projections
@@ -117,7 +117,7 @@ static bool PxcTestAxis(const PxVec3& axis, const Segment& segment, PxReal radiu
 	PX_ASSERT(d0>=0.0f);
 	const PxReal d1 = Max1 - min0;
 	PX_ASSERT(d1>=0.0f);
-	depth = physx::intrinsics::selectMin(d0, d1);
+	depth = augphysx::intrinsics::selectMin(d0, d1);
 	return true;
 }
 

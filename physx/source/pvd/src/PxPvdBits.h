@@ -30,7 +30,7 @@
 
 #include "PxPvdObjectModelBaseTypes.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {

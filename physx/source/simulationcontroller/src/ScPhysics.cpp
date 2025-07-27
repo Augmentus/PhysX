@@ -34,12 +34,12 @@
 #include "ScScene.h"
 #include "PxvGlobals.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::Physics* Sc::Physics::mInstance = NULL;
 const PxReal Sc::Physics::sWakeCounterOnCreation = 20.0f*0.02f;
 
-namespace physx
+namespace augphysx
 {
 	namespace Sc
 	{

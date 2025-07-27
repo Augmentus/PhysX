@@ -39,7 +39,7 @@
 #include "PsArray.h"
 #include "PsMutex.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	struct NullEventNameProvider : public PxProfileNameProvider
 	{

@@ -48,7 +48,7 @@
 #include "NpShape.h"
 #include "common/PxProfileZone.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Sc;
 

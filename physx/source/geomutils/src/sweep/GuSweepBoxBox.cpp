@@ -37,7 +37,7 @@
 #include "GuSweepTriangleUtils.h"
 #include "GuInternal.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Cm;
 

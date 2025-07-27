@@ -33,7 +33,7 @@
 #include "PsArray.h"
 #include "PsInlineAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

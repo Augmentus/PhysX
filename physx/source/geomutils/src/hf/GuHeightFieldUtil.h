@@ -38,7 +38,7 @@
 #include "../intersection/GuIntersectionRayBox.h"
 #include "PsBasicTemplates.h"
 
-namespace physx
+namespace augphysx
 {
 #define HF_SWEEP_REPORT_BUFFER_SIZE 64
 
@@ -79,7 +79,7 @@ namespace Gu
 			PX_ASSERT(absColScale >= PX_MIN_HEIGHTFIELD_XZ_SCALE);
 			PX_UNUSED(absRowScale);
 			PX_UNUSED(absColScale);
-			//using physx::intrinsics::fsel;
+			//using augphysx::intrinsics::fsel;
 			//mOneOverHeightScale	= fsel(mHfGeom->heightScale - minHeightPerSample, 1.0f / mHfGeom->heightScale, 1.0f / minHeightPerSample);
 			mOneOverHeightScale	= 1.0f / mHfGeom->heightScale;
 			mOneOverRowScale	= 1.0f / mHfGeom->rowScale;

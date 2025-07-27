@@ -42,7 +42,7 @@
 #include "DyArticulationJointCore.h"
 #include <stdio.h>
 
-namespace physx
+namespace augphysx
 {
 	namespace Dy
 	{

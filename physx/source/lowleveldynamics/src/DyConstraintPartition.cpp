@@ -31,7 +31,7 @@
 #define INTERLEAVE_SELF_CONSTRAINTS 1
 
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

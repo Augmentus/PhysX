@@ -44,7 +44,7 @@
 #include <dlfcn.h>
 #endif // ~PX_LINUX
 
-namespace physx
+namespace augphysx
 {
 	// alias shared foundation to something usable
 	namespace Ps = shdfnd;
@@ -70,7 +70,7 @@ namespace grid
 	class ClientContextPredictionManager;
 }
 
-namespace physx
+namespace augphysx
 {
 #if PX_VC
 #pragma warning(disable: 4191)	//'operator/operation' : unsafe conversion from 'type of expression' to 'type required'
@@ -79,10 +79,10 @@ namespace physx
 	class PxFoundation;
 	class PxPhysXGpu;
 
-	typedef physx::PxPhysXGpu* (PxCreatePhysXGpu_FUNC)();
-	typedef physx::PxCudaContextManager* (PxCreateCudaContextManager_FUNC)(physx::PxFoundation& foundation, const physx::PxCudaContextManagerDesc& desc, physx::PxProfilerCallback* profilerCallback);
-	typedef int (PxGetSuggestedCudaDeviceOrdinal_FUNC)(physx::PxErrorCallback& errc);
-	typedef grid::ClientContextPredictionManager* (PxCreateClientContextManager_FUNC)(grid::Server* server,  physx::PxU32 maxNbSleepMsg);
+	typedef augphysx::PxPhysXGpu* (PxCreatePhysXGpu_FUNC)();
+	typedef augphysx::PxCudaContextManager* (PxCreateCudaContextManager_FUNC)(augphysx::PxFoundation& foundation, const augphysx::PxCudaContextManagerDesc& desc, augphysx::PxProfilerCallback* profilerCallback);
+	typedef int (PxGetSuggestedCudaDeviceOrdinal_FUNC)(augphysx::PxErrorCallback& errc);
+	typedef grid::ClientContextPredictionManager* (PxCreateClientContextManager_FUNC)(grid::Server* server,  augphysx::PxU32 maxNbSleepMsg);
 
 	PxCreatePhysXGpu_FUNC* g_PxCreatePhysXGpu_Func = NULL;
 	PxCreateCudaContextManager_FUNC* g_PxCreateCudaContextManager_Func = NULL;

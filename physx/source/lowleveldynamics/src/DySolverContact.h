@@ -37,7 +37,7 @@
 #include "PxvConfig.h"
 #include "PsVecMath.h"
 
-namespace physx
+namespace augphysx
 {
 
 using namespace Ps::aos;

@@ -31,10 +31,10 @@
 #include "GuHeightField.h"
 #include "GuSerialize.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
-namespace physx
+namespace augphysx
 {
 
 bool saveHeightField(const HeightField& hf, PxOutputStream& stream, bool endian)

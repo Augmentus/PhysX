@@ -36,9 +36,9 @@
 #include "PsUserAllocated.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
-	using namespace physx::profile;
+	using namespace augphysx::profile;
 
 	class PxStringTableImpl : public PxStringTable, public Ps::UserAllocated
 	{
@@ -73,7 +73,7 @@ namespace physx
 				size_t len( strlen( inSrc ) );
 				len += 1;
 				char* newMem = reinterpret_cast<char*>(mWrapper.getAllocator().allocate( len, "PxStringTableImpl: const char*", __FILE__, __LINE__ ));
-				physx::shdfnd::strlcpy( newMem, len, inSrc );
+				augphysx::shdfnd::strlcpy( newMem, len, inSrc );
 				mHashMap.insert( newMem, 1 );
 				return newMem;
 			}

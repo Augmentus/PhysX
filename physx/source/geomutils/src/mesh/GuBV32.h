@@ -38,11 +38,11 @@
 #include "GuBV4.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Gu
 	{
-		struct BV32Data : public physx::shdfnd::UserAllocated
+		struct BV32Data : public augphysx::shdfnd::UserAllocated
 		{
 			PxVec3		mCenter;
 			PxU32		mNbLeafNodes;
@@ -103,7 +103,7 @@ namespace physx
 		} 
 		PX_ALIGN_SUFFIX(16);
 
-		class BV32Tree : public physx::shdfnd::UserAllocated
+		class BV32Tree : public augphysx::shdfnd::UserAllocated
 		{
 		public:
 			// PX_SERIALIZATION

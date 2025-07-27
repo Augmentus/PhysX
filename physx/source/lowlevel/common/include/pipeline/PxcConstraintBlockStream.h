@@ -36,7 +36,7 @@
 #include "PsMutex.h"
 #include "PxcNpMemBlockPool.h"
 
-namespace physx
+namespace augphysx
 {
 class PxsConstraintBlockManager
 {

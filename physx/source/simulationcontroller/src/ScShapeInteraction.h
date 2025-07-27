@@ -42,7 +42,7 @@
 
 #define INVALID_REPORT_PAIR_ID	0xffffffff
 
-namespace physx
+namespace augphysx
 {
 class PxsContactManagerOutputIterator;
 namespace Sc

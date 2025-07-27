@@ -30,7 +30,7 @@
 #include "GuIntersectionRayCapsule.h"
 #include "GuIntersectionRaySphere.h"
 
-using namespace physx;
+using namespace augphysx;
 
 // PT: ray-capsule intersection code, originally from the old Magic Software library.
 PxU32 Gu::intersectRayCapsuleInternal(const PxVec3& origin, const PxVec3& dir, const PxVec3& p0, const PxVec3& p1, float radius, PxReal s[2])

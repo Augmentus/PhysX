@@ -35,7 +35,7 @@
 #include "PxSceneDesc.h"
 #include "DySolverContact4.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct PxcNpWorkUnit;

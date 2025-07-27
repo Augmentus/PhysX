@@ -36,7 +36,7 @@
 #include "CmPhysXCommon.h"
 #include "PsMathUtils.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Ext
 {

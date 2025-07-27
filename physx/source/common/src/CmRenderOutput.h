@@ -35,7 +35,7 @@
 #include "CmRenderBuffer.h"
 #include "CmUtils.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

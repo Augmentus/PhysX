@@ -31,7 +31,7 @@
 
 #include "foundation/Px.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 	
 	/**
 	 *	Mutex interface that hides implementation around lock and unlock.

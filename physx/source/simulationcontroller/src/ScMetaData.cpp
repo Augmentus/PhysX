@@ -38,22 +38,22 @@
 #include "ScArticulationCore.h"
 #include "ScArticulationJointCore.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Ps;
 using namespace Cm;
 using namespace Sc;
 
 ///////////////////////////////////////////////////////////////////////////////
 
-template <typename T> class PxMetaDataArray : public physx::shdfnd::Array<T>
+template <typename T> class PxMetaDataArray : public augphysx::shdfnd::Array<T>
 {
 public:
-    static PX_FORCE_INLINE physx::PxU32 getDataOffset()           { return PX_OFFSET_OF(PxMetaDataArray<T>, mData); }
-    static PX_FORCE_INLINE physx::PxU32 getDataSize()             { return PX_SIZE_OF(PxMetaDataArray<T>, mData); }
-    static PX_FORCE_INLINE physx::PxU32 getSizeOffset()           { return PX_OFFSET_OF(PxMetaDataArray<T>, mSize); }
-    static PX_FORCE_INLINE physx::PxU32 getSizeSize()             { return PX_SIZE_OF(PxMetaDataArray<T>, mSize); }
-    static PX_FORCE_INLINE physx::PxU32 getCapacityOffset()       { return PX_OFFSET_OF(PxMetaDataArray<T>, mCapacity); }
-    static PX_FORCE_INLINE physx::PxU32 getCapacitySize()         { return PX_SIZE_OF(PxMetaDataArray<T>, mCapacity); }
+    static PX_FORCE_INLINE augphysx::PxU32 getDataOffset()           { return PX_OFFSET_OF(PxMetaDataArray<T>, mData); }
+    static PX_FORCE_INLINE augphysx::PxU32 getDataSize()             { return PX_SIZE_OF(PxMetaDataArray<T>, mData); }
+    static PX_FORCE_INLINE augphysx::PxU32 getSizeOffset()           { return PX_OFFSET_OF(PxMetaDataArray<T>, mSize); }
+    static PX_FORCE_INLINE augphysx::PxU32 getSizeSize()             { return PX_SIZE_OF(PxMetaDataArray<T>, mSize); }
+    static PX_FORCE_INLINE augphysx::PxU32 getCapacityOffset()       { return PX_OFFSET_OF(PxMetaDataArray<T>, mCapacity); }
+    static PX_FORCE_INLINE augphysx::PxU32 getCapacitySize()         { return PX_SIZE_OF(PxMetaDataArray<T>, mCapacity); }
 };
 
 void Sc::ActorCore::getBinaryMetaData(PxOutputStream& stream)

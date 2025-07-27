@@ -32,7 +32,7 @@
 #include "PsUtilities.h"
 #include "PxcNpCache.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 //#define ENABLE_CONTACT_CACHE_STATS
@@ -57,7 +57,7 @@ void PxcDisplayContactCacheStats()
 #endif
 }
 
-namespace physx
+namespace augphysx
 {
 	const bool g_CanUseContactCache[][PxGeometryType::eGEOMETRY_COUNT] =
 	{
@@ -206,7 +206,7 @@ static PX_FORCE_INLINE PxReal maxComponentDeltaRot(const PxTransform& t0, const 
 	return delta;
 }
 
-bool physx::PxcCacheLocalContacts(	PxcNpThreadContext& context, Gu::Cache& pairContactCache,
+bool augphysx::PxcCacheLocalContacts(	PxcNpThreadContext& context, Gu::Cache& pairContactCache,
 									const PxTransform& tm0, const PxTransform& tm1,
 									const PxcContactMethod conMethod,
 									const Gu::GeometryUnion& shape0, const Gu::GeometryUnion& shape1)

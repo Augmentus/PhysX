@@ -36,7 +36,7 @@
 #include "solver/PxSolverDefs.h"
 #include "PxArticulationJointReducedCoordinate.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Dy
 	{

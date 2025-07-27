@@ -35,7 +35,7 @@
 #include "CmPhysXCommon.h"
 #include "GuContactMethodImpl.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

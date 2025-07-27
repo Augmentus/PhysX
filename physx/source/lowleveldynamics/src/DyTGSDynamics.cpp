@@ -71,7 +71,7 @@
 #define PX_USE_BLOCK_1D 1
 
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

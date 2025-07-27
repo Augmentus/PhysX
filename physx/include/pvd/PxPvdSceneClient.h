@@ -36,7 +36,7 @@
 
 #include "foundation/PxFlags.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace pvdsdk
 	{
@@ -49,7 +49,7 @@ namespace physx
 }
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -108,27 +108,27 @@ class PxPvdSceneClient
 	/**
 	draw points on PVD application's render window
 	*/
-	virtual void drawPoints(const physx::pvdsdk::PvdDebugPoint* points, PxU32 count) = 0;
+	virtual void drawPoints(const augphysx::pvdsdk::PvdDebugPoint* points, PxU32 count) = 0;
 
 	/**
 	draw lines on PVD application's render window
 	*/
-	virtual void drawLines(const physx::pvdsdk::PvdDebugLine* lines, PxU32 count) = 0;
+	virtual void drawLines(const augphysx::pvdsdk::PvdDebugLine* lines, PxU32 count) = 0;
 
 	/**
 	draw triangles on PVD application's render window
 	*/
-	virtual void drawTriangles(const physx::pvdsdk::PvdDebugTriangle* triangles, PxU32 count) = 0;
+	virtual void drawTriangles(const augphysx::pvdsdk::PvdDebugTriangle* triangles, PxU32 count) = 0;
 
 	/**
 	draw text on PVD application's render window
 	*/
-	virtual void drawText(const physx::pvdsdk::PvdDebugText& text) = 0;
+	virtual void drawText(const augphysx::pvdsdk::PvdDebugText& text) = 0;
 
 	/**
 	get the underlying client, for advanced users
 	*/
-	virtual physx::pvdsdk::PvdClient* getClientInternal() = 0;
+	virtual augphysx::pvdsdk::PvdClient* getClientInternal() = 0;
 
 protected:
 	virtual ~PxPvdSceneClient(){}

@@ -38,7 +38,7 @@
 #include "ScbActor.h"
 #include "NpScene.h"
 
-namespace physx
+namespace augphysx
 {
 
 // PT: only API (virtual) functions should be implemented here. Other shared non-virtual functions should go to NpActor.

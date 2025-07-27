@@ -34,7 +34,7 @@
 #include "foundation/PxBounds3.h"
 #include "PsVecMath.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Scb
 	{
@@ -56,7 +56,7 @@ namespace Sq
 	// PT: TODO: - use SQ_PRUNER_INFLATION instead of hardcoding "0.01f"
 	PX_FORCE_INLINE void inflateBounds(PxBounds3& dst, const PxBounds3& src)
 	{
-		using namespace physx::shdfnd::aos;
+		using namespace augphysx::shdfnd::aos;
 
 		const Vec4V minV = V4LoadU(&src.minimum.x);
 		const Vec4V maxV = V4LoadU(&src.maximum.x);

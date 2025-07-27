@@ -39,7 +39,7 @@
 #include "DySleepingConfigulation.h"
 #include "PxsIslandSim.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy
@@ -69,8 +69,8 @@ bool disableGravity)
 	}
 
 	//Apply damping.
-	const PxReal linVelMultiplier = physx::intrinsics::fsel(oneMinusLinearDampingTimesDT, oneMinusLinearDampingTimesDT, 0.0f);
-	const PxReal angVelMultiplier = physx::intrinsics::fsel(oneMinusAngularDampingTimesDT, oneMinusAngularDampingTimesDT, 0.0f);
+	const PxReal linVelMultiplier = augphysx::intrinsics::fsel(oneMinusLinearDampingTimesDT, oneMinusLinearDampingTimesDT, 0.0f);
+	const PxReal angVelMultiplier = augphysx::intrinsics::fsel(oneMinusAngularDampingTimesDT, oneMinusAngularDampingTimesDT, 0.0f);
 	linearVelocity*=linVelMultiplier;
 	angularVelocity*=angVelMultiplier;
 

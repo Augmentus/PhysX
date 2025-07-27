@@ -39,10 +39,10 @@
 #include "GuInternal.h"
 #include "GuGJKRaycast.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Cm;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 #include "GuSweepConvexTri.h"
 

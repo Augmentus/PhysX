@@ -42,7 +42,7 @@
 #include "PsHashMap.h"
 #include "PsUserAllocated.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	template<typename TMutex,
 			 typename TScopedLock>

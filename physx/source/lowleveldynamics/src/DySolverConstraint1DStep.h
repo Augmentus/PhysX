@@ -40,7 +40,7 @@
 #include "DySolverConstraintDesc.h"
 
 
-namespace physx
+namespace augphysx
 {
 	namespace Dy
 	{

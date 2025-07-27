@@ -37,7 +37,7 @@
 #include "foundation/PxProfiler.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -111,7 +111,7 @@ PX_FLAGS_OPERATORS(PxPvdInstrumentationFlag::Enum, uint8_t)
 \brief PxPvd is the top-level class for the PVD framework, and the main customer interface for PVD
 configuration.It is a singleton class, instantiated and owned by the application.
 */
-class PxPvd : public physx::PxProfilerCallback
+class PxPvd : public augphysx::PxProfilerCallback
 {
   public:
 	/**

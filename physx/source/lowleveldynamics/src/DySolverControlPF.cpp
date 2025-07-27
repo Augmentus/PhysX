@@ -46,7 +46,7 @@
 #include "DySolverContext.h"
 #include "DySolverControlPF.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy
@@ -347,7 +347,7 @@ void SolverCoreGeneralPF::solveV_Blocks(SolverIslandParams& params) const
 	if(cache.mThresholdStreamIndex > 0)
 	{
 		//Write back to global buffer
-		const PxI32 threshIndex = physx::shdfnd::atomicAdd(reinterpret_cast<PxI32*>(&outThresholdPairs), PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
+		const PxI32 threshIndex = augphysx::shdfnd::atomicAdd(reinterpret_cast<PxI32*>(&outThresholdPairs), PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
 		for(PxU32 b = 0; b < cache.mThresholdStreamIndex; ++b)
 		{
 			thresholdStream[b + threshIndex] = cache.mThresholdStream[b];
@@ -390,8 +390,8 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 	PxI32* frictionConstraintIndex = &params.frictionConstraintIndex;
 
 	PxI32 endIndexCount = UnrollCount;
-	PxI32 index = physx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
-	PxI32 frictionIndex = physx::shdfnd::atomicAdd(frictionConstraintIndex, UnrollCount) - UnrollCount;
+	PxI32 index = augphysx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
+	PxI32 frictionIndex = augphysx::shdfnd::atomicAdd(frictionConstraintIndex, UnrollCount) - UnrollCount;
 	
 	BatchIterator contactIter(params.constraintBatchHeaders, params.numConstraintHeaders);
 	BatchIterator frictionIter(params.frictionConstraintBatches, params.numFrictionConstraintHeaders);
@@ -435,7 +435,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 					if(endIndexCount == 0)
 					{
 						endIndexCount = UnrollCount;
-						index = physx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
+						index = augphysx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
 					}
 				}
 				if(nbSolved)
@@ -471,7 +471,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 					if(frictionEndIndexCount == 0)
 					{
 						frictionEndIndexCount = UnrollCount;
-						frictionIndex  = physx::shdfnd::atomicAdd(frictionConstraintIndex, UnrollCount) - UnrollCount;
+						frictionIndex  = augphysx::shdfnd::atomicAdd(frictionConstraintIndex, UnrollCount) - UnrollCount;
 					}
 				}
 				if(nbSolved)
@@ -497,7 +497,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 	PxI32* bodyListIndex2 = &params.bodyListIndex2;
 
 	PxI32 endIndexCount2 = SaveUnrollCount;
-	PxI32 index2 = physx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount;
+	PxI32 index2 = augphysx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount;
 	{
 		PxI32 nbConcluded = 0;
 		while(index2 < articulationListSize)
@@ -511,7 +511,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 			nbConcluded += remainder;
 			if(endIndexCount2 == 0)
 			{
-				index2 = physx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount;
+				index2 = augphysx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount;
 				endIndexCount2 = SaveUnrollCount;
 			}
 			nbConcluded += remainder;
@@ -542,7 +542,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 			//Branch not required because this is the last time we use this atomic variable
 			//if(index2 < articulationListSizePlusbodyListSize)
 			{
-				index2 = physx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount - articulationListSize;
+				index2 = augphysx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount - articulationListSize;
 				endIndexCount2 = SaveUnrollCount;
 			}
 		}
@@ -550,7 +550,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 		if(nbConcluded)
 		{
 			Ps::memoryBarrier();
-			physx::shdfnd::atomicAdd(bodyListIndex2, nbConcluded);
+			augphysx::shdfnd::atomicAdd(bodyListIndex2, nbConcluded);
 		}
 	}
 
@@ -576,7 +576,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 				if(endIndexCount == 0)
 				{
 					endIndexCount = UnrollCount;
-					index = physx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
+					index = augphysx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
 				}
 			}
 			if(nbSolved)
@@ -606,7 +606,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 				if(frictionEndIndexCount == 0)
 				{
 					frictionEndIndexCount = UnrollCount;
-					frictionIndex  = physx::shdfnd::atomicAdd(frictionConstraintIndex, UnrollCount) - UnrollCount;
+					frictionIndex  = augphysx::shdfnd::atomicAdd(frictionConstraintIndex, UnrollCount) - UnrollCount;
 				}
 			}
 			if(nbSolved)
@@ -648,7 +648,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 				if(endIndexCount == 0)
 				{
 					endIndexCount = UnrollCount;
-					index = physx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
+					index = augphysx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
 				}
 			}
 			if(nbSolved)
@@ -684,7 +684,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 				if(frictionEndIndexCount == 0)
 				{
 					frictionEndIndexCount = UnrollCount;
-					frictionIndex  = physx::shdfnd::atomicAdd(frictionConstraintIndex, UnrollCount) - UnrollCount;
+					frictionIndex  = augphysx::shdfnd::atomicAdd(frictionConstraintIndex, UnrollCount) - UnrollCount;
 				}
 			}
 			if(nbSolved)
@@ -697,7 +697,7 @@ PxI32 SolverCoreGeneralPF::solveVParallelAndWriteBack(SolverIslandParams& params
 		if(cache.mThresholdStreamIndex > 0)
 		{
 			//Write back to global buffer
-			PxI32 threshIndex = physx::shdfnd::atomicAdd(outThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
+			PxI32 threshIndex = augphysx::shdfnd::atomicAdd(outThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
 			for(PxU32 b = 0; b < cache.mThresholdStreamIndex; ++b)
 			{
 				thresholdStream[b + threshIndex] = cache.mThresholdStream[b];

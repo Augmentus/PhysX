@@ -55,13 +55,13 @@
 
 
 #if PX_SUPPORT_GPU_PHYSX
-namespace physx
+namespace augphysx
 {
 	class PxCudaContextManager;
 }
 #endif
 
-namespace physx
+namespace augphysx
 {
 
 class PxsRigidBody;

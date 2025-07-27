@@ -46,8 +46,8 @@
 
 #include "PxcNpContactPrepShared.h"
 
-using namespace physx;
-using namespace physx::shdfnd;
+using namespace augphysx;
+using namespace augphysx::shdfnd;
 
 
 class PxsCMUpdateTask : public Cm::Task
@@ -994,7 +994,7 @@ PxsContactManagerOutputIterator PxsNphaseImplementationContext::getContactManage
 }
 
 
-PxvNphaseImplementationContextUsableAsFallback* physx::createNphaseImplementationContext(PxsContext& context, IG::IslandSim* islandSim)
+PxvNphaseImplementationContextUsableAsFallback* augphysx::createNphaseImplementationContext(PxsContext& context, IG::IslandSim* islandSim)
 {
 	return PxsNphaseImplementationContext::create(context, islandSim);
 }

@@ -37,7 +37,7 @@
 	#define	RetType	int
 	#define	MTDType	bool
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

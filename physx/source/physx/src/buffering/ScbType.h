@@ -30,7 +30,7 @@
 #ifndef PX_PHYSICS_SCB_TYPE
 #define PX_PHYSICS_SCB_TYPE
 
-namespace physx
+namespace augphysx
 {
 	struct ScbType
 	{

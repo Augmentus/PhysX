@@ -29,7 +29,7 @@
 
 #include "ScbBase.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Scb;
 
 #include "ScbActor.h"

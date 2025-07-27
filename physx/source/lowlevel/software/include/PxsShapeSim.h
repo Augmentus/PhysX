@@ -33,7 +33,7 @@
 #include "PxsBodySim.h"
 #include "PxsIslandNodeIndex.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxsShapeCore;
 

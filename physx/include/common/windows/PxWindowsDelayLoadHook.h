@@ -39,7 +39,7 @@
 */
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 	/**
@@ -75,7 +75,7 @@ namespace physx
 
 	@see PxDelayLoadHook
 	*/
-	PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxSetPhysXDelayLoadHook(const physx::PxDelayLoadHook* hook);
+	PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxSetPhysXDelayLoadHook(const augphysx::PxDelayLoadHook* hook);
 
 	/**
 	\brief Sets delay load hook instance for PhysXCooking dll.
@@ -84,7 +84,7 @@ namespace physx
 
 	@see PxDelayLoadHook
 	*/
-	PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxSetPhysXCookingDelayLoadHook(const physx::PxDelayLoadHook* hook);
+	PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxSetPhysXCookingDelayLoadHook(const augphysx::PxDelayLoadHook* hook);
 
 	/**
 	\brief Sets delay load hook instance for PhysXCommon dll.
@@ -93,10 +93,10 @@ namespace physx
 
 	@see PxDelayLoadHook
 	*/
-	PX_C_EXPORT PX_PHYSX_COMMON_API void PX_CALL_CONV PxSetPhysXCommonDelayLoadHook(const physx::PxDelayLoadHook* hook);
+	PX_C_EXPORT PX_PHYSX_COMMON_API void PX_CALL_CONV PxSetPhysXCommonDelayLoadHook(const augphysx::PxDelayLoadHook* hook);
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 /** @} */
 #endif

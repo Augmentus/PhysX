@@ -41,7 +41,7 @@
 #include "PxPvdObjectModelMetaData.h"
 #include "PxPvdObjectRegistrar.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace profile
@@ -196,7 +196,7 @@ class PvdImpl : public PsPvd, public shdfnd::UserAllocated
 	void sendTransportInitialization();
 
 	PxPvdTransport*						mPvdTransport;
-	physx::shdfnd::Array<PvdClient*>	mPvdClients;
+	augphysx::shdfnd::Array<PvdClient*>	mPvdClients;
 
 	MetaDataProvider*					mSharedMetaProvider; // shared between clients
 	ObjectRegistrar						mObjectRegistrar;
@@ -208,9 +208,9 @@ class PvdImpl : public PsPvd, public shdfnd::UserAllocated
 	bool								mIsNVTXSupportEnabled;
 	uint32_t							mNVTXContext;
 	uint64_t							mNextStreamId;
-	physx::profile::PxProfileZoneManager*mProfileZoneManager;
+	augphysx::profile::PxProfileZoneManager*mProfileZoneManager;
 	PvdProfileZoneClient*				mProfileClient;
-	physx::profile::PxProfileZone*		mProfileZone;
+	augphysx::profile::PxProfileZone*		mProfileZone;
 	static PvdImpl*						sInstance;
 	static uint32_t						sRefCount;
 };

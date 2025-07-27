@@ -33,7 +33,7 @@
 #include "SnXmlMemoryPoolStreams.h"
 #include "CmPhysXCommon.h"
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 	class XmlWriter
 	{
 	public:

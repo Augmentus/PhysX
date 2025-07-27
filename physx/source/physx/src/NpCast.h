@@ -40,7 +40,7 @@
 #include "NpArticulationJoint.h"
 #include "NpAggregate.h"
 
-namespace physx
+namespace augphysx
 {
 	// PT: Scb-to-Np casts
 

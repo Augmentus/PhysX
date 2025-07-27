@@ -31,7 +31,7 @@
 #include "NpRigidDynamic.h"
 #include "NpRigidActorTemplateInternal.h"
 
-using namespace physx;
+using namespace augphysx;
 
 NpRigidDynamic::NpRigidDynamic(const PxTransform& bodyPose)
 :	NpRigidDynamicT(PxConcreteType::eRIGID_DYNAMIC, PxBaseFlag::eOWNS_MEMORY | PxBaseFlag::eIS_RELEASABLE, PxActorType::eRIGID_DYNAMIC, bodyPose)
@@ -489,7 +489,7 @@ PxReal NpRigidDynamic::getContactReportThreshold() const
 }
 
 
-PxU32 physx::NpRigidDynamicGetShapes(Scb::Body& body, void* const*& shapes, bool* isCompound)
+PxU32 augphysx::NpRigidDynamicGetShapes(Scb::Body& body, void* const*& shapes, bool* isCompound)
 {
 	NpRigidDynamic* a = static_cast<NpRigidDynamic*>(body.getScBody().getPxActor());
 	NpShapeManager& sm = a->getShapeManager();

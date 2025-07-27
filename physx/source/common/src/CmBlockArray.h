@@ -40,7 +40,7 @@
 #include "CmPhysXCommon.h"
 #include "PsArray.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

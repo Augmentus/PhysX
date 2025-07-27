@@ -36,7 +36,7 @@
 namespace
 {
 
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 // V3PrepareCross would help here, but it's not on all platforms yet...
 
@@ -74,7 +74,7 @@ PX_FORCE_INLINE void transformInvFast(const FloatVArg wa, const Vec3VArg va, con
 
 
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

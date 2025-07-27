@@ -37,7 +37,7 @@
 #include "PsUserAllocated.h"
 #include "PsMutex.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxPhysics;

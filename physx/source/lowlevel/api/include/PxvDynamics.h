@@ -38,7 +38,7 @@
 #include "PsIntrinsics.h"
 #include "PxRigidDynamic.h"
 
-namespace physx
+namespace augphysx
 {
 
 /*!

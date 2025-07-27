@@ -41,7 +41,7 @@
 #include "GuInternal.h"
 #include "PsVecMath.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Cm;
 using namespace Ps::aos;

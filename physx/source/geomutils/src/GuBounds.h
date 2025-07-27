@@ -40,7 +40,7 @@
 #include "GuSphere.h"
 #include "GuCapsule.h"
 
-namespace physx
+namespace augphysx
 {
 class PxGeometry;
 

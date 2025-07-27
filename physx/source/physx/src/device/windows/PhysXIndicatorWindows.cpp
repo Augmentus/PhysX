@@ -42,7 +42,7 @@
 #endif
 
 // Scope-based to indicate to NV driver that CPU PhysX is happening
-physx::PhysXIndicator::PhysXIndicator(bool isGpu) 
+augphysx::PhysXIndicator::PhysXIndicator(bool isGpu) 
 : mPhysXDataPtr(0), mFileHandle(0), mIsGpu(isGpu)
 {
     // Get the windows version (we can only create Global\\ namespace objects in XP)
@@ -82,7 +82,7 @@ physx::PhysXIndicator::PhysXIndicator(bool isGpu)
 
 	bool alreadyExists = ERROR_ALREADY_EXISTS == GetLastError();
 
-	mPhysXDataPtr = (physx::NvPhysXToDrv_Data_V1*)MapViewOfFile(mFileHandle, 
+	mPhysXDataPtr = (augphysx::NvPhysXToDrv_Data_V1*)MapViewOfFile(mFileHandle, 
 		FILE_MAP_READ|FILE_MAP_WRITE, 0, 0, sizeof(NvPhysXToDrv_Data_V1));
 
 	if(!mPhysXDataPtr)
@@ -102,7 +102,7 @@ physx::PhysXIndicator::PhysXIndicator(bool isGpu)
 	NvPhysXToDrv_Header_Init(mPhysXDataPtr->header);
 }
 
-physx::PhysXIndicator::~PhysXIndicator()
+augphysx::PhysXIndicator::~PhysXIndicator()
 {
 	if(mPhysXDataPtr)
 	{
@@ -114,7 +114,7 @@ physx::PhysXIndicator::~PhysXIndicator()
 		CloseHandle(mFileHandle);
 }
 
-void physx::PhysXIndicator::setIsGpu(bool isGpu)
+void augphysx::PhysXIndicator::setIsGpu(bool isGpu)
 {
 	if(!mPhysXDataPtr)
 		return;
@@ -124,7 +124,7 @@ void physx::PhysXIndicator::setIsGpu(bool isGpu)
 	updateCounter(1);
 }
 
-PX_INLINE void physx::PhysXIndicator::updateCounter(int delta)
+PX_INLINE void augphysx::PhysXIndicator::updateCounter(int delta)
 {
 	(mIsGpu ? mPhysXDataPtr->bGpuPhysicsPresent 
 		: mPhysXDataPtr->bCpuPhysicsPresent) += delta;

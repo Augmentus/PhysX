@@ -48,7 +48,7 @@
 static const bool gVisualizeTouchedTris = false;
 static const float gDebugVisOffset = 0.01f;
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cct;
 using namespace Gu;
 using namespace Cm;

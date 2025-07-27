@@ -32,7 +32,7 @@
 #include "foundation/PxAssert.h"
 #include "CmRadixSort.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 #if defined(__BIG_ENDIAN__) || defined(_XBOX)

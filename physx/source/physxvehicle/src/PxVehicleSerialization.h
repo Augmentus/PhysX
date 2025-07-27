@@ -33,7 +33,7 @@
 #include "extensions/PxRepXSimpleType.h"
 #include "SnRepXSerializerImpl.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxRepXSerializer;
 	class PxSerializationRegistry;

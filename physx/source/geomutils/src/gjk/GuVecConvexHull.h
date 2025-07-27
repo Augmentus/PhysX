@@ -42,7 +42,7 @@
 #include "GuGeometryUnion.h"
 #include "PsVecQuat.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

@@ -38,7 +38,7 @@
 
 #include "PsTime.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	/**
 	 *	An event buffer maintains an in-memory buffer of events.  When this buffer is full

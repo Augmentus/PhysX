@@ -36,7 +36,7 @@
 #include "extensions/PxJoint.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -262,7 +262,7 @@ protected:
 };
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

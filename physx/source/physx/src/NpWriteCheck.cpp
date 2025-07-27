@@ -32,7 +32,7 @@
 
 #include "NpScene.h"
 
-using namespace physx;
+using namespace augphysx;
 
 NpWriteCheck::NpWriteCheck(NpScene* scene, const char* functionName, bool allowReentry) 
 : mScene(scene), mName(functionName), mAllowReentry(allowReentry), mErrorCount(0)

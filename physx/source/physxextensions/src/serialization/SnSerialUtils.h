@@ -35,7 +35,7 @@
 
 #define SN_BINARY_VERSION_GUID_NUM_CHARS 32
 
-namespace physx
+namespace augphysx
 {
 
 namespace Sn

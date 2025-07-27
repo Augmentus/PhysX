@@ -38,7 +38,7 @@
 #include "PsUserAllocated.h"
 #include "CmUtils.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxContactJointGeneratedValues;
 namespace Ext
@@ -119,5 +119,5 @@ namespace Ext
 	extern "C" const PxConstraintShaderTable* GetContactJointShaderTable();
 }
 
-}//physx
+}//augphysx
 #endif

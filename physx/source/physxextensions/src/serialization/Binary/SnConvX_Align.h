@@ -28,7 +28,7 @@
 #ifndef PX_CONVX_ALIGN_H
 #define PX_CONVX_ALIGN_H
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 	#define ALIGN_DEFAULT	16
 	#define ALIGN_FILE		128
 

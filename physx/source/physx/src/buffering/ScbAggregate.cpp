@@ -30,7 +30,7 @@
 #include "ScbAggregate.h"
 #include "ScbActor.h"
 
-using namespace physx;
+using namespace augphysx;
 
 void Scb::Aggregate::addActor(Scb::Actor& actor)
 {

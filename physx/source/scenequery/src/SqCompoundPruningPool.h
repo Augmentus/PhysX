@@ -35,7 +35,7 @@
 #include "SqIncrementalAABBTree.h"
 #include "PsArray.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sq
 {

@@ -34,7 +34,7 @@
 #include "PxPhysXConfig.h"
 #include "PxContact.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

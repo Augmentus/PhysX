@@ -43,7 +43,7 @@
 #include "serialization/SnSerializationRegistry.h"
 #include "serialization/Binary/SnSerializationContext.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 using namespace Ext;
 
@@ -412,7 +412,7 @@ void getBinaryMetaData_SerializationContext(PxOutputStream& stream)
 	PX_DEF_BIN_METADATA_ITEM(stream,	Sn::InternalReferenceHandle16,	SerialObjectIndex,	    objIndex,  	0)
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Ext
 {

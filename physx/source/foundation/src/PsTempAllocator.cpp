@@ -41,7 +41,7 @@
 #pragma warning(disable : 4706) // assignment within conditional expression
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

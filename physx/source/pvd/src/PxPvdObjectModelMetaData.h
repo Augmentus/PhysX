@@ -31,7 +31,7 @@
 #include "PxPvdObjectModelBaseTypes.h"
 #include "PxPvdBits.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {

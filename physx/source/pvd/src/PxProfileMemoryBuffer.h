@@ -34,7 +34,7 @@
 #include "PsAllocator.h"
 #include "foundation/PxMemory.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	template<typename TAllocator = typename shdfnd::AllocatorTraits<uint8_t>::Type >
 	class MemoryBuffer : public TAllocator

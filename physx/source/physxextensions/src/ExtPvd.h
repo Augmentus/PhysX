@@ -42,7 +42,7 @@
 #include "PxExtensionMetaDataObjects.h"
 #include "PxPvdObjectModelBaseTypes.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxJoint;
@@ -56,10 +56,10 @@ class PxContactJoint;
 }
 
 #define JOINT_GROUP 3
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk {
-	#define DEFINE_NATIVE_PVD_PHYSX3_TYPE_MAP( type ) DEFINE_PVD_TYPE_NAME_MAP( physx::type, "physx3", #type )
+	#define DEFINE_NATIVE_PVD_PHYSX3_TYPE_MAP( type ) DEFINE_PVD_TYPE_NAME_MAP( augphysx::type, "physx3", #type )
 
 	DEFINE_NATIVE_PVD_PHYSX3_TYPE_MAP(PxJoint)
 	DEFINE_NATIVE_PVD_PHYSX3_TYPE_MAP(PxJointGeneratedValues)
@@ -79,15 +79,15 @@ namespace pvdsdk {
 	DEFINE_NATIVE_PVD_PHYSX3_TYPE_MAP(PxD6JointGeneratedValues)
 #undef DEFINE_NATIVE_PVD_PHYSX3_TYPE_MAP	
 } //pvdsdk
-} // physx
+} // augphysx
 
-namespace physx
+namespace augphysx
 {
 namespace Ext
 {
-	using namespace physx::pvdsdk;	
+	using namespace augphysx::pvdsdk;	
 	
-	class Pvd: public physx::shdfnd::UserAllocated
+	class Pvd: public augphysx::shdfnd::UserAllocated
 	{
 		Pvd& operator=(const Pvd&);
 	public:
@@ -186,7 +186,7 @@ namespace Ext
 	};
 } // ext
 
-} // physx
+} // augphysx
 
 #endif // PX_SUPPORT_PVD
 #endif // EXT_PVD_H

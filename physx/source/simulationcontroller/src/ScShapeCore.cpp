@@ -35,7 +35,7 @@
 #include "GuHeightField.h"
 #include "ScMaterialCore.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sc;
 
 // djs: temporary cruft 

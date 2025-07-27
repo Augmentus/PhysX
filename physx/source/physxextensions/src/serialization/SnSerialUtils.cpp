@@ -34,7 +34,7 @@
 #include "PsString.h"
 #include "PsBasicTemplates.h"
 
-using namespace physx;
+using namespace augphysx;
 
 namespace
 {
@@ -82,7 +82,7 @@ const char* sBinaryPlatformNames[SN_NUM_BINARY_PLATFORMS] =
 
 }
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 
 PxU32 getBinaryPlatformTag()
 {
@@ -123,14 +123,14 @@ PxU32 getBinaryPlatformTag()
 #endif
 }
 
-bool isBinaryPlatformTagValid(physx::PxU32 platformTag)
+bool isBinaryPlatformTagValid(augphysx::PxU32 platformTag)
 {
 	PxU32 platformIndex = 0;
 	while (platformIndex < SN_NUM_BINARY_PLATFORMS && platformTag != sBinaryPlatformTags[platformIndex]) platformIndex++;
 	return platformIndex < SN_NUM_BINARY_PLATFORMS;
 }
 
-const char* getBinaryPlatformName(physx::PxU32 platformTag)
+const char* getBinaryPlatformName(augphysx::PxU32 platformTag)
 {
 	PxU32 platformIndex = 0;
 	while (platformIndex < SN_NUM_BINARY_PLATFORMS && platformTag != sBinaryPlatformTags[platformIndex]) platformIndex++;
@@ -156,5 +156,5 @@ bool checkCompatibility(const char* binaryVersionGuidCandidate)
 }
 
 } // Sn
-} // physx
+} // augphysx
 

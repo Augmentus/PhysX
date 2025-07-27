@@ -33,7 +33,7 @@
 #include "ScShapeSim.h"
 #include "ScShapeInteraction.h"
 
-using namespace physx;
+using namespace augphysx;
 
 ///////////////////////////////////////////////////////////////////////////////
 

@@ -32,7 +32,7 @@
 #include "common/PxTolerancesScale.h"
 #include "extensions/PxRepXSerializer.h"
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 	
 	struct	XmlNode;
 	

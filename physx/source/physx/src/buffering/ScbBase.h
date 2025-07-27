@@ -33,7 +33,7 @@
 #include "CmPhysXCommon.h"
 #include "ScbScene.h"
 
-namespace physx
+namespace augphysx
 {
 #if PX_SUPPORT_PVD
 	// PT: updatePvdProperties() is overloaded and the compiler needs to know 'this' type to do the right thing.

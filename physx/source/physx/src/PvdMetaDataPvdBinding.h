@@ -35,7 +35,7 @@
 #include "PxPhysXConfig.h"
 #include "PsArray.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace pvdsdk
 	{
@@ -45,7 +45,7 @@ namespace physx
 	}
 }
 
-namespace physx
+namespace augphysx
 {
 
 namespace Sc
@@ -56,7 +56,7 @@ struct Contact;
 namespace Vd
 {
 
-using namespace physx::pvdsdk;
+using namespace augphysx::pvdsdk;
 
 class PvdVisualizer
 {

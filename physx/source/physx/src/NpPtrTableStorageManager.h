@@ -37,7 +37,7 @@
 #include "CmPtrTable.h"
 #include "PsBitUtils.h"
 
-namespace physx
+namespace augphysx
 {
 class NpPtrTableStorageManager : public Cm::PtrTableStorageManager, public Ps::UserAllocated
 {

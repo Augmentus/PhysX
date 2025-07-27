@@ -38,7 +38,7 @@
 #include "PsAllocator.h"
 #include "GuBounds.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 
 void Sq::computeStaticWorldAABB(PxBounds3& bounds, const Scb::Shape& scbShape, const Scb::Actor& scbActor)

@@ -34,7 +34,7 @@
 #include "SqTypedef.h"
 #include "SqBounds.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sq
 {

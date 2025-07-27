@@ -38,7 +38,7 @@
 #include "CmUtils.h"
 #include "NpArticulationJoint.h"
 
-namespace physx
+namespace augphysx
 {
 
 // PX_SERIALIZATION

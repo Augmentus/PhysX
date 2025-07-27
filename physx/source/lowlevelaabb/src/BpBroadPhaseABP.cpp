@@ -35,8 +35,8 @@
 #include "PsVecMath.h"
 #include "PxcScratchAllocator.h"
 
-using namespace physx::shdfnd::aos;
-using namespace physx;
+using namespace augphysx::shdfnd::aos;
+using namespace augphysx;
 using namespace Bp;
 using namespace Cm;
 
@@ -3113,7 +3113,7 @@ BroadPhaseABP::~BroadPhaseABP()
 	DELETESINGLE(mABP);
 }
 
-void BroadPhaseABP::update(const PxU32 /*numCpuTasks*/, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, physx::PxBaseTask* /*continuation*/, physx::PxBaseTask* narrowPhaseUnblockTask)
+void BroadPhaseABP::update(const PxU32 /*numCpuTasks*/, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, augphysx::PxBaseTask* /*continuation*/, augphysx::PxBaseTask* narrowPhaseUnblockTask)
 {
 #if PX_CHECKED
 	PX_CHECK_AND_RETURN(scratchAllocator, "BroadPhaseABP::update - scratchAllocator must be non-NULL \n");

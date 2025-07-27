@@ -35,7 +35,7 @@
 #include "PsAllocator.h"
 #include "PsSList.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxsContext;

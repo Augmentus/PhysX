@@ -38,7 +38,7 @@
 #include "PxConstraint.h"
 #include "DyConstraintWriteBack.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxsRigidBody;

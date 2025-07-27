@@ -97,7 +97,7 @@
 @{
 */
 
-namespace physx
+namespace augphysx
 {
 
 class PxArticulationLink;

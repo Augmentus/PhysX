@@ -36,7 +36,7 @@
 #include "PsVecMath.h"
 #include "PsFPU.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Gu;
 using namespace shdfnd::aos;

@@ -31,7 +31,7 @@
 #include "GuIntersectionRaySphere.h"
 #include "GuIntersectionRay.h"
 
-using namespace physx;
+using namespace augphysx;
 
 // Based on GD Mag code, but now works correctly when origin is inside the sphere.
 // This version has limited accuracy.
@@ -93,7 +93,7 @@ bool Gu::intersectRaySphere(const PxVec3& origin, const PxVec3& dir, PxReal leng
 
 //	if(l<0.0f)
 //		l=0.0f;
-	l = physx::intrinsics::selectMax(l, 0.0f);
+	l = augphysx::intrinsics::selectMax(l, 0.0f);
 
 	bool status = intersectRaySphereBasic(origin + l*dir, dir, length - l, center, radius, dist, hit_pos);
 	if(status)

@@ -40,7 +40,7 @@
 
 #define BV4_ALIGN16(x)	PX_ALIGN_PREFIX(16)	x PX_ALIGN_SUFFIX(16)
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -65,7 +65,7 @@ namespace Gu
 		HIT_EXIT		= 2		//!< Hit found, you can early-exit (raycast any)
 	};
 
-	class RaycastHitInternal : public physx::shdfnd::UserAllocated
+	class RaycastHitInternal : public augphysx::shdfnd::UserAllocated
 	{
 		public:
 		PX_FORCE_INLINE		RaycastHitInternal()	{}
@@ -75,7 +75,7 @@ namespace Gu
 				PxU32		mTriangleID;
 	};
 
-	class SweepHit : public physx::shdfnd::UserAllocated
+	class SweepHit : public augphysx::shdfnd::UserAllocated
 	{
 		public:
 		PX_FORCE_INLINE		SweepHit()		{}
@@ -188,7 +188,7 @@ namespace Gu
 
 	// PT: now duplicated because not easy to do otherwise
 
-	struct BVDataSwizzledQ : public physx::shdfnd::UserAllocated
+	struct BVDataSwizzledQ : public augphysx::shdfnd::UserAllocated
 	{
 		struct Data
 		{
@@ -211,7 +211,7 @@ namespace Gu
 	};
 
 	#ifdef GU_BV4_COMPILE_NON_QUANTIZED_TREE
-	struct BVDataSwizzledNQ : public physx::shdfnd::UserAllocated
+	struct BVDataSwizzledNQ : public augphysx::shdfnd::UserAllocated
 	{
 		float		mMinX[4];
 		float		mMinY[4];
@@ -247,7 +247,7 @@ namespace Gu
 	template<class ParamsT>
 	PX_FORCE_INLINE	void setupMeshPointersAndQuantizedCoeffs(ParamsT* PX_RESTRICT params, const SourceMesh* PX_RESTRICT mesh, const BV4Tree* PX_RESTRICT tree)
 	{
-		using namespace physx::shdfnd::aos;
+		using namespace augphysx::shdfnd::aos;
 		
 		params->mTris32	= mesh->getTris32();
 		params->mTris16	= mesh->getTris16();

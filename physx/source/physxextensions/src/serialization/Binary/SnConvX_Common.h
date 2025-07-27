@@ -38,6 +38,6 @@
 #define DELETEARRAY(x)	if(x){ delete []x;	x = NULL; }
 
 #define	inline_	PX_FORCE_INLINE
-#define PsArray physx::shdfnd::Array
+#define PsArray augphysx::shdfnd::Array
 
 #endif

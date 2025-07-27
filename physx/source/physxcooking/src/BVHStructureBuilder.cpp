@@ -34,7 +34,7 @@
 #include "GuSerialize.h"
 #include "GuBVHStructure.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 // A.B. move this to some common place?
@@ -46,7 +46,7 @@ using namespace Gu;
 // A.B. move to common place
 PX_FORCE_INLINE void inflateBounds(PxBounds3& dst, const PxBounds3& src)
 {
-	using namespace physx::shdfnd::aos;
+	using namespace augphysx::shdfnd::aos;
 
 	const Vec4V minV = V4LoadU(&src.minimum.x);
 	const Vec4V maxV = V4LoadU(&src.maximum.x);

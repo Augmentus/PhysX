@@ -34,7 +34,7 @@
 #include "ScScene.h"
 #include "ScInteraction.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::ActorSim::ActorSim(Scene& scene, ActorCore& core) :
 	mFirstElement	(NULL),

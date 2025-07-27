@@ -33,7 +33,7 @@
 #include "PsArray.h"
 #include "PsMutex.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

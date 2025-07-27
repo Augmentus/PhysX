@@ -43,13 +43,13 @@
 //#define PX_HEIGHTFIELD_VERSION 0
 #define PX_HEIGHTFIELD_VERSION 1  // tiled version that was needed for PS3 only has been removed
 
-namespace physx
+namespace augphysx
 {
 class GuMeshFactory;
 class PxHeightFieldDesc;
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -917,7 +917,7 @@ PX_INLINE PxVec3 Gu::HeightField::getTriangleNormalInternal(PxU32 triangleIndex)
 	const PxI32 h2 = getSample(v2).height;
 
 	const float thickness = 0.0f;
-	const PxReal coeff = physx::intrinsics::fsel(thickness, -1.0f, 1.0f);
+	const PxReal coeff = augphysx::intrinsics::fsel(thickness, -1.0f, 1.0f);
 
 //	PxVec3 n(0,1,0);
 	const PxU32 cell = triangleIndex >> 1;

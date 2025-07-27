@@ -34,7 +34,7 @@
 #include "PsFoundation.h"
 #include "PsVecMath.h"
 
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 //#define CHECK_NB_OVERLAPS
 #define USE_FULLY_INSIDE_FLAG
@@ -43,7 +43,7 @@ using namespace physx::shdfnd::aos;
 //HWSCAN: reverse bits in fully-inside-flag bitmaps because the code gives us indices for which bits are set (and we want the opposite)
 #define HWSCAN
 
-using namespace physx;
+using namespace augphysx;
 using namespace Bp;
 using namespace Cm;
 
@@ -3058,7 +3058,7 @@ bool BroadPhaseMBP::removeRegion(PxU32 handle)
 	return mMBP->removeRegion(handle);
 }
 
-void BroadPhaseMBP::update(const PxU32 numCpuTasks, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, physx::PxBaseTask* continuation, physx::PxBaseTask* narrowPhaseUnblockTask)
+void BroadPhaseMBP::update(const PxU32 numCpuTasks, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, augphysx::PxBaseTask* continuation, augphysx::PxBaseTask* narrowPhaseUnblockTask)
 {
 #if PX_CHECKED
 	PX_CHECK_AND_RETURN(scratchAllocator, "BroadPhaseMBP::update - scratchAllocator must be non-NULL \n");

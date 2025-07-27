@@ -31,7 +31,7 @@
 #include "ExtJointMetaDataExtensions.h" 
 #include "SnJointRepXSerializer.h"
 
-namespace physx { 
+namespace augphysx { 
 
 	template<typename TJointType>
 	inline TJointType* createJoint( PxPhysics& physics, 

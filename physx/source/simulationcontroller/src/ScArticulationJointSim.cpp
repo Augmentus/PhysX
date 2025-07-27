@@ -36,7 +36,7 @@
 #include "ScArticulationSim.h"
 #include "PxsSimpleIslandManager.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::ArticulationJointSim::ArticulationJointSim(ArticulationJointCore& joint, ActorSim& parent, ActorSim& child) :
 	Interaction	(parent, child, InteractionType::eARTICULATION, 0),

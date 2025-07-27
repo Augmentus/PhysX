@@ -71,7 +71,7 @@ This should be called before calling any functions or methods in extensions whic
 @see PxCloseExtensions PxFoundation PxPhysics
 */
 
-PX_C_EXPORT bool PX_CALL_CONV PxInitExtensions(physx::PxPhysics& physics, physx::PxPvd* pvd);
+PX_C_EXPORT bool PX_CALL_CONV PxInitExtensions(augphysx::PxPhysics& physics, augphysx::PxPvd* pvd);
 
 /** \brief Shut down the PhysXExtensions library. 
 

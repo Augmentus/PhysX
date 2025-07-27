@@ -34,11 +34,11 @@
 #include "PsHashSet.h"
 #include "PsHashMap.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Vd
 {
-using namespace physx::shdfnd;
+using namespace augphysx::shdfnd;
 
 typedef HashSet<const PxRigidActor*> OwnerActorsValueType;
 typedef HashMap<const PxShape*, OwnerActorsValueType*> OwnerActorsMap;

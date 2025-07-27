@@ -28,7 +28,7 @@
 #ifndef PX_UNION_H
 #define PX_UNION_H
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 	struct UnionType
 	{
 		const char*			mTypeName;

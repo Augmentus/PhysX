@@ -35,7 +35,7 @@
 #include "foundation/PxBounds3.h"
 #include "foundation/PxMemory.h"
 
-using namespace physx;
+using namespace augphysx;
 
 namespace local
 {

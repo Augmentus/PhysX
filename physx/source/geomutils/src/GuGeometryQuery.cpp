@@ -49,7 +49,7 @@
 #include "GuDistancePointBox.h"
 #include "PsFPU.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 extern GeomSweepFuncs gGeomSweepFuncs;
@@ -259,7 +259,7 @@ PxReal PxGeometryQuery::pointDistance(const PxVec3& point, const PxGeometry& geo
 			if(sqDistance<=r*r)
 				return 0.0f;
 
-			const PxReal d = physx::intrinsics::sqrt(sqDistance);
+			const PxReal d = augphysx::intrinsics::sqrt(sqDistance);
 
 			if(closestPoint)
 			{

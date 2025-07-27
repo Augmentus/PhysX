@@ -41,7 +41,7 @@
 #include "PsArray.h"
 #include "PsAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {
@@ -236,7 +236,7 @@ Macro to instantiate a type for serialization testing.
 Note: Only use PX_NEW_SERIALIZED once in a scope.
 */
 #define PX_NEW_SERIALIZED(v,T) 															        \
-    void* _buf = physx::shdfnd::ReflectionAllocator<T>().allocate(sizeof(T),__FILE__,__LINE__);  \
+    void* _buf = augphysx::shdfnd::ReflectionAllocator<T>().allocate(sizeof(T),__FILE__,__LINE__);  \
 	Cm::markSerializedMem(_buf, sizeof(T));                                                      \
     v = PX_PLACEMENT_NEW(_buf, T)
 

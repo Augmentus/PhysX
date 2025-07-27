@@ -49,7 +49,7 @@
 #error "This file should only be included by unix builds!!"
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

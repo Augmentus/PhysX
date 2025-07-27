@@ -32,7 +32,7 @@
 #include "foundation/PxSimpleTypes.h"
 #include "foundation/PxErrorCallback.h"
 
-namespace physx
+namespace augphysx
 {
 PX_PUSH_PACK_DEFAULT
 

@@ -41,7 +41,7 @@ namespace local
 	struct QuickHullVertex;
 }
 
-namespace physx
+namespace augphysx
 {
 	class ConvexHull;
 

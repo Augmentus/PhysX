@@ -35,8 +35,8 @@
 #include "PxsSimpleIslandManager.h"
 #include "PxsSimulationController.h"
 
-using namespace physx;
-using namespace physx::Dy;
+using namespace augphysx;
+using namespace augphysx::Dy;
 using namespace Sc;
 
 #define PX_FREEZE_INTERVAL 1.5f

@@ -34,7 +34,7 @@
 #include "ScConstraintProjectionTree.h"
 #include "PsUtilities.h"  // for Ps::to8()
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

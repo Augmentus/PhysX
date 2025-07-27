@@ -35,7 +35,7 @@
 #include "cooking/PxCooking.h"
 #include "MeshBuilder.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Gu
 	{

@@ -41,7 +41,7 @@
 #include "CmUtils.h"
 #include "PsAlloca.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Gu;
 using namespace Cm;

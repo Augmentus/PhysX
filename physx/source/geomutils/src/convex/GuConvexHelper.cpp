@@ -32,7 +32,7 @@
 #include "GuInternal.h"
 #include "PsUtilities.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 // PT: we can't call alloca in a function and we want to avoid defines or duplicating the code. This makes it a bit tricky to write.

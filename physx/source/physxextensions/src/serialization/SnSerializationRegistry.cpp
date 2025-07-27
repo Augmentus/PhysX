@@ -38,7 +38,7 @@
 #include "PsFoundation.h"
 #include "PsString.h"
 
-using namespace physx;
+using namespace augphysx;
 
 namespace
 {
@@ -144,7 +144,7 @@ namespace
 	};
 }
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 
 SerializationRegistry::SerializationRegistry(PxPhysics& physics)
 	: mPhysics(physics)
@@ -163,13 +163,13 @@ SerializationRegistry::~SerializationRegistry()
 
 	if(mSerializers.size() > 0)
 	{
-		shdfnd::getFoundation().error(physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
+		shdfnd::getFoundation().error(augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
 			"PxSerializationRegistry::release(): some registered PxSerializer instances were not unregistered");	
 	}
 
 	if(mRepXSerializers.size() > 0)
 	{
-		shdfnd::getFoundation().error(physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
+		shdfnd::getFoundation().error(augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
 			"PxSerializationRegistry::release(): some registered PxRepXSerializer instances were not unregistered");	
 	}
 }
@@ -178,7 +178,7 @@ void SerializationRegistry::registerSerializer(PxType type, PxSerializer& serial
 {
 	if(mSerializers.find(type))
 	{
-		shdfnd::getFoundation().error(physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
+		shdfnd::getFoundation().error(augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
 			"PxSerializationRegistry::registerSerializer: Type %d has already been registered", type);		
 	}
 
@@ -192,7 +192,7 @@ PxSerializer* SerializationRegistry::unregisterSerializer(PxType type)
 
 	if(!mSerializers.erase(type))
 	{
-		shdfnd::getFoundation().error(physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
+		shdfnd::getFoundation().error(augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
 			"PxSerializationRegistry::unregisterSerializer: failed to find PxSerializer instance for type %d", type);
 	}
 	return s;
@@ -204,7 +204,7 @@ const PxSerializer* SerializationRegistry::getSerializer(PxType type) const
 #if PX_CHECKED
 	if (!e)
 	{
-		shdfnd::getFoundation().error(physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
+		shdfnd::getFoundation().error(augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
 			"PxSerializationRegistry::getSerializer: failed to find PxSerializer instance for type %d", type);
 	}
 #endif
@@ -240,7 +240,7 @@ void SerializationRegistry::registerRepXSerializer(PxType type, PxRepXSerializer
 {
 	if(mRepXSerializers.find(type))
 	{
-		shdfnd::getFoundation().error(physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
+		shdfnd::getFoundation().error(augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
 			"PxSerializationRegistry::registerRepXSerializer: Type %d has already been registered", type);	
 	}
 
@@ -252,7 +252,7 @@ PxRepXSerializer* SerializationRegistry::getRepXSerializer(const char* typeName)
 	SerializationRegistry* sr = const_cast<SerializationRegistry*>(this);
 	for( RepXSerializerMap::Iterator iter = sr->mRepXSerializers.getIterator(); !iter.done(); ++iter)
 	{
-		if ( physx::shdfnd::stricmp( iter->second->getTypeName(), typeName ) == 0 )
+		if ( augphysx::shdfnd::stricmp( iter->second->getTypeName(), typeName ) == 0 )
 			return iter->second;
 	}
 	return NULL;
@@ -265,7 +265,7 @@ PxRepXSerializer* SerializationRegistry::unregisterRepXSerializer(PxType type)
 
 	if(!mRepXSerializers.erase(type))
 	{
-		shdfnd::getFoundation().error(physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
+		shdfnd::getFoundation().error(augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, 
 			"PxSerializationRegistry::unregisterRepXSerializer: failed to find PxRepXSerializer instance for type %d", type);	
 	}
 	return s;
@@ -284,5 +284,5 @@ PxSerializationRegistry* PxSerialization::createSerializationRegistry(PxPhysics&
 	return PX_NEW(Sn::SerializationRegistry)(physics);	
 }
 
-} // physx
+} // augphysx
 

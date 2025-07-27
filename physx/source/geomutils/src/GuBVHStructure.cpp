@@ -36,7 +36,7 @@
 #include "PsFoundation.h"
 #include "CmUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 BVHStructure::BVHStructure(GuMeshFactory* factory):	

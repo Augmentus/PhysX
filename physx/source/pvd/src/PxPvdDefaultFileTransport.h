@@ -36,12 +36,12 @@
 #include "PsFileBuffer.h"
 #include "PsMutex.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
 
-class PvdDefaultFileTransport : public physx::PxPvdTransport, public physx::shdfnd::UserAllocated
+class PvdDefaultFileTransport : public augphysx::PxPvdTransport, public augphysx::shdfnd::UserAllocated
 {
 	PX_NOCOPY(PvdDefaultFileTransport)
   public:
@@ -64,10 +64,10 @@ class PvdDefaultFileTransport : public physx::PxPvdTransport, public physx::shdf
 	virtual void release();
 
   private:
-	physx::PsFileBuffer* mFileBuffer;
+	augphysx::PsFileBuffer* mFileBuffer;
 	bool mConnected;
 	uint64_t mWrittenData;
-	physx::shdfnd::Mutex mMutex;
+	augphysx::shdfnd::Mutex mMutex;
 	bool mLocked; // for debug, remove it when finished
 };
 

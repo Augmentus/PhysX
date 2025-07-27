@@ -34,7 +34,7 @@
 #include "common/PxPhysXCommonConfig.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxSerializationContext;
@@ -115,7 +115,7 @@ struct PX_PHYSX_COMMON_API PtrTable
 	void	exportExtraData(PxSerializationContext& stream);
 	void	importExtraData(PxDeserializationContext& context);
 
-	static void getBinaryMetaData(physx::PxOutputStream& stream);
+	static void getBinaryMetaData(augphysx::PxOutputStream& stream);
 
 private:
 	void realloc(PxU32 oldCapacity, PxU32 newCapacity, PtrTableStorageManager& sm);

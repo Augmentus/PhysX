@@ -40,7 +40,7 @@
 #include "foundation/PxErrors.h"
 //~PX_SERIALIZATION
 
-namespace physx
+namespace augphysx
 {
 
 template<class APIClass>

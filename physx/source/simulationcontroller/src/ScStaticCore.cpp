@@ -32,7 +32,7 @@
 #include "ScStaticSim.h"
 #include "PxRigidStatic.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::StaticSim* Sc::StaticCore::getSim() const
 {

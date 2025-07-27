@@ -34,10 +34,10 @@
 #include "ScConstraintSim.h"
 #include "ScConstraintInteraction.h"
 
-using namespace physx;
+using namespace augphysx;
 
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

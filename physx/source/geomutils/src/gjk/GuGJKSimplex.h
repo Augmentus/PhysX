@@ -43,7 +43,7 @@
 #endif
 
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

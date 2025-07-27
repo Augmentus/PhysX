@@ -33,7 +33,7 @@
 #include "foundation/PxMemory.h"
 #include "ScBodyCore.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

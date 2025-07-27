@@ -45,7 +45,7 @@
 #include "NpPvdSceneQueryCollector.h"
 #endif
 
-namespace physx { namespace Sq {
+namespace augphysx { namespace Sq {
 
 	struct QueryID { enum Enum {
 		QUERY_RAYCAST_ANY_OBJECT,

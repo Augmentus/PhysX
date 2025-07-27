@@ -34,7 +34,7 @@
 #include "foundation/PxVec3.h"
 #include "PxPhysXConfig.h"
 
-namespace physx
+namespace augphysx
 {
 	//! Vertex cloud reduction result structure
 	struct REDUCEDCLOUD

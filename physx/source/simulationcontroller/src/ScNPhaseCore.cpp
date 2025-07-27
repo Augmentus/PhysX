@@ -42,7 +42,7 @@
 #include "BpBroadPhase.h"
 #include "common/PxProfileZone.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sc;
 using namespace Gu;
 
@@ -1203,7 +1203,7 @@ Sc::ElementSimInteraction* Sc::NPhaseCore::convert(ElementSimInteraction* pair, 
 	return result;
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

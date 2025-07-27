@@ -35,11 +35,11 @@
 #include "PsUtilities.h"
 #include "PsBasicTemplates.h"
 
-using namespace physx;
-using namespace physx::shdfnd;
-using namespace physx::intrinsics;
+using namespace augphysx;
+using namespace augphysx::shdfnd;
+using namespace augphysx::intrinsics;
 
-PX_FOUNDATION_API PxTransform physx::PxTransformFromPlaneEquation(const PxPlane& plane)
+PX_FOUNDATION_API PxTransform augphysx::PxTransformFromPlaneEquation(const PxPlane& plane)
 {
 	PxPlane p = plane; 
 	p.normalize();
@@ -59,7 +59,7 @@ PX_FOUNDATION_API PxTransform physx::PxTransformFromPlaneEquation(const PxPlane&
 
 }
 
-PX_FOUNDATION_API PxTransform physx::PxTransformFromSegment(const PxVec3& p0, const PxVec3& p1, PxReal* halfHeight)
+PX_FOUNDATION_API PxTransform augphysx::PxTransformFromSegment(const PxVec3& p0, const PxVec3& p1, PxReal* halfHeight)
 {
 	const PxVec3 axis = p1-p0;
 	const PxReal height = axis.magnitude();
@@ -70,7 +70,7 @@ PX_FOUNDATION_API PxTransform physx::PxTransformFromSegment(const PxVec3& p0, co
 						height<1e-6f ? PxQuat(PxIdentity) : PxShortestRotation(PxVec3(1.f,0,0), axis/height));		
 }
 
-PX_FOUNDATION_API PxQuat physx::PxShortestRotation(const PxVec3& v0, const PxVec3& v1)
+PX_FOUNDATION_API PxQuat augphysx::PxShortestRotation(const PxVec3& v0, const PxVec3& v1)
 {
 	const PxReal d = v0.dot(v1);
 	const PxVec3 cross = v0.cross(v1);
@@ -92,7 +92,7 @@ PxQuat indexedRotation(PxU32 axis, PxReal s, PxReal c)
 }
 }
 
-PX_FOUNDATION_API PxVec3 physx::PxDiagonalize(const PxMat33& m, PxQuat& massFrame)
+PX_FOUNDATION_API PxVec3 augphysx::PxDiagonalize(const PxMat33& m, PxQuat& massFrame)
 {
 	// jacobi rotation using quaternions (from an idea of Stan Melax, with fix for precision issues)
 
@@ -141,7 +141,7 @@ PX_FOUNDATION_API PxVec3 physx::PxDiagonalize(const PxMat33& m, PxQuat& massFram
 \param basis Input = skewed basis, Output = (normalized) orthogonal basis.
 \return Bounding box extent.
 */
-PxVec3 physx::shdfnd::optimizeBoundingBox(PxMat33& basis)
+PxVec3 augphysx::shdfnd::optimizeBoundingBox(PxMat33& basis)
 {
 	PxVec3* PX_RESTRICT vec = &basis[0]; // PT: don't copy vectors if not needed...
 
@@ -179,7 +179,7 @@ PxVec3 physx::shdfnd::optimizeBoundingBox(PxMat33& basis)
 	return magnitude;
 }
 
-PxQuat physx::shdfnd::slerp(const PxReal t, const PxQuat& left, const PxQuat& right)
+PxQuat augphysx::shdfnd::slerp(const PxReal t, const PxQuat& left, const PxQuat& right)
 {
 	const PxReal quatEpsilon = (PxReal(1.0e-8f));
 
@@ -208,7 +208,7 @@ PxQuat physx::shdfnd::slerp(const PxReal t, const PxQuat& left, const PxQuat& ri
 	return left;
 }
 
-void physx::shdfnd::integrateTransform(const PxTransform& curTrans, const PxVec3& linvel, const PxVec3& angvel,
+void augphysx::shdfnd::integrateTransform(const PxTransform& curTrans, const PxVec3& linvel, const PxVec3& angvel,
                                        PxReal timeStep, PxTransform& result)
 {
 	result.p = curTrans.p + linvel * timeStep;

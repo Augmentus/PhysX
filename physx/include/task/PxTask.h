@@ -33,7 +33,7 @@
 #include "task/PxCpuDispatcher.h"
 #include "foundation/PxAssert.h"
 
-namespace physx
+namespace augphysx
 {
 
 /**

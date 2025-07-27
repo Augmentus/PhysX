@@ -36,7 +36,7 @@
 #include "PsThread.h"
 
 
-namespace physx
+namespace augphysx
 {
 
 struct PxSolverBody;

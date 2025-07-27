@@ -33,7 +33,7 @@
 
 #define MAX_DISPLAYED_ISSUES   10
 
-using namespace physx;
+using namespace augphysx;
 
 void Sn::ConvX::resetNbErrors()
 {

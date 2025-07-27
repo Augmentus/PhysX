@@ -34,7 +34,7 @@
 #include "GuContactMethodImpl.h"
 #include "GuDistanceSegmentSegmentSIMD.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Ps;
 using namespace aos;
@@ -74,7 +74,7 @@ static Vec4V pcmDistancePointSegmentTValue22(	const Vec3VArg a0, const Vec3VArg 
 	return V4Sel(V4IsEq(denom, zero), zero, tValue);
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -288,4 +288,4 @@ bool pcmContactCapsuleCapsule(GU_CONTACT_METHOD_ARGS)
 	return false;
 }
 }//Gu
-}//physx
+}//augphysx

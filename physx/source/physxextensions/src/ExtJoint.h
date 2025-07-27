@@ -49,7 +49,7 @@
 
 // PX_SERIALIZATION
 
-namespace physx
+namespace augphysx
 {
 	class PxDeserializationContext;
 
@@ -93,7 +93,7 @@ namespace Ext
 		
 #if PX_SUPPORT_PVD
 		// PxConstraintConnector
-		virtual bool updatePvdProperties(physx::pvdsdk::PvdDataStream& pvdConnection, const PxConstraint* c, PxPvdUpdateType::Enum updateType) const
+		virtual bool updatePvdProperties(augphysx::pvdsdk::PvdDataStream& pvdConnection, const PxConstraint* c, PxPvdUpdateType::Enum updateType) const
 		{
 			if(updateType == PxPvdUpdateType::UPDATE_SIM_PROPERTIES)
 			{
@@ -118,7 +118,7 @@ namespace Ext
 			return false;
 		}
 #else
-		virtual bool updatePvdProperties(physx::pvdsdk::PvdDataStream&, const PxConstraint*, PxPvdUpdateType::Enum) const
+		virtual bool updatePvdProperties(augphysx::pvdsdk::PvdDataStream&, const PxConstraint*, PxPvdUpdateType::Enum) const
 		{
 			return false;
 		}
@@ -138,7 +138,7 @@ namespace Ext
 			if(scene)
 			{
 				//if pvd not connect data stream is NULL
-				physx::pvdsdk::PvdDataStream* conn = scene->getScenePvdClient()->getClientInternal()->getDataStream();
+				augphysx::pvdsdk::PvdDataStream* conn = scene->getScenePvdClient()->getClientInternal()->getDataStream();
 				if( conn != NULL )
 					Ext::Pvd::setActors(
 					*conn,

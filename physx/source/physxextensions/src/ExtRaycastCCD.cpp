@@ -39,9 +39,9 @@
 
 #include "PsArray.h"
 
-using namespace physx;
+using namespace augphysx;
 
-namespace physx
+namespace augphysx
 {
 class RaycastCCDManagerInternal
 {
@@ -64,7 +64,7 @@ class RaycastCCDManagerInternal
 
 	private:
 		PxScene*						mScene;
-		physx::shdfnd::Array<CCDObject>	mObjects;
+		augphysx::shdfnd::Array<CCDObject>	mObjects;
 };
 }
 

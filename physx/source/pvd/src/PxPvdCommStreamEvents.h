@@ -34,7 +34,7 @@
 #include "PxPvdObjectModelBaseTypes.h"
 #include "PsTime.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
@@ -310,8 +310,8 @@ struct StreamInitialization : public EventSerializeable
 	StreamInitialization()
 	: mStreamId(getStreamId())
 	, mStreamVersion(getStreamVersion())
-	, mTimestampNumerator(physx::shdfnd::Time::getCounterFrequency().mNumerator * 10)
-	, mTimestampDenominator(physx::shdfnd::Time::getCounterFrequency().mDenominator)
+	, mTimestampNumerator(augphysx::shdfnd::Time::getCounterFrequency().mNumerator * 10)
+	, mTimestampDenominator(augphysx::shdfnd::Time::getCounterFrequency().mDenominator)
 	, mStreamFlags(sizeof(void*) == 4 ? 0 : 1)
 	{
 	}

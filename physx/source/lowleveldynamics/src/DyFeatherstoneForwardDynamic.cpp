@@ -51,7 +51,7 @@
 #pragma warning(disable:4505)
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

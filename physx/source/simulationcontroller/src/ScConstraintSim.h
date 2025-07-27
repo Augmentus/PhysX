@@ -34,7 +34,7 @@
 #include "PxSimulationEventCallback.h"
 #include "DyConstraint.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

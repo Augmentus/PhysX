@@ -40,7 +40,7 @@
 #include "PsFoundation.h"
 #include "PsUtilities.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Cm;
 
@@ -87,7 +87,7 @@ const PxBatchQueryMemory& NpBatchQuery::getUserMemory()
 // ROS abbreviates Raycast/Overlap/Sweep
 struct QTypeROS { enum Enum { eRAYCAST = 0, eOVERLAP = 1, eSWEEP = 2 }; }; // AP: perhaps can be shared with some other code
 
-namespace physx
+namespace augphysx
 {
 struct BatchStreamHeader
 {

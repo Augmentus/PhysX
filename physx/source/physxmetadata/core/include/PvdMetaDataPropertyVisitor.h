@@ -32,7 +32,7 @@
 
 #include <stdio.h>
 #include "PvdMetaDataExtensions.h"
-namespace physx
+namespace augphysx
 {
 
 namespace Vd
@@ -421,14 +421,14 @@ public:
 	DEFINE_PVD_PROPERTY_NOP( const void* )
 	DEFINE_PVD_PROPERTY_NOP( void* )
 	DEFINE_PVD_PROPERTY_NOP( PxSimulationFilterCallback * )
-	DEFINE_PVD_PROPERTY_NOP( physx::PxTaskManager * )
+	DEFINE_PVD_PROPERTY_NOP( augphysx::PxTaskManager * )
 	DEFINE_PVD_PROPERTY_NOP( PxSimulationFilterShader * )
 	DEFINE_PVD_PROPERTY_NOP( PxSimulationFilterShader)
 	DEFINE_PVD_PROPERTY_NOP( PxContactModifyCallback * )
 	DEFINE_PVD_PROPERTY_NOP( PxCCDContactModifyCallback * )
 	DEFINE_PVD_PROPERTY_NOP( PxSimulationEventCallback * )
-	DEFINE_PVD_PROPERTY_NOP( physx::PxCudaContextManager* )
-	DEFINE_PVD_PROPERTY_NOP( physx::PxCpuDispatcher * )
+	DEFINE_PVD_PROPERTY_NOP( augphysx::PxCudaContextManager* )
+	DEFINE_PVD_PROPERTY_NOP( augphysx::PxCpuDispatcher * )
 	DEFINE_PVD_PROPERTY_NOP( PxRigidActor )
 	DEFINE_PVD_PROPERTY_NOP( const PxRigidActor )
 	DEFINE_PVD_PROPERTY_NOP( PxRigidActor& )

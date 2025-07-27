@@ -42,12 +42,12 @@
 #include "PxArticulation.h"
 #include "common/PxProfileZone.h"
 
-namespace physx
+namespace augphysx
 {
 	class NpMaterial;
 }
 
-using namespace physx;
+using namespace augphysx;
 
 // constants to make boolean template parameters more readable
 static const bool tSimRunning = true;

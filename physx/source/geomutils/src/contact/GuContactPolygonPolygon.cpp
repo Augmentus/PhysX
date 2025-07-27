@@ -36,7 +36,7 @@
 #include "PsAllocator.h"
 #include "PsFPU.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #define CONTACT_REDUCTION
@@ -159,8 +159,8 @@ static void ContactReductionAllIn(	ContactBuffer& contactBuffer, PxU32 nbExistin
 			for(PxU32 j=0;j<nbAxes;j++)
 			{
 				const float dp = dot2D(dirs[j], p2d);
-				dpmin[j] = physx::intrinsics::selectMin(dpmin[j], dp);
-				dpmax[j] = physx::intrinsics::selectMax(dpmax[j], dp);
+				dpmin[j] = augphysx::intrinsics::selectMin(dpmin[j], dp);
+				dpmax[j] = augphysx::intrinsics::selectMax(dpmax[j], dp);
 			}
 		}
 
@@ -365,10 +365,10 @@ static void transformVertices(	float& minX, float& minY,
 	{
 		float x,y;
 		transform2DT(x, y, vertices[indices[i]], RotT);
-		lminX = physx::intrinsics::selectMin(lminX, x);
-		lminY = physx::intrinsics::selectMin(lminY, y);
-		lmaxX = physx::intrinsics::selectMax(lmaxX, x);
-		lmaxY = physx::intrinsics::selectMax(lmaxY, y);
+		lminX = augphysx::intrinsics::selectMin(lminX, x);
+		lminY = augphysx::intrinsics::selectMin(lminY, y);
+		lmaxX = augphysx::intrinsics::selectMax(lmaxX, x);
+		lmaxY = augphysx::intrinsics::selectMax(lmaxY, y);
 		verts2D[i*2+0] = x;
 		verts2D[i*2+1] = y;
 	}
@@ -399,13 +399,13 @@ static void transformVertices(	float& minX, float& minY,
 		// PT: theoretically proper DE702 fix (relocation + scaling)
 		const float dx = x - cx;
 		const float dy = y - cy;
-//		const float coeff = epsilon * physx::intrinsics::recipSqrt(dx*dx+dy*dy);
+//		const float coeff = epsilon * augphysx::intrinsics::recipSqrt(dx*dx+dy*dy);
 //		verts2D[i*2+0] = x - lminX + dx * coeff;
 //		verts2D[i*2+1] = y - lminY + dy * coeff;
 
 		// PT: approximate but faster DE702 fix. We multiply by epsilon so this is good enough.
-		verts2D[i*2+0] = x - lminX + physx::intrinsics::fsel(dx, epsilon, -epsilon);
-		verts2D[i*2+1] = y - lminY + physx::intrinsics::fsel(dy, epsilon, -epsilon);
+		verts2D[i*2+0] = x - lminX + augphysx::intrinsics::fsel(dx, epsilon, -epsilon);
+		verts2D[i*2+1] = y - lminY + augphysx::intrinsics::fsel(dy, epsilon, -epsilon);
 	}
 	lmaxX -= lminX;
 	lmaxY -= lminY;

@@ -35,9 +35,9 @@
 #include "task/PxTaskDefine.h"
 
 // some macros to keep the source code more readable
-#define PX_ALLOC_INFO(name, ID) __FILE__, __LINE__, name, physx::PxAllocId::ID
-#define PX_ALLOC_INFO_PARAMS_DECL(p0, p1, p2, p3)  const char* file = p0, int line = p1, const char* allocName = p2, physx::PxAllocId::Enum allocId = physx::PxAllocId::p3
-#define PX_ALLOC_INFO_PARAMS_DEF()  const char* file, int line, const char* allocName, physx::PxAllocId::Enum allocId
+#define PX_ALLOC_INFO(name, ID) __FILE__, __LINE__, name, augphysx::PxAllocId::ID
+#define PX_ALLOC_INFO_PARAMS_DECL(p0, p1, p2, p3)  const char* file = p0, int line = p1, const char* allocName = p2, augphysx::PxAllocId::Enum allocId = augphysx::PxAllocId::p3
+#define PX_ALLOC_INFO_PARAMS_DEF()  const char* file, int line, const char* allocName, augphysx::PxAllocId::Enum allocId
 #define PX_ALLOC_INFO_PARAMS_INPUT()  file, line, allocName, allocId
 #define PX_ALLOC_INFO_PARAMS_INPUT_INFO(info) info.getFileName(), info.getLine(), info.getAllocName(), info.getAllocId()
 
@@ -45,7 +45,7 @@
 #define NULL 0
 #endif
 
-namespace physx
+namespace augphysx
 {
 
 PX_PUSH_PACK_DEFAULT

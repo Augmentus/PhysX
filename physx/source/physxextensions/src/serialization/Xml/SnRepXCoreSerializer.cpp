@@ -37,8 +37,8 @@
 #include "SnXmlDeserializer.h"		
 #include "SnRepXCoreSerializer.h"
 
-using namespace physx::Sn;
-namespace physx { 
+using namespace augphysx::Sn;
+namespace augphysx { 
 	typedef PxReadOnlyPropertyInfo<PxPropertyInfoName::PxArticulationLink_InboundJoint, PxArticulationLink, PxArticulationJointBase *> TIncomingJointPropType;
 		
 	//*************************************************************
@@ -526,7 +526,7 @@ namespace physx {
 				matSuccess = inReader.gotoNextSibling() )
 			{
 				const char* actorType = inReader.getCurrentItemName();
-				if ( 0 == physx::shdfnd::stricmp( actorType, "PxActorRef" ) ) 
+				if ( 0 == augphysx::shdfnd::stricmp( actorType, "PxActorRef" ) ) 
 				{
 					PxActor *actor = NULL;
 					ret &= readReference<PxActor>( inReader, *inCollection, actor );
@@ -541,7 +541,7 @@ namespace physx {
 						theAggregate->addActor(*actor);
 					}
 				}
-				else if ( 0 == physx::shdfnd::stricmp( actorType, "PxArticulationRef" ) ) 
+				else if ( 0 == augphysx::shdfnd::stricmp( actorType, "PxArticulationRef" ) ) 
 				{
 					PxArticulation* articulation = NULL;
 					ret &= readReference<PxArticulation>( inReader, *inCollection, articulation );

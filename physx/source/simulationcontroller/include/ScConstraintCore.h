@@ -36,7 +36,7 @@
 #include "PsAllocator.h"
 #include "PxConstraint.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxConstraint;

@@ -35,7 +35,7 @@
 #include "foundation/PxFoundationConfig.h"
 #include <stdarg.h>
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

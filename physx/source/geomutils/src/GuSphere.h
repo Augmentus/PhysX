@@ -36,7 +36,7 @@
 #include "foundation/PxVec3.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 /**

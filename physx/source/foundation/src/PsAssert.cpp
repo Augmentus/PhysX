@@ -40,7 +40,7 @@
 
 namespace
 {
-class DefaultAssertHandler : public physx::PxAssertHandler
+class DefaultAssertHandler : public augphysx::PxAssertHandler
 {
 	virtual void operator()(const char* expr, const char* file, int line, bool& ignore)
 	{
@@ -51,7 +51,7 @@ class DefaultAssertHandler : public physx::PxAssertHandler
 #else
 		sprintf(buffer, "%s(%d) : Assertion failed: %s\n", file, line, expr);
 #endif
-		physx::shdfnd::printString(buffer);
+		augphysx::shdfnd::printString(buffer);
 #if PX_WINDOWS_FAMILY&& PX_DEBUG && PX_DEBUG_CRT
 		// _CrtDbgReport returns -1 on error, 1 on 'retry', 0 otherwise including 'ignore'.
 		// Hitting 'abort' will terminate the process immediately.
@@ -72,10 +72,10 @@ class DefaultAssertHandler : public physx::PxAssertHandler
 };
 
 DefaultAssertHandler sAssertHandler;
-physx::PxAssertHandler* sAssertHandlerPtr = &sAssertHandler;
+augphysx::PxAssertHandler* sAssertHandlerPtr = &sAssertHandler;
 }
 
-namespace physx
+namespace augphysx
 {
 
 PxAssertHandler& PxGetAssertHandler()

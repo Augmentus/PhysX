@@ -37,7 +37,7 @@
 #include "ScInteractionFlags.h"
 #include "ScActorCore.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxActor;

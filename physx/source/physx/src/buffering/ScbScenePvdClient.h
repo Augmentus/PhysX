@@ -44,7 +44,7 @@
 #include "PxPvdUserRenderer.h"
 #include "PsPvd.h"
 
-namespace physx
+namespace augphysx
 {
 class PxScene;
 class PxActor;

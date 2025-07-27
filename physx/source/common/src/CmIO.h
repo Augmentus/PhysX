@@ -36,7 +36,7 @@
 #include "foundation/PxMemory.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 	// wrappers for IO classes so that we can add extra functionality (byte counting, buffering etc)

@@ -35,7 +35,7 @@
 #include "CmMatrix34.h"
 #include "PsUtilities.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #define MAX_NB_CTCS	8 + 12*5 + 6*4
@@ -86,7 +86,7 @@ static PxI32 doBoxBoxContactGeneration(ContactBuffer& contactBuffer,
 									 PxU32& collisionData,
 									 const Cm::Matrix34& transform0, const Cm::Matrix34& transform1, PxReal contactDistance);
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu
@@ -116,7 +116,7 @@ bool contactBoxBox(GU_CONTACT_METHOD_ARGS)
 	return true;
 }
 }//Gu
-}//physx
+}//augphysx
 
 // face => 4 vertices of a face of the cube (i.e. a quad)
 static PX_FORCE_INLINE PxReal IsInYZ(const PxReal y, const PxReal z, const VertexInfo** PX_RESTRICT face)

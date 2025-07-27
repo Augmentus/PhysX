@@ -32,7 +32,7 @@
 
 #include "PxvConfig.h"
 
-namespace physx
+namespace augphysx
 {
 	struct PxcNpWorkUnit;
 	class PxcNpThreadContext;

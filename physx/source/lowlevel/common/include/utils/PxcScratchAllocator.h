@@ -37,7 +37,7 @@
 #include "PsArray.h"
 #include "PsAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 class PxcScratchAllocator
 {

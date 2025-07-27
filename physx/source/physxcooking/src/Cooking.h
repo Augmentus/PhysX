@@ -35,7 +35,7 @@
 
 #include "PsUserAllocated.h"
 
-namespace physx
+namespace augphysx
 {
 class TriangleMeshBuilder;
 class ConvexMeshBuilder;

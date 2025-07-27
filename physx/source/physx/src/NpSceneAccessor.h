@@ -32,7 +32,7 @@
 
 #include "PxScene.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxsSimulationController;
 

@@ -33,7 +33,7 @@
 
 #if PX_DEBUG || PX_CHECKED || PX_PROFILE
 	#define PX_PROFILE_ZONE(x, y)										\
-		physx::PxProfileScoped PX_CONCAT(_scoped, __LINE__)(PxGetProfilerCallback(), x, false, y)
+		augphysx::PxProfileScoped PX_CONCAT(_scoped, __LINE__)(PxGetProfilerCallback(), x, false, y)
 	#define PX_PROFILE_START_CROSSTHREAD(x, y)							\
 		if(PxGetProfilerCallback())										\
 			PxGetProfilerCallback()->zoneStart(x, true, y)

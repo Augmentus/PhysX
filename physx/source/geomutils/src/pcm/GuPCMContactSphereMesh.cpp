@@ -42,12 +42,12 @@
 #include "GuBox.h"
 
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 
-namespace physx
+namespace augphysx
 {
 
 

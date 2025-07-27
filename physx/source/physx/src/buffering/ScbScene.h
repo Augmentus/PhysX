@@ -43,7 +43,7 @@
 #include "ScbScenePvdClient.h"
 #endif
 
-namespace physx
+namespace augphysx
 {
 
 class NpMaterial;

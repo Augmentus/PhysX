@@ -38,7 +38,7 @@
 #include "foundation/PxMemory.h"
 #include "PxsIslandNodeIndex.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxsRigidBody;

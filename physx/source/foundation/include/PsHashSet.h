@@ -69,7 +69,7 @@
 // erasure of an element not in the set
 //
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

@@ -45,7 +45,7 @@
 #include "pvd/PxPvdSceneClient.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -889,7 +889,7 @@ class PxScene
 
 	@see fetchResults() checkResults()
 	*/
-	virtual	void				simulate(PxReal elapsedTime, physx::PxBaseTask* completionTask = NULL,
+	virtual	void				simulate(PxReal elapsedTime, augphysx::PxBaseTask* completionTask = NULL,
 									void* scratchMemBlock = 0, PxU32 scratchMemBlockSize = 0, bool controlSimulation = true) = 0;
 
 
@@ -903,7 +903,7 @@ class PxScene
 	application also calls removeReference().
 
 	*/
-	virtual	void				advance(physx::PxBaseTask* completionTask = 0) = 0;
+	virtual	void				advance(augphysx::PxBaseTask* completionTask = 0) = 0;
 
 	/**
 	\brief Performs collision detection for the scene over elapsedTime
@@ -922,7 +922,7 @@ class PxScene
     true unless the application is calling the PxTaskManager start/stopSimulation() methods itself.
 
 	*/
-	virtual	void				collide(PxReal elapsedTime, physx::PxBaseTask* completionTask = 0, void* scratchMemBlock = 0,
+	virtual	void				collide(PxReal elapsedTime, augphysx::PxBaseTask* completionTask = 0, void* scratchMemBlock = 0,
 									PxU32 scratchMemBlockSize = 0, bool controlSimulation = true) = 0;  
 	
 	/**
@@ -997,7 +997,7 @@ class PxScene
 
 	\param[in] continuation The task that will be executed once all callbacks have been processed.
 	*/
-	virtual void				processCallbacks(physx::PxBaseTask* continuation) = 0;
+	virtual void				processCallbacks(augphysx::PxBaseTask* continuation) = 0;
 
 
 	/**
@@ -1287,7 +1287,7 @@ class PxScene
 
 	@see PxSceneQueryUpdateMode::eBUILD_DISABLED_COMMIT_DISABLED
 	*/
-	virtual void				sceneQueriesUpdate(physx::PxBaseTask* completionTask = NULL, bool controlSimulation = true)	= 0;
+	virtual void				sceneQueriesUpdate(augphysx::PxBaseTask* completionTask = NULL, bool controlSimulation = true)	= 0;
 
 	/**
 	\brief This checks to see if the scene queries update has completed.

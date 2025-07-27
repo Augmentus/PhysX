@@ -32,7 +32,7 @@
 #include "PxPvdCommStreamEvents.h"
 #include "PxPvdCommStreamTypes.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {

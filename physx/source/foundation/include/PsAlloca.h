@@ -32,7 +32,7 @@
 
 #include "PsTempAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
@@ -63,12 +63,12 @@ class ScopedPointer : private Alloc
 #define PX_ALLOCA(var, type, count) type* var = reinterpret_cast<type*>(PxAlloca(sizeof(type) * (count)))
 #else
 #define PX_ALLOCA(var, type, count)                                                                                    \
-	physx::shdfnd::ScopedPointer<type> var;                                                                            \
+	augphysx::shdfnd::ScopedPointer<type> var;                                                                            \
 	{                                                                                                                  \
 		uint32_t size = sizeof(type) * (count);                                                                        \
 		var.mOwned = size > 1024;                                                                                      \
 		if(var.mOwned)                                                                                                 \
-			var.mPointer = reinterpret_cast<type*>(physx::shdfnd::TempAllocator().allocate(size, __FILE__, __LINE__)); \
+			var.mPointer = reinterpret_cast<type*>(augphysx::shdfnd::TempAllocator().allocate(size, __FILE__, __LINE__)); \
 		else                                                                                                           \
 			var.mPointer = reinterpret_cast<type*>(PxAlloca(size));                                                    \
 	}

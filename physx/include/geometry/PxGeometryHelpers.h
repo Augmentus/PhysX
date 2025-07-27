@@ -47,7 +47,7 @@
 #include "geometry/PxHeightFieldGeometry.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -207,7 +207,7 @@ PX_ALIGN_SUFFIX(4);
 
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

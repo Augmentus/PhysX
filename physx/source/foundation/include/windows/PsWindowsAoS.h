@@ -36,7 +36,7 @@
 #error Vector intrinsics should not be included when using scalar implementation.
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

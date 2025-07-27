@@ -34,7 +34,7 @@
 #include "GuSweepSphereSphere.h"
 #include "GuIntersectionRayCapsule.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 bool Gu::sweepSphereCapsule(const Sphere& sphere, const Capsule& lss, const PxVec3& dir, PxReal length, PxReal& d, PxVec3& ip, PxVec3& nrm, PxHitFlags hitFlags)

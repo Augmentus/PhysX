@@ -33,7 +33,7 @@
 #include "PsVecMath.h"
 #include "foundation/PxTransform.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

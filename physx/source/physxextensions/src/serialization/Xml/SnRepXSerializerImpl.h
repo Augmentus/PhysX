@@ -33,7 +33,7 @@
 #include "SnXmlVisitorWriter.h"
 #include "SnXmlVisitorReader.h"
 
-namespace physx { 
+namespace augphysx { 
 	using namespace Sn;
 
 	/**

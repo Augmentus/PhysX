@@ -40,7 +40,7 @@
 #include "common/PxPhysXCommonConfig.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -159,7 +159,7 @@ PX_INLINE bool PxSimpleTriangleMesh::isValid() const
 }
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

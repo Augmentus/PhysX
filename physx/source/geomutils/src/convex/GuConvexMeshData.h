@@ -39,7 +39,7 @@
 
 // Data definition
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

@@ -34,7 +34,7 @@
 #include "PsFoundation.h"
 #include "GuInternal.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 NodeAllocator::NodeAllocator() : mPool(NULL), mCurrentSlabIndex(0), mTotalNbNodes(0)

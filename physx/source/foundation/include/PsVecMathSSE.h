@@ -30,7 +30,7 @@
 #ifndef PSFOUNDATION_PSVECMATHSSE_H
 #define PSFOUNDATION_PSVECMATHSSE_H
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

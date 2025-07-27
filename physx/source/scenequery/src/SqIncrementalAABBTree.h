@@ -41,7 +41,7 @@
 #include "SqPrunerMergeData.h"
 
 
-namespace physx
+namespace augphysx
 {
 	namespace Gu
 	{
@@ -105,7 +105,7 @@ namespace physx
 			PX_FORCE_INLINE	IncrementalAABBTreeNode*		getPos(IncrementalAABBTreeNode* ) { return mChilds[0]; }
 			PX_FORCE_INLINE	IncrementalAABBTreeNode*		getNeg(IncrementalAABBTreeNode* ) { return mChilds[1]; }
 
-			PX_FORCE_INLINE	void						getAABBCenterExtentsV(physx::shdfnd::aos::Vec3V* center, physx::shdfnd::aos::Vec3V* extents) const
+			PX_FORCE_INLINE	void						getAABBCenterExtentsV(augphysx::shdfnd::aos::Vec3V* center, augphysx::shdfnd::aos::Vec3V* extents) const
 			{
 				const float half = 0.5f;
 				const FloatV halfV = FLoad(half);
@@ -114,13 +114,13 @@ namespace physx
 				*center = Vec3V_From_Vec4V((V4Scale(V4Add(mBVMax, mBVMin), halfV)));
 			}
 
-			PX_FORCE_INLINE	void						getAABBCenterExtentsV2(physx::shdfnd::aos::Vec3V* center, physx::shdfnd::aos::Vec3V* extents) const
+			PX_FORCE_INLINE	void						getAABBCenterExtentsV2(augphysx::shdfnd::aos::Vec3V* center, augphysx::shdfnd::aos::Vec3V* extents) const
 			{
 				*extents = Vec3V_From_Vec4V((V4Sub(mBVMax, mBVMin)));
 				*center = Vec3V_From_Vec4V((V4Add(mBVMax, mBVMin)));
 			}
 
-			PX_FORCE_INLINE	void						getAABBMinMaxV(physx::shdfnd::aos::Vec4V* minV, physx::shdfnd::aos::Vec4V* maxV) const
+			PX_FORCE_INLINE	void						getAABBMinMaxV(augphysx::shdfnd::aos::Vec4V* minV, augphysx::shdfnd::aos::Vec4V* maxV) const
 			{
 				*minV = mBVMin;
 				*maxV = mBVMax;

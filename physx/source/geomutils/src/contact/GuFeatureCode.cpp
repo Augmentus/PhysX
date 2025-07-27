@@ -30,7 +30,7 @@
 #include "GuConvexEdgeFlags.h"
 #include "GuFeatureCode.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 static FeatureCode computeFeatureCode(PxReal u, PxReal v)

@@ -30,7 +30,7 @@
 #include "GuDistanceSegmentSegment.h"
 #include "GuDistanceSegmentSegmentSIMD.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Ps;
 using namespace aos;
 
@@ -335,7 +335,7 @@ PxReal Gu::distanceSegmentSegmentSquared(	const PxVec3& origin0, const PxVec3& d
 		*param1 = fS1;
 
 	// account for numerical round-off error
-	return physx::intrinsics::selectMax(0.0f, fSqrDist);
+	return augphysx::intrinsics::selectMax(0.0f, fSqrDist);
 }
 
 PxReal Gu::distanceSegmentSegmentSquared(	const PxVec3& origin0, const PxVec3& extent0,

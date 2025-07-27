@@ -35,16 +35,16 @@
 #include "GuHeightField.h"
 #include "GuTriangleMesh.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
-namespace physx
+namespace augphysx
 {
 	bool PxcGetMaterialShapeMesh(const PxsShapeCore* shape0, const PxsShapeCore* shape1, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo);
 	bool PxcGetMaterialMesh(const PxsShapeCore* shape, const PxU32 index,  PxcNpThreadContext& context, PxsMaterialInfo* materialInfo);
 }
 
-bool physx::PxcGetMaterialMesh(const PxsShapeCore* shape, const PxU32 index, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo)
+bool augphysx::PxcGetMaterialMesh(const PxsShapeCore* shape, const PxU32 index, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo)
 {
 	PX_ASSERT(index == 1);
 	PX_UNUSED(index);
@@ -72,7 +72,7 @@ bool physx::PxcGetMaterialMesh(const PxsShapeCore* shape, const PxU32 index, Pxc
 	return true;
 }
 
-bool physx::PxcGetMaterialShapeMesh(const PxsShapeCore* shape0, const PxsShapeCore* shape1, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo)
+bool augphysx::PxcGetMaterialShapeMesh(const PxsShapeCore* shape0, const PxsShapeCore* shape1, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo)
 {
 	
 	ContactBuffer& contactBuffer = context.mContactBuffer;

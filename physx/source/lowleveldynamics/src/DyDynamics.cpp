@@ -69,7 +69,7 @@
 //KS - used to specifically turn on/off batches 1D SIMD constraints.
 #define DY_BATCH_1D 1
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {
@@ -586,7 +586,7 @@ public:
 
 		PxU16 compressedContactSize;
 
-		physx::writeCompressedContact(buffer.contacts, size, NULL, output.nbContacts, output.contactPatches, output.contactPoints, compressedContactSize,
+		augphysx::writeCompressedContact(buffer.contacts, size, NULL, output.nbContacts, output.contactPatches, output.contactPoints, compressedContactSize,
 			reinterpret_cast<PxReal*&>(output.contactForces), contactForceByteSize, mMaterialManager, false, 
 			false, materialInfo, output.nbPatches, 0, &mThreadContext.mConstraintBlockManager, &threadContext.mConstraintBlockStream, false);
 	}
@@ -2490,8 +2490,8 @@ static void preIntegrationParallel(
 	solverBodyPool[i].maxSolverNormalProgress = 0;
 	solverBodyPool[i].maxSolverFrictionProgress = 0;
 
-	physx::shdfnd::atomicMax(reinterpret_cast<volatile PxI32*>(maxSolverPositionIterations), PxI32(localMaxPosIter));
-	physx::shdfnd::atomicMax(reinterpret_cast<volatile PxI32*>(maxSolverVelocityIterations), PxI32(localMaxVelIter));
+	augphysx::shdfnd::atomicMax(reinterpret_cast<volatile PxI32*>(maxSolverPositionIterations), PxI32(localMaxPosIter));
+	augphysx::shdfnd::atomicMax(reinterpret_cast<volatile PxI32*>(maxSolverVelocityIterations), PxI32(localMaxVelIter));
 }
 
 void PxsPreIntegrateTask::runInternal()
@@ -2585,7 +2585,7 @@ void DynamicsContext::integrateCoreParallel(SolverIslandParams& params, IG::Isla
 
 	PxI32* bodyIntegrationListIndex = &params.bodyIntegrationListIndex;
 
-	PxI32 index = physx::shdfnd::atomicAdd(bodyIntegrationListIndex, unrollCount) - unrollCount;
+	PxI32 index = augphysx::shdfnd::atomicAdd(bodyIntegrationListIndex, unrollCount) - unrollCount;
 
 	const PxI32 numBodies = PxI32(params.bodyListSize);
 	const PxI32 numArtics = PxI32(params.articulationListSize);
@@ -2617,7 +2617,7 @@ void DynamicsContext::integrateCoreParallel(SolverIslandParams& params, IG::Isla
 		}
 		if(bodyRemainder == 0)
 		{
-			index = physx::shdfnd::atomicAdd(bodyIntegrationListIndex, unrollCount) - unrollCount;
+			index = augphysx::shdfnd::atomicAdd(bodyIntegrationListIndex, unrollCount) - unrollCount;
 			bodyRemainder = unrollCount;
 		}
 	}	
@@ -2662,13 +2662,13 @@ void DynamicsContext::integrateCoreParallel(SolverIslandParams& params, IG::Isla
 		}
 
 		{
-			index = physx::shdfnd::atomicAdd(bodyIntegrationListIndex, unrollCount) - unrollPlusArtics;
+			index = augphysx::shdfnd::atomicAdd(bodyIntegrationListIndex, unrollCount) - unrollPlusArtics;
 			bodyRemainder = unrollCount;
 		}
 	}
 
 	Ps::memoryBarrier();
-	physx::shdfnd::atomicAdd(&params.numObjectsIntegrated, numIntegrated);
+	augphysx::shdfnd::atomicAdd(&params.numObjectsIntegrated, numIntegrated);
 }
 
 static PxU32 createFinalizeContacts_Parallel(PxSolverBodyData* solverBodyData, ThreadContext& mThreadContext, DynamicsContext& context,

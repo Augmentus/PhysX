@@ -35,7 +35,7 @@
 #include "PsFoundation.h"
 #include "GuInternal.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Gu;
 

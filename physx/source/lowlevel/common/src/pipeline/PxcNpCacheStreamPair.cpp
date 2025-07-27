@@ -32,7 +32,7 @@
 #include "PsUserAllocated.h"
 #include "PxcNpMemBlockPool.h"
 
-using namespace physx;
+using namespace augphysx;
 
 void PxcNpCacheStreamPair::reset()
 {

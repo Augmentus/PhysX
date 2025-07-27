@@ -35,7 +35,7 @@
 #include "ExtJoint.h"
 #include "PsMathUtils.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxD6JointGeneratedValues;
 namespace Ext

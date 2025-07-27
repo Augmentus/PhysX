@@ -35,7 +35,7 @@
 #include "SqAABBTreeUpdateMap.h"
 #include "SqAABBTree.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Sq

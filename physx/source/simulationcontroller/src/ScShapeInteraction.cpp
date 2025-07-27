@@ -37,7 +37,7 @@
 #include "PxsSimpleIslandManager.h"
 #include "PxvNphaseImplementationContext.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::ShapeInteraction::ShapeInteraction(ShapeSim& s1, ShapeSim& s2, PxPairFlags pairFlags, PxsContactManager* contactManager) :
 	ElementSimInteraction	(s1, s2, InteractionType::eOVERLAP, InteractionFlag::eRB_ELEMENT|InteractionFlag::eFILTERABLE),

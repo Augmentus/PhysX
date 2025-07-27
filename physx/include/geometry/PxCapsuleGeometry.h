@@ -37,7 +37,7 @@
 #include "foundation/PxFoundationConfig.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -102,7 +102,7 @@ PX_INLINE bool PxCapsuleGeometry::isValid() const
 }
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

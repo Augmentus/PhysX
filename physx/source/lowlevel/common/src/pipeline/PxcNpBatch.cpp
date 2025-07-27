@@ -47,7 +47,7 @@
 #include "GuPersistentContactManifold.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 
@@ -434,12 +434,12 @@ static PX_FORCE_INLINE void discreteNarrowPhase(PxcNpThreadContext& context, con
 	finishContacts(input, output, context, materialInfo, isMeshType);
 }
 
-void physx::PxcDiscreteNarrowPhase(PxcNpThreadContext& context, const PxcNpWorkUnit& input, Gu::Cache& cache, PxsContactManagerOutput& output)
+void augphysx::PxcDiscreteNarrowPhase(PxcNpThreadContext& context, const PxcNpWorkUnit& input, Gu::Cache& cache, PxsContactManagerOutput& output)
 {
 	discreteNarrowPhase<true>(context, input, cache, output);
 }
 
-void physx::PxcDiscreteNarrowPhasePCM(PxcNpThreadContext& context, const PxcNpWorkUnit& input, Gu::Cache& cache, PxsContactManagerOutput& output)
+void augphysx::PxcDiscreteNarrowPhasePCM(PxcNpThreadContext& context, const PxcNpWorkUnit& input, Gu::Cache& cache, PxsContactManagerOutput& output)
 {
 	discreteNarrowPhase<false>(context, input, cache, output);
 }

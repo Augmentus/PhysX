@@ -40,7 +40,7 @@
 #include "PxShape.h"
 #include "PxArticulationBase.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxActor;

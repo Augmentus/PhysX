@@ -36,7 +36,7 @@
 #include "GuVecCapsule.h"
 #include "GuVecBox.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Ps::aos;
 
@@ -51,7 +51,7 @@ using namespace Ps::aos;
 	//  |/     |/      |/		6 = +++
 	// 0+------+1      *---x	7 = -++
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu
@@ -448,4 +448,4 @@ namespace Gu
 
 
 }//Gu
-}//physx
+}//augphysx

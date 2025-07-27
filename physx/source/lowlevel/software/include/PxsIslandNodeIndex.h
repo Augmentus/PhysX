@@ -32,7 +32,7 @@
 
 #include "foundation/PxSimpleTypes.h"
 
-namespace physx
+namespace augphysx
 {
 namespace IG
 {

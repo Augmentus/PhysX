@@ -43,7 +43,7 @@
 
 #include "ScbShape.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Gu;
 

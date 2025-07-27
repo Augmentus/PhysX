@@ -42,7 +42,7 @@
 #include "GuBV4.h"
 #include "GuBV32.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu {
 	
@@ -50,7 +50,7 @@ namespace Gu {
 // 2: height field functionality not supported anymore
 // 3: mass struct removed
 // 4: bounding sphere removed
-// 5: RTree added, opcode tree still in the binary image, physx 3.0
+// 5: RTree added, opcode tree still in the binary image, augphysx 3.0
 // 6: opcode tree removed from binary image
 // 7: convex decomposition is out
 // 8: adjacency information added

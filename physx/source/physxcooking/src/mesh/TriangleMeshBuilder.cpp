@@ -46,7 +46,7 @@
 #include "PsHashMap.h"
 #include "PsSort.h"
 
-namespace physx {
+namespace augphysx {
 
 struct int3
 {
@@ -76,11 +76,11 @@ PX_ALIGN_SUFFIX(16);
 
 #include "GrbTriangleMeshCooking.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Ps;
 
-namespace physx {
+namespace augphysx {
 
 TriangleMeshBuilder::TriangleMeshBuilder(TriangleMeshData& m, const PxCookingParams& params) :
 	edgeList	(NULL),

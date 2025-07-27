@@ -32,7 +32,7 @@
 
 #include "geometry/PxGeometry.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

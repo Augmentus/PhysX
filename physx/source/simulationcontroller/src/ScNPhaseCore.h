@@ -45,7 +45,7 @@
 #include "ScContactReportBuffer.h"
 #include "PsHash.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Bp
 {
@@ -112,7 +112,7 @@ namespace Sc
 
 		const PxU32 base = PxU32((add0 & 0xFFFF) | (add1 << 16));
 
-		return physx::shdfnd::hash(base);
+		return augphysx::shdfnd::hash(base);
 	}
 
 	struct ElementSimKey
@@ -144,7 +144,7 @@ namespace Sc
 
 		const PxU32 base = PxU32((add0 & 0xFFFF) | (add1 << 16));
 
-		return physx::shdfnd::hash(base);
+		return augphysx::shdfnd::hash(base);
 	}
 
 	class ContactReportAllocationManager

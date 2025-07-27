@@ -34,7 +34,7 @@
 #include "CmPhysXCommon.h"
 #include "PsAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

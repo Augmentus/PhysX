@@ -33,7 +33,7 @@
 #include "PxPvdObjectModelBaseTypes.h"
 #include "PxPvdBits.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
@@ -54,9 +54,9 @@ static inline void marshalSingleT(const uint8_t* srcData, uint8_t* destData)
 {
 	smtype incoming;
 
-	physx::intrinsics::memCopy(&incoming, srcData, sizeof(smtype));
+	augphysx::intrinsics::memCopy(&incoming, srcData, sizeof(smtype));
 	lgtype outgoing = static_cast<lgtype>(incoming);
-	physx::intrinsics::memCopy(destData, &outgoing, sizeof(lgtype));
+	augphysx::intrinsics::memCopy(destData, &outgoing, sizeof(lgtype));
 }
 
 template <typename smtype, typename lgtype>

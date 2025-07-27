@@ -55,7 +55,7 @@
 #include "CmBitMap.h"
 #include "CmUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 
@@ -69,7 +69,7 @@ using namespace Cm;
 //TODO: blend the graphics jounce towards the physics jounce to avoid graphical pops at kerbs etc.
 //TODO: better graph of friction vs slip.  Need to account for negative slip and positive slip differences.
 
-namespace physx
+namespace augphysx
 {
 
 ////////////////////////////////////////////////////////////////////////////
@@ -1195,7 +1195,7 @@ PX_INLINE void computeVelocity(const PxTransform& t1, const PxTransform& t2, con
 
 PX_FORCE_INLINE PxF32 computeSign(const PxF32 f)
 {
-	return physx::intrinsics::fsel(f, physx::intrinsics::fsel(-f, 0.0f, 1.0f), -1.0f); 
+	return augphysx::intrinsics::fsel(f, augphysx::intrinsics::fsel(-f, 0.0f, 1.0f), -1.0f); 
 }
 
 
@@ -1430,9 +1430,9 @@ PX_FORCE_INLINE void splitTorque
 	const PxF32 omegaMax=PxMax(w1Abs,w2Abs);
 	const PxF32 omegaMin=PxMin(w1Abs,w2Abs);
 	const PxF32 delta=omegaMax-diffBias*omegaMin;
-	const PxF32 deltaTorque=physx::intrinsics::fsel(delta, delta/omegaMax , 0.0f);
-	const PxF32 f1=physx::intrinsics::fsel(w1Abs-w2Abs, defaultSplitRatio*(1.0f-deltaTorque), defaultSplitRatio*(1.0f+deltaTorque));
-	const PxF32 f2=physx::intrinsics::fsel(w1Abs-w2Abs, (1.0f-defaultSplitRatio)*(1.0f+deltaTorque), (1.0f-defaultSplitRatio)*(1.0f-deltaTorque));
+	const PxF32 deltaTorque=augphysx::intrinsics::fsel(delta, delta/omegaMax , 0.0f);
+	const PxF32 f1=augphysx::intrinsics::fsel(w1Abs-w2Abs, defaultSplitRatio*(1.0f-deltaTorque), defaultSplitRatio*(1.0f+deltaTorque));
+	const PxF32 f2=augphysx::intrinsics::fsel(w1Abs-w2Abs, (1.0f-defaultSplitRatio)*(1.0f+deltaTorque), (1.0f-defaultSplitRatio)*(1.0f-deltaTorque));
 	const PxF32 denom=1.0f/(f1+f2);
 	*t1=f1*denom;
 	*t2=f2*denom;
@@ -1768,8 +1768,8 @@ PX_FORCE_INLINE void computeAckermannSteerAngles
 	const PxF32 dx=width + dz/PxTan(rightSteerAngle);
 	const PxF32 leftSteerAnglePerfect=PxAtan(dz/dx);
 	const PxF32 leftSteerAngle=rightSteerAngle + ackermannAccuracy*(leftSteerAnglePerfect-rightSteerAngle);
-	*rightAckermannSteerAngle=physx::intrinsics::fsel(steerAngle, rightSteerAngle, -leftSteerAngle);
-	*leftAckermannSteerAngle=physx::intrinsics::fsel(steerAngle, leftSteerAngle, -rightSteerAngle);
+	*rightAckermannSteerAngle=augphysx::intrinsics::fsel(steerAngle, rightSteerAngle, -leftSteerAngle);
+	*leftAckermannSteerAngle=augphysx::intrinsics::fsel(steerAngle, leftSteerAngle, -rightSteerAngle);
 }
 
 PX_FORCE_INLINE void computeAckermannCorrectedSteerAngles
@@ -4521,7 +4521,7 @@ void integrateWheelRotationAngles
 
 		PxF32 newRotAngle=wheelRotationAngles[j]+wheelOmega*timestep;
 		//Clamp the wheel rotation angle to a range (-10*pi,10*pi) to stop it getting crazily big.
-		newRotAngle=physx::intrinsics::fsel(newRotAngle-10*PxPi, newRotAngle-10*PxPi, physx::intrinsics::fsel(-newRotAngle-10*PxPi, newRotAngle + 10*PxPi, newRotAngle));
+		newRotAngle=augphysx::intrinsics::fsel(newRotAngle-10*PxPi, newRotAngle-10*PxPi, augphysx::intrinsics::fsel(-newRotAngle-10*PxPi, newRotAngle + 10*PxPi, newRotAngle));
 		wheelRotationAngles[j]=newRotAngle;
 		correctedWheelSpeeds[j]=wheelOmega;
 	}
@@ -4571,7 +4571,7 @@ void integrateNoDriveWheelRotationAngles
 
 		PxF32 newRotAngle=wheelRotationAngles[j]+wheelOmega*timestep;
 		//Clamp the wheel rotation angle to a range (-10*pi,10*pi) to stop it getting crazily big.
-		newRotAngle=physx::intrinsics::fsel(newRotAngle-10*PxPi, newRotAngle-10*PxPi, physx::intrinsics::fsel(-newRotAngle-10*PxPi, newRotAngle + 10*PxPi, newRotAngle));
+		newRotAngle=augphysx::intrinsics::fsel(newRotAngle-10*PxPi, newRotAngle-10*PxPi, augphysx::intrinsics::fsel(-newRotAngle-10*PxPi, newRotAngle + 10*PxPi, newRotAngle));
 		wheelRotationAngles[j]=newRotAngle;
 		correctedWheelSpeeds[j]=wheelOmega;
 	}
@@ -6990,8 +6990,8 @@ PX_FORCE_INLINE void PxVehicleUpdate::updateSingleVehicleAndStoreTelemetryData
 #endif
 }
 
-void physx::PxVehicleUpdateSingleVehicleAndStoreTelemetryData
-(const PxReal timestep, const PxVec3& gravity, const physx::PxVehicleDrivableSurfaceToTireFrictionPairs& vehicleDrivableSurfaceToTireFrictionPairs, 
+void augphysx::PxVehicleUpdateSingleVehicleAndStoreTelemetryData
+(const PxReal timestep, const PxVec3& gravity, const augphysx::PxVehicleDrivableSurfaceToTireFrictionPairs& vehicleDrivableSurfaceToTireFrictionPairs, 
  PxVehicleWheels* focusVehicle, PxVehicleWheelQueryResult* wheelQueryResults, PxVehicleTelemetryData& telemetryData,
  PxVehicleConcurrentUpdateData* vehicleConcurrentUpdates)
 {
@@ -7225,7 +7225,7 @@ void PxVehicleUpdate::updatePost
 }
 
 
-void physx::PxVehicleUpdates
+void augphysx::PxVehicleUpdates
 (const PxReal timestep, const PxVec3& gravity, const PxVehicleDrivableSurfaceToTireFrictionPairs& vehicleDrivableSurfaceToTireFrictionPairs, 
  const PxU32 numVehicles, PxVehicleWheels** vehicles, PxVehicleWheelQueryResult* vehicleWheelQueryResults, PxVehicleConcurrentUpdateData* vehicleConcurrentUpdates)
 {
@@ -7234,14 +7234,14 @@ void physx::PxVehicleUpdates
 		NULL);
 }
 
-void physx::PxVehiclePostUpdates
+void augphysx::PxVehiclePostUpdates
 (const PxVehicleConcurrentUpdateData* vehicleConcurrentUpdates, const PxU32 numVehicles, PxVehicleWheels** vehicles)
 {
 	PX_PROFILE_ZONE("PxVehicleUpdates::ePROFILE_POSTUPDATES",0);
 	PxVehicleUpdate::updatePost(vehicleConcurrentUpdates, numVehicles, vehicles);
 }
 
-void physx::PxVehicleShiftOrigin(const PxVec3& shift, const PxU32 numVehicles, PxVehicleWheels** vehicles)
+void augphysx::PxVehicleShiftOrigin(const PxVec3& shift, const PxU32 numVehicles, PxVehicleWheels** vehicles)
 {
 	PxVehicleUpdate::shiftOrigin(shift, numVehicles, vehicles);
 }
@@ -7406,7 +7406,7 @@ void PxVehicleUpdate::suspensionRaycasts(PxBatchQuery* batchQuery, const PxU32 n
 	END_TIMER(TIMER_RAYCASTS);
 }
 
-void physx::PxVehicleSuspensionRaycasts(PxBatchQuery* batchQuery, const PxU32 numVehicles, PxVehicleWheels** vehicles, const PxU32 numSceneQueryesults, PxRaycastQueryResult* sceneQueryResults, const bool* vehiclesToRaycast)
+void augphysx::PxVehicleSuspensionRaycasts(PxBatchQuery* batchQuery, const PxU32 numVehicles, PxVehicleWheels** vehicles, const PxU32 numSceneQueryesults, PxRaycastQueryResult* sceneQueryResults, const bool* vehiclesToRaycast)
 {
 	PX_PROFILE_ZONE("PxVehicleSuspensionRaycasts::ePROFILE_RAYCASTS",0);
 	PxVehicleUpdate::suspensionRaycasts(batchQuery, numVehicles, vehicles, numSceneQueryesults, sceneQueryResults, vehiclesToRaycast);
@@ -7645,7 +7645,7 @@ void PxVehicleUpdate::suspensionSweeps
 	END_TIMER(TIMER_SWEEPS);
 }
 
-namespace physx
+namespace augphysx
 {
     void PxVehicleSuspensionSweeps
     (PxBatchQuery* batchQuery,

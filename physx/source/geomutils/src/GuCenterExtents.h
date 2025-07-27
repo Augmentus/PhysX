@@ -38,11 +38,11 @@
 #include "CmUtils.h"
 #include "PsUserAllocated.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
-	class CenterExtents : public physx::shdfnd::UserAllocated
+	class CenterExtents : public augphysx::shdfnd::UserAllocated
 	{
 		public:
 		PX_FORCE_INLINE				CenterExtents()						{}

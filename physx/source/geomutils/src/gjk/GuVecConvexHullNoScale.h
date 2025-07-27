@@ -35,7 +35,7 @@
 #include "GuVecConvexHull.h"
 
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

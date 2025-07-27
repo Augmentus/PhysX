@@ -33,7 +33,7 @@
 #include "PsUtilities.h"
 #include "PsAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Dy
 	{

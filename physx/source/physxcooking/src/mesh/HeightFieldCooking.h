@@ -29,7 +29,7 @@
 
 #include "GuHeightField.h"
 
-namespace physx
+namespace augphysx
 {
 	bool saveHeightField(const Gu::HeightField& hf, PxOutputStream& stream, bool endianSwap);
 }

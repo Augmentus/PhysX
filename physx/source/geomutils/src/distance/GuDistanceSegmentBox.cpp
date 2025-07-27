@@ -33,7 +33,7 @@
 #include "GuDistancePointSegment.h"
 #include "GuIntersectionRayBox.h"
 
-using namespace physx;
+using namespace augphysx;
 
 static void face(unsigned int i0, unsigned int i1, unsigned int i2, PxVec3& rkPnt, const PxVec3& rkDir, const PxVec3& extents, const PxVec3& rkPmE, PxReal* pfLParam, PxReal& rfSqrDistance)
 {

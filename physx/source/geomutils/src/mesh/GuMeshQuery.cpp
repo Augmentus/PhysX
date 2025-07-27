@@ -43,7 +43,7 @@
 #include "GuMidphaseInterface.h"
 #include "PsFPU.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 namespace {
@@ -101,7 +101,7 @@ namespace {
 
 } // namespace
 
-void physx::PxMeshQuery::getTriangle(const PxTriangleMeshGeometry& triGeom, const PxTransform& globalPose, PxTriangleID triangleIndex, PxTriangle& triangle, PxU32* vertexIndices, PxU32* adjacencyIndices)
+void augphysx::PxMeshQuery::getTriangle(const PxTriangleMeshGeometry& triGeom, const PxTransform& globalPose, PxTriangleID triangleIndex, PxTriangle& triangle, PxU32* vertexIndices, PxU32* adjacencyIndices)
 {
 	TriangleMesh* tm = static_cast<TriangleMesh*>(triGeom.triangleMesh);
 
@@ -116,7 +116,7 @@ void physx::PxMeshQuery::getTriangle(const PxTriangleMeshGeometry& triGeom, cons
 
 ///////////////////////////////////////////////////////////////////////////////
 
-void physx::PxMeshQuery::getTriangle(const PxHeightFieldGeometry& hfGeom, const PxTransform& globalPose, PxTriangleID triangleIndex, PxTriangle& triangle, PxU32* vertexIndices, PxU32* adjacencyIndices)
+void augphysx::PxMeshQuery::getTriangle(const PxHeightFieldGeometry& hfGeom, const PxTransform& globalPose, PxTriangleID triangleIndex, PxTriangle& triangle, PxU32* vertexIndices, PxU32* adjacencyIndices)
 {
 	HeightFieldUtil hfUtil(hfGeom);
 	
@@ -125,7 +125,7 @@ void physx::PxMeshQuery::getTriangle(const PxHeightFieldGeometry& hfGeom, const 
 
 ///////////////////////////////////////////////////////////////////////////////
 
-PxU32 physx::PxMeshQuery::findOverlapTriangleMesh(
+PxU32 augphysx::PxMeshQuery::findOverlapTriangleMesh(
 	const PxGeometry& geom, const PxTransform& geomPose,
 	const PxTriangleMeshGeometry& meshGeom, const PxTransform& meshPose,
 	PxU32* results, PxU32 maxResults, PxU32 startIndex, bool& overflow)
@@ -184,7 +184,7 @@ PxU32 physx::PxMeshQuery::findOverlapTriangleMesh(
 
 ///////////////////////////////////////////////////////////////////////////////
 
-PxU32 physx::PxMeshQuery::findOverlapHeightField(	const PxGeometry& geom, const PxTransform& geomPose,
+PxU32 augphysx::PxMeshQuery::findOverlapHeightField(	const PxGeometry& geom, const PxTransform& geomPose,
 													const PxHeightFieldGeometry& hfGeom, const PxTransform& hfPose,
 													PxU32* results, PxU32 maxResults, PxU32 startIndex, bool& overflow)
 {
@@ -239,7 +239,7 @@ PxU32 physx::PxMeshQuery::findOverlapHeightField(	const PxGeometry& geom, const 
 
 ///////////////////////////////////////////////////////////////////////////////
 
-bool physx::PxMeshQuery::sweep(	const PxVec3& unitDir, const PxReal maxDistance,
+bool augphysx::PxMeshQuery::sweep(	const PxVec3& unitDir, const PxReal maxDistance,
 								const PxGeometry& geom, const PxTransform& pose,
 								PxU32 triangleCount, const PxTriangle* triangles,
 								PxSweepHit& sweepHit, PxHitFlags hitFlags,

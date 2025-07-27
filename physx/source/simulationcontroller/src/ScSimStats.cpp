@@ -31,7 +31,7 @@
 #include "ScSimStats.h"
 #include "PxvSimStats.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::SimStats::SimStats()
 {

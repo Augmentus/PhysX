@@ -33,7 +33,7 @@
 
 #include "foundation/PxSimpleTypes.h"
 
-namespace physx
+namespace augphysx
 {
 	class KernelWrangler;
 	class PxErrorCallback;

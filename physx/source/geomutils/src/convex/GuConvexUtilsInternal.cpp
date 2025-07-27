@@ -34,7 +34,7 @@
 #include "GuConvexMesh.h"
 #include "CmScaling.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 void Gu::computeHullOBB(Box& hullOBB, const PxBounds3& hullAABB, float offset, 

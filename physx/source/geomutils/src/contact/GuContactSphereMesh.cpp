@@ -43,7 +43,7 @@
 
 #define DEBUG_RENDER_MESHCONTACTS	0
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 static const bool gDrawTouchedTriangles = false;

@@ -35,7 +35,7 @@
 #include "GuBounds.h"
 #include "CmBitMap.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Gu;
 using namespace Ps;

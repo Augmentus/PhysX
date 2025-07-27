@@ -46,7 +46,7 @@
 	#include "PxFiltering.h"
 	#include "PsSList.h"
 
-	namespace physx
+	namespace augphysx
 	{
 	class PxcScratchAllocator;
 	struct PxBroadPhaseType;

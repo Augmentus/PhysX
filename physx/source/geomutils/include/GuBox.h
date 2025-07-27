@@ -40,7 +40,7 @@
 #include "CmPhysXCommon.h"
 #include "CmScaling.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

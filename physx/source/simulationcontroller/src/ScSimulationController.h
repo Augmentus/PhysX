@@ -33,7 +33,7 @@
 #define	SC_SIMULATION_CONTROLLER_H
 
 
-namespace physx
+namespace augphysx
 {
 
 class PxsHeapMemoryAllocator;

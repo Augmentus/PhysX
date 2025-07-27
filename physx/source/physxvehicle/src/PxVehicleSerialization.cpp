@@ -39,7 +39,7 @@
 #include "PsFPU.h"
 
 
-namespace physx
+namespace augphysx
 {
 	using namespace Sn;
 	

@@ -35,7 +35,7 @@
 #include "collision/PxCollisionDefs.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

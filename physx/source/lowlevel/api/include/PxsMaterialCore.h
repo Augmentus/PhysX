@@ -39,7 +39,7 @@
 #include "CmPhysXCommon.h"
 #include "CmUtils.h"
 
-namespace physx
+namespace augphysx
 {
 
 #define	MATERIAL_INVALID_HANDLE	0xffff

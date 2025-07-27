@@ -36,7 +36,7 @@
 #include "PxClient.h"
 #include "PxSimulationEventCallback.h"
 
-namespace physx
+namespace augphysx
 {
 class PxShape;
 

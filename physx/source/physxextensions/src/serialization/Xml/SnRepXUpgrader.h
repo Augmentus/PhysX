@@ -31,7 +31,7 @@
 
 #include "foundation/PxSimpleTypes.h"
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 	class RepXCollection;
 
 	class RepXUpgrader

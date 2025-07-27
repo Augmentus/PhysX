@@ -29,7 +29,7 @@
 
 #include "GuSweepBoxTriangle_SAT.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 // PT: SAT-based version, in box space

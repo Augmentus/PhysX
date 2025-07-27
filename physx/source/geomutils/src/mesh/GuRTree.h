@@ -48,7 +48,7 @@
 #define RTREE_N 4 // changing this number will affect the mesh format
 PX_COMPILE_TIME_ASSERT(RTREE_N == 4 || RTREE_N == 8); // using the low 5 bits for storage of index(childPtr) for dynamic rtree
 
-namespace physx
+namespace augphysx
 {
 
 
@@ -255,7 +255,7 @@ namespace Gu {
 	{
 		if ((mFlags & USER_ALLOCATED) == 0 && mPages)
 		{
-			physx::shdfnd::AlignedAllocator<128>().deallocate(mPages);
+			augphysx::shdfnd::AlignedAllocator<128>().deallocate(mPages);
 			mPages = NULL;
 		}
 	}

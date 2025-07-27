@@ -41,7 +41,7 @@
 #include "PxSceneDesc.h"
 
 
-namespace physx
+namespace augphysx
 {
 
 class PxFoundation;
@@ -131,7 +131,7 @@ public:
 		PxvNphaseImplementationFallback* fallbackForUnsupportedCMs,
 		const PxgDynamicsMemoryConfig& gpuDynamicsConfig, void* contactStreamBase, void* patchStreamBase, void* forceAndIndiceStreamBase,
 		Ps::Array<PxBounds3, Ps::VirtualAllocator>& bounds, IG::IslandSim* islandSim,
-		physx::Dy::Context* dynamicsContext, const PxU32 gpuComputeVersion, PxsHeapMemoryAllocatorManager* heapMemoryManager) = 0;
+		augphysx::Dy::Context* dynamicsContext, const PxU32 gpuComputeVersion, PxsHeapMemoryAllocatorManager* heapMemoryManager) = 0;
 
 	/**
 	Create GPU simulation controller.
@@ -159,17 +159,17 @@ public:
 /**
 Create PxPhysXGpu interface class.
 */
-PX_C_EXPORT PX_PHYSX_GPU_API physx::PxPhysXGpu* PX_CALL_CONV PxCreatePhysXGpu();
+PX_C_EXPORT PX_PHYSX_GPU_API augphysx::PxPhysXGpu* PX_CALL_CONV PxCreatePhysXGpu();
 
 /**
 Create a cuda context manager.
 */
-PX_C_EXPORT PX_PHYSX_GPU_API physx::PxCudaContextManager* PX_CALL_CONV PxCreateCudaContextManager(physx::PxFoundation& foundation, const physx::PxCudaContextManagerDesc& desc, physx::PxProfilerCallback* profilerCallback = NULL);
+PX_C_EXPORT PX_PHYSX_GPU_API augphysx::PxCudaContextManager* PX_CALL_CONV PxCreateCudaContextManager(augphysx::PxFoundation& foundation, const augphysx::PxCudaContextManagerDesc& desc, augphysx::PxProfilerCallback* profilerCallback = NULL);
 
 /**
 Query the device ordinal - depends on control panel settings.
 */
-PX_C_EXPORT PX_PHYSX_GPU_API int PX_CALL_CONV PxGetSuggestedCudaDeviceOrdinal(physx::PxErrorCallback& errc);
+PX_C_EXPORT PX_PHYSX_GPU_API int PX_CALL_CONV PxGetSuggestedCudaDeviceOrdinal(augphysx::PxErrorCallback& errc);
 
 namespace grid
 {
@@ -177,6 +177,6 @@ namespace grid
 	class ClientContextPredictionManager;
 }
 
-PX_C_EXPORT PX_PHYSX_GPU_API grid::ClientContextPredictionManager* PX_CALL_CONV PxCreateCudaClientContextManager(grid::ServerImpl* server, physx::PxU32 maxNbSleepMsg);
+PX_C_EXPORT PX_PHYSX_GPU_API grid::ClientContextPredictionManager* PX_CALL_CONV PxCreateCudaClientContextManager(grid::ServerImpl* server, augphysx::PxU32 maxNbSleepMsg);
 
 #endif // PX_PHYSX_GPU_H

@@ -31,7 +31,7 @@
 #include "GuContactMethodImpl.h"
 #include "GuGeometryUnion.h"
 
-using namespace physx;
+using namespace augphysx;
 
 //This version is ported 1:1 from novodex
 static PX_FORCE_INLINE bool ContactSphereBox(const PxVec3& sphereOrigin, 
@@ -156,7 +156,7 @@ static PX_FORCE_INLINE bool ContactSphereBox(const PxVec3& sphereOrigin,
 	}
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -178,4 +178,4 @@ bool contactSphereBox(GU_CONTACT_METHOD_ARGS)
 	return true;
 }
 }//Gu
-}//physx
+}//augphysx

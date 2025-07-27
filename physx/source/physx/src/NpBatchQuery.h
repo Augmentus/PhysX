@@ -39,7 +39,7 @@
 #include "CmPhysXCommon.h"
 #include "PsSync.h"
 
-namespace physx
+namespace augphysx
 {
 
 class NpSceneQueryManager;
@@ -157,7 +157,7 @@ private:
 						PxU32				mPrevOffset;
 						bool				mHasMtdSweep;
 
-	friend class physx::Sq::SceneQueryManager;
+	friend class augphysx::Sq::SceneQueryManager;
 };
 
 }

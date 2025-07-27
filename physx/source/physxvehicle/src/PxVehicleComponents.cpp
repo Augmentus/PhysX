@@ -33,7 +33,7 @@
 #include "CmBitMap.h"
 #include "PsFoundation.h"
 
-namespace physx
+namespace augphysx
 {
 
 bool PxVehicleChassisData::isValid() const

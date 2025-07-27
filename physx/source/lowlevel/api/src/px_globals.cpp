@@ -36,10 +36,10 @@
 #if PX_SUPPORT_GPU_PHYSX
 #include "PxPhysXGpu.h"
 
-physx::PxPhysXGpu* gPxPhysXGpu;
+augphysx::PxPhysXGpu* gPxPhysXGpu;
 #endif
 
-namespace physx
+namespace augphysx
 {
 
 PxvOffsetTable gPxvOffsetTable;
@@ -66,11 +66,11 @@ void PxvTerm()
 }
 
 #if PX_SUPPORT_GPU_PHYSX
-namespace physx
+namespace augphysx
 {
 	//forward declare stuff from PxPhysXGpuModuleLoader.cpp
 	void PxLoadPhysxGPUModule(const char* appGUID);
-	typedef physx::PxPhysXGpu* (PxCreatePhysXGpu_FUNC)();
+	typedef augphysx::PxPhysXGpu* (PxCreatePhysXGpu_FUNC)();
 	extern PxCreatePhysXGpu_FUNC* g_PxCreatePhysXGpu_Func;
 
 	PxPhysXGpu* PxvGetPhysXGpu(bool createIfNeeded)

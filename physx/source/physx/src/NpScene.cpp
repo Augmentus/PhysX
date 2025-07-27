@@ -54,7 +54,7 @@
 #include "PxsIslandSim.h"
 #include "common/PxProfileZone.h"
 
-using namespace physx;
+using namespace augphysx;
 
 // enable thread checks in all debug builds
 #if PX_DEBUG || PX_CHECKED
@@ -1846,7 +1846,7 @@ void NpScene::updateDirtyShaders()
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-void NpScene::simulateOrCollide(PxReal elapsedTime, physx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation, const char* invalidCallMsg, Sc::SimulationStage::Enum simStage)
+void NpScene::simulateOrCollide(PxReal elapsedTime, augphysx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation, const char* invalidCallMsg, Sc::SimulationStage::Enum simStage)
 {
 	PX_SIMD_GUARD;
 
@@ -1940,13 +1940,13 @@ void NpScene::simulateOrCollide(PxReal elapsedTime, physx::PxBaseTask* completio
 	}
 }
 
-void NpScene::simulate(PxReal elapsedTime, physx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation)
+void NpScene::simulate(PxReal elapsedTime, augphysx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation)
 {
 	simulateOrCollide(	elapsedTime, completionTask, scratchBlock, scratchBlockSize, controlSimulation, 
 						"PxScene::simulate: Simulation is still processing last simulate call, you should call fetchResults()!", Sc::SimulationStage::eADVANCE);
 }
 
-void NpScene::advance( physx::PxBaseTask* completionTask)
+void NpScene::advance( augphysx::PxBaseTask* completionTask)
 {
 	NP_WRITE_CHECK(this);
 	//issue error if advance() doesn't get called between fetchCollision() and fetchResult()
@@ -1975,7 +1975,7 @@ void NpScene::advance( physx::PxBaseTask* completionTask)
 	}
 }
 
-void NpScene::collide(PxReal elapsedTime, physx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation)
+void NpScene::collide(PxReal elapsedTime, augphysx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation)
 {
 	simulateOrCollide(	elapsedTime, 
 						completionTask,
@@ -2015,7 +2015,7 @@ void NpScene::fireOutOfBoundsCallbacks()
 	// Fire broad-phase callbacks
 	{
 		Sc::Scene& scene = mScene.getScScene();
-		using namespace physx::Sc;
+		using namespace augphysx::Sc;
 
 		bool outputWarning = scene.fireOutOfBoundsCallbacks();
 
@@ -2244,20 +2244,20 @@ void NpContactCallbackTask::setData(NpScene* scene, const PxContactPairHeader* c
 
 void NpContactCallbackTask::run()
 {
-	physx::PxSimulationEventCallback* callback = mScene->getSimulationEventCallback();
+	augphysx::PxSimulationEventCallback* callback = mScene->getSimulationEventCallback();
 	if(!callback)
 		return;
 
 	mScene->lockRead();
 	for(uint32_t i=0; i<mNbContactPairHeaders; ++i)
 	{
-		const physx::PxContactPairHeader& pairHeader = mContactPairHeaders[i];
+		const augphysx::PxContactPairHeader& pairHeader = mContactPairHeaders[i];
 		callback->onContact(pairHeader, pairHeader.pairs, pairHeader.nbPairs);
 	}
 	mScene->unlockRead();
 }
 
-void NpScene::processCallbacks(physx::PxBaseTask* continuation)
+void NpScene::processCallbacks(augphysx::PxBaseTask* continuation)
 {
 	PX_PROFILE_START_CROSSTHREAD("Basic.processCallbacks", getContextId());
 	PX_PROFILE_ZONE("Sim.processCallbacks", getContextId());
@@ -2949,7 +2949,7 @@ void NpScene::forceSceneQueryRebuild()
 	mSQManager.afterSync(getSceneQueryUpdateModeFast());
 }
 
-void NpScene::sceneQueriesUpdate(physx::PxBaseTask* completionTask, bool controlSimulation)
+void NpScene::sceneQueriesUpdate(augphysx::PxBaseTask* completionTask, bool controlSimulation)
 {
 	PX_SIMD_GUARD;
 

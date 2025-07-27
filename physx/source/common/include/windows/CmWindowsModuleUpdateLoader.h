@@ -36,7 +36,7 @@
 
 #include "windows/PsWindowsInclude.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {
@@ -64,7 +64,7 @@ protected:
 	FARPROC mGetUpdatedModuleFunc;
 };
 } // namespace Cm
-} // namespace physx
+} // namespace augphysx
 
 
 #endif	// CM_WINDOWS_MODULEUPDATELOADER_H

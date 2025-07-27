@@ -32,7 +32,7 @@
 // run.  You can find the most recent version of clang metadata generator by contacting
 // Chris Nuernberger <chrisn@nvidia.com> or Dilip or Adam.
 // The source code for the generate was at one time checked into:
-// physx/PhysXMetaDataGenerator/llvm/tools/clang/lib/Frontend/PhysXMetaDataAction.cpp
+// augphysx/PhysXMetaDataGenerator/llvm/tools/clang/lib/Frontend/PhysXMetaDataAction.cpp
 #define THERE_IS_NO_INCLUDE_GUARD_HERE_FOR_A_REASON
 
 PxJoint_PropertiesStart,

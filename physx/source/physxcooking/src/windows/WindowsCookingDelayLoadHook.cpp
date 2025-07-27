@@ -33,9 +33,9 @@
 #include "windows/PsWindowsInclude.h"
 #include "windows/CmWindowsLoadLibrary.h"
 
-static const physx::PxDelayLoadHook* gCookingDelayLoadHook = NULL;
+static const augphysx::PxDelayLoadHook* gCookingDelayLoadHook = NULL;
 
-void physx::PxSetPhysXCookingDelayLoadHook(const physx::PxDelayLoadHook* hook)
+void augphysx::PxSetPhysXCookingDelayLoadHook(const augphysx::PxDelayLoadHook* hook)
 {
 	gCookingDelayLoadHook = hook;
 }
@@ -47,7 +47,7 @@ void physx::PxSetPhysXCookingDelayLoadHook(const physx::PxDelayLoadHook* hook)
 #define DELAYIMP_INSECURE_WRITABLE_HOOKS
 #include <delayimp.h>
 
-using namespace physx;
+using namespace augphysx;
 
 #pragma comment(lib, "delayimp")
 

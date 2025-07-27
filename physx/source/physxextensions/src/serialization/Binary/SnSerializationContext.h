@@ -44,7 +44,7 @@
 #include "CmUtils.h"
 #include "SnConvX_Align.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Sn
 	{
@@ -286,7 +286,7 @@ namespace physx
 
 			virtual void writeName(const char*)
 			{
-				Ps::getFoundation().error(physx::PxErrorCode::eINVALID_OPERATION, __FILE__, __LINE__, 
+				Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_OPERATION, __FILE__, __LINE__, 
 					"Cannot export names during exportData.");
 			}
 

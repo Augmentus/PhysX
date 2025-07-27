@@ -29,7 +29,7 @@
 
 #include "PxPvdDefaultFileTransport.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
@@ -109,7 +109,7 @@ void PvdDefaultFileTransport::release()
 	PX_DELETE(this);
 }
 
-class NullFileTransport : public physx::PxPvdTransport, public physx::shdfnd::UserAllocated
+class NullFileTransport : public augphysx::PxPvdTransport, public augphysx::shdfnd::UserAllocated
 {
 	PX_NOCOPY(NullFileTransport)
   public:
@@ -134,7 +134,7 @@ class NullFileTransport : public physx::PxPvdTransport, public physx::shdfnd::Us
   private:
 	bool mConnected;
 	uint64_t mWrittenData;
-	physx::shdfnd::Mutex mMutex;
+	augphysx::shdfnd::Mutex mMutex;
 	bool mLocked; // for debug, remove it when finished
 };
 

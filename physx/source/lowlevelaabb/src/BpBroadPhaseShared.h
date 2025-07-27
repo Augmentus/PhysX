@@ -35,7 +35,7 @@
 #include "PsHash.h"
 #include "PsVecMath.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Bp
 {
@@ -202,7 +202,7 @@ namespace Bp
 
 		PX_FORCE_INLINE	void	operator = (const AABB_YZn& box)
 		{
-			using namespace physx::shdfnd::aos;
+			using namespace augphysx::shdfnd::aos;
 			V4StoreA(V4LoadA(&box.mMinY), &mMinY);
 		}
 
@@ -227,7 +227,7 @@ namespace Bp
 
 		PX_FORCE_INLINE	void	operator = (const AABB_YZr& box)
 		{
-			using namespace physx::shdfnd::aos;
+			using namespace augphysx::shdfnd::aos;
 			V4StoreA(V4LoadA(&box.mMinY), &mMinY);
 		}
 

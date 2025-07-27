@@ -37,7 +37,7 @@
 #include "CmRenderOutput.h"
 #endif
 
-namespace physx
+namespace augphysx
 {
 class NpArticulation;
 class NpArticulationLink;

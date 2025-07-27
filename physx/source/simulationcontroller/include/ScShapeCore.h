@@ -38,7 +38,7 @@
 #include "PxFiltering.h"
 #include "PxShape.h"
 
-namespace physx
+namespace augphysx
 {
 class PxShape;
 

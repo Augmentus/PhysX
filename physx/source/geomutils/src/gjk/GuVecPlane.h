@@ -43,7 +43,7 @@
 
 Plane equation used: a*x + b*y + c*z + d = 0
 */
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

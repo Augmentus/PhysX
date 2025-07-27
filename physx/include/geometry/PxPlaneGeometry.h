@@ -39,7 +39,7 @@
 #include "foundation/PxFoundationConfig.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -78,7 +78,7 @@ PX_INLINE bool PxPlaneGeometry::isValid() const
 }
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

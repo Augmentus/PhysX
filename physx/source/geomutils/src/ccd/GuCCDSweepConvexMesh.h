@@ -92,7 +92,7 @@
 	PxU32& /*outCCDFaceIndex*/,			\
 	const PxReal /*fastMovingThreshold*/
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

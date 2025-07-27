@@ -35,7 +35,7 @@
 #include "NpMaterial.h"
 #include "CmIDPool.h"
 
-namespace physx
+namespace augphysx
 {
 	class NpMaterialManager 
 	{

@@ -38,7 +38,7 @@
 #include "task/PxCpuDispatcher.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -91,7 +91,7 @@ simulation tasks will be executed on the thread that calls PxScene::simulate()
 PxDefaultCpuDispatcher* PxDefaultCpuDispatcherCreate(PxU32 numThreads, PxU32* affinityMasks = NULL);
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

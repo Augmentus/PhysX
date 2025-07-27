@@ -36,7 +36,7 @@
 #include "PsUserAllocated.h"
 #include "GuBVHStructure.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Gu
 	{

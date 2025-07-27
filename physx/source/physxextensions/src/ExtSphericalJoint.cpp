@@ -32,11 +32,11 @@
 #include "CmConeLimitHelper.h"
 #include "PxPhysics.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Ext;
 using namespace shdfnd;
 
-PxSphericalJoint* physx::PxSphericalJointCreate(PxPhysics& physics, PxRigidActor* actor0, const PxTransform& localFrame0, PxRigidActor* actor1, const PxTransform& localFrame1)
+PxSphericalJoint* augphysx::PxSphericalJointCreate(PxPhysics& physics, PxRigidActor* actor0, const PxTransform& localFrame0, PxRigidActor* actor1, const PxTransform& localFrame1)
 {
 	PX_CHECK_AND_RETURN_NULL(localFrame0.isSane(), "PxSphericalJointCreate: local frame 0 is not a valid transform"); 
 	PX_CHECK_AND_RETURN_NULL(localFrame1.isSane(), "PxSphericalJointCreate: local frame 1 is not a valid transform"); 

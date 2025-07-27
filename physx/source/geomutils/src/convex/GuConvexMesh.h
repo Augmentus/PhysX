@@ -40,7 +40,7 @@
 #include "GuConvexMeshData.h"
 
 
-namespace physx
+namespace augphysx
 {
 
 class BigConvexData;

@@ -39,7 +39,7 @@
 #include "GuConvexMesh.h"
 #include "CmScaling.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 ////////////////////////////////////////////////// raycasts //////////////////////////////////////////////////////////////////
@@ -306,7 +306,7 @@ PxU32 raycast_convexMesh(GU_RAY_FUNC_PARAMS)
 
 		if(dn > 1E-7f)	//the ray direction "exits" from the back side
 		{
-			earliestExit = physx::intrinsics::selectMin(earliestExit, distAlongRay);
+			earliestExit = augphysx::intrinsics::selectMin(earliestExit, distAlongRay);
 		}
 		else if(dn < -1E-7f)	//the ray direction "enters" from the front side
 		{
@@ -446,7 +446,7 @@ namespace
 				hit.flags |= PxHitFlag::eNORMAL;
 			}
 
-			hit.distance = physx::intrinsics::selectMax(0.f, (hit.position - mLocalRayOrig).dot(mLocalRayDir));
+			hit.distance = augphysx::intrinsics::selectMax(0.f, (hit.position - mLocalRayOrig).dot(mLocalRayDir));
 
 			if(mHitFlags & PxHitFlag::ePOSITION)
 			{

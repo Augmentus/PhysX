@@ -49,7 +49,7 @@
 #include "DyArticulationPImpl.h"
 #include "PsFoundation.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

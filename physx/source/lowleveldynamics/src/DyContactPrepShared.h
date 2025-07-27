@@ -40,7 +40,7 @@
 #include "PxsContactManager.h"
 #include "PxsContactManagerState.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

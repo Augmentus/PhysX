@@ -30,7 +30,7 @@
 #ifndef PX_PHYSICS_NP_RIGIDACTOR_TEMPLATE_INTERNAL
 #define PX_PHYSICS_NP_RIGIDACTOR_TEMPLATE_INTERNAL
 
-namespace physx
+namespace augphysx
 {
 
 template<class T, class T2>

@@ -33,9 +33,9 @@
 #include "PsArray.h"
 #include "PxProfileAllocatorWrapper.h"
 
-namespace physx { 
+namespace augphysx { 
 
-	using namespace physx::profile;
+	using namespace augphysx::profile;
 
 	/** 
 	 *	Linked list used to store next node ptr.

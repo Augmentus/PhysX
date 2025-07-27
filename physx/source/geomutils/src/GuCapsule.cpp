@@ -33,7 +33,7 @@
 #include "GuBox.h"
 #include "GuCapsule.h"
 
-using namespace physx;
+using namespace augphysx;
 
 /**
 *	Computes an OBB surrounding the capsule.

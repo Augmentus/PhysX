@@ -32,7 +32,7 @@
 
 #include "PxsRigidBody.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct PxsBodySim

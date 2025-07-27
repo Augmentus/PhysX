@@ -45,7 +45,7 @@
 #include "DySolverContact4.h"
 #include "DySolverConstraint1D4.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy
@@ -1140,7 +1140,7 @@ void solveContactPreBlock_WriteBack(const PxSolverConstraintDesc* PX_RESTRICT de
 	if(cache.mThresholdStreamIndex > (cache.mThresholdStreamLength - 4))
 	{
 		//Write back to global buffer
-		PxI32 threshIndex = physx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
+		PxI32 threshIndex = augphysx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
 		for(PxU32 a = 0; a < cache.mThresholdStreamIndex; ++a)
 		{
 			cache.mSharedThresholdStream[a + threshIndex] = cache.mThresholdStream[a];
@@ -1167,7 +1167,7 @@ void solveContactPreBlock_WriteBackStatic(const PxSolverConstraintDesc* PX_RESTR
 	if(cache.mThresholdStreamIndex > (cache.mThresholdStreamLength - 4))
 	{
 		//Write back to global buffer
-		PxI32 threshIndex = physx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
+		PxI32 threshIndex = augphysx::shdfnd::atomicAdd(cache.mSharedOutThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
 		for(PxU32 a = 0; a < cache.mThresholdStreamIndex; ++a)
 		{
 			cache.mSharedThresholdStream[a + threshIndex] = cache.mThresholdStream[a];

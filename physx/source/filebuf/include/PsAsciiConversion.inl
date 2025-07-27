@@ -135,7 +135,7 @@ PX_INLINE bool strToBool(const char *str, const char **endptr)
 		end = begin + strlen(str);
 
 	size_t len = (size_t)(end - begin);
-	if ( physx::shdfnd::strnicmp(begin,"true", len) == 0 || physx::shdfnd::strnicmp(begin,"1", len) == 0 )
+	if ( augphysx::shdfnd::strnicmp(begin,"true", len) == 0 || augphysx::shdfnd::strnicmp(begin,"1", len) == 0 )
 		ret = true;
 
 	if( endptr )
@@ -337,13 +337,13 @@ PX_INLINE float strToF32(const char *str, const char **endptr)
 	const char PX_F32_MIN[] = "PX_MIN_F32";
 	const char PX_F32_MAX[] = "PX_MAX_F32";
 
-	if( strncmp(begin, PX_F32_MIN, physx::PxMin(len, (uint32_t)(sizeof(PX_F32_MIN) - 1))) == 0)
+	if( strncmp(begin, PX_F32_MIN, augphysx::PxMin(len, (uint32_t)(sizeof(PX_F32_MIN) - 1))) == 0)
 		ret = -PX_MAX_F32;
-	else if( strncmp(begin, PX_F32_MAX, physx::PxMin(len, (uint32_t)(sizeof(PX_F32_MAX) - 1))) == 0)
+	else if( strncmp(begin, PX_F32_MAX, augphysx::PxMin(len, (uint32_t)(sizeof(PX_F32_MAX) - 1))) == 0)
 		ret = PX_MAX_F32;
-	else if( strncmp(begin, F32_MIN, physx::PxMin(len, (uint32_t)(sizeof(F32_MIN) - 1))) == 0)
+	else if( strncmp(begin, F32_MIN, augphysx::PxMin(len, (uint32_t)(sizeof(F32_MIN) - 1))) == 0)
 		ret = -PX_MAX_F32;
-	else if( strncmp(begin, F32_MAX, physx::PxMin(len, (uint32_t)(sizeof(F32_MAX) - 1))) == 0)
+	else if( strncmp(begin, F32_MAX, augphysx::PxMin(len, (uint32_t)(sizeof(F32_MAX) - 1))) == 0)
 		ret = PX_MAX_F32;
 	else
 	{
@@ -383,13 +383,13 @@ PX_INLINE double strToF64(const char *str, const char **endptr)
 	const char PX_F64_MIN[] = "PX_MIN_F64";
 	const char PX_F64_MAX[] = "PX_MAX_F64";
 
-	if( strncmp(begin, F64_MIN, physx::PxMin(len, (uint32_t)(sizeof(F64_MIN) - 1))) == 0)
+	if( strncmp(begin, F64_MIN, augphysx::PxMin(len, (uint32_t)(sizeof(F64_MIN) - 1))) == 0)
 		ret = -PX_MAX_F64;
-	else if( strncmp(begin, F64_MAX, physx::PxMin(len, (uint32_t)(sizeof(F64_MAX) - 1))) == 0)
+	else if( strncmp(begin, F64_MAX, augphysx::PxMin(len, (uint32_t)(sizeof(F64_MAX) - 1))) == 0)
 		ret = PX_MAX_F64;
-	else if( strncmp(begin, PX_F64_MIN, physx::PxMin(len, (uint32_t)(sizeof(PX_F64_MIN) - 1))) == 0)
+	else if( strncmp(begin, PX_F64_MIN, augphysx::PxMin(len, (uint32_t)(sizeof(PX_F64_MIN) - 1))) == 0)
 		ret = -PX_MAX_F64;
-	else if( strncmp(begin, PX_F64_MAX, physx::PxMin(len, (uint32_t)(sizeof(PX_F64_MAX) - 1))) == 0)
+	else if( strncmp(begin, PX_F64_MAX, augphysx::PxMin(len, (uint32_t)(sizeof(PX_F64_MAX) - 1))) == 0)
 		ret = PX_MAX_F64;
 	else
 		ret = (double)strtod_fast(begin);
@@ -420,99 +420,99 @@ PX_INLINE void strToF32s(float *v,uint32_t count,const char *str, const char**en
 //////////////////////////
 PX_INLINE const char * valueToStr( bool val, char *buf, uint32_t n )
 {
-	physx::shdfnd::snprintf(buf, n,"%s",val ? "true" : "false");
+	augphysx::shdfnd::snprintf(buf, n,"%s",val ? "true" : "false");
 	return buf;
 }
 
 PX_INLINE const char * valueToStr( int8_t val, char *buf, uint32_t n )
 {
 	if( val == INT8_MIN )
-		physx::shdfnd::snprintf(buf, n,"%s","INT8_MIN" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","INT8_MIN" );
 	else if( val == INT8_MAX )
-		physx::shdfnd::snprintf(buf, n,"%s","INT8_MAX" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","INT8_MAX" );
 	else
-		physx::shdfnd::snprintf(buf, n, "%d", val);
+		augphysx::shdfnd::snprintf(buf, n, "%d", val);
 	return buf;
 }
 
 PX_INLINE const char * valueToStr( int16_t val, char *buf, uint32_t n )
 {
 	if( val == INT16_MIN )
-		physx::shdfnd::snprintf(buf, n,"%s","INT16_MIN" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","INT16_MIN" );
 	else if( val == INT16_MAX )
-		physx::shdfnd::snprintf(buf, n,"%s","INT16_MAX" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","INT16_MAX" );
 	else
-		physx::shdfnd::snprintf(buf, n,"%d",val );
+		augphysx::shdfnd::snprintf(buf, n,"%d",val );
 	return buf;
 }
 
 PX_INLINE const char * valueToStr( int32_t val, char *buf, uint32_t n )
 {
 	if( val == INT32_MIN )
-		physx::shdfnd::snprintf(buf, n,"%s","INT32_MIN" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","INT32_MIN" );
 	else if( val == INT32_MAX )
-		physx::shdfnd::snprintf(buf, n,"%s","INT32_MAX" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","INT32_MAX" );
 	else
-		physx::shdfnd::snprintf(buf, n,"%d",val );
+		augphysx::shdfnd::snprintf(buf, n,"%d",val );
 	return buf;
 }
 
 PX_INLINE const char * valueToStr( int64_t val, char *buf, uint32_t n )
 {
-	physx::shdfnd::snprintf(buf, n,"%lld",val );
+	augphysx::shdfnd::snprintf(buf, n,"%lld",val );
 	return buf;
 }
 
 PX_INLINE const char * valueToStr( uint8_t val, char *buf, uint32_t n )
 {
-	physx::shdfnd::snprintf(buf, n, "%u", val);
+	augphysx::shdfnd::snprintf(buf, n, "%u", val);
 	return buf;
 }
 
 PX_INLINE const char * valueToStr( uint16_t val, char *buf, uint32_t n )
 {
 	if( val == UINT16_MAX )
-		physx::shdfnd::snprintf(buf, n,"%s","UINT16_MAX" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","UINT16_MAX" );
 	else
-		physx::shdfnd::snprintf(buf, n,"%u",val );
+		augphysx::shdfnd::snprintf(buf, n,"%u",val );
 	return buf;
 }
 
 PX_INLINE const char * valueToStr( uint32_t val, char *buf, uint32_t n )
 {
 	if( val == UINT32_MAX )
-		physx::shdfnd::snprintf(buf, n,"%s","UINT32_MAX" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","UINT32_MAX" );
 	else
-		physx::shdfnd::snprintf(buf, n,"%u",val );
+		augphysx::shdfnd::snprintf(buf, n,"%u",val );
 	return buf;
 }
 
 PX_INLINE const char * valueToStr( uint64_t val, char *buf, uint32_t n )
 {
-	physx::shdfnd::snprintf(buf, n,"%llu",val );
+	augphysx::shdfnd::snprintf(buf, n,"%llu",val );
 	return buf;
 }
 
 PX_INLINE const char * valueToStr( float val, char *buf, uint32_t n )
 {
-	if( !physx::PxIsFinite(val) )
+	if( !augphysx::PxIsFinite(val) )
 	{
 		PX_ASSERT( 0 && "invalid floating point" );
-		physx::shdfnd::snprintf(buf, n,"%s","0" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","0" );
 	}
 	else if( val == -PX_MAX_F32 )
-		physx::shdfnd::snprintf(buf, n,"%s","PX_MIN_F32" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","PX_MIN_F32" );
 	else if( val == PX_MAX_F32 )
-		physx::shdfnd::snprintf(buf, n,"%s","PX_MAX_F32" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","PX_MAX_F32" );
     else if ( val == 1 )
-    	physx::shdfnd::strlcpy(buf, n, "1");
+    	augphysx::shdfnd::strlcpy(buf, n, "1");
     else if ( val == 0 )
-    	physx::shdfnd::strlcpy(buf, n, "0");
+    	augphysx::shdfnd::strlcpy(buf, n, "0");
     else if ( val == - 1 )
-    	physx::shdfnd::strlcpy(buf, n, "-1");
+    	augphysx::shdfnd::strlcpy(buf, n, "-1");
     else
     {
-		physx::shdfnd::snprintf(buf,n,"%.9g", (double)val ); // %g expects double
+		augphysx::shdfnd::snprintf(buf,n,"%.9g", (double)val ); // %g expects double
 		const char *dot = strchr(buf,'.');
 		const char *e = strchr(buf,'e');
 		if ( dot && !e )
@@ -531,24 +531,24 @@ PX_INLINE const char * valueToStr( float val, char *buf, uint32_t n )
 
 PX_INLINE const char * valueToStr( double val, char *buf, uint32_t n )
 {
-	if( !physx::PxIsFinite(val) )
+	if( !augphysx::PxIsFinite(val) )
 	{
 		PX_ASSERT( 0 && "invalid floating point" );
-		physx::shdfnd::snprintf(buf, n,"%s","0" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","0" );
 	}
 	else if( val == -PX_MAX_F64 )
-		physx::shdfnd::snprintf(buf, n,"%s","PX_MIN_F64" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","PX_MIN_F64" );
 	else if( val == PX_MAX_F64 )
-		physx::shdfnd::snprintf(buf, n,"%s","PX_MAX_F64" );
+		augphysx::shdfnd::snprintf(buf, n,"%s","PX_MAX_F64" );
     else if ( val == 1 )
-		physx::shdfnd::strlcpy(buf, n, "1");
+		augphysx::shdfnd::strlcpy(buf, n, "1");
     else if ( val == 0 )
-    	physx::shdfnd::strlcpy(buf, n, "0");
+    	augphysx::shdfnd::strlcpy(buf, n, "0");
     else if ( val == - 1 )
-    	physx::shdfnd::strlcpy(buf, n, "-1");
+    	augphysx::shdfnd::strlcpy(buf, n, "-1");
     else
     {
-		physx::shdfnd::snprintf(buf,n,"%.18g", val );
+		augphysx::shdfnd::snprintf(buf,n,"%.18g", val );
 		const char *dot = strchr(buf,'.');
 		const char *e = strchr(buf,'e');
 		if ( dot && !e )

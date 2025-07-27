@@ -39,7 +39,7 @@
 #include "PsVecMath.h"
 #include "PsArray.h"
 
-namespace physx
+namespace augphysx
 {
 
 	using namespace shdfnd::aos;

@@ -30,7 +30,7 @@
 
 #include "PxProfileEventId.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	/**
 	\brief Mapping from event id to name.

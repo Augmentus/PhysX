@@ -36,9 +36,9 @@
 #include "SnRepXCollection.h"
 #include "SnRepXUpgrader.h"
 
-using namespace physx::profile;
+using namespace augphysx::profile;
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 
 	#define DEFINE_REPX_DEFAULT_PROPERTY( name, val ) RepXDefaultEntry( name, val ),
 
@@ -327,7 +327,7 @@ namespace physx { namespace Sn {
 
 			if ( strstr( newItem.liveObject.typeName, "PxCloth" ) || strstr( newItem.liveObject.typeName, "PxClothFabric" ) )
 			{  
-				physx::shdfnd::getFoundation().error(PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, "Didn't suppot PxCloth upgrate from 3.2 to 3.3! ");
+				augphysx::shdfnd::getFoundation().error(PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__, "Didn't suppot PxCloth upgrate from 3.2 to 3.3! ");
 				continue;
 			}
 

@@ -40,7 +40,7 @@
 #include "PxShape.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -606,7 +606,7 @@ to save on code memory if your application does not use articulations.  In this 
 the relevant implementation code from the library.  If you need to use articulations but not some other optional 
 component, you shoud call PxCreateBasePhysics() followed by this call.
 */
-PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxRegisterArticulations(physx::PxPhysics& physics);
+PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxRegisterArticulations(augphysx::PxPhysics& physics);
 
 
 /**
@@ -616,7 +616,7 @@ to save on code memory if your application does not use articulations.  In this 
 the relevant implementation code from the library.  If you need to use articulations but not some other optional
 component, you shoud call PxCreateBasePhysics() followed by this call.
 */
-PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxRegisterArticulationsReducedCoordinate(physx::PxPhysics& physics);
+PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxRegisterArticulationsReducedCoordinate(augphysx::PxPhysics& physics);
 
 /**
 \brief Enables the usage of the heightfield feature.  
@@ -635,7 +635,7 @@ This is to prevent a change to the heightfield implementation code at runtime wh
 Calling PxCreateBasePhysics() and then attempting to create a heightfield shape without first calling 
 ::PxRegisterHeightFields(), will result in an error.
 */
-PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxRegisterHeightFields(physx::PxPhysics& physics);
+PX_C_EXPORT PX_PHYSX_CORE_API void PX_CALL_CONV PxRegisterHeightFields(augphysx::PxPhysics& physics);
 
 /**
 \brief Creates an instance of the physics SDK with minimal additional components registered
@@ -658,11 +658,11 @@ has been created already will result in an error message and NULL will be return
 
 @see PxPhysics, PxFoundation, PxTolerancesScale, PxPvd
 */
-PX_C_EXPORT PX_PHYSX_CORE_API physx::PxPhysics* PX_CALL_CONV PxCreateBasePhysics(physx::PxU32 version,
-																			     physx::PxFoundation& foundation,
-																			     const physx::PxTolerancesScale& scale,																				 
+PX_C_EXPORT PX_PHYSX_CORE_API augphysx::PxPhysics* PX_CALL_CONV PxCreateBasePhysics(augphysx::PxU32 version,
+																			     augphysx::PxFoundation& foundation,
+																			     const augphysx::PxTolerancesScale& scale,																				 
 																			     bool trackOutstandingAllocations = false,
-																				 physx::PxPvd* pvd = NULL);
+																				 augphysx::PxPvd* pvd = NULL);
 
 /**
 \brief Creates an instance of the physics SDK.
@@ -689,13 +689,13 @@ modules manually.
 
 @see PxPhysics, PxCreateBasePhysics, PxRegisterArticulations, PxRegisterArticulationsReducedCoordinate, PxRegisterHeightFields 
 */
-PX_INLINE physx::PxPhysics* PxCreatePhysics(physx::PxU32 version,
-											physx::PxFoundation& foundation,
-											const physx::PxTolerancesScale& scale,											
+PX_INLINE augphysx::PxPhysics* PxCreatePhysics(augphysx::PxU32 version,
+											augphysx::PxFoundation& foundation,
+											const augphysx::PxTolerancesScale& scale,											
 											bool trackOutstandingAllocations = false,
-											physx::PxPvd* pvd = NULL )
+											augphysx::PxPvd* pvd = NULL )
 {
-	physx::PxPhysics* physics = PxCreateBasePhysics(version, foundation, scale, trackOutstandingAllocations, pvd);
+	augphysx::PxPhysics* physics = PxCreateBasePhysics(version, foundation, scale, trackOutstandingAllocations, pvd);
 	if(!physics)
 		return NULL;
 
@@ -719,7 +719,7 @@ Before using this function the user must call #PxCreatePhysics().
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
 #endif
 
-PX_C_EXPORT PX_PHYSX_CORE_API physx::PxPhysics& PX_CALL_CONV PxGetPhysics();
+PX_C_EXPORT PX_PHYSX_CORE_API augphysx::PxPhysics& PX_CALL_CONV PxGetPhysics();
 
 #ifdef __clang__
 #pragma clang diagnostic pop

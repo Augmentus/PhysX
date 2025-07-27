@@ -46,7 +46,7 @@
 #include "GuSphere.h"
 #include "GuCapsule.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu

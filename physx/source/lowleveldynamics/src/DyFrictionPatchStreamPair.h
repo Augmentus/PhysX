@@ -53,7 +53,7 @@
 
 #include "PxcNpMemBlockPool.h"
 
-namespace physx
+namespace augphysx
 {
 
 class FrictionPatchStreamPair

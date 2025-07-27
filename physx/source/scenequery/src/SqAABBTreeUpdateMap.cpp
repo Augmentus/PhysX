@@ -30,7 +30,7 @@
 #include "SqAABBTreeUpdateMap.h"
 #include "SqAABBTree.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 
 static const PxU32 SHRINK_THRESHOLD = 1024;

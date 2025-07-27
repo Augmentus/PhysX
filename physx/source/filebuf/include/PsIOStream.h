@@ -40,11 +40,11 @@
 #include <stdlib.h>
 #include "PsAsciiConversion.h"
 
-#define safePrintf physx::shdfnd::snprintf
+#define safePrintf augphysx::shdfnd::snprintf
 
 PX_PUSH_PACK_DEFAULT
 
-namespace physx
+namespace augphysx
 {
 	namespace general_PxIOStream2
 	{
@@ -60,7 +60,7 @@ public:
 	\param [in] stream the physx::PxFileBuf through which all reads and writes will be performed
 	\param [in] streamLen the length of the input data stream when de-serializing
 	*/
-	PsIOStream(physx::PxFileBuf &stream,uint32_t streamLen) : mBinary(true), mStreamLen(streamLen), mStream(stream) { }
+	PsIOStream(augphysx::PxFileBuf &stream,uint32_t streamLen) : mBinary(true), mStreamLen(streamLen), mStream(stream) { }
 	~PsIOStream(void) { }
 
 	/**
@@ -89,9 +89,9 @@ public:
 	PX_INLINE PsIOStream& operator<<(int32_t v);
 	PX_INLINE PsIOStream& operator<<(uint16_t v);
 	PX_INLINE PsIOStream& operator<<(int16_t v);
-	PX_INLINE PsIOStream& operator<<(const physx::PxVec3 &v);
-	PX_INLINE PsIOStream& operator<<(const physx::PxQuat &v);
-	PX_INLINE PsIOStream& operator<<(const physx::PxBounds3 &v);
+	PX_INLINE PsIOStream& operator<<(const augphysx::PxVec3 &v);
+	PX_INLINE PsIOStream& operator<<(const augphysx::PxQuat &v);
+	PX_INLINE PsIOStream& operator<<(const augphysx::PxBounds3 &v);
 
 	PX_INLINE PsIOStream& operator>>(const char *&c);
 	PX_INLINE PsIOStream& operator>>(bool &v);
@@ -106,13 +106,13 @@ public:
 	PX_INLINE PsIOStream& operator>>(int32_t &v);
 	PX_INLINE PsIOStream& operator>>(uint16_t &v);
 	PX_INLINE PsIOStream& operator>>(int16_t &v);
-	PX_INLINE PsIOStream& operator>>(physx::PxVec3 &v);
-	PX_INLINE PsIOStream& operator>>(physx::PxQuat &v);
-	PX_INLINE PsIOStream& operator>>(physx::PxBounds3 &v);
+	PX_INLINE PsIOStream& operator>>(augphysx::PxVec3 &v);
+	PX_INLINE PsIOStream& operator>>(augphysx::PxQuat &v);
+	PX_INLINE PsIOStream& operator>>(augphysx::PxBounds3 &v);
 
 	uint32_t getStreamLen(void) const { return mStreamLen; }
 
-	physx::PxFileBuf& getStream(void) { return mStream; }
+	augphysx::PxFileBuf& getStream(void) { return mStream; }
 
 	PX_INLINE void storeString(const char *c,bool zeroTerminate=false);
 
@@ -122,7 +122,7 @@ private:
 
 	bool      mBinary; // true if we are serializing binary data.  Otherwise, everything is assumed converted to ASCII
 	uint32_t     mStreamLen; // the length of the input data stream when de-serializing.
-	physx::PxFileBuf &mStream;
+	augphysx::PxFileBuf &mStream;
 	char			mReadString[MAX_STREAM_STRING]; // a temp buffer for streaming strings on input.
 };
 

@@ -37,7 +37,7 @@
 #include "PsBroadcast.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -53,7 +53,7 @@ class PvdClient;
 class PvdOMMetaDataProvider;
 
 // PsPvd is used for advanced user, it support custom pvd client API
-class PsPvd : public physx::PxPvd, public shdfnd::AllocationListener
+class PsPvd : public augphysx::PxPvd, public shdfnd::AllocationListener
 {
   public:
 	virtual void addClient(PvdClient* client) = 0;

@@ -41,7 +41,7 @@
 #define V4StoreA_Safe	V4StoreA
 #define V4StoreU_Safe	V4StoreU
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -51,7 +51,7 @@ namespace Gu
 		const PxVec3*	Vertex[3];
 	};
 
-	class IndTri32 : public physx::shdfnd::UserAllocated
+	class IndTri32 : public augphysx::shdfnd::UserAllocated
 	{
 		public:
 		PX_FORCE_INLINE				IndTri32()								{}
@@ -67,7 +67,7 @@ namespace Gu
 	};
 	PX_COMPILE_TIME_ASSERT(sizeof(IndTri32)==12);
 
-	class IndTri16 : public physx::shdfnd::UserAllocated
+	class IndTri16 : public augphysx::shdfnd::UserAllocated
 	{
 		public:
 		PX_FORCE_INLINE				IndTri16()								{}
@@ -102,7 +102,7 @@ namespace Gu
 	}
 
 
-	class SourceMeshBase : public physx::shdfnd::UserAllocated
+	class SourceMeshBase : public augphysx::shdfnd::UserAllocated
 	{
 	public:
 		PX_PHYSX_COMMON_API				SourceMeshBase();
@@ -213,7 +213,7 @@ namespace Gu
 	static	PX_FORCE_INLINE	PxU32	getChildType(PxU32 data)	{ return (data>>1)&3;							}
 
 	template<class BoxType>
-	struct BVDataPackedT : public physx::shdfnd::UserAllocated
+	struct BVDataPackedT : public augphysx::shdfnd::UserAllocated
 	{
 						BoxType			mAABB;
 						PxU32			mData;
@@ -238,7 +238,7 @@ namespace Gu
 #endif
 
 	// PT: TODO: align class to 16? (TA34704)
-	class BV4Tree : public physx::shdfnd::UserAllocated
+	class BV4Tree : public augphysx::shdfnd::UserAllocated
 	{
 		public:
 		// PX_SERIALIZATION

@@ -39,7 +39,7 @@
 #include "foundation/PxFoundationConfig.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -118,8 +118,8 @@ returned.
 @see PxFoundation
 */
 
-PX_C_EXPORT PX_FOUNDATION_API physx::PxFoundation* PX_CALL_CONV
-PxCreateFoundation(physx::PxU32 version, physx::PxAllocatorCallback& allocator, physx::PxErrorCallback& errorCallback);
+PX_C_EXPORT PX_FOUNDATION_API augphysx::PxFoundation* PX_CALL_CONV
+PxCreateFoundation(augphysx::PxU32 version, augphysx::PxAllocatorCallback& allocator, augphysx::PxErrorCallback& errorCallback);
 /**
 \brief Retrieves the Foundation SDK after it has been created.
 
@@ -133,14 +133,14 @@ PxCreateFoundation(physx::PxU32 version, physx::PxAllocatorCallback& allocator, 
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
 #endif // PX_LINUX
 #endif // PX_CLANG
-PX_C_EXPORT PX_FOUNDATION_API physx::PxFoundation& PX_CALL_CONV PxGetFoundation();
+PX_C_EXPORT PX_FOUNDATION_API augphysx::PxFoundation& PX_CALL_CONV PxGetFoundation();
 #if PX_CLANG
 #if PX_LINUX
 #pragma clang diagnostic pop
 #endif // PX_LINUX
 #endif // PX_CLANG
 
-namespace physx
+namespace augphysx
 {
 class PxProfilerCallback;
 }
@@ -148,12 +148,12 @@ class PxProfilerCallback;
 /**
 \brief Get the callback that will be used for all profiling.
 */
-PX_C_EXPORT PX_FOUNDATION_API physx::PxProfilerCallback* PX_CALL_CONV PxGetProfilerCallback();
+PX_C_EXPORT PX_FOUNDATION_API augphysx::PxProfilerCallback* PX_CALL_CONV PxGetProfilerCallback();
 
 /**
 \brief Set the callback that will be used for all profiling.
 */
-PX_C_EXPORT PX_FOUNDATION_API void PX_CALL_CONV PxSetProfilerCallback(physx::PxProfilerCallback* profiler);
+PX_C_EXPORT PX_FOUNDATION_API void PX_CALL_CONV PxSetProfilerCallback(augphysx::PxProfilerCallback* profiler);
 
 /** @} */
 #endif // PX_FOUNDATION_PX_FOUNDATION_H

@@ -33,7 +33,7 @@
 #include "CmPhysXCommon.h"
 #include "PsFoundation.h"
 
-namespace physx   
+namespace augphysx   
 {
 
 
@@ -86,7 +86,7 @@ PxsMaterialCombiner::PxsCombinedMaterial PxsMaterialCombiner::combineIsotropicFr
 		//isotropic case
 		const PxReal fDynFriction = PxMax(dynFriction, 0.f);
 
-		const PxReal fStaFriction = physx::intrinsics::fsel(staFriction - fDynFriction, staFriction, fDynFriction);
+		const PxReal fStaFriction = augphysx::intrinsics::fsel(staFriction - fDynFriction, staFriction, fDynFriction);
 		dest.dynFriction = fDynFriction;
 		dest.staFriction = fStaFriction;
 	}

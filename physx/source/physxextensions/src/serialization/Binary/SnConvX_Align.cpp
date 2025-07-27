@@ -28,7 +28,7 @@
 #include "SnConvX.h"
 #include "SnConvX_Align.h"
 #include <assert.h>
-using namespace physx;
+using namespace augphysx;
 
 void Sn::ConvX::alignTarget(int alignment)
 {

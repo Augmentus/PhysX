@@ -34,7 +34,7 @@
 #include "PxProfileEventNames.h"
 #include "PxProfileEventSender.h"
 
-namespace physx { 
+namespace augphysx { 
 	class PxAllocatorCallback;
 
 	namespace profile {

@@ -38,16 +38,16 @@
 #include "PsBasicTemplates.h"
 #include "PsAllocator.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #include "PsVecMath.h"
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 #define DELETESINGLE(x)	if (x) { delete x;		x = NULL; }
 #define DELETEARRAY(x)	if (x) { delete []x;	x = NULL; }
 
-struct BV32Node : public physx::shdfnd::UserAllocated
+struct BV32Node : public augphysx::shdfnd::UserAllocated
 {
 	BV32Node() : mNbChildBVNodes(0)
 	{}
@@ -496,7 +496,7 @@ static bool gReorderCallback(const AABBTreeNode* current, PxU32 /*depth*/, void*
 }
 
 
-bool physx::Gu::BuildBV32Ex(BV32Tree& tree, SourceMesh& mesh, float epsilon, PxU32 nbTrisPerLeaf)
+bool augphysx::Gu::BuildBV32Ex(BV32Tree& tree, SourceMesh& mesh, float epsilon, PxU32 nbTrisPerLeaf)
 {
 	const PxU32 nbTris = mesh.mNbTris;
 

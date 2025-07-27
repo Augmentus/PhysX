@@ -42,7 +42,7 @@
 Pool used to allocate variable sized tasks. It's intended to be cleared after a short period (time step).
 */
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

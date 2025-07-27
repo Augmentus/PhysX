@@ -39,7 +39,7 @@
 #include "GuPCMContactGenUtil.h"
 
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu

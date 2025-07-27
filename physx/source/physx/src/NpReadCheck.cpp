@@ -32,7 +32,7 @@
 
 #include "NpScene.h"
 
-using namespace physx;
+using namespace augphysx;
 
 NpReadCheck::NpReadCheck(const NpScene* scene, const char* functionName)
 	: mScene(scene), mName(functionName), mErrorCount(0)

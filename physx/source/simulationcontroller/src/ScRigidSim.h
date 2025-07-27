@@ -33,7 +33,7 @@
 #include "ScActorSim.h"
 #include "ScRigidCore.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

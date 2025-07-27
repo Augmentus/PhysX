@@ -40,7 +40,7 @@
 #include "ScObjectIDTracker.h"
 #include "DyContext.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PX_FORCE_INLINE void invalidateConstraintGroupsOnAdd(Sc::ConstraintProjectionManager& cpm, Sc::BodySim* b0, Sc::BodySim* b1, Sc::ConstraintSim& constraint)
 {

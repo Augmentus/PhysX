@@ -35,7 +35,7 @@
 #include "CmPhysXCommon.h"
 #include "ExtSharedQueueEntryPool.h"
 
-namespace physx
+namespace augphysx
 {
 
 #define EXT_TASK_QUEUE_ENTRY_POOL_SIZE 128

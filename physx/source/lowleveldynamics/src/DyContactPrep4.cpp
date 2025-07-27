@@ -46,7 +46,7 @@
 
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 
@@ -58,7 +58,7 @@ using namespace Gu;
 
 using namespace Ps::aos;
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

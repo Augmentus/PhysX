@@ -44,7 +44,7 @@
 
 #include <stdarg.h>
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
@@ -113,8 +113,8 @@ class PX_FOUNDATION_API Foundation : public PxFoundation, public UserAllocated
 		return mBroadcastingAllocator;
 	} // Return the broadcasting allocator
 
-	void registerAllocationListener(physx::shdfnd::AllocationListener& listener);
-	void deregisterAllocationListener(physx::shdfnd::AllocationListener& listener);
+	void registerAllocationListener(augphysx::shdfnd::AllocationListener& listener);
+	void deregisterAllocationListener(augphysx::shdfnd::AllocationListener& listener);
 
 	virtual bool getReportAllocationNames() const
 	{
@@ -193,8 +193,8 @@ PX_INLINE void setFoundationInstance(Foundation& foundation)
 
 // shortcut macros:
 // usage: Foundation::error(PX_WARN, "static friction %f is is lower than dynamic friction %d", sfr, dfr);
-#define PX_WARN ::physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__
-#define PX_INFO ::physx::PxErrorCode::eDEBUG_INFO, __FILE__, __LINE__
+#define PX_WARN ::augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__
+#define PX_INFO ::augphysx::PxErrorCode::eDEBUG_INFO, __FILE__, __LINE__
 
 #if PX_DEBUG || PX_CHECKED
 #define PX_WARN_ONCE(string)                                                                                           \

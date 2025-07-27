@@ -47,9 +47,9 @@
 #include "PxPvdUserRenderer.h"
 #include "PxvNphaseImplementationContext.h"
 
-using namespace physx;
-using namespace physx::Vd;
-using namespace physx::pvdsdk;
+using namespace augphysx;
+using namespace augphysx::Vd;
+using namespace augphysx::pvdsdk;
 using namespace Scb;
 
 namespace
@@ -84,11 +84,11 @@ namespace
 	struct CreateOp
 	{
 		CreateOp& operator=(const CreateOp&);
-		physx::pvdsdk::PvdDataStream& mStream;
+		augphysx::pvdsdk::PvdDataStream& mStream;
 		PvdMetaDataBinding& mBinding;
 		PsPvd* mPvd;
 		PxScene& mScene;
-		CreateOp(physx::pvdsdk::PvdDataStream& str, PvdMetaDataBinding& bind, PsPvd* pvd, PxScene& scene)
+		CreateOp(augphysx::pvdsdk::PvdDataStream& str, PvdMetaDataBinding& bind, PsPvd* pvd, PxScene& scene)
 			: mStream(str), mBinding(bind), mPvd(pvd), mScene(scene)
 		{
 		}
@@ -105,9 +105,9 @@ namespace
 	struct UpdateOp
 	{
 		UpdateOp& operator=(const UpdateOp&);
-		physx::pvdsdk::PvdDataStream& mStream;
+		augphysx::pvdsdk::PvdDataStream& mStream;
 		PvdMetaDataBinding& mBinding;
-		UpdateOp(physx::pvdsdk::PvdDataStream& str, PvdMetaDataBinding& bind) : mStream(str), mBinding(bind)
+		UpdateOp(augphysx::pvdsdk::PvdDataStream& str, PvdMetaDataBinding& bind) : mStream(str), mBinding(bind)
 		{
 		}
 		template <typename TDataType>
@@ -120,10 +120,10 @@ namespace
 	struct DestroyOp
 	{
 		DestroyOp& operator=(const DestroyOp&);
-		physx::pvdsdk::PvdDataStream& mStream;
+		augphysx::pvdsdk::PvdDataStream& mStream;
 		PvdMetaDataBinding& mBinding;
 		PxScene& mScene;
-		DestroyOp(physx::pvdsdk::PvdDataStream& str, PvdMetaDataBinding& bind, PxScene& scene)
+		DestroyOp(augphysx::pvdsdk::PvdDataStream& str, PvdMetaDataBinding& bind, PxScene& scene)
 			: mStream(str), mBinding(bind), mScene(scene)
 		{
 		}
@@ -181,8 +181,8 @@ namespace
 		{
 			PX_NOCOPY(PvdConstraintVisualizer)
 		public:
-			physx::pvdsdk::PvdUserRenderer& mRenderer;
-			PvdConstraintVisualizer(const void* id, physx::pvdsdk::PvdUserRenderer& r) : mRenderer(r)
+			augphysx::pvdsdk::PvdUserRenderer& mRenderer;
+			PvdConstraintVisualizer(const void* id, augphysx::pvdsdk::PvdUserRenderer& r) : mRenderer(r)
 			{
 				mRenderer.setInstanceId(id);
 			}
@@ -219,7 +219,7 @@ namespace
 		};
 	}
 
-	class SceneRendererClient : public RendererEventClient, public physx::shdfnd::UserAllocated
+	class SceneRendererClient : public RendererEventClient, public augphysx::shdfnd::UserAllocated
 	{
 		PX_NOCOPY(SceneRendererClient)
 	public:

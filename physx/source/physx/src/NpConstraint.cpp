@@ -37,7 +37,7 @@
 #include "ScbConstraint.h"
 #include "ScbNpDeps.h"
 
-using namespace physx;
+using namespace augphysx;
 
 void NpConstraint::setConstraintFunctions(PxConstraintConnector& n, const PxConstraintShaderTable& shaders)
 {
@@ -369,7 +369,7 @@ Scb::RigidObject* NpConstraint::getScbRigidObject(PxRigidActor* a)
 	}
 }
 
-void physx::NpConstraintGetRigidObjectsFromScb(const Scb::Constraint&c, Scb::RigidObject*&b0, Scb::RigidObject*&b1)
+void augphysx::NpConstraintGetRigidObjectsFromScb(const Scb::Constraint&c, Scb::RigidObject*&b0, Scb::RigidObject*&b1)
 {
 	const NpConstraint* np = reinterpret_cast<const NpConstraint*>(reinterpret_cast<const char*>(&c)-NpConstraint::getScbConstraintOffset());
 

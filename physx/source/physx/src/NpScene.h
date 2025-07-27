@@ -45,7 +45,7 @@
 #include "NpSceneQueries.h"
 #include "NpSceneAccessor.h"
 
-namespace physx
+namespace augphysx
 {
 class PhysicsThread;
 class PxBatchQueryDesc;
@@ -74,7 +74,7 @@ class NpBatchQuery;
 
 class PxBatchQuery;
 
-class NpContactCallbackTask : public physx::PxLightCpuTask
+class NpContactCallbackTask : public augphysx::PxLightCpuTask
 {
 	NpScene*	mScene;
 	const PxContactPairHeader* mContactPairHeaders;
@@ -185,15 +185,15 @@ class NpScene : public NpSceneQueries, public Ps::UserAllocated
 	virtual			PxPhysics&						getPhysics();
 
 	// new API methods
-	virtual			void							simulate(PxReal elapsedTime, physx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation);
-	virtual			void							advance(physx::PxBaseTask* completionTask);
-	virtual			void							collide(PxReal elapsedTime, physx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation = true);
+	virtual			void							simulate(PxReal elapsedTime, augphysx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation);
+	virtual			void							advance(augphysx::PxBaseTask* completionTask);
+	virtual			void							collide(PxReal elapsedTime, augphysx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation = true);
 	virtual			bool							checkResults(bool block);
 	virtual			bool							checkCollision(bool block);
 	virtual			bool							fetchCollision(bool block);
 	virtual			bool							fetchResults(bool block, PxU32* errorState);
 	virtual			bool							fetchResultsStart(const PxContactPairHeader*& contactPairs, PxU32& nbContactPairs, bool block = false);
-	virtual			void							processCallbacks(physx::PxBaseTask* continuation);
+	virtual			void							processCallbacks(augphysx::PxBaseTask* continuation);
 	virtual			void							fetchResultsFinish(PxU32* errorState = 0);
 
 	virtual			void							flush(bool sendPendingReports) { flushSimulation(sendPendingReports); }
@@ -206,7 +206,7 @@ class NpScene : public NpSceneQueries, public Ps::UserAllocated
 	virtual			void							setDynamicTreeRebuildRateHint(PxU32 dynamicTreeRebuildRateHint);
 	virtual			PxU32							getDynamicTreeRebuildRateHint() const;
 	virtual			void							forceDynamicTreeRebuild(bool rebuildStaticStructure, bool rebuildDynamicStructure);
-	virtual			void							sceneQueriesUpdate(physx::PxBaseTask* completionTask, bool controlSimulation);
+	virtual			void							sceneQueriesUpdate(augphysx::PxBaseTask* completionTask, bool controlSimulation);
 	virtual			bool							checkQueries(bool block);
 	virtual			bool							fetchQueries(bool block);
 	virtual			void							setSceneQueryUpdateMode(PxSceneQueryUpdateMode::Enum updateMode);
@@ -346,7 +346,7 @@ private:
 					bool							checkResultsInternal(bool block);
 					bool							checkCollisionInternal(bool block);
 					bool							checkSceneQueriesInternal(bool block);
-					void							simulateOrCollide(PxReal elapsedTime, physx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation, const char* invalidCallMsg, Sc::SimulationStage::Enum simStage);
+					void							simulateOrCollide(PxReal elapsedTime, augphysx::PxBaseTask* completionTask, void* scratchBlock, PxU32 scratchBlockSize, bool controlSimulation, const char* invalidCallMsg, Sc::SimulationStage::Enum simStage);
 
 					void							addRigidStatic(NpRigidStatic& , const Gu::BVHStructure* bvhStructure, bool hasPrunerStructure = false);
 					void							removeRigidStatic(NpRigidStatic&, bool wakeOnLostTouch, bool removeFromAggregate);

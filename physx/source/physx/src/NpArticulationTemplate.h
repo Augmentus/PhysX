@@ -40,7 +40,7 @@
 #include "NpArticulationLink.h"
 #include "NpAggregate.h"
 
-namespace physx
+namespace augphysx
 {
 class NpArticulationLink;
 class NpScene;
@@ -390,12 +390,12 @@ void PxArticulationImpl::setGlobalPose()
 	//This code is force PVD to update other links position
 	if (!mArticulation.isBuffering())
 	{
-		physx::NpArticulationLink*const* links = getLinks();
+		augphysx::NpArticulationLink*const* links = getLinks();
 
 		const PxU32 nbLinks = getNbLinks();
 		for (PxU32 i = 1; i < nbLinks; ++i)
 		{
-			physx::NpArticulationLink* link = links[i];
+			augphysx::NpArticulationLink* link = links[i];
 			//in the lowlevel articulation, we have already updated bodyCore's body2World
 			const PxTransform internalPose = link->getScbBodyFast().getScBody().getBody2World();
 			link->getScbBodyFast().setBody2World(internalPose, false);

@@ -39,7 +39,7 @@
 #include "DySpatial.h"
 #include "PsFPU.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

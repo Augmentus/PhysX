@@ -40,7 +40,7 @@
 #include "PsFoundation.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 void enable3WMode(const PxU32 rightDirection, const PxU32 upDirection, const bool removeFrontWheel, PxVehicleWheelsSimData& wheelsSimData, PxVehicleWheelsDynData& wheelsDynData, PxVehicleDriveSimData4W& driveSimData);

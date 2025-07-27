@@ -33,7 +33,7 @@
 #include "GuGJKUtil.h"
 #include "GuGJKType.h"
 
-namespace physx
+namespace augphysx
 {
   
 namespace Gu

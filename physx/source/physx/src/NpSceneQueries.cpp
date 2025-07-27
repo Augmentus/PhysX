@@ -39,7 +39,7 @@
 
 // Synchronous scene queries
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Gu;
 
@@ -303,7 +303,7 @@ struct GeomQueryAny
 				case PxGeometryType::eHEIGHTFIELD:
 				case PxGeometryType::eGEOMETRY_COUNT:
 				case PxGeometryType::eINVALID:
-					physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__,
+					augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__,
 							"PxScene::sweep(): first geometry object parameter must be sphere, capsule, box or convex geometry.");
 				break;
 			}
@@ -609,11 +609,11 @@ struct CapturePvdOnReturn : public PxHitCallback<HitType>
 
 	~CapturePvdOnReturn()
 	{
-		const physx::Vd::ScbScenePvdClient& pvdClient = mSQ->getScene().getScenePvdClient();
+		const augphysx::Vd::ScbScenePvdClient& pvdClient = mSQ->getScene().getScenePvdClient();
 		if(!(pvdClient.checkPvdDebugFlag() && (pvdClient.getScenePvdFlagsFast() & PxPvdSceneFlag::eTRANSMIT_SCENEQUERIES)))
 			return;
 
-		physx::Vd::PvdSceneQueryCollector& collector = mBFD ? mSQ->getBatchedSqCollector() : mSQ->getSingleSqCollector();
+		augphysx::Vd::PvdSceneQueryCollector& collector = mBFD ? mSQ->getBatchedSqCollector() : mSQ->getSingleSqCollector();
 
 		if(mParentCallback.nbTouches)
 		{

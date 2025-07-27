@@ -56,7 +56,7 @@
 
 #define	MAX_ITER	10
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cct;
 using namespace Gu;
 using namespace Cm;
@@ -1532,11 +1532,11 @@ bool SweepTest::doSweepTest(const InternalCBData_FindTouchedGeom* userData,
 					const float dp1 = touchedTri.verts[1].dot(upDirection);
 					const float dp2 = touchedTri.verts[2].dot(upDirection);
 					float dpmin = dp0;
-					dpmin = physx::intrinsics::selectMin(dpmin, dp1);
-					dpmin = physx::intrinsics::selectMin(dpmin, dp2);
+					dpmin = augphysx::intrinsics::selectMin(dpmin, dp1);
+					dpmin = augphysx::intrinsics::selectMin(dpmin, dp2);
 					float dpmax = dp0;
-					dpmax = physx::intrinsics::selectMax(dpmax, dp1);
-					dpmax = physx::intrinsics::selectMax(dpmax, dp2);
+					dpmax = augphysx::intrinsics::selectMax(dpmax, dp1);
+					dpmax = augphysx::intrinsics::selectMax(dpmax, dp2);
 
 					PxExtendedVec3 cacheCenter;
 					getCenter(mCacheBounds, cacheCenter);
@@ -2011,7 +2011,7 @@ void Controller::findTouchedObject(const PxControllerFilters& filters, const PxO
 			PxQueryHitType::Enum	preFilter(const PxFilterData& filterData, const PxShape* shape, const PxRigidActor* actor, PxHitFlags& queryFlags)
 			{
 				// PT: ignore triggers
-				if(shape->getFlags() & physx::PxShapeFlag::eTRIGGER_SHAPE)
+				if(shape->getFlags() & augphysx::PxShapeFlag::eTRIGGER_SHAPE)
 					return PxQueryHitType::eNONE;
 
 				// PT: we want to discard our own internal shapes only

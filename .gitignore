@@ -2,3 +2,4 @@
 physx/compiler
 !physx/public
 physx/bin
+.vs

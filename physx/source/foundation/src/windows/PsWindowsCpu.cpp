@@ -37,7 +37,7 @@
 #include <intrin.h>
 #pragma warning(pop)
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

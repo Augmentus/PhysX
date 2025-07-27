@@ -44,7 +44,7 @@
 
 #include "../../lowlevel/common/include/utils/PxcScratchAllocator.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Dy;
 using namespace immediate;
 
@@ -1355,7 +1355,7 @@ void immediate::PxRegisterImmediateArticulations()
 Dy::ArticulationV* immediate::PxCreateFeatherstoneArticulation(const PxFeatherstoneArticulationData& data)
 {
 	PX_ASSERT(gRegistration && "Please call PxRegisterImmediateArticulations() before creating immediate articulations.");
-	void* memory = physx::shdfnd::AlignedAllocator<64>().allocate(sizeof(immArticulation), __FILE__, __LINE__);
+	void* memory = augphysx::shdfnd::AlignedAllocator<64>().allocate(sizeof(immArticulation), __FILE__, __LINE__);
 	new (memory) immArticulation(data);
 	return reinterpret_cast<immArticulation*>(memory);
 }
@@ -1367,7 +1367,7 @@ void immediate::PxReleaseArticulation(Dy::ArticulationV* articulation)
 
 	immArticulation* immArt = static_cast<immArticulation*>(articulation);
 	immArt->~immArticulation();
-	physx::shdfnd::AlignedAllocator<64>().deallocate(articulation);
+	augphysx::shdfnd::AlignedAllocator<64>().deallocate(articulation);
 }
 
 // PT: TODO: add test vs DY_ARTICULATION_MAX_SIZE
@@ -1715,7 +1715,7 @@ bool immediate::PxSetJointData(Dy::ArticulationLinkHandle link, const PxFeathers
 	return true;
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

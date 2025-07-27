@@ -30,7 +30,7 @@
 
 #include "PxPvdUserRenderer.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {

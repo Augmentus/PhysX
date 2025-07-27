@@ -34,7 +34,7 @@
 #include "PxvManager.h"
 #include "PxsIslandSim.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PxsContactManager::PxsContactManager(PxsContext*, PxU32 index) /*:
 	mUserData	(NULL)*/

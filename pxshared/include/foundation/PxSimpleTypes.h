@@ -63,7 +63,7 @@
 #define PX_PRIu64 PRIu64
 #endif
 
-namespace physx
+namespace augphysx
 {
 typedef int64_t PxI64;
 typedef uint64_t PxU64;

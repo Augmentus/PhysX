@@ -51,12 +51,12 @@
 
 // Allocation macros going through user allocator
 #if PX_CHECKED
-	#define PX_ALLOC(n, name) physx::shdfnd::NamedAllocator(name).allocate(n, __FILE__, __LINE__)
+	#define PX_ALLOC(n, name) augphysx::shdfnd::NamedAllocator(name).allocate(n, __FILE__, __LINE__)
 #else
-	#define PX_ALLOC(n, name) physx::shdfnd::NonTrackingAllocator().allocate(n, __FILE__, __LINE__)
+	#define PX_ALLOC(n, name) augphysx::shdfnd::NonTrackingAllocator().allocate(n, __FILE__, __LINE__)
 #endif
 #define PX_ALLOC_TEMP(n, name) PX_ALLOC(n, name)
-#define PX_FREE(x) physx::shdfnd::NonTrackingAllocator().deallocate(x)
+#define PX_FREE(x) augphysx::shdfnd::NonTrackingAllocator().deallocate(x)
 #define PX_FREE_AND_RESET(x)	\
 	{                           \
 		PX_FREE(x);             \
@@ -64,7 +64,7 @@
 	}
 
 // The following macros support plain-old-types and classes derived from UserAllocated.
-#define PX_NEW(T) new (physx::shdfnd::ReflectionAllocator<T>(), __FILE__, __LINE__) T
+#define PX_NEW(T) new (augphysx::shdfnd::ReflectionAllocator<T>(), __FILE__, __LINE__) T
 #define PX_NEW_TEMP(T) PX_NEW(T)
 #define PX_DELETE(x) delete x
 #define PX_DELETE_AND_RESET(x)	\
@@ -84,8 +84,8 @@
 	}
 
 // aligned allocation
-#define PX_ALIGNED16_ALLOC(n) physx::shdfnd::AlignedAllocator<16>().allocate(n, __FILE__, __LINE__)
-#define PX_ALIGNED16_FREE(x) physx::shdfnd::AlignedAllocator<16>().deallocate(x)
+#define PX_ALIGNED16_ALLOC(n) augphysx::shdfnd::AlignedAllocator<16>().allocate(n, __FILE__, __LINE__)
+#define PX_ALIGNED16_FREE(x) augphysx::shdfnd::AlignedAllocator<16>().deallocate(x)
 
 //! placement new macro to make it easy to spot bad use of 'new'
 #define PX_PLACEMENT_NEW(p, T) new (p) T
@@ -122,7 +122,7 @@
 
 #define PxAllocaAligned(x, alignment) ((size_t(PxAlloca(x + alignment)) + (alignment - 1)) & ~size_t(alignment - 1))
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
@@ -338,21 +338,21 @@ union EnableIfPod
 // PX_DELETE_POD was preferred over PX_DELETE_ARRAY because it is used
 // less often and applies to both single instances and arrays.
 template <typename T>
-PX_INLINE void* operator new(size_t size, physx::shdfnd::ReflectionAllocator<T> alloc, const char* fileName,
-                             typename physx::shdfnd::EnableIfPod<T, int>::Type line)
+PX_INLINE void* operator new(size_t size, augphysx::shdfnd::ReflectionAllocator<T> alloc, const char* fileName,
+                             typename augphysx::shdfnd::EnableIfPod<T, int>::Type line)
 {
 	return alloc.allocate(size, fileName, line);
 }
 
 template <typename T>
-PX_INLINE void* operator new [](size_t size, physx::shdfnd::ReflectionAllocator<T> alloc, const char* fileName,
-                                typename physx::shdfnd::EnableIfPod<T, int>::Type line)
+PX_INLINE void* operator new [](size_t size, augphysx::shdfnd::ReflectionAllocator<T> alloc, const char* fileName,
+                                typename augphysx::shdfnd::EnableIfPod<T, int>::Type line)
 { return alloc.allocate(size, fileName, line); }
 
 // If construction after placement new throws, this placement delete is being called.
 template <typename T>
-PX_INLINE void operator delete(void* ptr, physx::shdfnd::ReflectionAllocator<T> alloc, const char* fileName,
-                               typename physx::shdfnd::EnableIfPod<T, int>::Type line)
+PX_INLINE void operator delete(void* ptr, augphysx::shdfnd::ReflectionAllocator<T> alloc, const char* fileName,
+                               typename augphysx::shdfnd::EnableIfPod<T, int>::Type line)
 {
 	PX_UNUSED(fileName);
 	PX_UNUSED(line);
@@ -362,8 +362,8 @@ PX_INLINE void operator delete(void* ptr, physx::shdfnd::ReflectionAllocator<T> 
 
 // If construction after placement new throws, this placement delete is being called.
 template <typename T>
-PX_INLINE void operator delete [](void* ptr, physx::shdfnd::ReflectionAllocator<T> alloc, const char* fileName,
-                                  typename physx::shdfnd::EnableIfPod<T, int>::Type line)
+PX_INLINE void operator delete [](void* ptr, augphysx::shdfnd::ReflectionAllocator<T> alloc, const char* fileName,
+                                  typename augphysx::shdfnd::EnableIfPod<T, int>::Type line)
 {
 	PX_UNUSED(fileName);
 	PX_UNUSED(line);

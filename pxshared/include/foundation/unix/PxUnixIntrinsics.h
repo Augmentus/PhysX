@@ -48,7 +48,7 @@
 #include <math.h>
 #include <float.h>
 
-namespace physx
+namespace augphysx
 {
 namespace intrinsics
 {

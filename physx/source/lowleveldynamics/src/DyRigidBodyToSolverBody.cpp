@@ -32,7 +32,7 @@
 #include "PxsRigidBody.h"
 #include "PxvDynamics.h"
 
-using namespace physx;
+using namespace augphysx;
 
 // PT: TODO: SIMDify all this...
 void Dy::copyToSolverBodyData(const PxVec3& linearVelocity, const PxVec3& angularVelocity, const PxReal invMass, const PxVec3& invInertia, const PxTransform& globalPose,

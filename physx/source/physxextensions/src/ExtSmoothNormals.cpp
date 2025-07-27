@@ -36,7 +36,7 @@
 #include "PsUtilities.h"
 #include "CmPhysXCommon.h"
 
-using namespace physx;
+using namespace augphysx;
 
 static PxReal computeAngle(const PxVec3* verts, const PxU32* refs, PxU32 vref)
 {

@@ -34,13 +34,13 @@
 #include "foundation/PxAssert.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
 #endif
 
-using namespace physx;
+using namespace augphysx;
 
 inline const char* nonNull(const char* str)
 {

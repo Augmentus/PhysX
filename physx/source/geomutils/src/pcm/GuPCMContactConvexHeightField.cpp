@@ -45,11 +45,11 @@
 #include "PsVecMath.h"
 
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
-namespace physx
+namespace augphysx
 {
 
 struct PCMConvexVsHeightfieldContactGenerationCallback
@@ -184,7 +184,7 @@ bool Gu::pcmContactConvexHeightField(GU_CONTACT_METHOD_ARGS)
 	using namespace Ps::aos;
 	
 	const PxConvexMeshGeometryLL& shapeConvex = shape0.get<const PxConvexMeshGeometryLL>();
-	const physx::PxHeightFieldGeometryLL& shapHeightField = shape1.get<const PxHeightFieldGeometryLL>();
+	const augphysx::PxHeightFieldGeometryLL& shapHeightField = shape1.get<const PxHeightFieldGeometryLL>();
 
 	const Gu::ConvexHullData* hullData = shapeConvex.hullData;
 	Gu::MultiplePersistentContactManifold& multiManifold = cache.getMultipleManifold();
@@ -234,7 +234,7 @@ bool Gu::pcmContactBoxHeightField(GU_CONTACT_METHOD_ARGS)
 	MultiplePersistentContactManifold& multiManifold = cache.getMultipleManifold();
 
 	const PxBoxGeometry& shapeBox = shape0.get<const PxBoxGeometry>();
-	const physx::PxHeightFieldGeometryLL& shapHeightField = shape1.get<const PxHeightFieldGeometryLL>();
+	const augphysx::PxHeightFieldGeometryLL& shapHeightField = shape1.get<const PxHeightFieldGeometryLL>();
 
 	const PxVec3 ext = shapeBox.halfExtents + PxVec3(params.mContactDistance);
 	const PxBounds3 hullAABB(-ext, ext);

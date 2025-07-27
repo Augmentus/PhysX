@@ -50,7 +50,7 @@ the one in the data and meta data, otherwise they are considered incompatible. A
 
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -283,7 +283,7 @@ public:
 };
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

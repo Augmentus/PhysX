@@ -34,7 +34,7 @@
 #include "extensions/PxShapeExt.h"
 #include "characterkinematic/PxExtended.h"
 
-namespace physx
+namespace augphysx
 {
 
 PX_FORCE_INLINE	bool testSlope(const PxVec3& normal, const PxVec3& upDirection, PxF32 slopeLimit)

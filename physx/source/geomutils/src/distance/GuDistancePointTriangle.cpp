@@ -31,7 +31,7 @@
 #include "GuDistancePointTriangle.h"
 #include "GuDistancePointTriangleSIMD.h"
 
-using namespace physx;
+using namespace augphysx;
 
 // Based on Christer Ericson's book
 PxVec3 Gu::closestPtPointTriangle(const PxVec3& p, const PxVec3& a, const PxVec3& b, const PxVec3& c, float& s, float& t)

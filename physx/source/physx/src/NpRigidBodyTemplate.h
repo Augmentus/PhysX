@@ -37,7 +37,7 @@
 #include "NpShape.h"
 #include "NpScene.h"
 
-namespace physx
+namespace augphysx
 {
 
 PX_INLINE PxVec3 invertDiagInertia(const PxVec3& m)
@@ -473,14 +473,14 @@ PX_FORCE_INLINE void NpRigidBodyTemplate<APIClass>::setRigidBodyFlagsInternal(co
 	//Test to ensure we are not enabling both CCD and kinematic state on a body. This is unsupported
 	if((filteredNewFlags & PxRigidBodyFlag::eENABLE_CCD) && (filteredNewFlags & PxRigidBodyFlag::eKINEMATIC))
 	{
-		physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+		augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 			"RigidBody::setRigidBodyFlag: kinematic bodies with CCD enabled are not supported! CCD will be ignored.");
 		filteredNewFlags &= PxRigidBodyFlags(~PxRigidBodyFlag::eENABLE_CCD);
 	}
 
 	if ((filteredNewFlags & PxRigidBodyFlag::eENABLE_CCD) && (filteredNewFlags & PxRigidBodyFlag::eENABLE_SPECULATIVE_CCD))
 	{
-		physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__,
+		augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__,
 			"RigidBody::setRigidBodyFlag: eENABLE_CCD can't be raised as the same time as eENABLE_SPECULATIVE_CCD! eENABLE_SPECULATIVE_CCD will be ignored.");
 		filteredNewFlags &= PxRigidBodyFlags(~PxRigidBodyFlag::eENABLE_SPECULATIVE_CCD);
 	}
@@ -510,7 +510,7 @@ PX_FORCE_INLINE void NpRigidBodyTemplate<APIClass>::setRigidBodyFlagsInternal(co
 		}
 		if(hasTriangleMesh)
 		{
-			physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "RigidBody::setRigidBodyFlag: dynamic meshes/planes/heightfields are not supported!");
+			augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "RigidBody::setRigidBodyFlag: dynamic meshes/planes/heightfields are not supported!");
 			return;
 		}
 
@@ -537,7 +537,7 @@ PX_FORCE_INLINE void NpRigidBodyTemplate<APIClass>::setRigidBodyFlagsInternal(co
 		else
 		{
 			//We're an articulation, raise an issue
-			physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "RigidBody::setRigidBodyFlag: kinematic articulation links are not supported!");
+			augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "RigidBody::setRigidBodyFlag: kinematic articulation links are not supported!");
 			return;
 		}
 

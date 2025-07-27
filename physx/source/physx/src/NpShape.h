@@ -35,7 +35,7 @@
 #include "PxShape.h"
 #include "buffering/ScbShape.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct NpInternalShapeFlag

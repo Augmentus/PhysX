@@ -30,7 +30,7 @@
 #include "NpScene.h"
 
 #if PX_SUPPORT_PVD
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 using namespace Vd;
 
@@ -59,7 +59,7 @@ PvdSceneQueryCollector::PvdSceneQueryCollector(Scb::Scene& scene, bool isBatched
 
 void PvdSceneQueryCollector::release()
 {
-	physx::pvdsdk::PvdDataStream* stream = mScene.getScenePvdClient().getDataStream();
+	augphysx::pvdsdk::PvdDataStream* stream = mScene.getScenePvdClient().getDataStream();
 	if(stream && stream->isConnected())
 	{
 		const Ps::Array<PxGeometryHolder>& geoms = getPrevFrameGeometries();

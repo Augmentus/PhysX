@@ -34,7 +34,7 @@
 
 #include "DyArticulationUtils.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxcConstraintBlockStream;

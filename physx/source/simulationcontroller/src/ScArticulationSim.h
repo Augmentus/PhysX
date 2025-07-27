@@ -38,7 +38,7 @@
 #include "ScArticulationCore.h" 
 #include "PxsSimpleIslandManager.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

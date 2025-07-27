@@ -35,7 +35,7 @@
 #include "PsBasicTemplates.h"
 #include "PsInlineArray.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

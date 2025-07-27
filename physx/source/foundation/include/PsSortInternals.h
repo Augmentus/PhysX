@@ -39,7 +39,7 @@
 #include "PsBasicTemplates.h"
 #include "PsUserAllocated.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

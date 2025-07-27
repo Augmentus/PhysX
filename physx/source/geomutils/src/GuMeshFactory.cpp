@@ -42,7 +42,7 @@
 #include "PsIntrinsics.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 // PT: TODO: refactor all this with a dedicated container

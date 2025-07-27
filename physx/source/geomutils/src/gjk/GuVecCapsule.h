@@ -38,7 +38,7 @@
 #include "GuVecConvex.h"   
 #include "GuConvexSupportTable.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

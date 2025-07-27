@@ -33,7 +33,7 @@
 #include "foundation/PxSimpleTypes.h"
 #include "GuBV4.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -59,7 +59,7 @@ namespace Gu
 	};
 
 	// PT: TODO: refactor with SQ version (TA34704)
-	class AABBTreeNode : public physx::shdfnd::UserAllocated
+	class AABBTreeNode : public augphysx::shdfnd::UserAllocated
 	{
 		public:
 		PX_FORCE_INLINE							AABBTreeNode() : mPos(0), mNodePrimitives(NULL), mNbPrimitives(0)
@@ -93,7 +93,7 @@ namespace Gu
 	typedef		bool	(*WalkingCallback)	(const AABBTreeNode* current, PxU32 depth, void* userData);
 
 	// PT: TODO: refactor with SQ version (TA34704)
-	class AABBTree : public physx::shdfnd::UserAllocated
+	class AABBTree : public augphysx::shdfnd::UserAllocated
 	{
 		public:
 											AABBTree();

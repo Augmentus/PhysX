@@ -31,7 +31,7 @@
 #include "PxProfileEventId.h"
 #include "PxProfileCompileTimeEventFilter.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	/**
 	\brief Template version of startEvent, called directly on provided profile buffer.

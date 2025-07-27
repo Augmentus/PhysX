@@ -36,7 +36,7 @@
 #include "PxMaterial.h"
 #include "PxsMaterialCore.h"
 
-namespace physx
+namespace augphysx
 {
 class PxMaterial;
 

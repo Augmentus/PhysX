@@ -36,7 +36,7 @@
 #define PX_SUPPORT_INLINE PX_FORCE_INLINE
 #define PX_SUPPORT_FORCE_INLINE PX_FORCE_INLINE
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

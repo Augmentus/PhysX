@@ -47,7 +47,7 @@
 #include "DyCorrelationBuffer.h"
 #include "PsAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxsIndexedContactManager;
 

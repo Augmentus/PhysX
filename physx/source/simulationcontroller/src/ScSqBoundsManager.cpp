@@ -32,7 +32,7 @@
 #include "ScShapeSim.h"
 #include "common/PxProfileZone.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sc;
 
 SqBoundsManager::SqBoundsManager() :

@@ -38,7 +38,7 @@
 #include "GuGJKPenetration.h"
 #include "GuEPA.h"
 
-namespace physx
+namespace augphysx
 {
 	using namespace Ps::aos;
 

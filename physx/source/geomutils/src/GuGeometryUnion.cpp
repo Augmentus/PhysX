@@ -34,7 +34,7 @@
 #include "GuHeightField.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Cm;
 

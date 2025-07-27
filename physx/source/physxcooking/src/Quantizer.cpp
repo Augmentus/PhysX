@@ -38,7 +38,7 @@
 
 #include "CmPhysXCommon.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PxU32	kmeans_cluster3d(const PxVec3 *input,				// an array of input 3d data points.
 		PxU32 inputSize,				// the number of input data points.
@@ -331,7 +331,7 @@ private:
 		Ps::Array<PxVec3>		mQuantizedOutput;
 };
 
-Quantizer * physx::createQuantizer(void)
+Quantizer * augphysx::createQuantizer(void)
 {
 	QuantizerImpl *m = PX_NEW(QuantizerImpl);
 	return static_cast< Quantizer *>(m);

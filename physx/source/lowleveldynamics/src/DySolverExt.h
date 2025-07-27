@@ -37,7 +37,7 @@
 #include "CmSpatialVector.h"
 #include "PsVecMath.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxsRigidBody;

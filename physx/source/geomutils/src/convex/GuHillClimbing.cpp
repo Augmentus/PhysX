@@ -34,7 +34,7 @@
 #include "GuHillClimbing.h"
 #include "GuBigConvexData2.h"
 
-namespace physx
+namespace augphysx
 {
 
 void localSearch(PxU32& id, const PxVec3& dir, const PxVec3* verts, const Gu::BigConvexRawData* val)

@@ -37,7 +37,7 @@
 #include "PsUtilities.h"
 #include "PsAllocator.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 BigConvexData::BigConvexData() : mVBuffer(NULL)

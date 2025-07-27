@@ -35,7 +35,7 @@
 #include "ScSqBoundsManager.h"
 #include "ScSimStats.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sc;
 
 static PX_FORCE_INLINE bool interactionHasElement(const Interaction* it, const ElementSim* elem)

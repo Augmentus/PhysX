@@ -38,7 +38,7 @@
 #include "PsUserAllocated.h"
 #include "CmUtils.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxDistanceJointGeneratedValues;
 namespace Ext

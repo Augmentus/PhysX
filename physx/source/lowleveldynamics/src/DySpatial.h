@@ -36,7 +36,7 @@
 #include "PsMathUtils.h"
 #include "CmSpatialVector.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

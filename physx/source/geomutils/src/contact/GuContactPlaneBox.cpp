@@ -36,7 +36,7 @@
 #include "CmMatrix34.h"
 #include "PsUtilities.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -126,4 +126,4 @@ bool contactPlaneBox(GU_CONTACT_METHOD_ARGS)
 	return contactBuffer.count > 0;
 }
 }//Gu
-}//physx
+}//augphysx

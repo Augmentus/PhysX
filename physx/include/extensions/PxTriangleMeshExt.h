@@ -38,7 +38,7 @@
 #include "common/PxPhysXCommonConfig.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -181,7 +181,7 @@ class PxHeightFieldGeometry;
 										 PxU32* usedIter = NULL);
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

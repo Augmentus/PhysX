@@ -34,7 +34,7 @@
 #include "NpConnector.h"
 #include "ScbActor.h" // DM: without this inclusion PVD-diabled android build fails, lacking Scb::Actor definition
 
-namespace physx
+namespace augphysx
 {
 	class NpShapeManager;
 	class NpAggregate;

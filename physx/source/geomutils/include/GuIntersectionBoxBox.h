@@ -34,7 +34,7 @@
 #include "foundation/PxBounds3.h"
 #include "GuBox.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

@@ -37,7 +37,7 @@
 #include "PxvConfig.h"
 #include "PsPool.h"
 
-namespace physx
+namespace augphysx
 {
 class PxRigidBodyDesc;
 

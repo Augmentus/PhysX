@@ -35,7 +35,7 @@
 #include "geometry/PxHeightFieldSample.h"
 #include "GuCenterExtents.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu

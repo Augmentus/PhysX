@@ -29,7 +29,7 @@
 
 #include "GuDistancePointBox.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PxReal Gu::distancePointBoxSquared(	const PxVec3& point, 
 									const PxVec3& boxOrigin, const PxVec3& boxExtent, const PxMat33& boxBase, 

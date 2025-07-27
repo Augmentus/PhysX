@@ -40,7 +40,7 @@
 #include "vehicle/PxVehicleWheels.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 

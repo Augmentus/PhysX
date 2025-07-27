@@ -39,7 +39,7 @@
 
 #define	GJK_SEPERATING_AXIS_VALIDATE 0
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

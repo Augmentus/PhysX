@@ -35,7 +35,7 @@
 #include "CctBoxController.h"
 #include "CctCharacterControllerManager.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cct;
 
 static PX_FORCE_INLINE PxVec3 CCTtoProxyExtents(PxF32 halfHeight, PxF32 halfSideExtent, PxF32 halfForwardExtent, PxF32 coeff)

@@ -31,7 +31,7 @@
 #include "geometry/PxGeometry.h"
 #include "PxcMaterialMethodImpl.h"
 
-namespace physx
+namespace augphysx
 {
 bool PxcGetMaterialShapeShape			(MATERIAL_METHOD_ARGS);
 bool PxcGetMaterialShapeMesh			(MATERIAL_METHOD_ARGS);

@@ -47,7 +47,7 @@
 #include "CmIO.h"
 #include "CmCollection.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 using namespace Sn;
 
@@ -179,7 +179,7 @@ namespace
 
 		virtual void			registerReference(PxBase&, PxU32, size_t)
 		{
-			Ps::getFoundation().error(physx::PxErrorCode::eINVALID_OPERATION, __FILE__, __LINE__, 
+			Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_OPERATION, __FILE__, __LINE__, 
 					"Cannot register references during exportData, exportExtraData.");
 		}
 

@@ -40,7 +40,7 @@
 #include "GuContactMethodImpl.h"
 #include "PsUtilities.h"
 
-namespace physx
+namespace augphysx
 {
 
 template <typename T>

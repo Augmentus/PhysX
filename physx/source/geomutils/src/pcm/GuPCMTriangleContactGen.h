@@ -33,7 +33,7 @@
 #include "GuPCMContactGenUtil.h"
 #include "GuPersistentContactManifold.h"
 
-namespace physx
+namespace augphysx
 {
 	struct PxTriangleMeshGeometryLL;
 	class PxHeightFieldGeometry;

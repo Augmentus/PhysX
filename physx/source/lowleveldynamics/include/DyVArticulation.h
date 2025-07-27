@@ -44,7 +44,7 @@
 #include "DyArticulationCore.h"
 #include "DyArticulationJointCore.h"
 
-namespace physx
+namespace augphysx
 {
 	struct PxsBodyCore;
 	class PxsConstraintBlockManager;
@@ -251,8 +251,8 @@ namespace physx
 			Cm::SpatialVector*			acceleration;
 			PxTransform*				poses;
 			PxQuat*						deltaQ;
-			physx::shdfnd::aos::Mat33V* externalLoads;
-			physx::shdfnd::aos::Mat33V* internalLoads;
+			augphysx::shdfnd::aos::Mat33V* externalLoads;
+			augphysx::shdfnd::aos::Mat33V* internalLoads;
 			const ArticulationCore*		core;
 			const PxArticulationFlags*	flags;	// PT: PX-1399
 			char*						scratchMemory;

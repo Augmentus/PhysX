@@ -39,7 +39,7 @@
 // Data/code shared with LL
 #include "GuEdgeListData.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

@@ -34,7 +34,7 @@
 #include "PxvConfig.h"
 #include "PxcNpWorkUnit.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxsContext;

@@ -39,7 +39,7 @@
 #include "PsMathUtils.h"
 #include "PsUtilities.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 /*namespace Gu
@@ -143,7 +143,7 @@ static bool GuTestAxis(const PxVec3& axis, const Segment& segment, PxReal radius
 	PX_ASSERT(d0>=0.0f);
 	const PxReal d1 = Max1 - min0;
 	PX_ASSERT(d1>=0.0f);
-	depth = physx::intrinsics::selectMin(d0, d1);
+	depth = augphysx::intrinsics::selectMin(d0, d1);
 	return true;
 }
 
@@ -356,7 +356,7 @@ static void GuGenerateEEContacts2(	ContactBuffer& contactBuffer,
 	}
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -456,4 +456,4 @@ bool contactCapsuleBox(GU_CONTACT_METHOD_ARGS)
 	return true;
 }
 }//Gu
-}//physx
+}//augphysx

@@ -36,7 +36,7 @@
 #include "extensions/PxRepXSimpleType.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 	
@@ -101,34 +101,34 @@ namespace physx
 	};
 	
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /**
 \brief Inline helper template function to create PxRepXObject from TDataType type supporting PxTypeInfo<TDataType>::name.
 */
 template<typename TDataType>
-PX_INLINE physx::PxRepXObject PxCreateRepXObject(const TDataType* inType, const physx::PxSerialObjectId inId)
+PX_INLINE augphysx::PxRepXObject PxCreateRepXObject(const TDataType* inType, const augphysx::PxSerialObjectId inId)
 {
-	return physx::PxRepXObject(physx::PxTypeInfo<TDataType>::name(), inType, inId);
+	return augphysx::PxRepXObject(augphysx::PxTypeInfo<TDataType>::name(), inType, inId);
 }
 
 /**
 \brief Inline helper function to create PxRepXObject from a PxBase instance.
 */
-PX_INLINE physx::PxRepXObject PxCreateRepXObject(const physx::PxBase* inType, const physx::PxSerialObjectId inId)
+PX_INLINE augphysx::PxRepXObject PxCreateRepXObject(const augphysx::PxBase* inType, const augphysx::PxSerialObjectId inId)
 {
 	PX_ASSERT(inType);
-	return physx::PxRepXObject(inType->getConcreteTypeName(), inType, inId);
+	return augphysx::PxRepXObject(inType->getConcreteTypeName(), inType, inId);
 }
 
 /**
 \brief Inline helper template function to create PxRepXObject form TDataType type using inType pointer as a PxSerialObjectId id.
 */
 template<typename TDataType>
-PX_INLINE physx::PxRepXObject PxCreateRepXObject(const TDataType* inType)
+PX_INLINE augphysx::PxRepXObject PxCreateRepXObject(const TDataType* inType)
 {
-	return PxCreateRepXObject(inType, static_cast<physx::PxSerialObjectId>(reinterpret_cast<size_t>(inType)));
+	return PxCreateRepXObject(inType, static_cast<augphysx::PxSerialObjectId>(reinterpret_cast<size_t>(inType)));
 }
 
 /**

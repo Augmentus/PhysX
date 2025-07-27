@@ -34,7 +34,7 @@
 #include "foundation/PxVec3.h"
 #include "PxContact.h"
 
-namespace physx
+namespace augphysx
 {
 class PxShape;
 class PxsContactManagerOutputIterator;

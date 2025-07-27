@@ -37,7 +37,7 @@
 #include "CmUtils.h"
 #include "PsFoundation.h"
 
-namespace physx
+namespace augphysx
 {
 
 extern PxF32 gToleranceScaleLength;

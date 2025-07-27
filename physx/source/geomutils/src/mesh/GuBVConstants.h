@@ -34,11 +34,11 @@
 
 namespace
 {
-	const physx::Ps::aos::VecU32V signMask = physx::Ps::aos::U4LoadXYZW((physx::PxU32(1)<<31), (physx::PxU32(1)<<31), (physx::PxU32(1)<<31), (physx::PxU32(1)<<31));
-	const physx::Ps::aos::Vec4V epsFloat4 = physx::Ps::aos::V4Load(1e-9f);
-	const physx::Ps::aos::Vec4V zeroes = physx::Ps::aos::V4Zero();
-	const physx::Ps::aos::Vec4V twos = physx::Ps::aos::V4Load(2.0f);
-	const physx::Ps::aos::Vec4V epsInflateFloat4 = physx::Ps::aos::V4Load(1e-7f);
+	const augphysx::Ps::aos::VecU32V signMask = augphysx::Ps::aos::U4LoadXYZW((augphysx::PxU32(1)<<31), (augphysx::PxU32(1)<<31), (augphysx::PxU32(1)<<31), (augphysx::PxU32(1)<<31));
+	const augphysx::Ps::aos::Vec4V epsFloat4 = augphysx::Ps::aos::V4Load(1e-9f);
+	const augphysx::Ps::aos::Vec4V zeroes = augphysx::Ps::aos::V4Zero();
+	const augphysx::Ps::aos::Vec4V twos = augphysx::Ps::aos::V4Load(2.0f);
+	const augphysx::Ps::aos::Vec4V epsInflateFloat4 = augphysx::Ps::aos::V4Load(1e-7f);
 }
 
 #endif // GU_BV_CONSTANTS_H

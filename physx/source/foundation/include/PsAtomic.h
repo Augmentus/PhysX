@@ -33,7 +33,7 @@
 #include "Ps.h"
 #include "foundation/PxFoundationConfig.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

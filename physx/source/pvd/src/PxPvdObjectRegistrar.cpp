@@ -29,14 +29,14 @@
 
 #include "PxPvdObjectRegistrar.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
 
 bool ObjectRegistrar::addItem(const void* inItem)
 {
-	physx::shdfnd::Mutex::ScopedLock lock(mRefCountMapLock);
+	augphysx::shdfnd::Mutex::ScopedLock lock(mRefCountMapLock);
 
 	if(mRefCountMap.find(inItem))
 	{
@@ -53,8 +53,8 @@ bool ObjectRegistrar::addItem(const void* inItem)
 
 bool ObjectRegistrar::decItem(const void* inItem)
 {
-	physx::shdfnd::Mutex::ScopedLock lock(mRefCountMapLock);
-	const physx::shdfnd::HashMap<const void*, uint32_t>::Entry* entry = mRefCountMap.find(inItem);
+	augphysx::shdfnd::Mutex::ScopedLock lock(mRefCountMapLock);
+	const augphysx::shdfnd::HashMap<const void*, uint32_t>::Entry* entry = mRefCountMap.find(inItem);
 	if(entry)
 	{
 		uint32_t& retval(const_cast<uint32_t&>(entry->second));
@@ -72,7 +72,7 @@ bool ObjectRegistrar::decItem(const void* inItem)
 
 void ObjectRegistrar::clear()
 {
-	physx::shdfnd::Mutex::ScopedLock lock(mRefCountMapLock);
+	augphysx::shdfnd::Mutex::ScopedLock lock(mRefCountMapLock);
 	mRefCountMap.clear();
 }
 

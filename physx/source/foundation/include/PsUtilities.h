@@ -36,7 +36,7 @@
 #include "PsIntrinsics.h"
 #include "PsBasicTemplates.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
@@ -84,7 +84,7 @@ Get number of elements in array
 */
 template <typename T, size_t N>
 char (&ArraySizeHelper(T (&array)[N]))[N];
-#define PX_ARRAY_SIZE(_array) (sizeof(physx::shdfnd::ArraySizeHelper(_array)))
+#define PX_ARRAY_SIZE(_array) (sizeof(augphysx::shdfnd::ArraySizeHelper(_array)))
 
 /*!
 Sort two elements using operator<

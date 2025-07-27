@@ -33,7 +33,7 @@
 #include "PsAllocator.h"
 #include "PsFPU.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 ReducedVertexCloud::ReducedVertexCloud(const PxVec3* verts, PxU32 nb_verts) : mNbRVerts(0), mRVerts(NULL), mXRef(NULL)

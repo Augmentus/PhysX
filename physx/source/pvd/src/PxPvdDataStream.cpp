@@ -32,9 +32,9 @@
 #include "PxPvdImpl.h"
 #include "PsFoundation.h"
 
-using namespace physx;
-using namespace physx::pvdsdk;
-using namespace physx::shdfnd;
+using namespace augphysx;
+using namespace augphysx::pvdsdk;
+using namespace augphysx::shdfnd;
 
 namespace
 {
@@ -560,7 +560,7 @@ struct PvdOutStream : public PvdDataStream, public UserAllocated
 					if(offset.mOffsetType == PtrOffsetType::VoidPtrOffset)
 						continue;
 					const char* strPtr;
-					physx::intrinsics::memCopy(&strPtr, itemPtr + offset.mOffset, sizeof(char*));
+					augphysx::intrinsics::memCopy(&strPtr, itemPtr + offset.mOffset, sizeof(char*));
 					strPtr = nonNull(strPtr);
 					uint32_t len = safeStrLen(strPtr) + 1;
 					mSPVBuffer.write(strPtr, len);
@@ -647,7 +647,7 @@ struct PvdOutStream : public PvdDataStream, public UserAllocated
 			PVD_FOREACH(idx, desc.mStringOffsets.size())
 			{
 				const char* strPtr;
-				physx::intrinsics::memCopy(&strPtr, data.begin() + desc.mStringOffsets[idx], sizeof(char*));
+				augphysx::intrinsics::memCopy(&strPtr, data.begin() + desc.mStringOffsets[idx], sizeof(char*));
 				strPtr = nonNull(strPtr);
 				uint32_t len = safeStrLen(strPtr) + 1;
 				mSPVBuffer.write(strPtr, len);

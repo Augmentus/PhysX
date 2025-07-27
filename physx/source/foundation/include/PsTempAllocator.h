@@ -32,7 +32,7 @@
 
 #include "PsAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

@@ -40,7 +40,7 @@
 #endif
 
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {
@@ -60,7 +60,7 @@ namespace Cm
 #endif		
 	};
 
-	PX_INLINE FARPROC WINAPI physXCommonDliNotePreLoadLibrary(const char* libraryName, const physx::PxDelayLoadHook* delayLoadHook)
+	PX_INLINE FARPROC WINAPI physXCommonDliNotePreLoadLibrary(const char* libraryName, const augphysx::PxDelayLoadHook* delayLoadHook)
 	{	
 		if(!delayLoadHook)
 		{
@@ -81,7 +81,7 @@ namespace Cm
 		return NULL;
     }
 } // namespace Cm
-} // namespace physx
+} // namespace augphysx
 
 
 #endif	// CM_WINDOWS_LOADLIBRARY_H

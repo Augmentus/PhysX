@@ -33,7 +33,7 @@
 #include "foundation/PxSimpleTypes.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

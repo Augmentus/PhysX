@@ -37,7 +37,7 @@
 @{
 */
 
-namespace physx
+namespace augphysx
 {
 
 class PxD6Joint;

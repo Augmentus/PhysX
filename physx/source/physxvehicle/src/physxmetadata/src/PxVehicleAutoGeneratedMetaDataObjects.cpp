@@ -36,7 +36,7 @@
 #include "PxVehicleMetaDataObjects.h"
 #include "PxMetaDataCppPrefix.h"
 #include "PxVehicleSuspWheelTire4.h"
-using namespace physx;
+using namespace augphysx;
 inline PxVec3 getPxVehicleChassisDataMMOI( const PxVehicleChassisData* inOwner ) { return inOwner->mMOI; }
 inline void setPxVehicleChassisDataMMOI( PxVehicleChassisData* inOwner, PxVec3 inData) { inOwner->mMOI = inData; }
 inline PxReal getPxVehicleChassisDataMMass( const PxVehicleChassisData* inOwner ) { return inOwner->mMass; }
@@ -111,7 +111,7 @@ inline void setPxVehicleGearsDataMSwitchTime( PxVehicleGearsData* inOwner, PxRea
 		,MSwitchTime( inSource->mSwitchTime )
 {
 	PX_UNUSED(inSource);
-		for ( PxU32 idx = 0; idx < static_cast<PxU32>( physx::PxVehicleGearsData::eGEARSRATIO_COUNT ); ++idx )
+		for ( PxU32 idx = 0; idx < static_cast<PxU32>( augphysx::PxVehicleGearsData::eGEARSRATIO_COUNT ); ++idx )
 		GearRatio[idx] = getPxVehicleGearsData_GearRatio( inSource, static_cast< PxVehicleGearsData::Enum >( idx ) );
 }
 void setPxVehicleAutoBoxData_Latency( PxVehicleAutoBoxData* inObj, const PxReal inArg){ inObj->setLatency( inArg ); }
@@ -129,9 +129,9 @@ PxReal getPxVehicleAutoBoxData_DownRatios( const PxVehicleAutoBoxData* inObj, Px
 		:Latency( getPxVehicleAutoBoxData_Latency( inSource ) )
 {
 	PX_UNUSED(inSource);
-		for ( PxU32 idx = 0; idx < static_cast<PxU32>( physx::PxVehicleGearsData::eGEARSRATIO_COUNT ); ++idx )
+		for ( PxU32 idx = 0; idx < static_cast<PxU32>( augphysx::PxVehicleGearsData::eGEARSRATIO_COUNT ); ++idx )
 		UpRatios[idx] = getPxVehicleAutoBoxData_UpRatios( inSource, static_cast< PxVehicleGearsData::Enum >( idx ) );
-		for ( PxU32 idx = 0; idx < static_cast<PxU32>( physx::PxVehicleGearsData::eGEARSRATIO_COUNT ); ++idx )
+		for ( PxU32 idx = 0; idx < static_cast<PxU32>( augphysx::PxVehicleGearsData::eGEARSRATIO_COUNT ); ++idx )
 		DownRatios[idx] = getPxVehicleAutoBoxData_DownRatios( inSource, static_cast< PxVehicleGearsData::Enum >( idx ) );
 }
 inline PxReal getPxVehicleDifferential4WDataMFrontRearSplit( const PxVehicleDifferential4WData* inOwner ) { return inOwner->mFrontRearSplit; }

@@ -42,13 +42,13 @@
 #include "DyCorrelationBuffer.h"
 #include "DySolverConstraintExtShared.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 // constraint-gen only, since these use getVelocityFast methods
 // which aren't valid during the solver phase
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

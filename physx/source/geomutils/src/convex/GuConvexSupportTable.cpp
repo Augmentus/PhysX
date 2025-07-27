@@ -29,7 +29,7 @@
 
 #include "GuVecBox.h"
 
-namespace physx
+namespace augphysx
 {
 	const Ps::aos::BoolV boxVertexTable[8] = {
 										Ps::aos::BFFFF(),//---

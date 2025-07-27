@@ -40,7 +40,7 @@
 
 #if PX_SUPPORT_PVD
 
-namespace physx
+namespace augphysx
 {
 namespace Scb
 {

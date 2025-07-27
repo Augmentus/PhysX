@@ -32,7 +32,7 @@
 #include "foundation/PxSimpleTypes.h"
 #include "extensions/PxRepXSimpleType.h"
 
-namespace physx {
+namespace augphysx {
 	namespace Sn { struct XmlNode; }
 	
 	/**

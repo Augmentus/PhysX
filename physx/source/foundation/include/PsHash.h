@@ -46,7 +46,7 @@
 Central definition of hash functions
 */
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

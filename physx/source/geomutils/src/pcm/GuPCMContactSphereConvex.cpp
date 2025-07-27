@@ -39,7 +39,7 @@
 #include "GuPCMContactGen.h"
 #include "GuPCMShapeConvex.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

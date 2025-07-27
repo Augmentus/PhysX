@@ -30,7 +30,7 @@
 #ifndef PXC_NPCONTACTPREPSHARED_H
 #define PXC_NPCONTACTPREPSHARED_H
 
-namespace physx
+namespace augphysx
 {
 class PxcNpThreadContext;
 struct PxsMaterialInfo;

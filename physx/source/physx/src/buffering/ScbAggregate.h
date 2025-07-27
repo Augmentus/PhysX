@@ -38,7 +38,7 @@
 #include "ScbBase.h"
 
 
-namespace physx
+namespace augphysx
 {
 namespace Scb
 {

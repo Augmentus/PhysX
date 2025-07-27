@@ -40,7 +40,7 @@
 #include "GuPCMContactGen.h"
 
 
-namespace physx
+namespace augphysx
 {
 using namespace Ps::aos;
 

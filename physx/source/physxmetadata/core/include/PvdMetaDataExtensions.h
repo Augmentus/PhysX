@@ -34,15 +34,15 @@
 #if PX_SUPPORT_PVD
 #include "PxPvdObjectModelBaseTypes.h"
 
-namespace physx { namespace pvdsdk {
+namespace augphysx { namespace pvdsdk {
 
-	template<> PX_INLINE NamespacedName getPvdNamespacedNameForType<physx::PxMetaDataPlane>() { return getPvdNamespacedNameForType<PxVec4>(); }
-	template<> PX_INLINE NamespacedName getPvdNamespacedNameForType<physx::PxRigidActor*>() { return getPvdNamespacedNameForType<VoidPtr>(); }
+	template<> PX_INLINE NamespacedName getPvdNamespacedNameForType<augphysx::PxMetaDataPlane>() { return getPvdNamespacedNameForType<PxVec4>(); }
+	template<> PX_INLINE NamespacedName getPvdNamespacedNameForType<augphysx::PxRigidActor*>() { return getPvdNamespacedNameForType<VoidPtr>(); }
 	
 }}
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace Vd
 {

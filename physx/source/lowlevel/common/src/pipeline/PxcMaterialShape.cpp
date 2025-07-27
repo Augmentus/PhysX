@@ -34,10 +34,10 @@
 #include "PxcNpThreadContext.h"
 #include "GuHeightField.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
-namespace physx
+namespace augphysx
 {
 bool PxcGetMaterialShape(const PxsShapeCore* shape, const PxU32 index, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo)
 {

@@ -29,10 +29,10 @@
 
 #include "ExtJoint.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Ext;
 
-PxConstraint* physx::resolveConstraintPtr(PxDeserializationContext& v,
+PxConstraint* augphysx::resolveConstraintPtr(PxDeserializationContext& v,
 										  PxConstraint* old,
 										  PxConstraintConnector* connector,
 										  PxConstraintShaderTable &shaders)

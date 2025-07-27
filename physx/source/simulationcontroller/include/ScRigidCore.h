@@ -35,7 +35,7 @@
 #include "PxvDynamics.h"
 #include "PxShape.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Sc

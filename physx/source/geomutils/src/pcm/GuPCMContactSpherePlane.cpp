@@ -33,7 +33,7 @@
 #include "GuGeometryUnion.h"
 #include "GuContactMethodImpl.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu
@@ -83,4 +83,4 @@ bool pcmContactSpherePlane(GU_CONTACT_METHOD_ARGS)
 	return false;
 }
 }//Gu
-}//physx
+}//augphysx

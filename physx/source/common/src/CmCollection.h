@@ -38,7 +38,7 @@
 #include "PsUserAllocated.h"
 #include "PsAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {	
@@ -48,7 +48,7 @@ namespace Cm
 			  class Allocator = Ps::NonTrackingAllocator >
 	class CollectionHashMap : public Ps::CoalescedHashMap< Key, Value, HashFn, Allocator>
 	{
-		typedef physx::shdfnd::internal::HashMapBase< Key, Value, HashFn, Allocator> MapBase;	
+		typedef augphysx::shdfnd::internal::HashMapBase< Key, Value, HashFn, Allocator> MapBase;	
 		typedef Ps::Pair<const Key,Value> EntryData;
 
 		public:

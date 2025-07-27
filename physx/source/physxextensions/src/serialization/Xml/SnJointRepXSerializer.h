@@ -36,7 +36,7 @@
 #include "SnRepXSerializerImpl.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 	
@@ -66,7 +66,7 @@ namespace physx
 #endif
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

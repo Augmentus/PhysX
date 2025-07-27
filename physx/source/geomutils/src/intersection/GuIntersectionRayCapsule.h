@@ -35,7 +35,7 @@
 #include "GuDistancePointSegment.h"
 #include "GuIntersectionRay.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

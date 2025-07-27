@@ -38,7 +38,7 @@
 #include "common/PxCoreUtilityTypes.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -143,7 +143,7 @@ PX_INLINE bool PxTriangleMeshGeometry::isValid() const
 }
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

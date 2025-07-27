@@ -35,7 +35,7 @@
 #include "CmScaling.h"
 
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -99,4 +99,4 @@ bool contactPlaneConvex(GU_CONTACT_METHOD_ARGS)
 	return status;
 }
 }//Gu
-}//physx
+}//augphysx

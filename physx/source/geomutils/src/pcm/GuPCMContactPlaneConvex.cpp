@@ -35,7 +35,7 @@
 #include "GuPersistentContactManifold.h"
 
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -155,4 +155,4 @@ bool pcmContactPlaneConvex(GU_CONTACT_METHOD_ARGS)
 }
 
 }//Gu
-}//physx
+}//augphysx

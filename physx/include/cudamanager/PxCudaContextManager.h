@@ -44,7 +44,7 @@ typedef struct CUctx_st *CUcontext;
 typedef struct CUgraphicsResource_st *CUgraphicsResource;
 typedef int CUdevice;
 
-namespace physx
+namespace augphysx
 { 
 	
 /** \brief Possible graphic/CUDA interoperability modes for context */

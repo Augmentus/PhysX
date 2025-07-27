@@ -34,17 +34,17 @@
 #include "PxcNpThreadContext.h"
 #include "GuHeightField.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
-namespace physx
+namespace augphysx
 {
 	bool PxcGetMaterialShapeHeightField(const PxsShapeCore* shape0, const PxsShapeCore* shape1, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo);
 	bool PxcGetMaterialHeightField(const PxsShapeCore* shape, const PxU32 index, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo);
 	PxU32 GetMaterialIndex(const Gu::HeightFieldData* hfData, PxU32 triangleIndex);
 }
 
-physx::PxU32 physx::GetMaterialIndex(const Gu::HeightFieldData* hfData, PxU32 triangleIndex)
+augphysx::PxU32 augphysx::GetMaterialIndex(const Gu::HeightFieldData* hfData, PxU32 triangleIndex)
 {
 	const PxU32 sampleIndex = triangleIndex >> 1;
 	const bool isFirstTriangle = (triangleIndex & 0x1) == 0;
@@ -54,7 +54,7 @@ physx::PxU32 physx::GetMaterialIndex(const Gu::HeightFieldData* hfData, PxU32 tr
 	return isFirstTriangle ? hf->materialIndex0 : hf->materialIndex1;
 }
 
-bool physx::PxcGetMaterialHeightField(const PxsShapeCore* shape, const PxU32 index, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo)
+bool augphysx::PxcGetMaterialHeightField(const PxsShapeCore* shape, const PxU32 index, PxcNpThreadContext& context, PxsMaterialInfo* materialInfo)
 {
 	PX_ASSERT(index == 1);
 	PX_UNUSED(index);
@@ -83,7 +83,7 @@ bool physx::PxcGetMaterialHeightField(const PxsShapeCore* shape, const PxU32 ind
 	return true;
 }
 
-bool physx::PxcGetMaterialShapeHeightField(const PxsShapeCore* shape0, const PxsShapeCore* shape1, PxcNpThreadContext& context,  PxsMaterialInfo* materialInfo)
+bool augphysx::PxcGetMaterialShapeHeightField(const PxsShapeCore* shape0, const PxsShapeCore* shape1, PxcNpThreadContext& context,  PxsMaterialInfo* materialInfo)
 {
 	const ContactBuffer& contactBuffer = context.mContactBuffer;
 	const PxHeightFieldGeometryLL& hfGeom = shape1->geometry.get<const PxHeightFieldGeometryLL>();

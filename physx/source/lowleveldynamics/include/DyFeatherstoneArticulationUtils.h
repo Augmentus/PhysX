@@ -35,7 +35,7 @@
 #include "PsBitUtils.h"
 #include "foundation/PxMemory.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

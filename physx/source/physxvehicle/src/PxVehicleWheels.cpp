@@ -41,7 +41,7 @@
 #include "PsIntrinsics.h"
 #include "PsFoundation.h"
 
-namespace physx
+namespace augphysx
 {
 
 extern PxVec3 gRight;

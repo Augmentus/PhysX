@@ -34,7 +34,7 @@
 #include "PxsMaterialCore.h"
 #include "PsAlignedMalloc.h"
 
-namespace physx
+namespace augphysx
 {
 	struct PxsMaterialInfo
 	{
@@ -48,7 +48,7 @@ namespace physx
 		PxsMaterialManager()
 		{
 			const PxU32 matCount = 128;
-			materials = reinterpret_cast<PxsMaterialCore*>(physx::shdfnd::AlignedAllocator<16>().allocate(sizeof(PxsMaterialCore)*matCount,  __FILE__, __LINE__));
+			materials = reinterpret_cast<PxsMaterialCore*>(augphysx::shdfnd::AlignedAllocator<16>().allocate(sizeof(PxsMaterialCore)*matCount,  __FILE__, __LINE__));
 			maxMaterials = matCount;
 			for(PxU32 i=0; i<matCount; ++i)
 			{
@@ -58,7 +58,7 @@ namespace physx
 
 		~PxsMaterialManager()
 		{
-			physx::shdfnd::AlignedAllocator<16>().deallocate(materials);
+			augphysx::shdfnd::AlignedAllocator<16>().deallocate(materials);
 		}
 
 		void setMaterial(PxsMaterialCore* mat)
@@ -97,7 +97,7 @@ namespace physx
 			const PxU32 numMaterials = maxMaterials;
 			
 			maxMaterials = (minValueForMax+31)&~31;
-			PxsMaterialCore* mat = reinterpret_cast<PxsMaterialCore*>(physx::shdfnd::AlignedAllocator<16>().allocate(sizeof(PxsMaterialCore)*maxMaterials,  __FILE__, __LINE__));
+			PxsMaterialCore* mat = reinterpret_cast<PxsMaterialCore*>(augphysx::shdfnd::AlignedAllocator<16>().allocate(sizeof(PxsMaterialCore)*maxMaterials,  __FILE__, __LINE__));
 			for(PxU32 i=0; i<numMaterials; ++i)
 			{
 				mat[i] = materials[i];
@@ -107,7 +107,7 @@ namespace physx
 				mat[i].setMaterialIndex(MATERIAL_INVALID_HANDLE);
 			}
 
-			physx::shdfnd::AlignedAllocator<16>().deallocate(materials);
+			augphysx::shdfnd::AlignedAllocator<16>().deallocate(materials);
 
 			materials = mat;
 		}

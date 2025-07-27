@@ -36,7 +36,7 @@
 #include "CmPhysXCommon.h"
 #include "PsUtilities.h"
 
-namespace physx
+namespace augphysx
 {
 	PX_INLINE void flip(PxU16& v)
 	{

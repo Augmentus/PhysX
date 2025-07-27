@@ -36,7 +36,7 @@
 #include "PsVecMath.h"
 #include "DySolverContact.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct PxcNpWorkUnit;

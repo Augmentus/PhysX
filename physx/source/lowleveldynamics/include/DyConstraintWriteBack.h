@@ -35,7 +35,7 @@
 #include "PxvConfig.h"
 #include "PxvDynamics.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Dy
 	{

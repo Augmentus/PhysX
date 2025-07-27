@@ -38,7 +38,7 @@
 
 #define PX_DEFAULT_CACHE_SIZE 512
 
-namespace physx
+namespace augphysx
 {
 	struct PxsTransformFlag
 	{

@@ -40,7 +40,7 @@
 #include "GuBox.h"
 #include "GuCapsule.h"
 
-namespace physx
+namespace augphysx
 {	
 	namespace Gu
 	{
@@ -49,7 +49,7 @@ namespace physx
 	}
 }
 
-namespace physx
+namespace augphysx
 {	
 	namespace Cm
 	{

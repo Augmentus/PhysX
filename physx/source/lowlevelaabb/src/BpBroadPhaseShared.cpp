@@ -31,7 +31,7 @@
 #include "foundation/PxMemory.h"
 #include "PsBitUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Bp;
 
 #define MBP_ALLOC(x)		PX_ALLOC(x, "MBP")

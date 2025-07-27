@@ -31,7 +31,7 @@
 #include "PxPvdProfileZoneClient.h"
 #include "PxPvdProfileZone.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {
@@ -82,7 +82,7 @@ struct ProfileZoneClient : public profile::PxProfileZoneClient, public shdfnd::U
 }
 }
 
-using namespace physx;
+using namespace augphysx;
 using namespace pvdsdk;
 
 PvdProfileZoneClient::PvdProfileZoneClient(PvdImpl& pvd) : mSDKPvd(pvd), mPvdDataStream(NULL), mIsConnected(false)

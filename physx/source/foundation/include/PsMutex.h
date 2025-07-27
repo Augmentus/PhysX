@@ -44,7 +44,7 @@
  */
 #include <new>
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

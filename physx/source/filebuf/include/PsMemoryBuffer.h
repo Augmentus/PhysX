@@ -34,7 +34,7 @@
 #include "filebuf/PxFileBuf.h"
 #include "foundation/PxAssert.h"
 
-namespace physx
+namespace augphysx
 {
 namespace general_PxIOStream2
 {
@@ -385,13 +385,13 @@ public:
 		case 0:
 			return PX_ALLOC(size, PX_DEBUG_EXP("PxMemoryBufferAllocator"));			
 		case 16 :
-			return physx::AlignedAllocator<16>().allocate(size, __FILE__, __LINE__);			
+			return augphysx::AlignedAllocator<16>().allocate(size, __FILE__, __LINE__);			
 		case 32 :
-			return physx::AlignedAllocator<32>().allocate(size, __FILE__, __LINE__);			
+			return augphysx::AlignedAllocator<32>().allocate(size, __FILE__, __LINE__);			
 		case 64 :
-			return physx::AlignedAllocator<64>().allocate(size, __FILE__, __LINE__);			
+			return augphysx::AlignedAllocator<64>().allocate(size, __FILE__, __LINE__);			
 		case 128 :
-			return physx::AlignedAllocator<128>().allocate(size, __FILE__, __LINE__);			
+			return augphysx::AlignedAllocator<128>().allocate(size, __FILE__, __LINE__);			
 		default :
 			PX_ASSERT(0);
 		}
@@ -405,16 +405,16 @@ public:
 			PX_FREE(mem);
 			break;
 		case 16 :
-			physx::AlignedAllocator<16>().deallocate(mem);			
+			augphysx::AlignedAllocator<16>().deallocate(mem);			
 			break;
 		case 32 :
-			physx::AlignedAllocator<32>().deallocate(mem);
+			augphysx::AlignedAllocator<32>().deallocate(mem);
 			break;
 		case 64 :
-			physx::AlignedAllocator<64>().deallocate(mem);
+			augphysx::AlignedAllocator<64>().deallocate(mem);
 			break;
 		case 128 :
-			physx::AlignedAllocator<128>().deallocate(mem);
+			augphysx::AlignedAllocator<128>().deallocate(mem);
 			break;
 		default :
 			PX_ASSERT(0);

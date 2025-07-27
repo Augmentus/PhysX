@@ -36,7 +36,7 @@
 #include "PsArray.h"
 #include "PxcScratchAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxcNpMemBlock
 {

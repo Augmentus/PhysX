@@ -33,7 +33,7 @@
 #include "PsString.h"
 #include "foundation/PxMemory.h"
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 
 typedef CMemoryPoolManager TMemoryPoolManager;
 
@@ -145,7 +145,7 @@ namespace snXmlImpl {
 			for ( XmlNode* theNode = mFirstChild; theNode; theNode = theNode->mNextSibling )
 			{
 				XmlNode* theRepXNode = theNode;
-				if ( physx::shdfnd::stricmp( theRepXNode->mName, inName ) == 0 )
+				if ( augphysx::shdfnd::stricmp( theRepXNode->mName, inName ) == 0 )
 					return theNode;
 			}
 			return NULL;

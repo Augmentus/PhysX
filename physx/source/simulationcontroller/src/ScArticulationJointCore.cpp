@@ -33,7 +33,7 @@
 #include "ScBodyCore.h"
 #include "ScPhysics.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::ArticulationJointCore::ArticulationJointCore(const PxTransform& parentFrame,
 												 const PxTransform& childFrame,

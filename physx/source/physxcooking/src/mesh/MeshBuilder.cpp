@@ -30,7 +30,7 @@
 #include "MeshBuilder.h"
 #include "GuInternal.h"
 
-namespace physx
+namespace augphysx
 {
 	//#define PROFILE_BOUNDS
 #ifdef PROFILE_BOUNDS

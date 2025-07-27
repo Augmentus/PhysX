@@ -34,7 +34,7 @@
 #include "geometry/PxGeometry.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxConvexMeshGeometry;
 	class PxCapsuleGeometry;

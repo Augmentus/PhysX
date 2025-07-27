@@ -39,7 +39,7 @@
 
 #include "PsUserAllocated.h"
 
-namespace physx
+namespace augphysx
 {
 	namespace Sq
 	{				

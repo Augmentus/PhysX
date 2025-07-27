@@ -48,7 +48,7 @@
 #include "PsAllocator.h"
 #include "PsFPU.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace shdfnd::aos;
 using namespace intrinsics;
@@ -1412,7 +1412,7 @@ bool Gu::contactConvexHeightfield(GU_CONTACT_METHOD_ARGS)
 	PX_UNUSED(renderOutput);
 
 	//Create a triangle cache from the HF triangles and then feed triangles to NP mesh methods
-	const physx::PxHeightFieldGeometryLL& shapeMesh = shape1.get<const PxHeightFieldGeometryLL>();
+	const augphysx::PxHeightFieldGeometryLL& shapeMesh = shape1.get<const PxHeightFieldGeometryLL>();
 
 	Cm::FastVertex2ShapeScaling convexScaling;
 	PxBounds3 hullAABB;
@@ -1431,7 +1431,7 @@ bool Gu::contactBoxHeightfield(GU_CONTACT_METHOD_ARGS)
 	PX_UNUSED(renderOutput);
 
 	//Create a triangle cache from the HF triangles and then feed triangles to NP mesh methods
-	const physx::PxHeightFieldGeometryLL& shapeMesh = shape1.get<const PxHeightFieldGeometryLL>();
+	const augphysx::PxHeightFieldGeometryLL& shapeMesh = shape1.get<const PxHeightFieldGeometryLL>();
 
 	const PxBoxGeometry& shapeBox = shape0.get<const PxBoxGeometry>();
 

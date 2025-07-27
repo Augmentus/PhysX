@@ -55,7 +55,7 @@ Platform specific defines
 
 #define PX_SIGN_BITMASK 0x80000000
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

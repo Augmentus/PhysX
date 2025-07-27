@@ -40,14 +40,14 @@
 #include "ExtSerialization.h"
 #include "CmCollection.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sn;
 
 namespace
 {
 	struct RequiresCallback : public PxProcessPxBaseCallback
 	{
-		RequiresCallback(physx::PxCollection& c) : collection(c) {}
+		RequiresCallback(augphysx::PxCollection& c) : collection(c) {}
 		void process(PxBase& base)
 		{			
 			  if(!collection.contains(base))
@@ -60,7 +60,7 @@ namespace
 
 	struct CompleteCallback : public PxProcessPxBaseCallback
 	{
-		CompleteCallback(physx::PxCollection& r, physx::PxCollection& c, const physx::PxCollection* e) :
+		CompleteCallback(augphysx::PxCollection& r, augphysx::PxCollection& c, const augphysx::PxCollection* e) :
 		required(r),  complete(c), external(e)	{}
 		void process(PxBase& base)
 		{
@@ -135,7 +135,7 @@ bool PxSerialization::isSerializable(PxCollection& collection, PxSerializationRe
 				if(object && (object != &s))
 				{					
 					subordinateCollection->release();					
-					Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+					Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 						"PxSerialization::isSerializable: Reference id %" PX_PRIu64 " used both in current collection and in externalReferences. "
 						"Please use unique identifiers.", id);	
 					return false;
@@ -175,14 +175,14 @@ bool PxSerialization::isSerializable(PxCollection& collection, PxSerializationRe
 				{
 					if(!externalReferences->contains(s0))
 					{						
-						Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+						Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 							"PxSerialization::isSerializable: Object of type %s references a missing object of type %s. "
 							"The missing object needs to be added to either the current collection or the externalReferences collection.",
 							s.getConcreteTypeName(), s0.getConcreteTypeName());						
 					}
 					else if(externalReferences->getId(s0) == PX_SERIAL_OBJECT_ID_INVALID)
 					{						
-						Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+						Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 							"PxSerialization::isSerializable: Object of type %s in externalReferences collection requires an id.", 
 							s0.getConcreteTypeName());
 					}
@@ -191,7 +191,7 @@ bool PxSerialization::isSerializable(PxCollection& collection, PxSerializationRe
 				}
 				else
 				{				
-					Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+					Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 						"PxSerialization::isSerializable: Object of type %s references a missing serial object of type %s. "
 						"Please completed the collection or specify an externalReferences collection containing the object.",
 						s.getConcreteTypeName(), s0.getConcreteTypeName());					
@@ -211,7 +211,7 @@ bool PxSerialization::isSerializable(PxCollection& collection, PxSerializationRe
 	{
 		PxBase& subordinate = subordinateCollection->getObject(j);
 
-		Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+		Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 			"PxSerialization::isSerializable: An object of type %s is subordinate but not required "
 			"by other objects in the collection (orphan). Please remove the object from the collection or add its owner.", 
 			subordinate.getConcreteTypeName());
@@ -245,7 +245,7 @@ bool PxSerialization::isSerializable(PxCollection& collection, PxSerializationRe
 				if(collection.contains(s0))
 				{
 					oppositeRequiresCollection->release();
-					Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+					Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 						"PxSerialization::isSerializable: Object of type %s in externalReferences references an object "
 						"of type %s in collection (circular dependency).",
 						s.getConcreteTypeName(), s0.getConcreteTypeName());
@@ -307,9 +307,9 @@ void PxSerialization::createSerialObjectIds(PxCollection& collection, const PxSe
 	}
 }
 
-namespace physx { namespace Sn
+namespace augphysx { namespace Sn
 {
-	static PxU32 addToStringTable(physx::shdfnd::Array<char>& stringTable, const char* str)
+	static PxU32 addToStringTable(augphysx::shdfnd::Array<char>& stringTable, const char* str)
 	{
 		if(!str)
 			return 0xffffffff;

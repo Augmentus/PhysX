@@ -38,7 +38,7 @@
 @{
 */
 
-namespace physx
+namespace augphysx
 {
 
 struct PxVehiclePropertyInfoName

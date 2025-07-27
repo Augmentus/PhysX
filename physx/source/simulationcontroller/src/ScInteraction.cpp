@@ -32,7 +32,7 @@
 #include "ScInteraction.h"
 #include "ScNPhaseCore.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sc::Interaction::Interaction(ActorSim& actor0, ActorSim& actor1, InteractionType::Enum type, PxU8 flags) :
 	mActor0				(actor0),

@@ -38,12 +38,12 @@
 #include "PxPvdDataStreamHelpers.h"
 #include "PxPvdDataStream.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Vd
 {	
-	using namespace physx::shdfnd;
-	using namespace physx::pvdsdk;
+	using namespace augphysx::shdfnd;
+	using namespace augphysx::pvdsdk;
 
 	template<typename TPropType>
 	struct PropertyDefinitionOp

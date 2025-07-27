@@ -30,7 +30,7 @@
 
 #include "foundation/Px.h"
 
-namespace physx
+namespace augphysx
 {
 
 /**

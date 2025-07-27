@@ -30,7 +30,7 @@
 
 #include "PxProfileEventBufferClient.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 	
 	/**
 	\brief	Manager keep collections of PxProfileEventBufferClient clients. 

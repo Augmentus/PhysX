@@ -34,7 +34,7 @@
 #include "PsThread.h"
 #include <stdio.h>
 
-using namespace physx;
+using namespace augphysx;
 
 
 PxDefaultErrorCallback::PxDefaultErrorCallback()
@@ -89,7 +89,7 @@ void PxDefaultErrorCallback::reportError(PxErrorCode::Enum e, const char* messag
 		char buffer[1024];
 		sprintf(buffer, "%s (%d) : %s : %s\n", file, line, errorCode, message);
 
-		physx::shdfnd::printString(buffer);
+		augphysx::shdfnd::printString(buffer);
 
 		// in debug builds halt execution for abort codes
 		PX_ASSERT(e != PxErrorCode::eABORT);
@@ -98,8 +98,8 @@ void PxDefaultErrorCallback::reportError(PxErrorCode::Enum e, const char* messag
 		// and make sure that the error message is flushed  
 		while (e == PxErrorCode::eABORT)
 		{
-			physx::shdfnd::printString(buffer);
-			physx::shdfnd::Thread::sleep(1000);
+			augphysx::shdfnd::printString(buffer);
+			augphysx::shdfnd::Thread::sleep(1000);
 		}
 	}	
 }

@@ -34,7 +34,7 @@
 #include "PsString.h"
 #include "PsAllocator.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
@@ -127,7 +127,7 @@ Foundation* Foundation::createInstance(PxU32 version, PxErrorCallback& errc, PxA
 	if(version != PX_PHYSICS_VERSION)
 	{
 		char* buffer = new char[256];
-		physx::shdfnd::snprintf(buffer, 256, "Wrong version: physics version is 0x%08x, tried to create 0x%08x",
+		augphysx::shdfnd::snprintf(buffer, 256, "Wrong version: physics version is 0x%08x, tried to create 0x%08x",
 			PX_PHYSICS_VERSION, version);
 		errc.reportError(PxErrorCode::eINVALID_PARAMETER, buffer, __FILE__, __LINE__);
 		return 0;
@@ -232,13 +232,13 @@ Foundation* Foundation::mInstance = NULL;
 PxU32 Foundation::mRefCount = 0;
 PxU32 Foundation::mWarnOnceTimestap = 0;
 
-void Foundation::registerAllocationListener(physx::shdfnd::AllocationListener& listener)
+void Foundation::registerAllocationListener(augphysx::shdfnd::AllocationListener& listener)
 {
 	Mutex::ScopedLock lock(mListenerMutex);
 	mBroadcastingAllocator.registerListener(listener);
 }
 
-void Foundation::deregisterAllocationListener(physx::shdfnd::AllocationListener& listener)
+void Foundation::deregisterAllocationListener(augphysx::shdfnd::AllocationListener& listener)
 {
 	Mutex::ScopedLock lock(mListenerMutex);
 	mBroadcastingAllocator.deregisterListener(listener);
@@ -256,28 +256,28 @@ void Foundation::deregisterErrorCallback(PxErrorCallback& callback)
 	mBroadcastingError.deregisterListener(callback);
 }
 
-physx::PxProfilerCallback* gProfilerCallback = NULL;
+augphysx::PxProfilerCallback* gProfilerCallback = NULL;
 
 } // namespace shdfnd
 } // namespace physx
 
-physx::PxFoundation* PxCreateFoundation(physx::PxU32 version, physx::PxAllocatorCallback& allocator,
-                                        physx::PxErrorCallback& errorCallback)
+augphysx::PxFoundation* PxCreateFoundation(augphysx::PxU32 version, augphysx::PxAllocatorCallback& allocator,
+                                        augphysx::PxErrorCallback& errorCallback)
 {
-	return physx::shdfnd::Foundation::createInstance(version, errorCallback, allocator);
+	return augphysx::shdfnd::Foundation::createInstance(version, errorCallback, allocator);
 }
 
-physx::PxFoundation& PxGetFoundation()
+augphysx::PxFoundation& PxGetFoundation()
 {
-	return physx::shdfnd::Foundation::getInstance();
+	return augphysx::shdfnd::Foundation::getInstance();
 }
 
-physx::PxProfilerCallback* PxGetProfilerCallback()
+augphysx::PxProfilerCallback* PxGetProfilerCallback()
 {
-	return physx::shdfnd::gProfilerCallback;
+	return augphysx::shdfnd::gProfilerCallback;
 }
 
-void PxSetProfilerCallback(physx::PxProfilerCallback* profiler)
+void PxSetProfilerCallback(augphysx::PxProfilerCallback* profiler)
 {
-	physx::shdfnd::gProfilerCallback = profiler;
+	augphysx::shdfnd::gProfilerCallback = profiler;
 }

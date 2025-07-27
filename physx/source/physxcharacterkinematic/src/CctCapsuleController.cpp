@@ -34,7 +34,7 @@
 #include "CctCapsuleController.h"
 #include "CctCharacterControllerManager.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cct;
 
 static PX_FORCE_INLINE float CCTtoProxyRadius(float r, PxF32 coeff)	{ return r * coeff;			}

@@ -43,7 +43,7 @@
 #include "foundation/PxBounds3.h"
 #include "foundation/PxMemory.h"
 
-using namespace physx;
+using namespace augphysx;
 
 namespace local
 {		
@@ -461,7 +461,7 @@ namespace local
 		PX_FORCE_INLINE PxU32 getNbHullVerts() { return mOutputNumVertices; }
 
 	protected:
-		friend class physx::QuickHullConvexHullLib;
+		friend class augphysx::QuickHullConvexHullLib;
 
 		const PxCookingParams&	mCookingParams;		// cooking params
 		const PxConvexMeshDesc& mConvexDesc;		// convex desc

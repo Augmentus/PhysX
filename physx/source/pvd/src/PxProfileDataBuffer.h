@@ -35,7 +35,7 @@
 #include "PxProfileMemoryBuffer.h"
 #include "PxProfileEventBufferClient.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	template<typename TMutex
 			, typename TScopedLock>

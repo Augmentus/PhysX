@@ -40,7 +40,7 @@
 #include "GuVecConvex.h"
 #include "GuConvexSupportTable.h"
 
-namespace physx
+namespace augphysx
 {
 PX_PHYSX_COMMON_API extern const Ps::aos::BoolV boxVertexTable[8];
 

@@ -33,7 +33,7 @@
 
 #include "foundation/Px.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	/**
 	 *	Generic class to wrap any mutex type that has lock and unlock methods

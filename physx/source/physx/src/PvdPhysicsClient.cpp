@@ -39,8 +39,8 @@
 #include "PvdPhysicsClient.h"
 #include "PvdTypeNames.h"
 
-using namespace physx;
-using namespace physx::Vd;
+using namespace augphysx;
+using namespace augphysx::Vd;
 
 PvdPhysicsClient::PvdPhysicsClient(PsPvd* pvd)
 : mPvd(pvd), mPvdDataStream(NULL), mIsConnected(false)
@@ -98,7 +98,7 @@ void PvdPhysicsClient::sendEntireSDK()
 
 #define SEND_BUFFER_GROUP(type, name)                   \
 	{                                                   \
-		physx::shdfnd::Array<type*> buffers;            \
+		augphysx::shdfnd::Array<type*> buffers;            \
 		PxU32 numBuffers = physics.getNb##name();       \
 		buffers.resize(numBuffers);                     \
 		physics.get##name(buffers.begin(), numBuffers);	\

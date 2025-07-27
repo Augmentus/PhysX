@@ -43,7 +43,7 @@
 #include "CmRenderOutput.h"
 #include "CmUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 // PX_SERIALIZATION

@@ -34,7 +34,7 @@
 #include "PxsSimulationController.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 
 static void updateBodySim(Sc::BodySim* bodySim)
 {

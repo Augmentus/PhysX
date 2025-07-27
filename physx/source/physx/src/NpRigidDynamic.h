@@ -36,7 +36,7 @@
 #include "NpRigidBodyTemplate.h"
 #include "ScbBody.h"
 
-namespace physx
+namespace augphysx
 {
 
 class NpRigidDynamic;

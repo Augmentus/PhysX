@@ -34,7 +34,7 @@
 #include "CmPhysXCommon.h"
 #include "PsUtilities.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

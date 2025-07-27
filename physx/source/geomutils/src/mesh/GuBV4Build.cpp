@@ -38,11 +38,11 @@
 #include "PsBasicTemplates.h"
 #include <stdio.h>
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #include "PsVecMath.h"
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 #define GU_BV4_USE_NODE_POOLS
 
@@ -414,7 +414,7 @@ static void setEmpty(CenterExtents& box)
 // For type1: we have 3 nodes, we need 8*2 = 16 bits => 6 bits/node = 18 bits available, ok
 // For type2: we have 4 nodes, we need 8*3 = 24 bits => 6 bits/node = 24 bits available, ok
 //#pragma pack(1)
-struct BVData : public physx::shdfnd::UserAllocated
+struct BVData : public augphysx::shdfnd::UserAllocated
 {
 	BVData();
 	CenterExtents	mAABB;
@@ -433,7 +433,7 @@ BVData::BVData() : mData(PX_INVALID_U32)
 #endif
 }
 
-struct BV4Node : public physx::shdfnd::UserAllocated
+struct BV4Node : public augphysx::shdfnd::UserAllocated
 {
 	PX_FORCE_INLINE	BV4Node()	{}
 	PX_FORCE_INLINE	~BV4Node()	{}
@@ -481,7 +481,7 @@ struct BV4BuildParams
 
 #ifdef GU_BV4_USE_NODE_POOLS
 	//
-	struct Slab : public physx::shdfnd::UserAllocated
+	struct Slab : public augphysx::shdfnd::UserAllocated
 	{
 		BV4Node	mNodes[NB_NODES_PER_SLAB];
 		PxU32	mNbUsedNodes;
@@ -1471,7 +1471,7 @@ static bool gReorderCallback(const AABBTreeNode* current, PxU32 /*depth*/, void*
 	return true;
 }
 
-bool physx::Gu::BuildBV4Ex(BV4Tree& tree, SourceMesh& mesh, float epsilon, PxU32 nbTrisPerLeaf)
+bool augphysx::Gu::BuildBV4Ex(BV4Tree& tree, SourceMesh& mesh, float epsilon, PxU32 nbTrisPerLeaf)
 {
 	const PxU32 nbTris = mesh.mNbTris;
 

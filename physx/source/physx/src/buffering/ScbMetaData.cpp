@@ -36,7 +36,7 @@
 #include "ScbArticulationJoint.h"
 #include "ScbAggregate.h"
 
-using namespace physx;
+using namespace augphysx;
 
 ///////////////////////////////////////////////////////////////////////////////
 

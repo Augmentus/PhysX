@@ -32,7 +32,7 @@
 #include "ScShapeSim.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sc;
 
 /*

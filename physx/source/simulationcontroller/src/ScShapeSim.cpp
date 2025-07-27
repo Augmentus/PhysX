@@ -48,7 +48,7 @@
 #include "PxsSimulationController.h"
 #include "common/PxProfileZone.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Sc;
 

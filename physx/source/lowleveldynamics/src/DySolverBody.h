@@ -38,7 +38,7 @@
 #include "CmSpatialVector.h"
 #include "solver/PxSolverDefs.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxsRigidBody;

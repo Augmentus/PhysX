@@ -46,7 +46,7 @@
 #include "CmUtils.h"
 #include "PsUtilities.h"
 
-using namespace physx;
+using namespace augphysx;
 #if PX_ENABLE_DYNAMIC_MESH_RTREE
 using namespace shdfnd::aos;
 #endif
@@ -54,7 +54,7 @@ using Ps::Array;
 using Ps::sort;
 using namespace Gu;
 
-namespace physx
+namespace augphysx
 {
 namespace Gu {
 

@@ -38,7 +38,7 @@
 #include "PsMutex.h"
 #include "PsPvd.h"
 
-namespace physx
+namespace augphysx
 {
 class PxProfileMemoryEventBuffer;
 
@@ -57,7 +57,7 @@ class PvdPhysicsClient : public PvdClient, public PxErrorCallback, public NpFact
 	void onPvdDisconnected();
 	void flush();
 
-	physx::pvdsdk::PvdDataStream* getDataStream();
+	augphysx::pvdsdk::PvdDataStream* getDataStream();
 	
 	void sendEntireSDK();	
 	void destroyPvdInstance(const PxPhysics* physics);

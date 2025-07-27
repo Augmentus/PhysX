@@ -35,7 +35,7 @@
 #include "PsHashSet.h"
 #include "ScConstraintGroupNode.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxcScratchAllocator;
 

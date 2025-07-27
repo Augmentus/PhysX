@@ -37,7 +37,7 @@
 #include "PsHashSet.h"
 #include "CmBitMap.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sq
 {

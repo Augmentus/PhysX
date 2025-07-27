@@ -34,7 +34,7 @@
 #include "ExtTaskQueueHelper.h"
 #include "PsFPU.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Ext::CpuWorkerThread::CpuWorkerThread()
 :	mQueueEntryPool(EXT_TASK_QUEUE_ENTRY_POOL_SIZE),

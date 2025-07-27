@@ -33,7 +33,7 @@
 #include "GuContactMethodImpl.h"
 #include "PsVecTransform.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -81,4 +81,4 @@ bool pcmContactSphereSphere(GU_CONTACT_METHOD_ARGS)
 	return false;
 }
 }//Gu
-}//physx
+}//augphysx

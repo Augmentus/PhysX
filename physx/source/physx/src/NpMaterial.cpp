@@ -32,7 +32,7 @@
 #include "NpPhysics.h"
 #include "CmUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 
 NpMaterial::NpMaterial(const Sc::MaterialCore& desc)
 : PxMaterial(PxConcreteType::eMATERIAL, PxBaseFlag::eOWNS_MEMORY | PxBaseFlag::eIS_RELEASABLE)

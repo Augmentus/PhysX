@@ -41,9 +41,9 @@
 #include "DySolverConstraintExtShared.h"
 #include "DyConstraintPrep.h"
 
-using namespace physx::Gu;
+using namespace augphysx::Gu;
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

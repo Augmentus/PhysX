@@ -36,7 +36,7 @@
 #include "PsArray.h"
 #include "PsSList.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Ext
 {

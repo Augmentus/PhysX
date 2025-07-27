@@ -38,7 +38,7 @@
 */
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 
 namespace general_PxIOStream2

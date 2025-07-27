@@ -39,7 +39,7 @@
 #include "PsInlineArray.h"
 #include "PsFPU.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {
@@ -48,7 +48,7 @@ namespace Cm
 	// this and override the runInternal() method
 	// to ensure that the correct floating point 
 	// state is set / reset during execution
-	class Task : public physx::PxLightCpuTask
+	class Task : public augphysx::PxLightCpuTask
 	{
 	public:
 		Task(PxU64 contextId)
@@ -69,9 +69,9 @@ namespace Cm
 		virtual void runInternal()=0;
 	};
 
-	// same as Cm::Task but inheriting from physx::PxBaseTask
+	// same as Cm::Task but inheriting from augphysx::PxBaseTask
 	// instead of PxLightCpuTask
-	class BaseTask : public physx::PxBaseTask
+	class BaseTask : public augphysx::PxBaseTask
 	{
 	public:
 
@@ -88,7 +88,7 @@ namespace Cm
 		virtual void runInternal()=0;
 	};
 
-	template <class T, void (T::*Fn)(physx::PxBaseTask*) >
+	template <class T, void (T::*Fn)(augphysx::PxBaseTask*) >
 	class DelegateTask : public Cm::Task, public shdfnd::UserAllocated
 	{
 	public:
@@ -137,10 +137,10 @@ namespace Cm
 		virtual void removeReference()
 		{
 			shdfnd::Mutex::ScopedLock lock(mMutex);
-			if (!physx::shdfnd::atomicDecrement(&mRefCount))
+			if (!augphysx::shdfnd::atomicDecrement(&mRefCount))
 			{
 				// prevents access to mReferencesToRemove until release
-				physx::shdfnd::atomicIncrement(&mRefCount);
+				augphysx::shdfnd::atomicIncrement(&mRefCount);
 				mNotifySubmission = false;
 				PX_ASSERT(mReferencesToRemove.empty());
 				for (PxU32 i = 0; i < mDependents.size(); i++)
@@ -156,7 +156,7 @@ namespace Cm
 		virtual void addReference()
 		{
 			shdfnd::Mutex::ScopedLock lock(mMutex);
-			physx::shdfnd::atomicIncrement(&mRefCount);
+			augphysx::shdfnd::atomicIncrement(&mRefCount);
 			mNotifySubmission = true;
 		}
 
@@ -171,7 +171,7 @@ namespace Cm
 		/**
 		Sets the task manager. Doesn't increase the reference count.
 		*/
-		PX_INLINE void setTaskManager(physx::PxTaskManager& tm)
+		PX_INLINE void setTaskManager(augphysx::PxTaskManager& tm)
 		{
 			mTm = &tm;
 		}
@@ -180,10 +180,10 @@ namespace Cm
 		Adds a dependent task. It also sets the task manager querying it from the dependent task.  
 		The refcount is incremented every time a dependent task is added.
 		*/
-		PX_INLINE void addDependent(physx::PxBaseTask& dependent)
+		PX_INLINE void addDependent(augphysx::PxBaseTask& dependent)
 		{
 			shdfnd::Mutex::ScopedLock lock(mMutex);
-			physx::shdfnd::atomicIncrement(&mRefCount);
+			augphysx::shdfnd::atomicIncrement(&mRefCount);
 			mTm = dependent.getTaskManager();
 			mDependents.pushBack(&dependent);
 			dependent.addReference();
@@ -196,7 +196,7 @@ namespace Cm
 		*/
 		virtual void release()
 		{
-			Ps::InlineArray<physx::PxBaseTask*, 10> referencesToRemove;
+			Ps::InlineArray<augphysx::PxBaseTask*, 10> referencesToRemove;
 
 			{
 				shdfnd::Mutex::ScopedLock lock(mMutex);
@@ -214,7 +214,7 @@ namespace Cm
 				}
 				else
 				{
-					physx::shdfnd::atomicDecrement(&mRefCount);
+					augphysx::shdfnd::atomicDecrement(&mRefCount);
 				}
 
 				// the scoped lock needs to get freed before the continuation tasks get (potentially) submitted because
@@ -231,8 +231,8 @@ namespace Cm
 	protected:
 		volatile PxI32 mRefCount;
 		const char* mName;
-		Ps::InlineArray<physx::PxBaseTask*, 4> mDependents;
-		Ps::InlineArray<physx::PxBaseTask*, 4> mReferencesToRemove;
+		Ps::InlineArray<augphysx::PxBaseTask*, 4> mDependents;
+		Ps::InlineArray<augphysx::PxBaseTask*, 4> mReferencesToRemove;
 		bool mNotifySubmission;
 		Ps::Mutex mMutex; // guarding mDependents and mNotifySubmission
 	};
@@ -241,7 +241,7 @@ namespace Cm
 	/**
 	\brief Specialization of FanoutTask class in order to provide the delegation mechanism.
 	*/
-	template <class T, void (T::*Fn)(physx::PxBaseTask*) >
+	template <class T, void (T::*Fn)(augphysx::PxBaseTask*) >
 	class DelegateFanoutTask : public FanoutTask, public shdfnd::UserAllocated
 	{
 	public:
@@ -250,7 +250,7 @@ namespace Cm
 
 		  virtual void runInternal()
 		  {
-			  physx::PxBaseTask* continuation = mReferencesToRemove.empty() ? NULL : mReferencesToRemove[0];
+			  augphysx::PxBaseTask* continuation = mReferencesToRemove.empty() ? NULL : mReferencesToRemove[0];
 			  (mObj->*Fn)(continuation);
 		  }
 

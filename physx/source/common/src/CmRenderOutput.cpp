@@ -39,11 +39,11 @@
 #pragma warning(disable: 4996 ) // intentionally suppressing this warning message
 #endif
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

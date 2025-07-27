@@ -31,7 +31,7 @@
 #ifndef PX_PHYSICS_SCB_NPDEPS
 #define PX_PHYSICS_SCB_NPDEPS
 
-namespace physx
+namespace augphysx
 {
 
 // The Scb layer needs to delete the owning Np objects, but we don't want to include the Np headers

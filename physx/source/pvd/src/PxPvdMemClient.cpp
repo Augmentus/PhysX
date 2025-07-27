@@ -30,7 +30,7 @@
 #include "PxPvdImpl.h"
 #include "PxPvdMemClient.h"
 
-namespace physx
+namespace augphysx
 {
 namespace pvdsdk
 {

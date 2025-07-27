@@ -37,7 +37,7 @@
 #include "PxConstraintDesc.h"
 #include "solver/PxSolverDefs.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct PxcNpWorkUnit;

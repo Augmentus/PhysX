@@ -37,7 +37,7 @@
 #include "GuEPA.h"
 
 
-namespace physx
+namespace augphysx
 {
 
 

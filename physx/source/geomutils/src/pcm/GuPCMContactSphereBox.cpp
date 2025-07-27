@@ -34,7 +34,7 @@
 #include "GuContactMethodImpl.h"
 
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu
@@ -150,4 +150,4 @@ bool pcmContactSphereBox(GU_CONTACT_METHOD_ARGS)
 }
 
 }//Gu
-}//physx
+}//augphysx

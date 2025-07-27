@@ -52,8 +52,8 @@
 #include "PsPvd.h"
 #endif
 
-using namespace physx;
-using namespace physx::pvdsdk;
+using namespace augphysx;
+using namespace augphysx::pvdsdk;
 
 #if PX_SUPPORT_PVD
 struct JointConnectionHandler : public PvdClient

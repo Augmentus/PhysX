@@ -46,7 +46,7 @@ Geometry interface
 // moved to
 #include "GuGeometryUnion.h"
 
-namespace physx
+namespace augphysx
 {
 
 struct PxsShapeCore

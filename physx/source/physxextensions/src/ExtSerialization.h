@@ -31,7 +31,7 @@
 #ifndef EXT_SERIALIZATION_H
 #define EXT_SERIALIZATION_H
 
-namespace physx
+namespace augphysx
 {
 namespace Ext
 {

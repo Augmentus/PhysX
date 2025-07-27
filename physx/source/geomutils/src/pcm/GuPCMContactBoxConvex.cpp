@@ -42,7 +42,7 @@
 
 #define PCM_BOX_HULL_DEBUG 0
 
-namespace physx
+namespace augphysx
 {
 
 using namespace Ps::aos;
@@ -274,4 +274,4 @@ bool pcmContactBoxConvex(GU_CONTACT_METHOD_ARGS)
 }
 
 }//Gu
-}//physx
+}//augphysx

@@ -29,7 +29,7 @@
 
 #include "ScbShape.h"
 
-using namespace physx;
+using namespace augphysx;
 
 bool Scb::Shape::setMaterialsHelper(PxMaterial* const* materials, PxU16 materialCount)
 {

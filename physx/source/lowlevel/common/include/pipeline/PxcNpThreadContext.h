@@ -43,7 +43,7 @@
 #include "CmBitMap.h"
 #include "../pcm/GuPersistentContactManifold.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxsTransformCache;

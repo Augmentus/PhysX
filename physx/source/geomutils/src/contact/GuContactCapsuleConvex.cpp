@@ -38,7 +38,7 @@
 #include "GuGJK.h"
 #include "GuGeometryUnion.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 ///////////
@@ -122,7 +122,7 @@ static bool GuTestAxis(const PxVec3& axis, const Gu::Segment& segment, PxReal ra
 	PX_ASSERT(d0>=0.0f);
 	const PxReal d1 = Max1 - min0;
 	PX_ASSERT(d1>=0.0f);
-	depth = physx::intrinsics::selectMin(d0, d1);
+	depth = augphysx::intrinsics::selectMin(d0, d1);
 	return true;
 }
 
@@ -240,7 +240,7 @@ static bool raycast_convexMesh2(	const PolygonalData& polyData,
 
 		if (dn > 1E-7f)	//the ray direction "exits" from the back side
 		{
-			earliestExit = physx::intrinsics::selectMin(earliestExit, distAlongRay);
+			earliestExit = augphysx::intrinsics::selectMin(earliestExit, distAlongRay);
 		}
 		else if (dn < -1E-7f)	//the ray direction "enters" from the front side
 		{
@@ -248,7 +248,7 @@ static bool raycast_convexMesh2(	const PolygonalData& polyData,
 			{
 				latestEntry = distAlongRay;
 			}*/
-			latestEntry = physx::intrinsics::selectMax(latestEntry, distAlongRay);
+			latestEntry = augphysx::intrinsics::selectMax(latestEntry, distAlongRay);
 		}
 		else
 		{
@@ -434,7 +434,7 @@ static void GuGenerateEEContacts2b(ContactBuffer& contactBuffer,
 	}
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

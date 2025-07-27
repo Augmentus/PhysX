@@ -37,7 +37,7 @@
 
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

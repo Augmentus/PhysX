@@ -35,7 +35,7 @@
 
 //Memory events define their own event stream
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 	struct MemoryEventTypes
 	{
 		enum Enum
@@ -404,7 +404,7 @@ namespace physx { namespace profile {
 	template<typename TRetVal, typename TOperator>
 	inline TRetVal MemoryEvent::visit( TOperator inOp ) const
 	{ 
-		return physx::profile::visit<TRetVal>( mHeader.getType(), mData, inOp ); 
+		return augphysx::profile::visit<TRetVal>( mHeader.getType(), mData, inOp ); 
 	}
 }}
 

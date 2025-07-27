@@ -43,7 +43,7 @@
 #include "PsAllocator.h"
 
 
-namespace physx {
+namespace augphysx {
 	namespace profile {
 
 		static const uint32_t LOCAL_BUFFER_SIZE = 512;

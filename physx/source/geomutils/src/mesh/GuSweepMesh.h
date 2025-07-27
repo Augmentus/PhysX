@@ -33,7 +33,7 @@
 #include "GuMidphaseInterface.h"
 #include "GuVecConvexHull.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu
@@ -96,15 +96,15 @@ namespace Gu
 	{		
 		const Matrix34Padded&		mMeshToBox;
 		PxReal						mDist, mDist0;
-		physx::shdfnd::aos::FloatV	mDistV;
+		augphysx::shdfnd::aos::FloatV	mDistV;
 		const Box&					mBox;
 		const PxVec3&				mLocalDir;
 		const PxVec3&				mWorldUnitDir;
 		PxReal						mInflation;
 		PxTriangle					mHitTriangle;
-		physx::shdfnd::aos::Vec3V	mMinClosestA;
-		physx::shdfnd::aos::Vec3V	mMinNormal;
-		physx::shdfnd::aos::Vec3V	mLocalMotionV;
+		augphysx::shdfnd::aos::Vec3V	mMinClosestA;
+		augphysx::shdfnd::aos::Vec3V	mMinNormal;
+		augphysx::shdfnd::aos::Vec3V	mLocalMotionV;
 		PxU32						mMinTriangleIndex;
 		PxVec3						mOneOverDir;
 		const bool					mBothTriangleSidesCollide;	// PT: true if PxMeshGeometryFlag::eDOUBLE_SIDED || PxHitFlag::eMESH_BOTH_SIDES
@@ -129,12 +129,12 @@ namespace Gu
 	{
 		PxTriangle							mHitTriangle;
 		ConvexHullV							mConvexHull;
-		physx::shdfnd::aos::PsMatTransformV	mMeshToConvex;
-		physx::shdfnd::aos::PsTransformV	mConvexPoseV;
+		augphysx::shdfnd::aos::PsMatTransformV	mMeshToConvex;
+		augphysx::shdfnd::aos::PsTransformV	mConvexPoseV;
 		const Cm::FastVertex2ShapeScaling&	mMeshScale;
 		PxSweepHit							mSweepHit; // stores either the closest or any hit depending on value of mAnyHit
-		physx::shdfnd::aos::FloatV			mInitialDistance;
-		physx::shdfnd::aos::Vec3V			mConvexSpaceDir; // convexPose.rotateInv(-unit*distance)
+		augphysx::shdfnd::aos::FloatV			mInitialDistance;
+		augphysx::shdfnd::aos::Vec3V			mConvexSpaceDir; // convexPose.rotateInv(-unit*distance)
 		PxVec3								mUnitDir;
 		PxVec3								mMeshSpaceUnitDir;
 		PxReal								mInflation;

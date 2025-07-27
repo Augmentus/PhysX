@@ -63,7 +63,7 @@
 #pragma intrinsic(_BitScanForward)
 #pragma intrinsic(_BitScanReverse)
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

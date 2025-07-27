@@ -36,7 +36,7 @@
 
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {	
 	//////////////////////////////////////////////////////////////////////////
 	// base class for the convex hull libraries - inflation based and quickhull

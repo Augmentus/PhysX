@@ -36,7 +36,7 @@
 #include "ScbAggregate.h"
 #include "PsUserAllocated.h"
 
-namespace physx
+namespace augphysx
 {
 
 class NpScene;

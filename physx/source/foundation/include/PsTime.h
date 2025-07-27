@@ -37,7 +37,7 @@
 #include <time.h>
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

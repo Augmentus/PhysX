@@ -34,7 +34,7 @@
 #include "NpScene.h"
 #include "NpRigidActorTemplateInternal.h"
 
-using namespace physx;
+using namespace augphysx;
 
 NpRigidStatic::NpRigidStatic(const PxTransform& pose)
 : NpRigidStaticT(PxConcreteType::eRIGID_STATIC, PxBaseFlag::eOWNS_MEMORY | PxBaseFlag::eIS_RELEASABLE)
@@ -111,7 +111,7 @@ PxTransform NpRigidStatic::getGlobalPose() const
 	return mRigidStatic.getActor2World();
 }
 
-PxU32 physx::NpRigidStaticGetShapes(Scb::RigidStatic& rigid, void* const *&shapes)
+PxU32 augphysx::NpRigidStaticGetShapes(Scb::RigidStatic& rigid, void* const *&shapes)
 {
 	NpRigidStatic* a = static_cast<NpRigidStatic*>(rigid.getScRigidCore().getPxActor());
 	NpShapeManager& sm = a->getShapeManager();

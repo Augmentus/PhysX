@@ -38,7 +38,7 @@
 */
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -258,7 +258,7 @@ protected:
 };
     
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /**
@@ -272,7 +272,7 @@ For deserialization, the system gives back a collection of deserialized objects 
 
 @see PxCollection, PxCollection::release()
 */
-PX_PHYSX_COMMON_API physx::PxCollection* PX_CALL_CONV PxCreateCollection();
+PX_PHYSX_COMMON_API augphysx::PxCollection* PX_CALL_CONV PxCreateCollection();
 
 
 /** @} */

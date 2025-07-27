@@ -35,7 +35,7 @@
 #include "CmRenderOutput.h"
 #include "PxConstraintDesc.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

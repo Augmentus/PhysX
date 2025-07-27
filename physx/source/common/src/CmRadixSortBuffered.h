@@ -33,7 +33,7 @@
 #include "CmPhysXCommon.h"
 #include "CmRadixSort.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

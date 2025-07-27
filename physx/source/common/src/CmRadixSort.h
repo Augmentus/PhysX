@@ -32,7 +32,7 @@
 
 #include "common/PxPhysXCommonConfig.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {

@@ -37,7 +37,7 @@
 #include <new>
 #include <ctype.h>
 
-using namespace physx;
+using namespace augphysx;
 
 namespace
 {
@@ -56,7 +56,7 @@ static const Entity entity[NUM_ENTITY] = {
 	{ "&lt;", 4, '<' }, { "&amp;", 5, '&' }, { "&gt;", 4, '>' }, { "&quot;", 6, '\"' }, { "&apos;", 6, '\'' }
 };
 
-class MyFastXml : public physx::shdfnd::FastXml
+class MyFastXml : public augphysx::shdfnd::FastXml
 {
   public:
 	enum CharType
@@ -343,7 +343,7 @@ class MyFastXml : public physx::shdfnd::FastXml
 		return scan;
 	}
 
-	virtual bool processXml(physx::PxInputData& fileBuf, bool streamFromMemory)
+	virtual bool processXml(augphysx::PxInputData& fileBuf, bool streamFromMemory)
 	{
 		releaseMemory();
 		mFileBuf = &fileBuf;
@@ -797,7 +797,7 @@ class MyFastXml : public physx::shdfnd::FastXml
 
 	CharType mTypes[256];
 
-	physx::PxInputData* mFileBuf;
+	augphysx::PxInputData* mFileBuf;
 
 	char* mReadBuffer;
 	char* mReadBufferEnd;
@@ -816,7 +816,7 @@ class MyFastXml : public physx::shdfnd::FastXml
 };
 }
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

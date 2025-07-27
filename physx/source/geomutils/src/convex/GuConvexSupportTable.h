@@ -34,7 +34,7 @@
 #include "GuVecConvex.h"
 #include "PsVecTransform.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu  
 {

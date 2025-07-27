@@ -39,7 +39,7 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(bool v)
 	else
 	{
 		char scratch[6];
-		storeString( physx::PxAsc::valueToStr(v, scratch, 6) );
+		storeString( augphysx::PxAsc::valueToStr(v, scratch, 6) );
 	}
 	return *this;
 }
@@ -59,8 +59,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(uint8_t c)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::IntStrLen];
-		storeString( physx::PxAsc::valueToStr(c, scratch, physx::PxAsc::IntStrLen) );
+		char scratch[augphysx::PxAsc::IntStrLen];
+		storeString( augphysx::PxAsc::valueToStr(c, scratch, augphysx::PxAsc::IntStrLen) );
 	}
 
 	return *this;
@@ -74,8 +74,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(int8_t c)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::IntStrLen];
-		storeString( physx::PxAsc::valueToStr(c, scratch, physx::PxAsc::IntStrLen) );
+		char scratch[augphysx::PxAsc::IntStrLen];
+		storeString( augphysx::PxAsc::valueToStr(c, scratch, augphysx::PxAsc::IntStrLen) );
 	}
 
 	return *this;
@@ -111,8 +111,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(uint64_t v)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::IntStrLen];
-		storeString( physx::PxAsc::valueToStr(v, scratch, physx::PxAsc::IntStrLen) );
+		char scratch[augphysx::PxAsc::IntStrLen];
+		storeString( augphysx::PxAsc::valueToStr(v, scratch, augphysx::PxAsc::IntStrLen) );
 	}
 	return *this;
 }
@@ -125,8 +125,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(int64_t v)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::IntStrLen];
-		storeString( physx::PxAsc::valueToStr(v, scratch, physx::PxAsc::IntStrLen) );
+		char scratch[augphysx::PxAsc::IntStrLen];
+		storeString( augphysx::PxAsc::valueToStr(v, scratch, augphysx::PxAsc::IntStrLen) );
 	}
 	return *this;
 }
@@ -139,8 +139,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(double v)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::PxF64StrLen];
-		storeString( physx::PxAsc::valueToStr(v, scratch, physx::PxAsc::PxF64StrLen) );
+		char scratch[augphysx::PxAsc::PxF64StrLen];
+		storeString( augphysx::PxAsc::valueToStr(v, scratch, augphysx::PxAsc::PxF64StrLen) );
 	}
 	return *this;
 }
@@ -153,8 +153,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(float v)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::PxF32StrLen];
-		storeString( physx::PxAsc::valueToStr(v, scratch, physx::PxAsc::PxF32StrLen) );
+		char scratch[augphysx::PxAsc::PxF32StrLen];
+		storeString( augphysx::PxAsc::valueToStr(v, scratch, augphysx::PxAsc::PxF32StrLen) );
 
 	}
 	return *this;
@@ -168,8 +168,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(uint32_t v)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::IntStrLen];
-		storeString( physx::PxAsc::valueToStr(v, scratch, physx::PxAsc::IntStrLen) );
+		char scratch[augphysx::PxAsc::IntStrLen];
+		storeString( augphysx::PxAsc::valueToStr(v, scratch, augphysx::PxAsc::IntStrLen) );
 	}
 	return *this;
 }
@@ -182,8 +182,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(int32_t v)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::IntStrLen];
-		storeString( physx::PxAsc::valueToStr(v, scratch, physx::PxAsc::IntStrLen) );
+		char scratch[augphysx::PxAsc::IntStrLen];
+		storeString( augphysx::PxAsc::valueToStr(v, scratch, augphysx::PxAsc::IntStrLen) );
 	}
 	return *this;
 }
@@ -196,8 +196,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(uint16_t v)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::IntStrLen];
-		storeString( physx::PxAsc::valueToStr(v, scratch, physx::PxAsc::IntStrLen) );
+		char scratch[augphysx::PxAsc::IntStrLen];
+		storeString( augphysx::PxAsc::valueToStr(v, scratch, augphysx::PxAsc::IntStrLen) );
 	}
 	return *this;
 }
@@ -210,8 +210,8 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(int16_t v)
 	}
 	else
 	{
-		char scratch[physx::PxAsc::IntStrLen];
-		storeString( physx::PxAsc::valueToStr(v, scratch, physx::PxAsc::IntStrLen) );
+		char scratch[augphysx::PxAsc::IntStrLen];
+		storeString( augphysx::PxAsc::valueToStr(v, scratch, augphysx::PxAsc::IntStrLen) );
 	}
 	return *this;
 }
@@ -326,7 +326,7 @@ PX_INLINE PsIOStream& PsIOStream::operator>>(bool &v)
 
 #define NX_IOSTREAM_COMMA_SEPARATOR if(!mBinary) *this << ' ';
 
-PX_INLINE PsIOStream& PsIOStream::operator<<(const physx::PxVec3 &v)
+PX_INLINE PsIOStream& PsIOStream::operator<<(const augphysx::PxVec3 &v)
 {
 	*this << v.x; 
 	NX_IOSTREAM_COMMA_SEPARATOR;
@@ -336,7 +336,7 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(const physx::PxVec3 &v)
 	return *this;
 }
 
-PX_INLINE PsIOStream& PsIOStream::operator<<(const physx::PxQuat &v)
+PX_INLINE PsIOStream& PsIOStream::operator<<(const augphysx::PxQuat &v)
 {
 	*this << v.x;
 	NX_IOSTREAM_COMMA_SEPARATOR;
@@ -349,7 +349,7 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(const physx::PxQuat &v)
 }
 
 
-PX_INLINE PsIOStream& PsIOStream::operator<<(const physx::PxBounds3 &v)
+PX_INLINE PsIOStream& PsIOStream::operator<<(const augphysx::PxBounds3 &v)
 {
 	*this << v.minimum;
 	NX_IOSTREAM_COMMA_SEPARATOR;
@@ -357,7 +357,7 @@ PX_INLINE PsIOStream& PsIOStream::operator<<(const physx::PxBounds3 &v)
 	return *this;
 }
 
-PX_INLINE PsIOStream& PsIOStream::operator>>(physx::PxVec3 &v)
+PX_INLINE PsIOStream& PsIOStream::operator>>(augphysx::PxVec3 &v)
 {
 	*this >> v.x;
 	*this >> v.y;
@@ -365,7 +365,7 @@ PX_INLINE PsIOStream& PsIOStream::operator>>(physx::PxVec3 &v)
 	return *this;
 }
 
-PX_INLINE PsIOStream& PsIOStream::operator>>(physx::PxQuat &v)
+PX_INLINE PsIOStream& PsIOStream::operator>>(augphysx::PxQuat &v)
 {
 	*this>>v.x;
 	*this>>v.y;
@@ -374,7 +374,7 @@ PX_INLINE PsIOStream& PsIOStream::operator>>(physx::PxQuat &v)
 	return *this;
 }
 
-PX_INLINE PsIOStream& PsIOStream::operator>>(physx::PxBounds3 &v)
+PX_INLINE PsIOStream& PsIOStream::operator>>(augphysx::PxBounds3 &v)
 {
 	*this >> v.minimum;
 	*this >> v.maximum;

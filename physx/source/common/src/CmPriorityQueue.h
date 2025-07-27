@@ -36,7 +36,7 @@
 #include "PsAllocator.h"
 #include "foundation/PxMemory.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Cm
 {
@@ -180,7 +180,7 @@ namespace Cm
 		InlinePriorityQueue<Element, Capacity, Comparator>& operator = (const InlinePriorityQueue<Element, Capacity, Comparator>);
 	};
 
-	template <typename Element, typename Comparator, typename Alloc = typename physx::shdfnd::AllocatorTraits<Element>::Type>
+	template <typename Element, typename Comparator, typename Alloc = typename augphysx::shdfnd::AllocatorTraits<Element>::Type>
 	class PriorityQueue : public PriorityQueueBase<Element, Comparator>, protected Alloc
 	{
 		PxU32 mCapacity;
@@ -219,7 +219,7 @@ namespace Cm
 				Element* newElems = reinterpret_cast<Element*>(Alloc::allocate(sizeof(Element)*newCapacity, __FILE__, __LINE__));
 				if(this->mDataPtr)
 				{
-					physx::PxMemCopy(newElems, this->mDataPtr, sizeof(Element) * this->mHeapSize);
+					augphysx::PxMemCopy(newElems, this->mDataPtr, sizeof(Element) * this->mHeapSize);
 					Alloc::deallocate(this->mDataPtr);
 				}
 				this->mDataPtr = newElems;

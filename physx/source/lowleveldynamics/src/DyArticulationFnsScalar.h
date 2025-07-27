@@ -38,7 +38,7 @@
 #include "DyArticulationScalar.h"
 #include "DySpatial.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

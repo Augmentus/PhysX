@@ -38,10 +38,10 @@
 #include "GuGJK.h"
 #include "GuSweepSharedTests.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 using namespace Gu;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 // PT: TODO: remove this function, replace with Midphase:: call at calling sites (TA34704)
 bool Gu::checkOverlapAABB_triangleGeom(const PxGeometry& geom, const PxTransform& pose, const PxBounds3& box)

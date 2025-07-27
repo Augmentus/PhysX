@@ -34,7 +34,7 @@
 #include "PxvDynamics.h"
 #include "CmSpatialVector.h"
 
-namespace physx
+namespace augphysx
 {
 struct PxsCCDBody;
 

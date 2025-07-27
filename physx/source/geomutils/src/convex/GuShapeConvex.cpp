@@ -36,7 +36,7 @@
 #include "GuHillClimbing.h"
 #include "PsFPU.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 static PX_FORCE_INLINE PxU32 selectClosestPolygon(PxReal& maxDp_, PxU32 numPolygons, const Gu::HullPolygonData* polys, const PxVec3& axis)
@@ -136,8 +136,8 @@ static void HullProjectionCB_SmallConvex(const PolygonalData& data, const PxVec3
 		while(numVerts--)
 		{
 			const PxReal dp = (*verts++).dot(vertexSpaceDirection);
-			minimum = physx::intrinsics::selectMin(minimum, dp);
-			maximum = physx::intrinsics::selectMax(maximum, dp);
+			minimum = augphysx::intrinsics::selectMin(minimum, dp);
+			maximum = augphysx::intrinsics::selectMax(maximum, dp);
 		}
 
 	}
@@ -399,9 +399,9 @@ static PX_FORCE_INLINE void projectBox(PxVec3& p, const PxVec3& localDir, const 
 //	p.x = (localDir.x >= 0) ? extents.x : -extents.x;
 //	p.y = (localDir.y >= 0) ? extents.y : -extents.y;
 //	p.z = (localDir.z >= 0) ? extents.z : -extents.z;
-	p.x = physx::intrinsics::fsel(localDir.x, extents.x, -extents.x);
-	p.y = physx::intrinsics::fsel(localDir.y, extents.y, -extents.y);
-	p.z = physx::intrinsics::fsel(localDir.z, extents.z, -extents.z);
+	p.x = augphysx::intrinsics::fsel(localDir.x, extents.x, -extents.x);
+	p.y = augphysx::intrinsics::fsel(localDir.y, extents.y, -extents.y);
+	p.z = augphysx::intrinsics::fsel(localDir.z, extents.z, -extents.z);
 }
 
 static void	HullProjectionCB_Box(const PolygonalData& data, const PxVec3& dir, const Cm::Matrix34& world, const Cm::FastVertex2ShapeScaling& scaling, PxReal& minimum, PxReal& maximum)

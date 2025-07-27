@@ -36,9 +36,9 @@
 #include "GuInternal.h"
 #include "GuGJK.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 
 #define GU_SAFE_DISTANCE_FOR_NORMAL_COMPUTATION 0.1f
 

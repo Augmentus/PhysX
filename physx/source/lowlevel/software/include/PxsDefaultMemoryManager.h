@@ -35,7 +35,7 @@
 #include "PsAllocator.h"
 #include "PsArray.h"
 
-namespace physx
+namespace augphysx
 {
 	
 	class PxsDefaultMemoryAllocator : public Ps::VirtualAllocatorCallback

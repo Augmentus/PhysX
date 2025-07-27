@@ -34,10 +34,10 @@
 #include "PsUtilities.h"
 #include "foundation/PxBounds3.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy

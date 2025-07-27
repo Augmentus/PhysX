@@ -53,7 +53,7 @@
 
 class OverlapFilterTask;
 
-namespace physx
+namespace augphysx
 {
 
 // PT: TODO: move INVALID_FILTER_PAIR_INDEX out of public API

@@ -37,14 +37,14 @@
 
 #define PX_PROPERTY_INFO_NAME PxPropertyInfoName
 	static PxU32ToName g_physx__PxShapeFlag__EnumConversion[] = {
-		{ "eSIMULATION_SHAPE", static_cast<PxU32>( physx::PxShapeFlag::eSIMULATION_SHAPE ) },
-		{ "eSCENE_QUERY_SHAPE", static_cast<PxU32>( physx::PxShapeFlag::eSCENE_QUERY_SHAPE ) },
-		{ "eTRIGGER_SHAPE", static_cast<PxU32>( physx::PxShapeFlag::eTRIGGER_SHAPE ) },
-		{ "eVISUALIZATION", static_cast<PxU32>( physx::PxShapeFlag::eVISUALIZATION ) },
+		{ "eSIMULATION_SHAPE", static_cast<PxU32>( augphysx::PxShapeFlag::eSIMULATION_SHAPE ) },
+		{ "eSCENE_QUERY_SHAPE", static_cast<PxU32>( augphysx::PxShapeFlag::eSCENE_QUERY_SHAPE ) },
+		{ "eTRIGGER_SHAPE", static_cast<PxU32>( augphysx::PxShapeFlag::eTRIGGER_SHAPE ) },
+		{ "eVISUALIZATION", static_cast<PxU32>( augphysx::PxShapeFlag::eVISUALIZATION ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxShapeFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxShapeFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxShapeFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxShapeFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxPhysics;
 	struct PxPhysicsGeneratedValues
 	{
@@ -108,24 +108,24 @@ template<> struct PxEnumTraits< physx::PxShapeFlag::Enum > { PxEnumTraits() : Na
 	};
 
 	static PxU32ToName g_physx__PxMaterialFlag__EnumConversion[] = {
-		{ "eDISABLE_FRICTION", static_cast<PxU32>( physx::PxMaterialFlag::eDISABLE_FRICTION ) },
-		{ "eDISABLE_STRONG_FRICTION", static_cast<PxU32>( physx::PxMaterialFlag::eDISABLE_STRONG_FRICTION ) },
-		{ "eIMPROVED_PATCH_FRICTION", static_cast<PxU32>( physx::PxMaterialFlag::eIMPROVED_PATCH_FRICTION ) },
+		{ "eDISABLE_FRICTION", static_cast<PxU32>( augphysx::PxMaterialFlag::eDISABLE_FRICTION ) },
+		{ "eDISABLE_STRONG_FRICTION", static_cast<PxU32>( augphysx::PxMaterialFlag::eDISABLE_STRONG_FRICTION ) },
+		{ "eIMPROVED_PATCH_FRICTION", static_cast<PxU32>( augphysx::PxMaterialFlag::eIMPROVED_PATCH_FRICTION ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxMaterialFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxMaterialFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxMaterialFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxMaterialFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxCombineMode__EnumConversion[] = {
-		{ "eAVERAGE", static_cast<PxU32>( physx::PxCombineMode::eAVERAGE ) },
-		{ "eMIN", static_cast<PxU32>( physx::PxCombineMode::eMIN ) },
-		{ "eMULTIPLY", static_cast<PxU32>( physx::PxCombineMode::eMULTIPLY ) },
-		{ "eMAX", static_cast<PxU32>( physx::PxCombineMode::eMAX ) },
-		{ "eN_VALUES", static_cast<PxU32>( physx::PxCombineMode::eN_VALUES ) },
-		{ "ePAD_32", static_cast<PxU32>( physx::PxCombineMode::ePAD_32 ) },
+		{ "eAVERAGE", static_cast<PxU32>( augphysx::PxCombineMode::eAVERAGE ) },
+		{ "eMIN", static_cast<PxU32>( augphysx::PxCombineMode::eMIN ) },
+		{ "eMULTIPLY", static_cast<PxU32>( augphysx::PxCombineMode::eMULTIPLY ) },
+		{ "eMAX", static_cast<PxU32>( augphysx::PxCombineMode::eMAX ) },
+		{ "eN_VALUES", static_cast<PxU32>( augphysx::PxCombineMode::eN_VALUES ) },
+		{ "ePAD_32", static_cast<PxU32>( augphysx::PxCombineMode::ePAD_32 ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxCombineMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxCombineMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxCombineMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxCombineMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxMaterial;
 	struct PxMaterialGeneratedValues
 	{
@@ -207,22 +207,22 @@ template<> struct PxEnumTraits< physx::PxCombineMode::Enum > { PxEnumTraits() : 
 	};
 
 	static PxU32ToName g_physx__PxActorType__EnumConversion[] = {
-		{ "eRIGID_STATIC", static_cast<PxU32>( physx::PxActorType::eRIGID_STATIC ) },
-		{ "eRIGID_DYNAMIC", static_cast<PxU32>( physx::PxActorType::eRIGID_DYNAMIC ) },
-		{ "eARTICULATION_LINK", static_cast<PxU32>( physx::PxActorType::eARTICULATION_LINK ) },
+		{ "eRIGID_STATIC", static_cast<PxU32>( augphysx::PxActorType::eRIGID_STATIC ) },
+		{ "eRIGID_DYNAMIC", static_cast<PxU32>( augphysx::PxActorType::eRIGID_DYNAMIC ) },
+		{ "eARTICULATION_LINK", static_cast<PxU32>( augphysx::PxActorType::eARTICULATION_LINK ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxActorType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxActorType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxActorType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxActorType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxActorFlag__EnumConversion[] = {
-		{ "eVISUALIZATION", static_cast<PxU32>( physx::PxActorFlag::eVISUALIZATION ) },
-		{ "eDISABLE_GRAVITY", static_cast<PxU32>( physx::PxActorFlag::eDISABLE_GRAVITY ) },
-		{ "eSEND_SLEEP_NOTIFIES", static_cast<PxU32>( physx::PxActorFlag::eSEND_SLEEP_NOTIFIES ) },
-		{ "eDISABLE_SIMULATION", static_cast<PxU32>( physx::PxActorFlag::eDISABLE_SIMULATION ) },
+		{ "eVISUALIZATION", static_cast<PxU32>( augphysx::PxActorFlag::eVISUALIZATION ) },
+		{ "eDISABLE_GRAVITY", static_cast<PxU32>( augphysx::PxActorFlag::eDISABLE_GRAVITY ) },
+		{ "eSEND_SLEEP_NOTIFIES", static_cast<PxU32>( augphysx::PxActorFlag::eSEND_SLEEP_NOTIFIES ) },
+		{ "eDISABLE_SIMULATION", static_cast<PxU32>( augphysx::PxActorFlag::eDISABLE_SIMULATION ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxActorFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxActorFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxActorFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxActorFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxActor;
 	struct PxActorGeneratedValues
 	{
@@ -352,30 +352,30 @@ template<> struct PxEnumTraits< physx::PxActorFlag::Enum > { PxEnumTraits() : Na
 	};
 
 	static PxU32ToName g_physx__PxForceMode__EnumConversion[] = {
-		{ "eFORCE", static_cast<PxU32>( physx::PxForceMode::eFORCE ) },
-		{ "eIMPULSE", static_cast<PxU32>( physx::PxForceMode::eIMPULSE ) },
-		{ "eVELOCITY_CHANGE", static_cast<PxU32>( physx::PxForceMode::eVELOCITY_CHANGE ) },
-		{ "eACCELERATION", static_cast<PxU32>( physx::PxForceMode::eACCELERATION ) },
+		{ "eFORCE", static_cast<PxU32>( augphysx::PxForceMode::eFORCE ) },
+		{ "eIMPULSE", static_cast<PxU32>( augphysx::PxForceMode::eIMPULSE ) },
+		{ "eVELOCITY_CHANGE", static_cast<PxU32>( augphysx::PxForceMode::eVELOCITY_CHANGE ) },
+		{ "eACCELERATION", static_cast<PxU32>( augphysx::PxForceMode::eACCELERATION ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxForceMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxForceMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxForceMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxForceMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxRigidBodyFlag__EnumConversion[] = {
-		{ "eKINEMATIC", static_cast<PxU32>( physx::PxRigidBodyFlag::eKINEMATIC ) },
-		{ "eUSE_KINEMATIC_TARGET_FOR_SCENE_QUERIES", static_cast<PxU32>( physx::PxRigidBodyFlag::eUSE_KINEMATIC_TARGET_FOR_SCENE_QUERIES ) },
-		{ "eENABLE_CCD", static_cast<PxU32>( physx::PxRigidBodyFlag::eENABLE_CCD ) },
-		{ "eENABLE_CCD_FRICTION", static_cast<PxU32>( physx::PxRigidBodyFlag::eENABLE_CCD_FRICTION ) },
-		{ "eENABLE_POSE_INTEGRATION_PREVIEW", static_cast<PxU32>( physx::PxRigidBodyFlag::eENABLE_POSE_INTEGRATION_PREVIEW ) },
-		{ "eENABLE_SPECULATIVE_CCD", static_cast<PxU32>( physx::PxRigidBodyFlag::eENABLE_SPECULATIVE_CCD ) },
-		{ "eENABLE_CCD_MAX_CONTACT_IMPULSE", static_cast<PxU32>( physx::PxRigidBodyFlag::eENABLE_CCD_MAX_CONTACT_IMPULSE ) },
-		{ "eRETAIN_ACCELERATIONS", static_cast<PxU32>( physx::PxRigidBodyFlag::eRETAIN_ACCELERATIONS ) },
-		{ "eFORCE_KINE_KINE_NOTIFICATIONS", static_cast<PxU32>( physx::PxRigidBodyFlag::eFORCE_KINE_KINE_NOTIFICATIONS ) },
-		{ "eFORCE_STATIC_KINE_NOTIFICATIONS", static_cast<PxU32>( physx::PxRigidBodyFlag::eFORCE_STATIC_KINE_NOTIFICATIONS ) },
-		{ "eRESERVED", static_cast<PxU32>( physx::PxRigidBodyFlag::eRESERVED ) },
+		{ "eKINEMATIC", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eKINEMATIC ) },
+		{ "eUSE_KINEMATIC_TARGET_FOR_SCENE_QUERIES", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eUSE_KINEMATIC_TARGET_FOR_SCENE_QUERIES ) },
+		{ "eENABLE_CCD", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eENABLE_CCD ) },
+		{ "eENABLE_CCD_FRICTION", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eENABLE_CCD_FRICTION ) },
+		{ "eENABLE_POSE_INTEGRATION_PREVIEW", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eENABLE_POSE_INTEGRATION_PREVIEW ) },
+		{ "eENABLE_SPECULATIVE_CCD", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eENABLE_SPECULATIVE_CCD ) },
+		{ "eENABLE_CCD_MAX_CONTACT_IMPULSE", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eENABLE_CCD_MAX_CONTACT_IMPULSE ) },
+		{ "eRETAIN_ACCELERATIONS", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eRETAIN_ACCELERATIONS ) },
+		{ "eFORCE_KINE_KINE_NOTIFICATIONS", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eFORCE_KINE_KINE_NOTIFICATIONS ) },
+		{ "eFORCE_STATIC_KINE_NOTIFICATIONS", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eFORCE_STATIC_KINE_NOTIFICATIONS ) },
+		{ "eRESERVED", static_cast<PxU32>( augphysx::PxRigidBodyFlag::eRESERVED ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxRigidBodyFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxRigidBodyFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxRigidBodyFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxRigidBodyFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxRigidBody;
 	struct PxRigidBodyGeneratedValues
 		: PxRigidActorGeneratedValues	{
@@ -485,16 +485,16 @@ template<> struct PxEnumTraits< physx::PxRigidBodyFlag::Enum > { PxEnumTraits() 
 	};
 
 	static PxU32ToName g_physx__PxRigidDynamicLockFlag__EnumConversion[] = {
-		{ "eLOCK_LINEAR_X", static_cast<PxU32>( physx::PxRigidDynamicLockFlag::eLOCK_LINEAR_X ) },
-		{ "eLOCK_LINEAR_Y", static_cast<PxU32>( physx::PxRigidDynamicLockFlag::eLOCK_LINEAR_Y ) },
-		{ "eLOCK_LINEAR_Z", static_cast<PxU32>( physx::PxRigidDynamicLockFlag::eLOCK_LINEAR_Z ) },
-		{ "eLOCK_ANGULAR_X", static_cast<PxU32>( physx::PxRigidDynamicLockFlag::eLOCK_ANGULAR_X ) },
-		{ "eLOCK_ANGULAR_Y", static_cast<PxU32>( physx::PxRigidDynamicLockFlag::eLOCK_ANGULAR_Y ) },
-		{ "eLOCK_ANGULAR_Z", static_cast<PxU32>( physx::PxRigidDynamicLockFlag::eLOCK_ANGULAR_Z ) },
+		{ "eLOCK_LINEAR_X", static_cast<PxU32>( augphysx::PxRigidDynamicLockFlag::eLOCK_LINEAR_X ) },
+		{ "eLOCK_LINEAR_Y", static_cast<PxU32>( augphysx::PxRigidDynamicLockFlag::eLOCK_LINEAR_Y ) },
+		{ "eLOCK_LINEAR_Z", static_cast<PxU32>( augphysx::PxRigidDynamicLockFlag::eLOCK_LINEAR_Z ) },
+		{ "eLOCK_ANGULAR_X", static_cast<PxU32>( augphysx::PxRigidDynamicLockFlag::eLOCK_ANGULAR_X ) },
+		{ "eLOCK_ANGULAR_Y", static_cast<PxU32>( augphysx::PxRigidDynamicLockFlag::eLOCK_ANGULAR_Y ) },
+		{ "eLOCK_ANGULAR_Z", static_cast<PxU32>( augphysx::PxRigidDynamicLockFlag::eLOCK_ANGULAR_Z ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxRigidDynamicLockFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxRigidDynamicLockFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxRigidDynamicLockFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxRigidDynamicLockFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxRigidDynamic;
 	struct PxRigidDynamicGeneratedValues
 		: PxRigidBodyGeneratedValues	{
@@ -746,12 +746,12 @@ template<> struct PxEnumTraits< physx::PxRigidDynamicLockFlag::Enum > { PxEnumTr
 	};
 
 	static PxU32ToName g_physx__PxArticulationJointDriveType__EnumConversion[] = {
-		{ "eTARGET", static_cast<PxU32>( physx::PxArticulationJointDriveType::eTARGET ) },
-		{ "eERROR", static_cast<PxU32>( physx::PxArticulationJointDriveType::eERROR ) },
+		{ "eTARGET", static_cast<PxU32>( augphysx::PxArticulationJointDriveType::eTARGET ) },
+		{ "eERROR", static_cast<PxU32>( augphysx::PxArticulationJointDriveType::eERROR ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxArticulationJointDriveType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationJointDriveType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxArticulationJointDriveType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationJointDriveType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxArticulationJoint;
 	struct PxArticulationJointGeneratedValues
 		: PxArticulationJointBaseGeneratedValues	{
@@ -865,49 +865,49 @@ template<> struct PxEnumTraits< physx::PxArticulationJointDriveType::Enum > { Px
 	};
 
 	static PxU32ToName g_physx__PxArticulationJointType__EnumConversion[] = {
-		{ "eFIX", static_cast<PxU32>( physx::PxArticulationJointType::eFIX ) },
-		{ "ePRISMATIC", static_cast<PxU32>( physx::PxArticulationJointType::ePRISMATIC ) },
-		{ "eREVOLUTE", static_cast<PxU32>( physx::PxArticulationJointType::eREVOLUTE ) },
-		{ "eSPHERICAL", static_cast<PxU32>( physx::PxArticulationJointType::eSPHERICAL ) },
-		{ "eUNDEFINED", static_cast<PxU32>( physx::PxArticulationJointType::eUNDEFINED ) },
+		{ "eFIX", static_cast<PxU32>( augphysx::PxArticulationJointType::eFIX ) },
+		{ "ePRISMATIC", static_cast<PxU32>( augphysx::PxArticulationJointType::ePRISMATIC ) },
+		{ "eREVOLUTE", static_cast<PxU32>( augphysx::PxArticulationJointType::eREVOLUTE ) },
+		{ "eSPHERICAL", static_cast<PxU32>( augphysx::PxArticulationJointType::eSPHERICAL ) },
+		{ "eUNDEFINED", static_cast<PxU32>( augphysx::PxArticulationJointType::eUNDEFINED ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxArticulationJointType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationJointType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxArticulationJointType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationJointType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxArticulationAxis__EnumConversion[] = {
-		{ "eTWIST", static_cast<PxU32>( physx::PxArticulationAxis::eTWIST ) },
-		{ "eSWING1", static_cast<PxU32>( physx::PxArticulationAxis::eSWING1 ) },
-		{ "eSWING2", static_cast<PxU32>( physx::PxArticulationAxis::eSWING2 ) },
-		{ "eX", static_cast<PxU32>( physx::PxArticulationAxis::eX ) },
-		{ "eY", static_cast<PxU32>( physx::PxArticulationAxis::eY ) },
-		{ "eZ", static_cast<PxU32>( physx::PxArticulationAxis::eZ ) },
+		{ "eTWIST", static_cast<PxU32>( augphysx::PxArticulationAxis::eTWIST ) },
+		{ "eSWING1", static_cast<PxU32>( augphysx::PxArticulationAxis::eSWING1 ) },
+		{ "eSWING2", static_cast<PxU32>( augphysx::PxArticulationAxis::eSWING2 ) },
+		{ "eX", static_cast<PxU32>( augphysx::PxArticulationAxis::eX ) },
+		{ "eY", static_cast<PxU32>( augphysx::PxArticulationAxis::eY ) },
+		{ "eZ", static_cast<PxU32>( augphysx::PxArticulationAxis::eZ ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxArticulationAxis::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationAxis__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxArticulationAxis::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationAxis__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxArticulationMotion__EnumConversion[] = {
-		{ "eLOCKED", static_cast<PxU32>( physx::PxArticulationMotion::eLOCKED ) },
-		{ "eLIMITED", static_cast<PxU32>( physx::PxArticulationMotion::eLIMITED ) },
-		{ "eFREE", static_cast<PxU32>( physx::PxArticulationMotion::eFREE ) },
+		{ "eLOCKED", static_cast<PxU32>( augphysx::PxArticulationMotion::eLOCKED ) },
+		{ "eLIMITED", static_cast<PxU32>( augphysx::PxArticulationMotion::eLIMITED ) },
+		{ "eFREE", static_cast<PxU32>( augphysx::PxArticulationMotion::eFREE ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxArticulationMotion::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationMotion__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxArticulationMotion::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationMotion__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxArticulationDriveType__EnumConversion[] = {
-		{ "eFORCE", static_cast<PxU32>( physx::PxArticulationDriveType::eFORCE ) },
-		{ "eACCELERATION", static_cast<PxU32>( physx::PxArticulationDriveType::eACCELERATION ) },
-		{ "eTARGET", static_cast<PxU32>( physx::PxArticulationDriveType::eTARGET ) },
-		{ "eVELOCITY", static_cast<PxU32>( physx::PxArticulationDriveType::eVELOCITY ) },
-		{ "eNONE", static_cast<PxU32>( physx::PxArticulationDriveType::eNONE ) },
+		{ "eFORCE", static_cast<PxU32>( augphysx::PxArticulationDriveType::eFORCE ) },
+		{ "eACCELERATION", static_cast<PxU32>( augphysx::PxArticulationDriveType::eACCELERATION ) },
+		{ "eTARGET", static_cast<PxU32>( augphysx::PxArticulationDriveType::eTARGET ) },
+		{ "eVELOCITY", static_cast<PxU32>( augphysx::PxArticulationDriveType::eVELOCITY ) },
+		{ "eNONE", static_cast<PxU32>( augphysx::PxArticulationDriveType::eNONE ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxArticulationDriveType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationDriveType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxArticulationDriveType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationDriveType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxArticulationJointReducedCoordinate;
 	struct PxArticulationJointReducedCoordinateGeneratedValues
 		: PxArticulationJointBaseGeneratedValues	{
 		PxArticulationJointType::Enum JointType;
-		PxArticulationMotion::Enum Motion[physx::PxArticulationAxis::eCOUNT];
+		PxArticulationMotion::Enum Motion[augphysx::PxArticulationAxis::eCOUNT];
 		PxReal FrictionCoefficient;
 		const char * ConcreteTypeName;
 		PxReal MaxJointVelocity;
@@ -1118,25 +1118,25 @@ template<> struct PxEnumTraits< physx::PxArticulationDriveType::Enum > { PxEnumT
 	};
 
 	static PxU32ToName g_physx__PxArticulationFlag__EnumConversion[] = {
-		{ "eFIX_BASE", static_cast<PxU32>( physx::PxArticulationFlag::eFIX_BASE ) },
-		{ "eDRIVE_LIMITS_ARE_FORCES", static_cast<PxU32>( physx::PxArticulationFlag::eDRIVE_LIMITS_ARE_FORCES ) },
+		{ "eFIX_BASE", static_cast<PxU32>( augphysx::PxArticulationFlag::eFIX_BASE ) },
+		{ "eDRIVE_LIMITS_ARE_FORCES", static_cast<PxU32>( augphysx::PxArticulationFlag::eDRIVE_LIMITS_ARE_FORCES ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxArticulationFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxArticulationFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxArticulationCache__EnumConversion[] = {
-		{ "eVELOCITY", static_cast<PxU32>( physx::PxArticulationCache::eVELOCITY ) },
-		{ "eACCELERATION", static_cast<PxU32>( physx::PxArticulationCache::eACCELERATION ) },
-		{ "ePOSITION", static_cast<PxU32>( physx::PxArticulationCache::ePOSITION ) },
-		{ "eFORCE", static_cast<PxU32>( physx::PxArticulationCache::eFORCE ) },
-		{ "eLINKVELOCITY", static_cast<PxU32>( physx::PxArticulationCache::eLINKVELOCITY ) },
-		{ "eLINKACCELERATION", static_cast<PxU32>( physx::PxArticulationCache::eLINKACCELERATION ) },
-		{ "eROOT", static_cast<PxU32>( physx::PxArticulationCache::eROOT ) },
-		{ "eALL", static_cast<PxU32>( physx::PxArticulationCache::eALL ) },
+		{ "eVELOCITY", static_cast<PxU32>( augphysx::PxArticulationCache::eVELOCITY ) },
+		{ "eACCELERATION", static_cast<PxU32>( augphysx::PxArticulationCache::eACCELERATION ) },
+		{ "ePOSITION", static_cast<PxU32>( augphysx::PxArticulationCache::ePOSITION ) },
+		{ "eFORCE", static_cast<PxU32>( augphysx::PxArticulationCache::eFORCE ) },
+		{ "eLINKVELOCITY", static_cast<PxU32>( augphysx::PxArticulationCache::eLINKVELOCITY ) },
+		{ "eLINKACCELERATION", static_cast<PxU32>( augphysx::PxArticulationCache::eLINKACCELERATION ) },
+		{ "eROOT", static_cast<PxU32>( augphysx::PxArticulationCache::eROOT ) },
+		{ "eALL", static_cast<PxU32>( augphysx::PxArticulationCache::eALL ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxArticulationCache::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationCache__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxArticulationCache::Enum > { PxEnumTraits() : NameConversion( g_physx__PxArticulationCache__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxArticulationReducedCoordinate;
 	struct PxArticulationReducedCoordinateGeneratedValues
 		: PxArticulationBaseGeneratedValues	{
@@ -1260,21 +1260,21 @@ template<> struct PxEnumTraits< physx::PxArticulationCache::Enum > { PxEnumTrait
 	};
 
 	static PxU32ToName g_physx__PxConstraintFlag__EnumConversion[] = {
-		{ "eBROKEN", static_cast<PxU32>( physx::PxConstraintFlag::eBROKEN ) },
-		{ "ePROJECT_TO_ACTOR0", static_cast<PxU32>( physx::PxConstraintFlag::ePROJECT_TO_ACTOR0 ) },
-		{ "ePROJECT_TO_ACTOR1", static_cast<PxU32>( physx::PxConstraintFlag::ePROJECT_TO_ACTOR1 ) },
-		{ "ePROJECTION", static_cast<PxU32>( physx::PxConstraintFlag::ePROJECTION ) },
-		{ "eCOLLISION_ENABLED", static_cast<PxU32>( physx::PxConstraintFlag::eCOLLISION_ENABLED ) },
-		{ "eVISUALIZATION", static_cast<PxU32>( physx::PxConstraintFlag::eVISUALIZATION ) },
-		{ "eDRIVE_LIMITS_ARE_FORCES", static_cast<PxU32>( physx::PxConstraintFlag::eDRIVE_LIMITS_ARE_FORCES ) },
-		{ "eIMPROVED_SLERP", static_cast<PxU32>( physx::PxConstraintFlag::eIMPROVED_SLERP ) },
-		{ "eDISABLE_PREPROCESSING", static_cast<PxU32>( physx::PxConstraintFlag::eDISABLE_PREPROCESSING ) },
-		{ "eENABLE_EXTENDED_LIMITS", static_cast<PxU32>( physx::PxConstraintFlag::eENABLE_EXTENDED_LIMITS ) },
-		{ "eGPU_COMPATIBLE", static_cast<PxU32>( physx::PxConstraintFlag::eGPU_COMPATIBLE ) },
+		{ "eBROKEN", static_cast<PxU32>( augphysx::PxConstraintFlag::eBROKEN ) },
+		{ "ePROJECT_TO_ACTOR0", static_cast<PxU32>( augphysx::PxConstraintFlag::ePROJECT_TO_ACTOR0 ) },
+		{ "ePROJECT_TO_ACTOR1", static_cast<PxU32>( augphysx::PxConstraintFlag::ePROJECT_TO_ACTOR1 ) },
+		{ "ePROJECTION", static_cast<PxU32>( augphysx::PxConstraintFlag::ePROJECTION ) },
+		{ "eCOLLISION_ENABLED", static_cast<PxU32>( augphysx::PxConstraintFlag::eCOLLISION_ENABLED ) },
+		{ "eVISUALIZATION", static_cast<PxU32>( augphysx::PxConstraintFlag::eVISUALIZATION ) },
+		{ "eDRIVE_LIMITS_ARE_FORCES", static_cast<PxU32>( augphysx::PxConstraintFlag::eDRIVE_LIMITS_ARE_FORCES ) },
+		{ "eIMPROVED_SLERP", static_cast<PxU32>( augphysx::PxConstraintFlag::eIMPROVED_SLERP ) },
+		{ "eDISABLE_PREPROCESSING", static_cast<PxU32>( augphysx::PxConstraintFlag::eDISABLE_PREPROCESSING ) },
+		{ "eENABLE_EXTENDED_LIMITS", static_cast<PxU32>( augphysx::PxConstraintFlag::eENABLE_EXTENDED_LIMITS ) },
+		{ "eGPU_COMPATIBLE", static_cast<PxU32>( augphysx::PxConstraintFlag::eGPU_COMPATIBLE ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxConstraintFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxConstraintFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxConstraintFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxConstraintFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxConstraint;
 	struct PxConstraintGeneratedValues
 	{
@@ -1348,17 +1348,17 @@ template<> struct PxEnumTraits< physx::PxConstraintFlag::Enum > { PxEnumTraits()
 	};
 
 	static PxU32ToName g_physx__PxGeometryType__EnumConversion[] = {
-		{ "eSPHERE", static_cast<PxU32>( physx::PxGeometryType::eSPHERE ) },
-		{ "ePLANE", static_cast<PxU32>( physx::PxGeometryType::ePLANE ) },
-		{ "eCAPSULE", static_cast<PxU32>( physx::PxGeometryType::eCAPSULE ) },
-		{ "eBOX", static_cast<PxU32>( physx::PxGeometryType::eBOX ) },
-		{ "eCONVEXMESH", static_cast<PxU32>( physx::PxGeometryType::eCONVEXMESH ) },
-		{ "eTRIANGLEMESH", static_cast<PxU32>( physx::PxGeometryType::eTRIANGLEMESH ) },
-		{ "eHEIGHTFIELD", static_cast<PxU32>( physx::PxGeometryType::eHEIGHTFIELD ) },
+		{ "eSPHERE", static_cast<PxU32>( augphysx::PxGeometryType::eSPHERE ) },
+		{ "ePLANE", static_cast<PxU32>( augphysx::PxGeometryType::ePLANE ) },
+		{ "eCAPSULE", static_cast<PxU32>( augphysx::PxGeometryType::eCAPSULE ) },
+		{ "eBOX", static_cast<PxU32>( augphysx::PxGeometryType::eBOX ) },
+		{ "eCONVEXMESH", static_cast<PxU32>( augphysx::PxGeometryType::eCONVEXMESH ) },
+		{ "eTRIANGLEMESH", static_cast<PxU32>( augphysx::PxGeometryType::eTRIANGLEMESH ) },
+		{ "eHEIGHTFIELD", static_cast<PxU32>( augphysx::PxGeometryType::eHEIGHTFIELD ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxGeometryType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxGeometryType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxGeometryType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxGeometryType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxShape;
 	struct PxShapeGeneratedValues
 	{
@@ -1776,11 +1776,11 @@ template<> struct PxEnumTraits< physx::PxGeometryType::Enum > { PxEnumTraits() :
 	};
 
 	static PxU32ToName g_physx__PxConvexMeshGeometryFlag__EnumConversion[] = {
-		{ "eTIGHT_BOUNDS", static_cast<PxU32>( physx::PxConvexMeshGeometryFlag::eTIGHT_BOUNDS ) },
+		{ "eTIGHT_BOUNDS", static_cast<PxU32>( augphysx::PxConvexMeshGeometryFlag::eTIGHT_BOUNDS ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxConvexMeshGeometryFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxConvexMeshGeometryFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxConvexMeshGeometryFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxConvexMeshGeometryFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxConvexMeshGeometry;
 	struct PxConvexMeshGeometryGeneratedValues
 		: PxGeometryGeneratedValues	{
@@ -1942,11 +1942,11 @@ template<> struct PxEnumTraits< physx::PxConvexMeshGeometryFlag::Enum > { PxEnum
 	};
 
 	static PxU32ToName g_physx__PxMeshGeometryFlag__EnumConversion[] = {
-		{ "eDOUBLE_SIDED", static_cast<PxU32>( physx::PxMeshGeometryFlag::eDOUBLE_SIDED ) },
+		{ "eDOUBLE_SIDED", static_cast<PxU32>( augphysx::PxMeshGeometryFlag::eDOUBLE_SIDED ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxMeshGeometryFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxMeshGeometryFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxMeshGeometryFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxMeshGeometryFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxTriangleMeshGeometry;
 	struct PxTriangleMeshGeometryGeneratedValues
 		: PxGeometryGeneratedValues	{
@@ -2076,17 +2076,17 @@ template<> struct PxEnumTraits< physx::PxMeshGeometryFlag::Enum > { PxEnumTraits
 	};
 
 	static PxU32ToName g_physx__PxHeightFieldFormat__EnumConversion[] = {
-		{ "eS16_TM", static_cast<PxU32>( physx::PxHeightFieldFormat::eS16_TM ) },
+		{ "eS16_TM", static_cast<PxU32>( augphysx::PxHeightFieldFormat::eS16_TM ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxHeightFieldFormat::Enum > { PxEnumTraits() : NameConversion( g_physx__PxHeightFieldFormat__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxHeightFieldFormat::Enum > { PxEnumTraits() : NameConversion( g_physx__PxHeightFieldFormat__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxHeightFieldFlag__EnumConversion[] = {
-		{ "eNO_BOUNDARY_EDGES", static_cast<PxU32>( physx::PxHeightFieldFlag::eNO_BOUNDARY_EDGES ) },
+		{ "eNO_BOUNDARY_EDGES", static_cast<PxU32>( augphysx::PxHeightFieldFlag::eNO_BOUNDARY_EDGES ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxHeightFieldFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxHeightFieldFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxHeightFieldFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxHeightFieldFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxHeightFieldDesc;
 	struct PxHeightFieldDescGeneratedValues
 	{
@@ -2156,123 +2156,123 @@ template<> struct PxEnumTraits< physx::PxHeightFieldFlag::Enum > { PxEnumTraits(
 	};
 
 	static PxU32ToName g_physx__PxSceneFlag__EnumConversion[] = {
-		{ "eENABLE_ACTIVE_ACTORS", static_cast<PxU32>( physx::PxSceneFlag::eENABLE_ACTIVE_ACTORS ) },
-		{ "eENABLE_CCD", static_cast<PxU32>( physx::PxSceneFlag::eENABLE_CCD ) },
-		{ "eDISABLE_CCD_RESWEEP", static_cast<PxU32>( physx::PxSceneFlag::eDISABLE_CCD_RESWEEP ) },
-		{ "eADAPTIVE_FORCE", static_cast<PxU32>( physx::PxSceneFlag::eADAPTIVE_FORCE ) },
-		{ "eENABLE_PCM", static_cast<PxU32>( physx::PxSceneFlag::eENABLE_PCM ) },
-		{ "eDISABLE_CONTACT_REPORT_BUFFER_RESIZE", static_cast<PxU32>( physx::PxSceneFlag::eDISABLE_CONTACT_REPORT_BUFFER_RESIZE ) },
-		{ "eDISABLE_CONTACT_CACHE", static_cast<PxU32>( physx::PxSceneFlag::eDISABLE_CONTACT_CACHE ) },
-		{ "eREQUIRE_RW_LOCK", static_cast<PxU32>( physx::PxSceneFlag::eREQUIRE_RW_LOCK ) },
-		{ "eENABLE_STABILIZATION", static_cast<PxU32>( physx::PxSceneFlag::eENABLE_STABILIZATION ) },
-		{ "eENABLE_AVERAGE_POINT", static_cast<PxU32>( physx::PxSceneFlag::eENABLE_AVERAGE_POINT ) },
-		{ "eEXCLUDE_KINEMATICS_FROM_ACTIVE_ACTORS", static_cast<PxU32>( physx::PxSceneFlag::eEXCLUDE_KINEMATICS_FROM_ACTIVE_ACTORS ) },
-		{ "eENABLE_GPU_DYNAMICS", static_cast<PxU32>( physx::PxSceneFlag::eENABLE_GPU_DYNAMICS ) },
-		{ "eENABLE_ENHANCED_DETERMINISM", static_cast<PxU32>( physx::PxSceneFlag::eENABLE_ENHANCED_DETERMINISM ) },
-		{ "eENABLE_FRICTION_EVERY_ITERATION", static_cast<PxU32>( physx::PxSceneFlag::eENABLE_FRICTION_EVERY_ITERATION ) },
-		{ "eMUTABLE_FLAGS", static_cast<PxU32>( physx::PxSceneFlag::eMUTABLE_FLAGS ) },
+		{ "eENABLE_ACTIVE_ACTORS", static_cast<PxU32>( augphysx::PxSceneFlag::eENABLE_ACTIVE_ACTORS ) },
+		{ "eENABLE_CCD", static_cast<PxU32>( augphysx::PxSceneFlag::eENABLE_CCD ) },
+		{ "eDISABLE_CCD_RESWEEP", static_cast<PxU32>( augphysx::PxSceneFlag::eDISABLE_CCD_RESWEEP ) },
+		{ "eADAPTIVE_FORCE", static_cast<PxU32>( augphysx::PxSceneFlag::eADAPTIVE_FORCE ) },
+		{ "eENABLE_PCM", static_cast<PxU32>( augphysx::PxSceneFlag::eENABLE_PCM ) },
+		{ "eDISABLE_CONTACT_REPORT_BUFFER_RESIZE", static_cast<PxU32>( augphysx::PxSceneFlag::eDISABLE_CONTACT_REPORT_BUFFER_RESIZE ) },
+		{ "eDISABLE_CONTACT_CACHE", static_cast<PxU32>( augphysx::PxSceneFlag::eDISABLE_CONTACT_CACHE ) },
+		{ "eREQUIRE_RW_LOCK", static_cast<PxU32>( augphysx::PxSceneFlag::eREQUIRE_RW_LOCK ) },
+		{ "eENABLE_STABILIZATION", static_cast<PxU32>( augphysx::PxSceneFlag::eENABLE_STABILIZATION ) },
+		{ "eENABLE_AVERAGE_POINT", static_cast<PxU32>( augphysx::PxSceneFlag::eENABLE_AVERAGE_POINT ) },
+		{ "eEXCLUDE_KINEMATICS_FROM_ACTIVE_ACTORS", static_cast<PxU32>( augphysx::PxSceneFlag::eEXCLUDE_KINEMATICS_FROM_ACTIVE_ACTORS ) },
+		{ "eENABLE_GPU_DYNAMICS", static_cast<PxU32>( augphysx::PxSceneFlag::eENABLE_GPU_DYNAMICS ) },
+		{ "eENABLE_ENHANCED_DETERMINISM", static_cast<PxU32>( augphysx::PxSceneFlag::eENABLE_ENHANCED_DETERMINISM ) },
+		{ "eENABLE_FRICTION_EVERY_ITERATION", static_cast<PxU32>( augphysx::PxSceneFlag::eENABLE_FRICTION_EVERY_ITERATION ) },
+		{ "eMUTABLE_FLAGS", static_cast<PxU32>( augphysx::PxSceneFlag::eMUTABLE_FLAGS ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxSceneFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxSceneFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxSceneFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxSceneFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxActorTypeFlag__EnumConversion[] = {
-		{ "eRIGID_STATIC", static_cast<PxU32>( physx::PxActorTypeFlag::eRIGID_STATIC ) },
-		{ "eRIGID_DYNAMIC", static_cast<PxU32>( physx::PxActorTypeFlag::eRIGID_DYNAMIC ) },
+		{ "eRIGID_STATIC", static_cast<PxU32>( augphysx::PxActorTypeFlag::eRIGID_STATIC ) },
+		{ "eRIGID_DYNAMIC", static_cast<PxU32>( augphysx::PxActorTypeFlag::eRIGID_DYNAMIC ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxActorTypeFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxActorTypeFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxActorTypeFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxActorTypeFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxPairFilteringMode__EnumConversion[] = {
-		{ "eKEEP", static_cast<PxU32>( physx::PxPairFilteringMode::eKEEP ) },
-		{ "eSUPPRESS", static_cast<PxU32>( physx::PxPairFilteringMode::eSUPPRESS ) },
-		{ "eKILL", static_cast<PxU32>( physx::PxPairFilteringMode::eKILL ) },
-		{ "eDEFAULT", static_cast<PxU32>( physx::PxPairFilteringMode::eDEFAULT ) },
+		{ "eKEEP", static_cast<PxU32>( augphysx::PxPairFilteringMode::eKEEP ) },
+		{ "eSUPPRESS", static_cast<PxU32>( augphysx::PxPairFilteringMode::eSUPPRESS ) },
+		{ "eKILL", static_cast<PxU32>( augphysx::PxPairFilteringMode::eKILL ) },
+		{ "eDEFAULT", static_cast<PxU32>( augphysx::PxPairFilteringMode::eDEFAULT ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxPairFilteringMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxPairFilteringMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxPairFilteringMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxPairFilteringMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxFrictionType__EnumConversion[] = {
-		{ "ePATCH", static_cast<PxU32>( physx::PxFrictionType::ePATCH ) },
-		{ "eONE_DIRECTIONAL", static_cast<PxU32>( physx::PxFrictionType::eONE_DIRECTIONAL ) },
-		{ "eTWO_DIRECTIONAL", static_cast<PxU32>( physx::PxFrictionType::eTWO_DIRECTIONAL ) },
+		{ "ePATCH", static_cast<PxU32>( augphysx::PxFrictionType::ePATCH ) },
+		{ "eONE_DIRECTIONAL", static_cast<PxU32>( augphysx::PxFrictionType::eONE_DIRECTIONAL ) },
+		{ "eTWO_DIRECTIONAL", static_cast<PxU32>( augphysx::PxFrictionType::eTWO_DIRECTIONAL ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxFrictionType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxFrictionType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxFrictionType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxFrictionType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxVisualizationParameter__EnumConversion[] = {
-		{ "eSCALE", static_cast<PxU32>( physx::PxVisualizationParameter::eSCALE ) },
-		{ "eWORLD_AXES", static_cast<PxU32>( physx::PxVisualizationParameter::eWORLD_AXES ) },
-		{ "eBODY_AXES", static_cast<PxU32>( physx::PxVisualizationParameter::eBODY_AXES ) },
-		{ "eBODY_MASS_AXES", static_cast<PxU32>( physx::PxVisualizationParameter::eBODY_MASS_AXES ) },
-		{ "eBODY_LIN_VELOCITY", static_cast<PxU32>( physx::PxVisualizationParameter::eBODY_LIN_VELOCITY ) },
-		{ "eBODY_ANG_VELOCITY", static_cast<PxU32>( physx::PxVisualizationParameter::eBODY_ANG_VELOCITY ) },
-		{ "eCONTACT_POINT", static_cast<PxU32>( physx::PxVisualizationParameter::eCONTACT_POINT ) },
-		{ "eCONTACT_NORMAL", static_cast<PxU32>( physx::PxVisualizationParameter::eCONTACT_NORMAL ) },
-		{ "eCONTACT_ERROR", static_cast<PxU32>( physx::PxVisualizationParameter::eCONTACT_ERROR ) },
-		{ "eCONTACT_FORCE", static_cast<PxU32>( physx::PxVisualizationParameter::eCONTACT_FORCE ) },
-		{ "eACTOR_AXES", static_cast<PxU32>( physx::PxVisualizationParameter::eACTOR_AXES ) },
-		{ "eCOLLISION_AABBS", static_cast<PxU32>( physx::PxVisualizationParameter::eCOLLISION_AABBS ) },
-		{ "eCOLLISION_SHAPES", static_cast<PxU32>( physx::PxVisualizationParameter::eCOLLISION_SHAPES ) },
-		{ "eCOLLISION_AXES", static_cast<PxU32>( physx::PxVisualizationParameter::eCOLLISION_AXES ) },
-		{ "eCOLLISION_COMPOUNDS", static_cast<PxU32>( physx::PxVisualizationParameter::eCOLLISION_COMPOUNDS ) },
-		{ "eCOLLISION_FNORMALS", static_cast<PxU32>( physx::PxVisualizationParameter::eCOLLISION_FNORMALS ) },
-		{ "eCOLLISION_EDGES", static_cast<PxU32>( physx::PxVisualizationParameter::eCOLLISION_EDGES ) },
-		{ "eCOLLISION_STATIC", static_cast<PxU32>( physx::PxVisualizationParameter::eCOLLISION_STATIC ) },
-		{ "eCOLLISION_DYNAMIC", static_cast<PxU32>( physx::PxVisualizationParameter::eCOLLISION_DYNAMIC ) },
-		{ "eDEPRECATED_COLLISION_PAIRS", static_cast<PxU32>( physx::PxVisualizationParameter::eDEPRECATED_COLLISION_PAIRS ) },
-		{ "eJOINT_LOCAL_FRAMES", static_cast<PxU32>( physx::PxVisualizationParameter::eJOINT_LOCAL_FRAMES ) },
-		{ "eJOINT_LIMITS", static_cast<PxU32>( physx::PxVisualizationParameter::eJOINT_LIMITS ) },
-		{ "eCULL_BOX", static_cast<PxU32>( physx::PxVisualizationParameter::eCULL_BOX ) },
-		{ "eMBP_REGIONS", static_cast<PxU32>( physx::PxVisualizationParameter::eMBP_REGIONS ) },
-		{ "eNUM_VALUES", static_cast<PxU32>( physx::PxVisualizationParameter::eNUM_VALUES ) },
+		{ "eSCALE", static_cast<PxU32>( augphysx::PxVisualizationParameter::eSCALE ) },
+		{ "eWORLD_AXES", static_cast<PxU32>( augphysx::PxVisualizationParameter::eWORLD_AXES ) },
+		{ "eBODY_AXES", static_cast<PxU32>( augphysx::PxVisualizationParameter::eBODY_AXES ) },
+		{ "eBODY_MASS_AXES", static_cast<PxU32>( augphysx::PxVisualizationParameter::eBODY_MASS_AXES ) },
+		{ "eBODY_LIN_VELOCITY", static_cast<PxU32>( augphysx::PxVisualizationParameter::eBODY_LIN_VELOCITY ) },
+		{ "eBODY_ANG_VELOCITY", static_cast<PxU32>( augphysx::PxVisualizationParameter::eBODY_ANG_VELOCITY ) },
+		{ "eCONTACT_POINT", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCONTACT_POINT ) },
+		{ "eCONTACT_NORMAL", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCONTACT_NORMAL ) },
+		{ "eCONTACT_ERROR", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCONTACT_ERROR ) },
+		{ "eCONTACT_FORCE", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCONTACT_FORCE ) },
+		{ "eACTOR_AXES", static_cast<PxU32>( augphysx::PxVisualizationParameter::eACTOR_AXES ) },
+		{ "eCOLLISION_AABBS", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCOLLISION_AABBS ) },
+		{ "eCOLLISION_SHAPES", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCOLLISION_SHAPES ) },
+		{ "eCOLLISION_AXES", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCOLLISION_AXES ) },
+		{ "eCOLLISION_COMPOUNDS", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCOLLISION_COMPOUNDS ) },
+		{ "eCOLLISION_FNORMALS", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCOLLISION_FNORMALS ) },
+		{ "eCOLLISION_EDGES", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCOLLISION_EDGES ) },
+		{ "eCOLLISION_STATIC", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCOLLISION_STATIC ) },
+		{ "eCOLLISION_DYNAMIC", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCOLLISION_DYNAMIC ) },
+		{ "eDEPRECATED_COLLISION_PAIRS", static_cast<PxU32>( augphysx::PxVisualizationParameter::eDEPRECATED_COLLISION_PAIRS ) },
+		{ "eJOINT_LOCAL_FRAMES", static_cast<PxU32>( augphysx::PxVisualizationParameter::eJOINT_LOCAL_FRAMES ) },
+		{ "eJOINT_LIMITS", static_cast<PxU32>( augphysx::PxVisualizationParameter::eJOINT_LIMITS ) },
+		{ "eCULL_BOX", static_cast<PxU32>( augphysx::PxVisualizationParameter::eCULL_BOX ) },
+		{ "eMBP_REGIONS", static_cast<PxU32>( augphysx::PxVisualizationParameter::eMBP_REGIONS ) },
+		{ "eNUM_VALUES", static_cast<PxU32>( augphysx::PxVisualizationParameter::eNUM_VALUES ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxVisualizationParameter::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVisualizationParameter__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxVisualizationParameter::Enum > { PxEnumTraits() : NameConversion( g_physx__PxVisualizationParameter__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxPruningStructureType__EnumConversion[] = {
-		{ "eNONE", static_cast<PxU32>( physx::PxPruningStructureType::eNONE ) },
-		{ "eDYNAMIC_AABB_TREE", static_cast<PxU32>( physx::PxPruningStructureType::eDYNAMIC_AABB_TREE ) },
-		{ "eSTATIC_AABB_TREE", static_cast<PxU32>( physx::PxPruningStructureType::eSTATIC_AABB_TREE ) },
-		{ "eLAST", static_cast<PxU32>( physx::PxPruningStructureType::eLAST ) },
+		{ "eNONE", static_cast<PxU32>( augphysx::PxPruningStructureType::eNONE ) },
+		{ "eDYNAMIC_AABB_TREE", static_cast<PxU32>( augphysx::PxPruningStructureType::eDYNAMIC_AABB_TREE ) },
+		{ "eSTATIC_AABB_TREE", static_cast<PxU32>( augphysx::PxPruningStructureType::eSTATIC_AABB_TREE ) },
+		{ "eLAST", static_cast<PxU32>( augphysx::PxPruningStructureType::eLAST ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxPruningStructureType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxPruningStructureType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxPruningStructureType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxPruningStructureType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxSceneQueryUpdateMode__EnumConversion[] = {
-		{ "eBUILD_ENABLED_COMMIT_ENABLED", static_cast<PxU32>( physx::PxSceneQueryUpdateMode::eBUILD_ENABLED_COMMIT_ENABLED ) },
-		{ "eBUILD_ENABLED_COMMIT_DISABLED", static_cast<PxU32>( physx::PxSceneQueryUpdateMode::eBUILD_ENABLED_COMMIT_DISABLED ) },
-		{ "eBUILD_DISABLED_COMMIT_DISABLED", static_cast<PxU32>( physx::PxSceneQueryUpdateMode::eBUILD_DISABLED_COMMIT_DISABLED ) },
+		{ "eBUILD_ENABLED_COMMIT_ENABLED", static_cast<PxU32>( augphysx::PxSceneQueryUpdateMode::eBUILD_ENABLED_COMMIT_ENABLED ) },
+		{ "eBUILD_ENABLED_COMMIT_DISABLED", static_cast<PxU32>( augphysx::PxSceneQueryUpdateMode::eBUILD_ENABLED_COMMIT_DISABLED ) },
+		{ "eBUILD_DISABLED_COMMIT_DISABLED", static_cast<PxU32>( augphysx::PxSceneQueryUpdateMode::eBUILD_DISABLED_COMMIT_DISABLED ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxSceneQueryUpdateMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxSceneQueryUpdateMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxSceneQueryUpdateMode::Enum > { PxEnumTraits() : NameConversion( g_physx__PxSceneQueryUpdateMode__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxHitFlag__EnumConversion[] = {
-		{ "ePOSITION", static_cast<PxU32>( physx::PxHitFlag::ePOSITION ) },
-		{ "eNORMAL", static_cast<PxU32>( physx::PxHitFlag::eNORMAL ) },
-		{ "eUV", static_cast<PxU32>( physx::PxHitFlag::eUV ) },
-		{ "eASSUME_NO_INITIAL_OVERLAP", static_cast<PxU32>( physx::PxHitFlag::eASSUME_NO_INITIAL_OVERLAP ) },
-		{ "eMESH_MULTIPLE", static_cast<PxU32>( physx::PxHitFlag::eMESH_MULTIPLE ) },
-		{ "eMESH_ANY", static_cast<PxU32>( physx::PxHitFlag::eMESH_ANY ) },
-		{ "eMESH_BOTH_SIDES", static_cast<PxU32>( physx::PxHitFlag::eMESH_BOTH_SIDES ) },
-		{ "ePRECISE_SWEEP", static_cast<PxU32>( physx::PxHitFlag::ePRECISE_SWEEP ) },
-		{ "eMTD", static_cast<PxU32>( physx::PxHitFlag::eMTD ) },
-		{ "eFACE_INDEX", static_cast<PxU32>( physx::PxHitFlag::eFACE_INDEX ) },
-		{ "eDEFAULT", static_cast<PxU32>( physx::PxHitFlag::eDEFAULT ) },
-		{ "eMODIFIABLE_FLAGS", static_cast<PxU32>( physx::PxHitFlag::eMODIFIABLE_FLAGS ) },
+		{ "ePOSITION", static_cast<PxU32>( augphysx::PxHitFlag::ePOSITION ) },
+		{ "eNORMAL", static_cast<PxU32>( augphysx::PxHitFlag::eNORMAL ) },
+		{ "eUV", static_cast<PxU32>( augphysx::PxHitFlag::eUV ) },
+		{ "eASSUME_NO_INITIAL_OVERLAP", static_cast<PxU32>( augphysx::PxHitFlag::eASSUME_NO_INITIAL_OVERLAP ) },
+		{ "eMESH_MULTIPLE", static_cast<PxU32>( augphysx::PxHitFlag::eMESH_MULTIPLE ) },
+		{ "eMESH_ANY", static_cast<PxU32>( augphysx::PxHitFlag::eMESH_ANY ) },
+		{ "eMESH_BOTH_SIDES", static_cast<PxU32>( augphysx::PxHitFlag::eMESH_BOTH_SIDES ) },
+		{ "ePRECISE_SWEEP", static_cast<PxU32>( augphysx::PxHitFlag::ePRECISE_SWEEP ) },
+		{ "eMTD", static_cast<PxU32>( augphysx::PxHitFlag::eMTD ) },
+		{ "eFACE_INDEX", static_cast<PxU32>( augphysx::PxHitFlag::eFACE_INDEX ) },
+		{ "eDEFAULT", static_cast<PxU32>( augphysx::PxHitFlag::eDEFAULT ) },
+		{ "eMODIFIABLE_FLAGS", static_cast<PxU32>( augphysx::PxHitFlag::eMODIFIABLE_FLAGS ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxHitFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxHitFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxHitFlag::Enum > { PxEnumTraits() : NameConversion( g_physx__PxHitFlag__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	static PxU32ToName g_physx__PxBroadPhaseType__EnumConversion[] = {
-		{ "eSAP", static_cast<PxU32>( physx::PxBroadPhaseType::eSAP ) },
-		{ "eMBP", static_cast<PxU32>( physx::PxBroadPhaseType::eMBP ) },
-		{ "eABP", static_cast<PxU32>( physx::PxBroadPhaseType::eABP ) },
-		{ "eGPU", static_cast<PxU32>( physx::PxBroadPhaseType::eGPU ) },
-		{ "eLAST", static_cast<PxU32>( physx::PxBroadPhaseType::eLAST ) },
+		{ "eSAP", static_cast<PxU32>( augphysx::PxBroadPhaseType::eSAP ) },
+		{ "eMBP", static_cast<PxU32>( augphysx::PxBroadPhaseType::eMBP ) },
+		{ "eABP", static_cast<PxU32>( augphysx::PxBroadPhaseType::eABP ) },
+		{ "eGPU", static_cast<PxU32>( augphysx::PxBroadPhaseType::eGPU ) },
+		{ "eLAST", static_cast<PxU32>( augphysx::PxBroadPhaseType::eLAST ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxBroadPhaseType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxBroadPhaseType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxBroadPhaseType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxBroadPhaseType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxScene;
 	struct PxSceneGeneratedValues
 	{
@@ -2618,12 +2618,12 @@ template<> struct PxEnumTraits< physx::PxBroadPhaseType::Enum > { PxEnumTraits()
 	};
 
 	static PxU32ToName g_physx__PxSolverType__EnumConversion[] = {
-		{ "ePGS", static_cast<PxU32>( physx::PxSolverType::ePGS ) },
-		{ "eTGS", static_cast<PxU32>( physx::PxSolverType::eTGS ) },
+		{ "ePGS", static_cast<PxU32>( augphysx::PxSolverType::ePGS ) },
+		{ "eTGS", static_cast<PxU32>( augphysx::PxSolverType::eTGS ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxSolverType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxSolverType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxSolverType::Enum > { PxEnumTraits() : NameConversion( g_physx__PxSolverType__EnumConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxSceneDesc;
 	struct PxSceneDescGeneratedValues
 	{
@@ -2831,14 +2831,14 @@ template<> struct PxEnumTraits< physx::PxSolverType::Enum > { PxEnumTraits() : N
 	};
 
 	static PxU32ToName g_physx__PxSimulationStatistics__RbPairStatsTypeConversion[] = {
-		{ "eDISCRETE_CONTACT_PAIRS", static_cast<PxU32>( physx::PxSimulationStatistics::eDISCRETE_CONTACT_PAIRS ) },
-		{ "eCCD_PAIRS", static_cast<PxU32>( physx::PxSimulationStatistics::eCCD_PAIRS ) },
-		{ "eMODIFIED_CONTACT_PAIRS", static_cast<PxU32>( physx::PxSimulationStatistics::eMODIFIED_CONTACT_PAIRS ) },
-		{ "eTRIGGER_PAIRS", static_cast<PxU32>( physx::PxSimulationStatistics::eTRIGGER_PAIRS ) },
+		{ "eDISCRETE_CONTACT_PAIRS", static_cast<PxU32>( augphysx::PxSimulationStatistics::eDISCRETE_CONTACT_PAIRS ) },
+		{ "eCCD_PAIRS", static_cast<PxU32>( augphysx::PxSimulationStatistics::eCCD_PAIRS ) },
+		{ "eMODIFIED_CONTACT_PAIRS", static_cast<PxU32>( augphysx::PxSimulationStatistics::eMODIFIED_CONTACT_PAIRS ) },
+		{ "eTRIGGER_PAIRS", static_cast<PxU32>( augphysx::PxSimulationStatistics::eTRIGGER_PAIRS ) },
 		{ NULL, 0 }
 	};
 
-template<> struct PxEnumTraits< physx::PxSimulationStatistics::RbPairStatsType > { PxEnumTraits() : NameConversion( g_physx__PxSimulationStatistics__RbPairStatsTypeConversion ) {} const PxU32ToName* NameConversion; }; 
+template<> struct PxEnumTraits< augphysx::PxSimulationStatistics::RbPairStatsType > { PxEnumTraits() : NameConversion( g_physx__PxSimulationStatistics__RbPairStatsTypeConversion ) {} const PxU32ToName* NameConversion; }; 
 	class PxSimulationStatistics;
 	struct PxSimulationStatisticsGeneratedValues
 	{

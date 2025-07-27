@@ -37,7 +37,7 @@
 #include "CmUtils.h"
 #include "NpArticulation.h"
 
-using namespace physx;
+using namespace augphysx;
 
 // PX_SERIALIZATION
 void NpArticulationLink::requiresObjects(PxProcessPxBaseCallback& c)

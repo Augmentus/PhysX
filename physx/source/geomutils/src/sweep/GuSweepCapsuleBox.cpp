@@ -39,7 +39,7 @@
 #include "GuSIMDHelpers.h"
 #include "PsAlloca.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 namespace

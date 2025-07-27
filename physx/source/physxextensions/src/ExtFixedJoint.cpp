@@ -31,10 +31,10 @@
 #include "ExtConstraintHelper.h"
 #include "PxPhysics.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Ext;
 
-PxFixedJoint* physx::PxFixedJointCreate(PxPhysics& physics, PxRigidActor* actor0, const PxTransform& localFrame0, PxRigidActor* actor1, const PxTransform& localFrame1)
+PxFixedJoint* augphysx::PxFixedJointCreate(PxPhysics& physics, PxRigidActor* actor0, const PxTransform& localFrame0, PxRigidActor* actor1, const PxTransform& localFrame1)
 {
 	PX_CHECK_AND_RETURN_NULL(localFrame0.isSane(), "PxFixedJointCreate: local frame 0 is not a valid transform"); 
 	PX_CHECK_AND_RETURN_NULL(localFrame1.isSane(), "PxFixedJointCreate: local frame 1 is not a valid transform"); 

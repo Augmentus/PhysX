@@ -35,7 +35,7 @@
 #include "GuSweepTriangleUtils.h"
 #include "GuInternal.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #define LOCAL_EPSILON 0.00001f	// PT: this value makes the 'basicAngleTest' pass. Fails because of a ray almost parallel to a triangle
@@ -256,7 +256,7 @@ static PX_FORCE_INLINE int intersectRayAABB2(const PxVec3& minimum, const PxVec3
 			tnear = t1y;
 			ret = by;
 		}
-		tfar = physx::intrinsics::selectMin(tfar, t2y);
+		tfar = augphysx::intrinsics::selectMin(tfar, t2y);
 	}
 
 	if(!fbz)
@@ -266,7 +266,7 @@ static PX_FORCE_INLINE int intersectRayAABB2(const PxVec3& minimum, const PxVec3
 			tnear = t1z;
 			ret = bz;
 		}
-		tfar = physx::intrinsics::selectMin(tfar, t2z);
+		tfar = augphysx::intrinsics::selectMin(tfar, t2z);
 	}
 
 	if(tnear>tfar || tfar<LOCAL_EPSILON_RAY_BOX)
@@ -348,9 +348,9 @@ static const PxVec3* getBoxLocalEdgeNormals()
 static PX_FORCE_INLINE void closestAxis2(const PxVec3& v, PxU32& j, PxU32& k)
 {
 	// find largest 2D plane projection
-	const PxF32 absPx = physx::intrinsics::abs(v.x);
-	const PxF32 absPy = physx::intrinsics::abs(v.y);
-	const PxF32 absPz = physx::intrinsics::abs(v.z);
+	const PxF32 absPx = augphysx::intrinsics::abs(v.x);
+	const PxF32 absPy = augphysx::intrinsics::abs(v.y);
+	const PxF32 absPz = augphysx::intrinsics::abs(v.z);
 	//PxU32 m = 0;	//x biggest axis
 	j = 1;
 	k = 2;
@@ -501,9 +501,9 @@ bool Gu::sweepBoxTriangle(	const PxTriangle& tri, const PxBounds3& box,
 		// - doing this outside of the ray-box function gets rid of 3 fabs/fcmp per call
 		// - doing this with integer code removes the 3 remaining fabs/fcmps totally
 		// - doing this outside reduces the LHS
-		const bool b0 = physx::intrinsics::abs(negMotion.x)<LOCAL_EPSILON_RAY_BOX;
-		const bool b1 = physx::intrinsics::abs(negMotion.y)<LOCAL_EPSILON_RAY_BOX;
-		const bool b2 = physx::intrinsics::abs(negMotion.z)<LOCAL_EPSILON_RAY_BOX;
+		const bool b0 = augphysx::intrinsics::abs(negMotion.x)<LOCAL_EPSILON_RAY_BOX;
+		const bool b1 = augphysx::intrinsics::abs(negMotion.y)<LOCAL_EPSILON_RAY_BOX;
+		const bool b2 = augphysx::intrinsics::abs(negMotion.z)<LOCAL_EPSILON_RAY_BOX;
 
 		// ### have this as a param ?
 		const PxVec3& Min = box.minimum;

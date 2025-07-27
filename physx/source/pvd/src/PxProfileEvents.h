@@ -34,17 +34,17 @@
 #include "PxProfileEventId.h"
 
 
-#define	PX_PROFILE_UNION_1(a)					physx::profile::TUnion<a, physx::profile::Empty>
-#define	PX_PROFILE_UNION_2(a,b)					physx::profile::TUnion<a, PX_PROFILE_UNION_1(b)>
-#define	PX_PROFILE_UNION_3(a,b,c)				physx::profile::TUnion<a, PX_PROFILE_UNION_2(b,c)>
-#define	PX_PROFILE_UNION_4(a,b,c,d)				physx::profile::TUnion<a, PX_PROFILE_UNION_3(b,c,d)>
-#define	PX_PROFILE_UNION_5(a,b,c,d,e)			physx::profile::TUnion<a, PX_PROFILE_UNION_4(b,c,d,e)>
-#define	PX_PROFILE_UNION_6(a,b,c,d,e,f)			physx::profile::TUnion<a, PX_PROFILE_UNION_5(b,c,d,e,f)>
-#define	PX_PROFILE_UNION_7(a,b,c,d,e,f,g)		physx::profile::TUnion<a, PX_PROFILE_UNION_6(b,c,d,e,f,g)>
-#define	PX_PROFILE_UNION_8(a,b,c,d,e,f,g,h)		physx::profile::TUnion<a, PX_PROFILE_UNION_7(b,c,d,e,f,g,h)>
-#define	PX_PROFILE_UNION_9(a,b,c,d,e,f,g,h,i)	physx::profile::TUnion<a, PX_PROFILE_UNION_8(b,c,d,e,f,g,h,i)>
+#define	PX_PROFILE_UNION_1(a)					augphysx::profile::TUnion<a, augphysx::profile::Empty>
+#define	PX_PROFILE_UNION_2(a,b)					augphysx::profile::TUnion<a, PX_PROFILE_UNION_1(b)>
+#define	PX_PROFILE_UNION_3(a,b,c)				augphysx::profile::TUnion<a, PX_PROFILE_UNION_2(b,c)>
+#define	PX_PROFILE_UNION_4(a,b,c,d)				augphysx::profile::TUnion<a, PX_PROFILE_UNION_3(b,c,d)>
+#define	PX_PROFILE_UNION_5(a,b,c,d,e)			augphysx::profile::TUnion<a, PX_PROFILE_UNION_4(b,c,d,e)>
+#define	PX_PROFILE_UNION_6(a,b,c,d,e,f)			augphysx::profile::TUnion<a, PX_PROFILE_UNION_5(b,c,d,e,f)>
+#define	PX_PROFILE_UNION_7(a,b,c,d,e,f,g)		augphysx::profile::TUnion<a, PX_PROFILE_UNION_6(b,c,d,e,f,g)>
+#define	PX_PROFILE_UNION_8(a,b,c,d,e,f,g,h)		augphysx::profile::TUnion<a, PX_PROFILE_UNION_7(b,c,d,e,f,g,h)>
+#define	PX_PROFILE_UNION_9(a,b,c,d,e,f,g,h,i)	augphysx::profile::TUnion<a, PX_PROFILE_UNION_8(b,c,d,e,f,g,h,i)>
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	struct Empty {};
 
@@ -698,7 +698,7 @@ namespace physx { namespace profile {
 	template<typename TRetVal, typename TOperator>
 	inline TRetVal Event::visit( TOperator inOp ) const
 	{ 
-		return physx::profile::visit<TRetVal>( static_cast<EventTypes::Enum>(mHeader.mEventType), mData, inOp ); 
+		return augphysx::profile::visit<TRetVal>( static_cast<EventTypes::Enum>(mHeader.mEventType), mData, inOp ); 
 	}
 } }
 

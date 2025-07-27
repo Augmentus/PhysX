@@ -34,11 +34,11 @@
 #include "ExtConstraintHelper.h"
 #include "CmConeLimitHelper.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Ext;
 using namespace shdfnd;
 
-PxD6Joint* physx::PxD6JointCreate(PxPhysics& physics, PxRigidActor* actor0, const PxTransform& localFrame0, PxRigidActor* actor1, const PxTransform& localFrame1)
+PxD6Joint* augphysx::PxD6JointCreate(PxPhysics& physics, PxRigidActor* actor0, const PxTransform& localFrame0, PxRigidActor* actor1, const PxTransform& localFrame1)
 {
 	PX_CHECK_AND_RETURN_NULL(localFrame0.isSane(), "PxD6JointCreate: local frame 0 is not a valid transform"); 
 	PX_CHECK_AND_RETURN_NULL(localFrame1.isSane(), "PxD6JointCreate: local frame 1 is not a valid transform"); 
@@ -427,8 +427,8 @@ static PxQuat project(const PxQuat& q, const PxVec3& axis, PxReal cosHalfTol, bo
 // SWING2: cB[0].cross(cA[1])
 // then, as above, we decompose into swing * free, and truncate the free rotation
 
-//export this in the physx namespace so we can unit test it
-namespace physx
+//export this in the augphysx namespace so we can unit test it
+namespace augphysx
 {
 PxQuat angularProject(PxU32 lockedDofs, const PxQuat& q, PxReal cosHalfTol, bool& truncated)
 {

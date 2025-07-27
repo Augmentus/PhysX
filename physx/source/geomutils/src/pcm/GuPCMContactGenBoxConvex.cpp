@@ -41,7 +41,7 @@
 
 #define PCM_USE_INTERNAL_OBJECT 1
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Ps::aos;
 
@@ -55,7 +55,7 @@ using namespace Ps::aos;
 	//  |/     |/      |/		6 = +++
 	// 0+------+1      *---x	7 = -++
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu
@@ -818,4 +818,4 @@ EdgeTest:
 	}
 
 }//Gu
-}//physx
+}//augphysx

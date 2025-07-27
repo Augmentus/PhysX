@@ -28,12 +28,12 @@
 // Copyright (c) 2001-2004 NovodeX AG. All rights reserved.  
 
 #include "GuBV4.h"
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #if PX_INTEL_FAMILY  && !defined(PX_SIMD_DISABLED)
 #include "PsVecMath.h"
-using namespace physx::shdfnd::aos;
+using namespace augphysx::shdfnd::aos;
 #include "GuBV4_BoxSweep_Internal.h"
 
 Ps::IntBool Sweep_AABB_BV4(const Box& localBox, const PxVec3& localDir, float maxDist, const BV4Tree& tree, SweepHit* PX_RESTRICT hit, PxU32 flags);

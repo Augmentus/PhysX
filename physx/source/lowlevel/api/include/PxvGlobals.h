@@ -34,7 +34,7 @@
 #include "PxvConfig.h"
 #include "PsBasicTemplates.h"
 
-namespace physx
+namespace augphysx
 {
 
 /*!

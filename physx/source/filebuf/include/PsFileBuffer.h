@@ -34,7 +34,7 @@
 #include "PsUserAllocated.h"
 #include <stdio.h>
 
-namespace physx
+namespace augphysx
 {
 namespace general_PxIOStream2
 {

@@ -33,7 +33,7 @@
 #include "CmPhysXCommon.h"
 #include "PsUtilities.h"
 
-namespace physx
+namespace augphysx
 {
 
 PxVehicleWheels4SimData::PxVehicleWheels4SimData()

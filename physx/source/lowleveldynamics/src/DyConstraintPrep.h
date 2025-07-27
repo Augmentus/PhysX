@@ -41,7 +41,7 @@
 
 #define DY_ARTICULATION_BAD_RESPONSE 0.02f
 
-namespace physx
+namespace augphysx
 {
 
 class PxcConstraintBlockStream;

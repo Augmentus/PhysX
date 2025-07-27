@@ -32,7 +32,7 @@
 
 #include "PsThread.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 	
 	struct PxDefaultContextProvider
 	{

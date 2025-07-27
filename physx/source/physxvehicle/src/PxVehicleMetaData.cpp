@@ -40,7 +40,7 @@
 
 #include "PsAllocator.h"
 
-using namespace physx;
+using namespace augphysx;
 
 namespace
 {

@@ -30,7 +30,7 @@
 #include "geometry/PxGeometry.h"
 #include "PxcContactMethodImpl.h"
 
-namespace physx
+namespace augphysx
 {
 static bool PxcInvalidContactPair	(CONTACT_METHOD_ARGS_UNUSED)		{ return false;	}
 

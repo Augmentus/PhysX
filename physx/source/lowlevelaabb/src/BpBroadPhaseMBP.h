@@ -40,7 +40,7 @@ namespace internalMBP
 	class MBP;
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Bp
 {
@@ -68,8 +68,8 @@ namespace Bp
 	// BroadPhase
 		virtual	PxBroadPhaseType::Enum		getType()					const	{ return PxBroadPhaseType::eMBP;	}
 		virtual	void						destroy()							{ delete this;						}
-		virtual	void						update(const PxU32 numCpuTasks, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, physx::PxBaseTask* continuation, physx::PxBaseTask* narrowPhaseUnblockTask);
-		virtual void						fetchBroadPhaseResults(physx::PxBaseTask*) {}
+		virtual	void						update(const PxU32 numCpuTasks, PxcScratchAllocator* scratchAllocator, const BroadPhaseUpdateData& updateData, augphysx::PxBaseTask* continuation, augphysx::PxBaseTask* narrowPhaseUnblockTask);
+		virtual void						fetchBroadPhaseResults(augphysx::PxBaseTask*) {}
 		virtual	PxU32						getNbCreatedPairs()		const;
 		virtual BroadPhasePair*				getCreatedPairs();
 		virtual PxU32						getNbDeletedPairs()		const;

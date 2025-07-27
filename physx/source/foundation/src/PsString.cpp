@@ -43,7 +43,7 @@
 #pragma clang diagnostic ignored "-Wformat-nonliteral"
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

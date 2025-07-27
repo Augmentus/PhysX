@@ -31,7 +31,7 @@
 #include "ScBodySim.h"
 #include "ScNPhaseCore.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sc;
 
 TriggerInteraction::TriggerInteraction(	ShapeSim& tShape, ShapeSim& oShape) :

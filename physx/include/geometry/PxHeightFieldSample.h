@@ -37,7 +37,7 @@
 #include "foundation/PxBitAndData.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -117,7 +117,7 @@ struct PxHeightFieldSample
 };
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

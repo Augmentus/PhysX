@@ -31,7 +31,7 @@
 #include "SnSerializationContext.h"
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sn;
 
 PxBase* DeserializationContext::resolveReference(PxU32 kind, size_t reference) const

@@ -46,7 +46,7 @@
 #include "PsFoundation.h"
 #include "DyConstraintPrep.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 
@@ -58,7 +58,7 @@ using namespace Gu;
 
 using namespace Ps::aos;
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {
@@ -593,7 +593,7 @@ bool createFinalizeSolverContacts(
 #if PX_CHECKED
 	if (overflow)
 	{
-		Ps::getFoundation().error(physx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__,
+		Ps::getFoundation().error(augphysx::PxErrorCode::eDEBUG_WARNING, __FILE__, __LINE__,
 			"Dropping contacts in solver because we exceeded limit of 32 friction patches.");
 	}
 #endif

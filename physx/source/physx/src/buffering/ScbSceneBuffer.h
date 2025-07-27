@@ -35,7 +35,7 @@
 
 #include "ScScene.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Scb
 {

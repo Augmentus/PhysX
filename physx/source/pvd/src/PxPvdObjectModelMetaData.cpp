@@ -30,7 +30,7 @@
 #include "PxPvdInternalByteStreams.h"
 #include "PxPvdMarshalling.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace pvdsdk;
 using namespace shdfnd;
 

@@ -33,7 +33,7 @@
 #include "PxSceneDesc.h"
 #include "CmBitMap.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Bp;
 using namespace Cm;
 

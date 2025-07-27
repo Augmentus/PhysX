@@ -30,9 +30,9 @@
 #include "ScSimulationController.h"
 #include "PsAllocator.h"
 
-using namespace physx;
+using namespace augphysx;
 
-PxsSimulationController* physx::createSimulationController(PxsSimulationControllerCallback* callback)
+PxsSimulationController* augphysx::createSimulationController(PxsSimulationControllerCallback* callback)
 {
 	return PX_PLACEMENT_NEW(PX_ALLOC(sizeof(Sc::SimulationController), PX_DEBUG_EXP("ScSimulationController")), Sc::SimulationController(callback)); 
 }

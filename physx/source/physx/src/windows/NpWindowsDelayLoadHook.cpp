@@ -33,7 +33,7 @@
 #include "windows/PsWindowsInclude.h"
 #include "windows/CmWindowsLoadLibrary.h"
 
-namespace physx
+namespace augphysx
 {
 	static const PxDelayLoadHook* gPhysXDelayLoadHook = NULL;
 	
@@ -50,7 +50,7 @@ namespace physx
 #define DELAYIMP_INSECURE_WRITABLE_HOOKS
 #include <delayimp.h>
 
-using namespace physx;
+using namespace augphysx;
 
 #pragma comment(lib, "delayimp")
 

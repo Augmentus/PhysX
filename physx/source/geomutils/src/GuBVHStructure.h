@@ -43,7 +43,7 @@
 #include "PsVecMath.h"
 #include "PsUserAllocated.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {

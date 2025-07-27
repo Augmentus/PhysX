@@ -46,12 +46,12 @@
 #include "PsFoundation.h"
 #include "CmCollection.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sn;
 
-using namespace physx::profile; //for the foundation wrapper system.
+using namespace augphysx::profile; //for the foundation wrapper system.
 
-namespace physx { namespace Sn {	
+namespace augphysx { namespace Sn {	
 
 	class XmlNodeWriter : public SimpleXmlWriter
 	{
@@ -350,7 +350,7 @@ namespace physx { namespace Sn {
 		// Return true to continue processing the XML file.
 		// Return false to stop processing the XML file; leaves the read pointer of the stream right after this close tag.
 		// The bool 'isError' indicates whether processing was stopped due to an error, or intentionally canceled early.
-		virtual bool processClose(const char* /*element*/,physx::PxU32 /*depth*/,bool& /*isError*/)
+		virtual bool processClose(const char* /*element*/,augphysx::PxU32 /*depth*/,bool& /*isError*/)
 		{
 			mCurrentNode = mCurrentNode->mParent;
 			return true;
@@ -639,9 +639,9 @@ namespace physx { namespace Sn {
 						theChild != NULL;
 						theChild = theChild->mNextSibling )
 				{
-					if ( physx::shdfnd::stricmp( theChild->mName, "scale" ) == 0 
-						|| physx::shdfnd::stricmp( theChild->mName, "version" ) == 0 
-						|| physx::shdfnd::stricmp( theChild->mName, "upvector" ) == 0 )
+					if ( augphysx::shdfnd::stricmp( theChild->mName, "scale" ) == 0 
+						|| augphysx::shdfnd::stricmp( theChild->mName, "version" ) == 0 
+						|| augphysx::shdfnd::stricmp( theChild->mName, "upvector" ) == 0 )
 						continue;
 					XmlNodeReader theReader( theChild, mAllocator.getAllocator(), mAllocator.mManager );
 					PxRepXObject theObject;
@@ -683,7 +683,7 @@ namespace physx { namespace Sn {
 		//Performs a deep copy of the repx node.
 		virtual XmlNode* copyRepXNode( const XmlNode* srcNode ) 
 		{
-			return physx::Sn::copyRepXNode( &mAllocator.mManager, srcNode );
+			return augphysx::Sn::copyRepXNode( &mAllocator.mManager, srcNode );
 		}
 
 		virtual void addCollectionItem( RepXCollectionItem inItem ) 

@@ -32,7 +32,7 @@
 
 #include "PxsSimpleIslandManager.h"
 
-namespace physx
+namespace augphysx
 {
 
 }

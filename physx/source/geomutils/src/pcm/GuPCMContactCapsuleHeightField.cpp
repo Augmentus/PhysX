@@ -42,11 +42,11 @@
 #include "GuInternal.h"
 #include "GuPCMContactMeshCallback.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Ps::aos;
 
-namespace physx
+namespace augphysx
 {
 
 struct PCMCapsuleVsHeightfieldContactGenerationCallback :  PCMHeightfieldContactGenerationCallback<PCMCapsuleVsHeightfieldContactGenerationCallback>

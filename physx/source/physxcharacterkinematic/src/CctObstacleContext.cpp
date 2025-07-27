@@ -32,7 +32,7 @@
 #include "CctCharacterControllerManager.h"
 #include "PsUtilities.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cct;
 
 //! Initial list size

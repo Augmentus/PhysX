@@ -33,7 +33,7 @@
 #include "foundation/PxMemory.h"
 #include "PsVecMath.h"
 
-namespace physx
+namespace augphysx
 {
 	struct HullTriangleData;
 	class BigConvexData;

@@ -37,7 +37,7 @@
 #include "common/PxPhysXCommonConfig.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -121,7 +121,7 @@ PX_DEFINE_TYPEINFO(PxShape,									PxConcreteType::eSHAPE)
 PX_DEFINE_TYPEINFO(PxPruningStructure,						PxConcreteType::ePRUNING_STRUCTURE)
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

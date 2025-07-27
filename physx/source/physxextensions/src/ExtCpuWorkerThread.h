@@ -37,7 +37,7 @@
 #include "ExtSharedQueueEntryPool.h"
 
 
-namespace physx
+namespace augphysx
 {
 namespace Ext
 {

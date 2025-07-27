@@ -34,7 +34,7 @@
 #include "GuMeshData.h"
 #include "GuRTree.h"
 
-namespace physx
+namespace augphysx
 {
 	struct RTreeCooker
 	{

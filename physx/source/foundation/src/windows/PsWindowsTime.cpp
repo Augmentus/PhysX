@@ -49,7 +49,7 @@ double getTickDuration()
 double sTickDuration = getTickDuration();
 } // namespace
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

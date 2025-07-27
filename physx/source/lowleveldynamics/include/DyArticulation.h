@@ -40,7 +40,7 @@
 #include "PxArticulationJoint.h"
 #include "DyVArticulation.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxConstraintAllocator;
 	class PxcConstraintBlockStream;

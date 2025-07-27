@@ -33,7 +33,7 @@
 #include "GuIntersectionRayBox.h"
 #include "GuIntersectionRayBoxSIMD.h"
 
-using namespace physx;
+using namespace augphysx;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
@@ -285,15 +285,15 @@ int Gu::intersectRayAABB(const PxVec3& minimum, const PxVec3& maximum, const PxV
 	#define LOCAL_EPSILON PX_EPS_F32
 	//#define LOCAL_EPSILON 0.0001f
 
-	if(physx::intrinsics::abs(rd.x)<LOCAL_EPSILON)
+	if(augphysx::intrinsics::abs(rd.x)<LOCAL_EPSILON)
 //	if(rd.x>-LOCAL_EPSILON && rd.x<LOCAL_EPSILON)
 		if(ro.x<minimum.x || ro.x>maximum.x)
 				return -1;
-	if(physx::intrinsics::abs(rd.y)<LOCAL_EPSILON)
+	if(augphysx::intrinsics::abs(rd.y)<LOCAL_EPSILON)
 //	if(rd.y>-LOCAL_EPSILON && rd.y<LOCAL_EPSILON)
 		if(ro.y<minimum.y || ro.y>maximum.y)
 				return -1;
-	if(physx::intrinsics::abs(rd.z)<LOCAL_EPSILON)
+	if(augphysx::intrinsics::abs(rd.z)<LOCAL_EPSILON)
 //	if(rd.z>-LOCAL_EPSILON && rd.z<LOCAL_EPSILON)
 		if(ro.z<minimum.z || ro.z>maximum.z)
 				return -1;
@@ -375,7 +375,7 @@ bool Gu::intersectRayAABB2(
 	PX_ASSERT(maximum.y-minimum.y >= GU_MIN_AABB_EXTENT*0.5f);
 	PX_ASSERT(maximum.z-minimum.z >= GU_MIN_AABB_EXTENT*0.5f);
 	// not using vector math due to vector to integer pipeline penalties. TODO: verify that it's indeed faster
-	namespace i = physx::intrinsics;
+	namespace i = augphysx::intrinsics;
 
 	// P+tD=a; t=(a-P)/D
 	// t=(a - p.x)*1/d.x = a/d.x +(- p.x/d.x)

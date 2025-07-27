@@ -40,7 +40,7 @@
 #include "common/PxRenderBuffer.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -293,7 +293,7 @@ protected:
 
 	By default, locking is disabled.
 	*/
-PX_C_EXPORT physx::PxControllerManager* PX_CALL_CONV PxCreateControllerManager(physx::PxScene& scene, bool lockingEnabled = false);
+PX_C_EXPORT augphysx::PxControllerManager* PX_CALL_CONV PxCreateControllerManager(augphysx::PxScene& scene, bool lockingEnabled = false);
 
 /** @} */
 #endif //PX_PHYSICS_CCT_MANAGER

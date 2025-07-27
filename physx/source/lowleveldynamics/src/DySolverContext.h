@@ -31,7 +31,7 @@
 #ifndef DY_SOLVERCONTEXT_H
 #define DY_SOLVERCONTEXT_H
 
-namespace physx
+namespace augphysx
 {
 	struct PxSolverBodyData;
 

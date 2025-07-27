@@ -36,9 +36,9 @@
 #include "GuPersistentContactManifold.h"
 #include "GuGJKUtil.h"
 
-using namespace physx;
+using namespace augphysx;
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -631,7 +631,7 @@ PxU32 Gu::PersistentContactManifold::reduceContactsForPCM(const Ps::aos::Vec3VAr
 
 
 	bool chosen[5];
-	physx::PxMemZero(chosen, sizeof(bool)*5);
+	augphysx::PxMemZero(chosen, sizeof(bool)*5);
 	const FloatV negMax = FNeg(FMax());
 	PersistentContact tempContacts[5];
 	
@@ -946,7 +946,7 @@ void Gu::PersistentContactManifold::reduceBatchContactsCluster(const PersistentC
 	//get the deepest points
 
 	bool chosen[64];
-	physx::PxMemZero(chosen, sizeof(bool)*numPoints);
+	augphysx::PxMemZero(chosen, sizeof(bool)*numPoints);
 	const FloatV max = FMax();
 	const FloatV nmax = FNeg(max);
 	FloatV maxDist = nmax;
@@ -1280,7 +1280,7 @@ void Gu::PersistentContactManifold::reduceBatchContacts2(const PersistentContact
 	
 	PX_ASSERT(numPoints < 64);
 	bool chosen[64];
-	physx::PxMemZero(chosen, sizeof(bool)*numPoints);
+	augphysx::PxMemZero(chosen, sizeof(bool)*numPoints);
 	FloatV maxDis = V4GetW(manifoldPoints[0].mLocalNormalPen);
 	PxI32 index = 0;
 	//keep the deepest point
@@ -1548,7 +1548,7 @@ Ps::aos::FloatV Gu::SinglePersistentContactManifold::reduceBatchContactsCapsule(
 	using namespace Ps::aos;
 
 	bool* chosen = reinterpret_cast<bool*>(PxAlloca(sizeof(bool)*numContacts));
-	physx::PxMemZero(chosen, sizeof(bool)*numContacts);
+	augphysx::PxMemZero(chosen, sizeof(bool)*numContacts);
 	const FloatV max = FMax();
 	FloatV maxDis = max;
 	PxI32 index = -1;
@@ -1635,7 +1635,7 @@ Ps::aos::FloatV Gu::SinglePersistentContactManifold::reduceBatchContactsConvex(c
 	using namespace Ps::aos;
 
 	bool* chosen = reinterpret_cast<bool*>(PxAlloca(sizeof(bool)*numContacts));
-	physx::PxMemZero(chosen, sizeof(bool)*numContacts);
+	augphysx::PxMemZero(chosen, sizeof(bool)*numContacts);
 	const FloatV max = FMax();
 	const FloatV nmax = FNeg(max);
 	FloatV maxDis = nmax;
@@ -2366,7 +2366,7 @@ bool Gu::MultiplePersistentContactManifold::addManifoldContactsToContactBuffer(G
 	This function copies the mesh persistent contact from compress buffer(NpCacheStreamPair in the PxcNpThreadContext) to the multiple manifold
 */
 // PT: function moved to cpp to go around a compiler bug on PS4
-void physx::Gu::MultiplePersistentContactManifold::fromBuffer(PxU8* PX_RESTRICT buffer)
+void augphysx::Gu::MultiplePersistentContactManifold::fromBuffer(PxU8* PX_RESTRICT buffer)
 {
 	using namespace Ps::aos;
 	PxU32 numManifolds = 0;

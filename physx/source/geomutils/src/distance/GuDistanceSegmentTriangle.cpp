@@ -36,7 +36,7 @@
 #include "GuDistanceSegmentSegmentSIMD.h"
 #include "GuBarycentricCoordinates.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 // ptchernev: 
@@ -375,7 +375,7 @@ PxReal Gu::distanceSegmentTriangleSquared(	const PxVec3& origin, const PxVec3& d
 	if(v)	*v = fT;
 
 	// account for numerical round-off error
-	return physx::intrinsics::selectMax(0.0f, fSqrDist);
+	return augphysx::intrinsics::selectMax(0.0f, fSqrDist);
 }
 
 

@@ -41,7 +41,7 @@
 #include "PxPvdDataStream.h"
 #include "extensions/PxJoint.h"
 
-using namespace physx;
+using namespace augphysx;
 
 class LLReducedArticulationPool : public Ps::Pool<Dy::FeatherstoneArticulation, Ps::AlignedAllocator<Dy::DY_ARTICULATION_MAX_SIZE> >
 {
@@ -297,7 +297,7 @@ bool NpArticulationReducedCoordinate::computeLambda(PxArticulationCache& cache, 
 {
 	if (!mImpl.getAPIScene())
 	{
-		physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "PxArticulation::computeLambda : object must be in a scened!");
+		augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "PxArticulation::computeLambda : object must be in a scened!");
 		return false;
 	}
 		
@@ -305,7 +305,7 @@ bool NpArticulationReducedCoordinate::computeLambda(PxArticulationCache& cache, 
 
 	if (cache.version != mImpl.mCacheVersion)
 	{
-		physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "PxArticulation::computeLambda : cache is invalid, articulation configuration has changed!");
+		augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, "PxArticulation::computeLambda : cache is invalid, articulation configuration has changed!");
 		return false;
 	}
 
@@ -471,12 +471,12 @@ void PxArticulationImpl::recomputeLinkIDs()
 		if (scArtSim)
 		{
 
-			physx::NpArticulationLink*const* links = getLinks();
+			augphysx::NpArticulationLink*const* links = getLinks();
 
 			const PxU32 nbLinks = getNbLinks();
 			for (PxU32 i = 1; i < nbLinks; ++i)
 			{
-				physx::NpArticulationLink* link = links[i];
+				augphysx::NpArticulationLink* link = links[i];
 				PxU32 cHandle = scArtSim->findBodyIndex(*link->getScbBodyFast().getScBody().getSim());
 				link->setLLIndex(cHandle);
 			}

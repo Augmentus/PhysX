@@ -40,7 +40,7 @@
 // If it's a math function where the inputs have specific semantics (e.g.
 // separateSwingTwist) it doesn't.
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

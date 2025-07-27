@@ -49,7 +49,7 @@
 #include <assert.h>
 #include "PsFoundation.h"
 
-using namespace physx;
+using namespace augphysx;
 
 Sn::ConvX::ConvX() :
     mMetaData_Src		(NULL),

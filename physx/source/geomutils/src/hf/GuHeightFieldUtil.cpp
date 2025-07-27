@@ -36,7 +36,7 @@
 #include "PsFoundation.h"
 #include "PsIntrinsics.h"
 
-using namespace physx;
+using namespace augphysx;
 
 void Gu::HeightFieldUtil::computeLocalBounds(PxBounds3& bounds) const
 {

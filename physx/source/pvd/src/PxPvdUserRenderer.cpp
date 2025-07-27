@@ -30,8 +30,8 @@
 #include "PxPvdBits.h"
 #include <stdarg.h>
 
-using namespace physx;
-using namespace physx::pvdsdk;
+using namespace augphysx;
+using namespace augphysx::pvdsdk;
 
 namespace
 {

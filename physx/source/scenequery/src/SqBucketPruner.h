@@ -40,7 +40,7 @@
 	#include "PsHashMap.h"
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace Sq
 {

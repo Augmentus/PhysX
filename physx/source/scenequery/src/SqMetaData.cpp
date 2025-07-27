@@ -31,7 +31,7 @@
 
 #include "SqPruningStructure.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sq;
 
 ///////////////////////////////////////////////////////////////////////////////

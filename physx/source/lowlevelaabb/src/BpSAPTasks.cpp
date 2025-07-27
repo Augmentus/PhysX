@@ -32,7 +32,7 @@
 #include "BpBroadPhaseSap.h"
 #include "PsTime.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Bp

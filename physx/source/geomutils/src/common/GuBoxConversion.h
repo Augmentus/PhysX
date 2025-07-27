@@ -35,7 +35,7 @@
 #include "CmMatrix34.h"
 #include "PsVecMath.h"
 
-namespace physx
+namespace augphysx
 {
 	// PT: builds rot from quat. WARNING: writes 4 bytes after 'dst.rot'.
 	PX_FORCE_INLINE void buildFrom(Gu::Box& dst, const PxQuat& q)

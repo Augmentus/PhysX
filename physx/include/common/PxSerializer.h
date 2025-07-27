@@ -42,7 +42,7 @@
 
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -211,7 +211,7 @@ public:
 		{
 			RequiresCallback(PxSerializationContext& c) : context(c) {}
 			RequiresCallback& operator=(RequiresCallback&) { PX_ASSERT(0); return *this; }
-			void process(physx::PxBase& base)
+			void process(augphysx::PxBase& base)
 			{				
 				context.registerReference(base, PX_SERIAL_REF_KIND_PXBASE, size_t(&base));
 			}
@@ -258,7 +258,7 @@ private:
 	{ PxSerializer* s = x; if (s) { s->~PxSerializer(); PxGetFoundation().getAllocatorCallback().deallocate(s); } }
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

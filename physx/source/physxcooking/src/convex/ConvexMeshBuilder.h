@@ -36,7 +36,7 @@
 #include "GuConvexMeshData.h"
 #include "ConvexPolygonsBuilder.h"
 
-namespace physx
+namespace augphysx
 {
 	//////////////////////////////////////////////////////////////////////////
 	// Convex mesh builder, creates the convex mesh from given polygons and creates internal data

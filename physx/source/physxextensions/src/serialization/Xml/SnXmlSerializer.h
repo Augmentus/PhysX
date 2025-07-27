@@ -32,7 +32,7 @@
 #include "PxExtensionMetaDataObjects.h"
 #include "SnXmlVisitorWriter.h"
 
-namespace physx {
+namespace augphysx {
 
 namespace Sn {
 	

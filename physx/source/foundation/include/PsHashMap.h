@@ -69,7 +69,7 @@
 // for(HashMap::Iterator iter = test.getIterator(); !iter.done(); ++iter)
 //			myFunction(iter->first, iter->second);
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

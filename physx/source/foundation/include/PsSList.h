@@ -40,7 +40,7 @@
 #define PX_SLIST_ALIGNMENT 8
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

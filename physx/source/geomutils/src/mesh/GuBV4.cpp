@@ -34,7 +34,7 @@
 #include "CmUtils.h"
 #include "PsUtilities.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 
 #define DELETEARRAY(x)		if (x) { delete []x;	x = NULL; }

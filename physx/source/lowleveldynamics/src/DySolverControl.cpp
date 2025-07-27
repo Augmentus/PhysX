@@ -47,7 +47,7 @@
 #include "DySolverContext.h"
 
 
-namespace physx
+namespace augphysx
 {
 
 namespace Dy
@@ -320,7 +320,7 @@ void SolverCoreGeneral::solveV_Blocks(SolverIslandParams& params) const
 	if(cache.mThresholdStreamIndex > 0)
 	{
 		//Write back to global buffer
-		PxI32 threshIndex = physx::shdfnd::atomicAdd(outThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
+		PxI32 threshIndex = augphysx::shdfnd::atomicAdd(outThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
 		for(PxU32 b = 0; b < cache.mThresholdStreamIndex; ++b)
 		{
 			thresholdStream[b + threshIndex] = cache.mThresholdStream[b];
@@ -386,7 +386,7 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 	PX_ASSERT(positionIterations >= 1);
 
 	PxI32 endIndexCount = UnrollCount;
-	PxI32 index = physx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
+	PxI32 index = augphysx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
 
 	PxI32 articSolveStart = 0;
 	PxI32 articSolveEnd = 0;
@@ -427,13 +427,13 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 					if(endIndexCount == 0)
 					{
 						endIndexCount = UnrollCount;
-						index = physx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
+						index = augphysx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
 					}
 				}
 				if(nbSolved)
 				{
 					Ps::memoryBarrier();
-					physx::shdfnd::atomicAdd(constraintIndex2, nbSolved);
+					augphysx::shdfnd::atomicAdd(constraintIndex2, nbSolved);
 				}
 				targetConstraintIndex += headersPerPartition[b]; //Increment target constraint index by batch count
 			}
@@ -457,14 +457,14 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 
 				if (nbSolved)
 				{
-					physx::shdfnd::atomicAdd(articIndex2, nbSolved);
+					augphysx::shdfnd::atomicAdd(articIndex2, nbSolved);
 				}
 
 				const PxI32 remaining = articSolveEnd - articSolveStart;
 
 				if (remaining == 0)
 				{
-					articSolveStart = physx::shdfnd::atomicAdd(articIndex, ArticCount) - ArticCount;
+					articSolveStart = augphysx::shdfnd::atomicAdd(articIndex, ArticCount) - ArticCount;
 					articSolveEnd = articSolveStart + ArticCount;
 				}
 			}
@@ -483,7 +483,7 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 
 	//Save velocity - articulated
 	PxI32 endIndexCount2 = SaveUnrollCount;
-	PxI32 index2 = physx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount;
+	PxI32 index2 = augphysx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount;
 	{
 		WAIT_FOR_PROGRESS(articIndex2, targetArticIndex);
 		WAIT_FOR_PROGRESS(constraintIndex2, targetConstraintIndex);
@@ -498,7 +498,7 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 			}
 			if(endIndexCount2 == 0)
 			{
-				index2 = physx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount;
+				index2 = augphysx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount;
 				endIndexCount2 = SaveUnrollCount;
 			}
 			nbConcluded += remainder;
@@ -529,7 +529,7 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 			//Branch not required because this is the last time we use this atomic variable
 			//if(index2 < articulationListSizePlusbodyListSize)
 			{
-				index2 = physx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount - articulationListSize;
+				index2 = augphysx::shdfnd::atomicAdd(bodyListIndex, SaveUnrollCount) - SaveUnrollCount - articulationListSize;
 				endIndexCount2 = SaveUnrollCount;
 			}
 		}
@@ -537,7 +537,7 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 		if(nbConcluded)
 		{
 			Ps::memoryBarrier();
-			physx::shdfnd::atomicAdd(bodyListIndex2, nbConcluded);
+			augphysx::shdfnd::atomicAdd(bodyListIndex2, nbConcluded);
 		}
 	}
 
@@ -565,13 +565,13 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 				if(endIndexCount == 0)
 				{
 					endIndexCount = UnrollCount;
-					index = physx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
+					index = augphysx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
 				}
 			}
 			if(nbSolved)
 			{
 				Ps::memoryBarrier();
-				physx::shdfnd::atomicAdd(constraintIndex2, nbSolved);
+				augphysx::shdfnd::atomicAdd(constraintIndex2, nbSolved);
 			}
 			targetConstraintIndex += headersPerPartition[b]; //Increment target constraint index by batch count
 		}
@@ -595,14 +595,14 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 
 			if (nbSolved)
 			{
-				physx::shdfnd::atomicAdd(articIndex2, nbSolved);
+				augphysx::shdfnd::atomicAdd(articIndex2, nbSolved);
 			}
 
 			const PxI32 remaining = articSolveEnd - articSolveStart;
 
 			if (remaining == 0)
 			{
-				articSolveStart = physx::shdfnd::atomicAdd(articIndex, ArticCount) - ArticCount;
+				articSolveStart = augphysx::shdfnd::atomicAdd(articIndex, ArticCount) - ArticCount;
 				articSolveEnd = articSolveStart + ArticCount;
 			}
 
@@ -643,13 +643,13 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 				if(endIndexCount == 0)
 				{
 					endIndexCount = UnrollCount;
-					index = physx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
+					index = augphysx::shdfnd::atomicAdd(constraintIndex, UnrollCount) - UnrollCount;
 				}
 			}
 			if(nbSolved)
 			{
 				Ps::memoryBarrier();
-				physx::shdfnd::atomicAdd(constraintIndex2, nbSolved);
+				augphysx::shdfnd::atomicAdd(constraintIndex2, nbSolved);
 			}
 			targetConstraintIndex += headersPerPartition[b]; //Increment target constraint index by batch count
 		}
@@ -674,14 +674,14 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 
 				if (nbSolved)
 				{
-					physx::shdfnd::atomicAdd(articIndex2, nbSolved);
+					augphysx::shdfnd::atomicAdd(articIndex2, nbSolved);
 				}
 
 				PxI32 remaining = articSolveEnd - articSolveStart;
 
 				if (remaining == 0)
 				{
-					articSolveStart = physx::shdfnd::atomicAdd(articIndex, ArticCount) - ArticCount;
+					articSolveStart = augphysx::shdfnd::atomicAdd(articIndex, ArticCount) - ArticCount;
 					articSolveEnd = articSolveStart + ArticCount;
 				}
 			}
@@ -690,7 +690,7 @@ PxI32 SolverCoreGeneral::solveVParallelAndWriteBack
 		if(cache.mThresholdStreamIndex > 0)
 		{
 			//Write back to global buffer
-			PxI32 threshIndex = physx::shdfnd::atomicAdd(outThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
+			PxI32 threshIndex = augphysx::shdfnd::atomicAdd(outThresholdPairs, PxI32(cache.mThresholdStreamIndex)) - PxI32(cache.mThresholdStreamIndex);
 			for(PxU32 b = 0; b < cache.mThresholdStreamIndex; ++b)
 			{
 				thresholdStream[b + threshIndex] = cache.mThresholdStream[b];

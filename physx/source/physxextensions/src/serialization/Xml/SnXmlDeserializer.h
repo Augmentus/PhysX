@@ -31,7 +31,7 @@
 
 #include "SnXmlVisitorReader.h"
 
-namespace physx { namespace Sn {
+namespace augphysx { namespace Sn {
 	
 	//Definitions needed internally in the Serializer headers.
 	template<typename TTriIndexElem>

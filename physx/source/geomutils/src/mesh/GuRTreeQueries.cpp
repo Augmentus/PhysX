@@ -65,11 +65,11 @@ General notes:
 #include "stdio.h"
 #endif
 
-using namespace physx;
-using namespace physx::shdfnd;
+using namespace augphysx;
+using namespace augphysx::shdfnd;
 using namespace Ps::aos;
 
-namespace physx
+namespace augphysx
 {
 namespace Gu {
 

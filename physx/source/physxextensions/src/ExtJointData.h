@@ -32,7 +32,7 @@
 
 #include "extensions/PxJointLimit.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Ext
 {

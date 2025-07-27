@@ -40,7 +40,7 @@
 #include "PsIntrinsics.h"
 #include "CmPhysXCommon.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Ps;
 using namespace Cm;
 using namespace Gu;

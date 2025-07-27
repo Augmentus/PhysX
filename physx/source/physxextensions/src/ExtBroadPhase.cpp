@@ -33,7 +33,7 @@
 #include "PsFoundation.h"
 #include "CmPhysXCommon.h"
 
-using namespace physx;
+using namespace augphysx;
 
 PxU32 PxBroadPhaseExt::createRegionsFromWorldBounds(PxBounds3* regions, const PxBounds3& globalBounds, PxU32 nbSubdiv, PxU32 upAxis)
 {

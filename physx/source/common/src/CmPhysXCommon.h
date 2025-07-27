@@ -50,14 +50,14 @@
 // caused troubles (e.g. TTP 1705, TTP 306).
 #define PX_PARALLEL_TOLERANCE	1e-02f
 
-namespace physx
+namespace augphysx
 {
 	// alias shared foundation to something usable
 	namespace Ps = shdfnd;
 }
 
 #if PX_CHECKED
-	#define PX_CHECK_MSG(exp, msg)				(!!(exp) || (physx::shdfnd::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, msg), 0) )
+	#define PX_CHECK_MSG(exp, msg)				(!!(exp) || (augphysx::shdfnd::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, msg), 0) )
 	#define PX_CHECK(exp)						PX_CHECK_MSG(exp, #exp)
 	#define PX_CHECK_AND_RETURN(exp,msg)		{ if(!(exp)) { PX_CHECK_MSG(exp, msg); return; } }
 	#define PX_CHECK_AND_RETURN_NULL(exp,msg)	{ if(!(exp)) { PX_CHECK_MSG(exp, msg); return 0; } }
@@ -72,15 +72,15 @@ namespace physx
 
 #if PX_VC
 	// VC compiler defines __FUNCTION__ as a string literal so it is possible to concatenate it with another string
-	// Example: #define PX_CHECK_VALID(x)	PX_CHECK_MSG(physx::shdfnd::checkValid(x), __FUNCTION__ ": parameter invalid!")
-	#define PX_CHECK_VALID(x)				PX_CHECK_MSG(physx::shdfnd::checkValid(x), __FUNCTION__)
+	// Example: #define PX_CHECK_VALID(x)	PX_CHECK_MSG(augphysx::shdfnd::checkValid(x), __FUNCTION__ ": parameter invalid!")
+	#define PX_CHECK_VALID(x)				PX_CHECK_MSG(augphysx::shdfnd::checkValid(x), __FUNCTION__)
 #elif PX_GCC_FAMILY
 	// GCC compiler defines __FUNCTION__ as a variable, hence, it is NOT possible concatenate an additional string to it
 	// In GCC, __FUNCTION__ only returns the function name, using __PRETTY_FUNCTION__ will return the full function definition
-	#define PX_CHECK_VALID(x)				PX_CHECK_MSG(physx::shdfnd::checkValid(x), __PRETTY_FUNCTION__)
+	#define PX_CHECK_VALID(x)				PX_CHECK_MSG(augphysx::shdfnd::checkValid(x), __PRETTY_FUNCTION__)
 #else
 	// Generic macro for other compilers
-	#define PX_CHECK_VALID(x)				PX_CHECK_MSG(physx::shdfnd::checkValid(x), __FUNCTION__)
+	#define PX_CHECK_VALID(x)				PX_CHECK_MSG(augphysx::shdfnd::checkValid(x), __FUNCTION__)
 #endif
 
 

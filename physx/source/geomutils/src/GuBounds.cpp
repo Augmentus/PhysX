@@ -46,7 +46,7 @@
 #include "GuConvexUtilsInternal.h"
 #include "GuBoxConversion.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace Ps::aos;
 
@@ -472,7 +472,7 @@ static PX_FORCE_INLINE void computeMinMaxBounds(PxBounds3* PX_RESTRICT bounds, c
 
 ShapeData::ShapeData(const PxGeometry& g, const PxTransform& t, PxReal inflation)
 {
-	using namespace physx::shdfnd::aos;
+	using namespace augphysx::shdfnd::aos;
 
 	// PT: this cast to matrix is already done in GeometryUnion::computeBounds (e.g. for boxes). So we do it first,
 	// then we'll pass the matrix directly to computeBoundsShapeData, to avoid the double conversion.

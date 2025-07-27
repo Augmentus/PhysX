@@ -41,7 +41,7 @@
 #define	GJK_VALIDATE 0
 
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -315,6 +315,6 @@ namespace Gu
 
 }//Gu
 
-}//physx
+}//augphysx
 
 #endif

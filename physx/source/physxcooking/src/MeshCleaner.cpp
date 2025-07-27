@@ -37,7 +37,7 @@
 #error Do not include anymore!
 #endif
 
-using namespace physx;
+using namespace augphysx;
 
 struct Indices
 {

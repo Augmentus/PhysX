@@ -33,7 +33,7 @@
 #include "GuBarycentricCoordinates.h"
 #include "PsSort.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu

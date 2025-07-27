@@ -30,7 +30,7 @@
 
 #include "PxProfileEventNames.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 	
 	/**
 	\brief Client handles the data when an event buffer flushes.  This data

@@ -36,7 +36,7 @@
 #include "PsIntrinsics.h"
 #include "CmUtils.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxConstraintSolverPrepKernel;

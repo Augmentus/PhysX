@@ -31,7 +31,7 @@
 #include "PxProfileMemoryEventBuffer.h"
 #include "PsUserAllocated.h"
 
-namespace physx { namespace profile {
+namespace augphysx { namespace profile {
 
 	struct PxProfileNameProviderForward
 	{

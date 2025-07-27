@@ -33,7 +33,7 @@
 #include "PxsIslandSim.h"
 #include "CmTask.h"
 
-namespace physx
+namespace augphysx
 {
 
 namespace Sc

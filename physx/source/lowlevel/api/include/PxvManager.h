@@ -38,7 +38,7 @@
 #include "PxvConfig.h"
 #include "PxvGeometry.h"
 
-namespace physx
+namespace augphysx
 {
 
 /*!

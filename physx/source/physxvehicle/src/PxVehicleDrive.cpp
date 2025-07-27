@@ -36,7 +36,7 @@
 #include "PsUtilities.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 bool PxVehicleDriveSimData::isValid() const

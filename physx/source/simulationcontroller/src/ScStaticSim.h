@@ -34,7 +34,7 @@
 #include "ScRigidSim.h"
 #include "ScStaticCore.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Sc
 {

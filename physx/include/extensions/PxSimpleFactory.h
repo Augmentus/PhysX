@@ -39,7 +39,7 @@
 #include "foundation/PxPlane.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -330,7 +330,7 @@ void PxScaleRigidActor(PxRigidActor& actor, PxReal scale, bool scaleMassProps = 
 
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

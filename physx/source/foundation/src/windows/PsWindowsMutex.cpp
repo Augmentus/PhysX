@@ -34,7 +34,7 @@
 #include "PsThread.h"
 #include "foundation/PxErrorCallback.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

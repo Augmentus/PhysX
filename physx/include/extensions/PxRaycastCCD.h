@@ -37,7 +37,7 @@
 #include "foundation/PxVec3.h"
 
 #if !PX_DOXYGEN
-namespace physx
+namespace augphysx
 {
 #endif
 
@@ -93,7 +93,7 @@ namespace physx
 	};
 
 #if !PX_DOXYGEN
-} // namespace physx
+} // namespace augphysx
 #endif
 
 /** @} */

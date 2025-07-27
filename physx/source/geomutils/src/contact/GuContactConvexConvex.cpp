@@ -48,7 +48,7 @@
 	#define USE_BOX_DATA
 #endif
 
-using namespace physx;
+using namespace augphysx;
 using namespace Gu;
 using namespace shdfnd::aos;
 using namespace intrinsics;
@@ -747,7 +747,7 @@ static bool GuContactHullHull(	const PolygonalData& polyData0, const PolygonalDa
 								const Cm::FastVertex2ShapeScaling& scaling0, const Cm::FastVertex2ShapeScaling& scaling1,
 								bool idtScale0, bool idtScale1);
 
-namespace physx
+namespace augphysx
 {
 
 namespace Gu
@@ -803,7 +803,7 @@ bool contactConvexConvex(GU_CONTACT_METHOD_ARGS)
 								scaling0, scaling1, idtScale0, idtScale1);
 }
 }//Gu
-}//physx
+}//augphysx
 
 static bool GuContactHullHull(	const PolygonalData& polyData0, const PolygonalData& polyData1,
 								const PxBounds3& hullBounds0, const PxBounds3& hullBounds1,

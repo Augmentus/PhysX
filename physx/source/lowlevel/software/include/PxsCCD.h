@@ -56,7 +56,7 @@ namespace physx {
 #define PRINTCCDDEBUG(x)
 #endif
 
-namespace physx
+namespace augphysx
 {
 
 // ------------------------------------------------------------------------------------------------------------

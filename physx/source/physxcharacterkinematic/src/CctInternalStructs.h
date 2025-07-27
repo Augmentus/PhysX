@@ -33,7 +33,7 @@
 
 #include "CctController.h"
 
-namespace physx
+namespace augphysx
 {
 	class PxObstacle;	// (*)
 

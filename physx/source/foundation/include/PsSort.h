@@ -52,7 +52,7 @@ that the predicate implements the < operator:
 // this was intentional.
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

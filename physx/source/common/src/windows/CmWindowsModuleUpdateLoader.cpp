@@ -40,7 +40,7 @@
 #include "windows/CmWindowsLoadLibrary.h"
 
 
-namespace physx { namespace Cm {
+namespace augphysx { namespace Cm {
 
 #if PX_VC
 #pragma warning(disable: 4191)	//'operator/operation' : unsafe conversion from 'type of expression' to 'type required'

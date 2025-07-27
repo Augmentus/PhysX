@@ -41,7 +41,7 @@
 #include "NpArticulationLink.h"
 #include "CmTransformUtils.h"
 
-using namespace physx;
+using namespace augphysx;
 
 ///////////////////////////////////////////////////////////////////////////////
 

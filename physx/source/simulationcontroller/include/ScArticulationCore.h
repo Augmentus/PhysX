@@ -35,7 +35,7 @@
 #include "DyArticulation.h"
 #include "DyFeatherstoneArticulation.h"
 
-namespace physx
+namespace augphysx
 {
 
 class PxvArticulation;

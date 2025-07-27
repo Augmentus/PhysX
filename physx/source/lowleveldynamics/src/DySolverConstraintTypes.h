@@ -34,7 +34,7 @@
 #include "foundation/PxSimpleTypes.h"
 #include "PxvConfig.h"
 
-namespace physx
+namespace augphysx
 {
 
 enum SolverConstraintType

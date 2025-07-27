@@ -56,10 +56,10 @@
 #include "DyContactPrepShared.h"
 #include "PsFoundation.h"
 
-using namespace physx::Gu;
-using namespace physx::shdfnd::aos;
+using namespace augphysx::Gu;
+using namespace augphysx::shdfnd::aos;
 
-namespace physx
+namespace augphysx
 {
 namespace Dy
 {

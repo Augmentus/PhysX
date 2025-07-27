@@ -57,7 +57,7 @@
 #include "GuVecConvexHull.h"
 #include "GuConvexMesh.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cm;
 using namespace Gu;
 using namespace Ps::aos;
@@ -278,7 +278,7 @@ static bool intersectHeightFieldCapsule(const HeightFieldUtil& hfUtil, const PxC
 	return false;
 }
 
-namespace physx
+namespace augphysx
 {
 namespace Gu
 {
@@ -431,10 +431,10 @@ static bool intersectHeightFieldBox(const HeightFieldTraceUtil& hfUtil, const Bo
 			if(boxVertexInHfShape.z < minz) minz = boxVertexInHfShape.z;
 			if(boxVertexInHfShape.x > maxx) maxx = boxVertexInHfShape.x;
 			if(boxVertexInHfShape.z > maxz) maxz = boxVertexInHfShape.z;*/
-			minx = physx::intrinsics::selectMin(boxVertexInHfShape.x, minx);
-			minz = physx::intrinsics::selectMin(boxVertexInHfShape.z, minz);
-			maxx = physx::intrinsics::selectMax(boxVertexInHfShape.x, maxx);
-			maxz = physx::intrinsics::selectMax(boxVertexInHfShape.z, maxz);
+			minx = augphysx::intrinsics::selectMin(boxVertexInHfShape.x, minx);
+			minz = augphysx::intrinsics::selectMin(boxVertexInHfShape.z, minz);
+			maxx = augphysx::intrinsics::selectMax(boxVertexInHfShape.x, maxx);
+			maxz = augphysx::intrinsics::selectMax(boxVertexInHfShape.z, maxz);
 		}
 
 		const PxReal oneOverRowScale = hfUtil.getOneOverRowScale();

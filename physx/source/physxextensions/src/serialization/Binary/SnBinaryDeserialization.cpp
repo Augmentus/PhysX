@@ -44,7 +44,7 @@
 #include "CmIO.h"
 #include "CmCollection.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Sn;
 
 namespace
@@ -89,14 +89,14 @@ namespace
 #if PX_CHECKED
 		if (header != PX_MAKE_FOURCC('S','E','B','D'))
 		{
-			Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+			Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 				"Buffer contains data with wrong header indicating invalid binary data.");
 			return false;
 		}
 
 		if (!checkCompatibility(binaryVersionGuid))
 		{
-			Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+			Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 				"Buffer contains binary data version 0x%s and is incompatible with this PhysX sdk (0x%s).\n", 
 				binaryVersionGuid, getBinaryVersionGuid());
 			return false;
@@ -104,7 +104,7 @@ namespace
 
 		if (platformTag != getBinaryPlatformTag())
 		{
-			Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+			Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 				"Buffer contains data with platform mismatch:\nExpected: %s \nActual: %s\n",
 				getBinaryPlatformName(getBinaryPlatformTag()),
 				getBinaryPlatformName(platformTag));
@@ -275,7 +275,7 @@ PxCollection* PxSerialization::createCollectionFromBinary(void* memBlock, PxSeri
 			PxBase* instance = serializer->createObject(address, context);
 			if (!instance)
 			{
-				Ps::getFoundation().error(physx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
+				Ps::getFoundation().error(augphysx::PxErrorCode::eINVALID_PARAMETER, __FILE__, __LINE__, 
 					"Cannot create class instance for concrete type %d.", classType);
 				collection->release();
 				return NULL;

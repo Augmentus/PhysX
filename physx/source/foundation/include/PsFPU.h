@@ -40,7 +40,7 @@
 #define PX_FPU_GUARD shdfnd::FPUGuard scopedFpGuard;
 #define PX_SIMD_GUARD shdfnd::SIMDGuard scopedFpGuard;
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

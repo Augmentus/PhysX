@@ -41,7 +41,7 @@
 #include "PsFoundation.h"
 #include "CmRadixSortBuffered.h"
 
-using namespace physx;
+using namespace augphysx;
 using namespace Cct;
 
 static const PxF32 gMaxOverlapRecover = 4.0f;	// PT: TODO: expose this

@@ -36,7 +36,7 @@
 #include "geometry/PxGeometry.h"
 #include "CmPhysXCommon.h"
 
-namespace physx
+namespace augphysx
 {
 
 /*!

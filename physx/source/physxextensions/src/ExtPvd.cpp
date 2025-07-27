@@ -46,11 +46,11 @@ PX_DUMMY_SYMBOL
 #include "PvdMetaDataPropertyVisitor.h"
 #include "PvdMetaDataDefineProperties.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Ext
 {
-	using namespace physx::Vd;
+	using namespace augphysx::Vd;
 
 	template<typename TObjType, typename TOperator>
 	inline void visitPvdInstanceProperties( TOperator inOperator )
@@ -66,7 +66,7 @@ namespace Ext
 		PxClassInfoTraits<TObjType>().Info.visitInstanceProperties( theFilter, thePropCount );
 	}
 
-	Pvd::PvdNameSpace::PvdNameSpace(physx::pvdsdk::PvdDataStream& conn, const char* /*name*/)
+	Pvd::PvdNameSpace::PvdNameSpace(augphysx::pvdsdk::PvdDataStream& conn, const char* /*name*/)
 		: mConnection(conn)
 	{
 	}
@@ -75,7 +75,7 @@ namespace Ext
 	{
 	}
 
-	void Pvd::releasePvdInstance(physx::pvdsdk::PvdDataStream& pvdConnection, const PxConstraint& c, const PxJoint& joint)
+	void Pvd::releasePvdInstance(augphysx::pvdsdk::PvdDataStream& pvdConnection, const PxConstraint& c, const PxJoint& joint)
 	{
 		if(!pvdConnection.isConnected())
 			return;
@@ -115,7 +115,7 @@ namespace Ext
 		}
 	}
 
-	void Pvd::sendClassDescriptions(physx::pvdsdk::PvdDataStream& inStream)
+	void Pvd::sendClassDescriptions(augphysx::pvdsdk::PvdDataStream& inStream)
 	{
 		if (inStream.isClassExist<PxJoint>())
 		      return;
@@ -133,7 +133,7 @@ namespace Ext
 		}
 	}
 	
-	void Pvd::setActors( physx::pvdsdk::PvdDataStream& inStream, const PxJoint& inJoint, const PxConstraint& c, const PxActor* newActor0, const PxActor* newActor1 )
+	void Pvd::setActors( augphysx::pvdsdk::PvdDataStream& inStream, const PxJoint& inJoint, const PxConstraint& c, const PxActor* newActor0, const PxActor* newActor1 )
 	{
 		PxRigidActor* actor0, *actor1;
 		c.getActors( actor0, actor1 );

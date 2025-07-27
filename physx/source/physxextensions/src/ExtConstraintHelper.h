@@ -36,7 +36,7 @@
 #include "extensions/PxD6Joint.h"
 #include "ExtJointData.h"
 
-namespace physx
+namespace augphysx
 {
 namespace Ext
 {

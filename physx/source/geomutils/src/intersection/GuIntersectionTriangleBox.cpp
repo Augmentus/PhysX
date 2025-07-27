@@ -34,7 +34,7 @@
 #include "GuBox.h"
 #include "GuSIMDHelpers.h"
 
-using namespace physx;
+using namespace augphysx;
 
 
 Ps::IntBool Gu::intersectTriangleBox_ReferenceCode(const PxVec3& boxcenter, const PxVec3& extents, const PxVec3& tp0, const PxVec3& tp1, const PxVec3& tp2)
