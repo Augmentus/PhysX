@@ -35,7 +35,7 @@
 #define PAUSE()
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

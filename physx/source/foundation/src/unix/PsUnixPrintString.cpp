@@ -34,7 +34,7 @@
 #include <android/log.h>
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
