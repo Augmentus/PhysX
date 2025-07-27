@@ -38,7 +38,7 @@ PX_COMPILE_TIME_ASSERT(8 * sizeof(uint32_t) >= sizeof(fenv_t));
 #include <xmmintrin.h>
 #endif
 
-physx::shdfnd::FPUGuard::FPUGuard()
+augphysx::shdfnd::FPUGuard::FPUGuard()
 {
 #if defined(__CYGWIN__)
 #pragma message "FPUGuard::FPUGuard() is not implemented"
@@ -68,7 +68,7 @@ physx::shdfnd::FPUGuard::FPUGuard()
 #endif
 }
 
-physx::shdfnd::FPUGuard::~FPUGuard()
+augphysx::shdfnd::FPUGuard::~FPUGuard()
 {
 #if defined(__CYGWIN__)
 #pragma message "FPUGuard::~FPUGuard() is not implemented"
@@ -87,7 +87,7 @@ physx::shdfnd::FPUGuard::~FPUGuard()
 #endif
 }
 
-PX_FOUNDATION_API void physx::shdfnd::enableFPExceptions()
+PX_FOUNDATION_API void augphysx::shdfnd::enableFPExceptions()
 {
 #if PX_LINUX && !defined(__EMSCRIPTEN__)
 	feclearexcept(FE_ALL_EXCEPT);
@@ -104,7 +104,7 @@ PX_FOUNDATION_API void physx::shdfnd::enableFPExceptions()
 #endif
 }
 
-PX_FOUNDATION_API void physx::shdfnd::disableFPExceptions()
+PX_FOUNDATION_API void augphysx::shdfnd::disableFPExceptions()
 {
 #if PX_LINUX && !defined(__EMSCRIPTEN__)
 	fedisableexcept(FE_ALL_EXCEPT);

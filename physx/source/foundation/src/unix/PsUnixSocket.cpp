@@ -51,7 +51,7 @@
 #define SOMAXCONN 5
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

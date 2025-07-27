@@ -43,7 +43,7 @@
 #define cpuid(op, reg) reg[0] = reg[1] = reg[2] = reg[3] = 0;
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

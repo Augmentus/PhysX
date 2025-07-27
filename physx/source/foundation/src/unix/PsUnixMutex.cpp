@@ -39,7 +39,7 @@
 
 #include <pthread.h>
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

@@ -37,7 +37,7 @@
 #define USE_MUTEX
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

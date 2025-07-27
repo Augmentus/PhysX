@@ -82,10 +82,10 @@ PX_FOUNDATION_API void disableFPExceptions();
 #elif (PX_LINUX && PX_SSE2) || PX_PS4 || PX_OSX
 #include "unix/PsUnixFPU.h"
 #else
-PX_INLINE physx::shdfnd::SIMDGuard::SIMDGuard()
+PX_INLINE augphysx::shdfnd::SIMDGuard::SIMDGuard()
 {
 }
-PX_INLINE physx::shdfnd::SIMDGuard::~SIMDGuard()
+PX_INLINE augphysx::shdfnd::SIMDGuard::~SIMDGuard()
 {
 }
 #endif

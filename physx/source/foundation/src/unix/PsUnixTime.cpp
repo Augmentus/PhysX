@@ -42,7 +42,7 @@
 #define CLOCKID CLOCK_REALTIME
 #endif
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {

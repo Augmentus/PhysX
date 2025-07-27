@@ -66,7 +66,7 @@ int android_getCpuCount(void);
 
 #define PxSpinLockPause() asm("nop")
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
