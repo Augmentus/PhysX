@@ -43,7 +43,7 @@
 #include <arm_neon.h>
 #endif
 
-PX_INLINE physx::shdfnd::SIMDGuard::SIMDGuard()
+PX_INLINE augphysx::shdfnd::SIMDGuard::SIMDGuard()
 {
 #if !PX_EMSCRIPTEN && (PX_X86 || PX_X64)
 	mControlWord = _mm_getcsr();
@@ -52,7 +52,7 @@ PX_INLINE physx::shdfnd::SIMDGuard::SIMDGuard()
 #endif
 }
 
-PX_INLINE physx::shdfnd::SIMDGuard::~SIMDGuard()
+PX_INLINE augphysx::shdfnd::SIMDGuard::~SIMDGuard()
 {
 #if !PX_EMSCRIPTEN && (PX_X86 || PX_X64)
 	// restore control word and clear exception flags

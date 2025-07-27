@@ -2,7 +2,8 @@
 <preset name="mac-universal" comment="macOS Universal Fat Xcode PhysX general settings">
   <platform targetPlatform="mac-universal" compiler="xcode" />
   <CMakeSwitches>
-    <cmakeSwitch name="PX_BUILDSNIPPETS" value="True" comment="Generate the snippets" />
+    <cmakeSwitch name="PX_BUILDSNIPPETS" value="False" comment="Generate the snippets" />
+    <cmakeSwitch name="PX_BUILDPUBLICSAMPLES" value="False" comment="Generate the samples projects" />
     <cmakeSwitch name="PX_GENERATE_STATIC_LIBRARIES" value="True" comment="Generate static libraries" />
   </CMakeSwitches>
   <CMakeParams>

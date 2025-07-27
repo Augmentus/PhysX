@@ -70,19 +70,19 @@ PX_FOUNDATION_API PX_DEPRECATED void PxSetAssertHandler(PxAssertHandler& handler
 	#define PX_ASSERT(exp)                                                                                                 \
 		{                                                                                                                  \
 			static bool _ignore = false;                                                                                   \
-			((void)((!!(exp)) || (!_ignore && (physx::PxGetAssertHandler()(#exp, __FILE__, __LINE__, _ignore), false))));  \
+			((void)((!!(exp)) || (!_ignore && (augphysx::PxGetAssertHandler()(#exp, __FILE__, __LINE__, _ignore), false))));  \
 			PX_CODE_ANALYSIS_ASSUME(exp);                                                                                  \
 		}
 	#define PX_ALWAYS_ASSERT_MESSAGE(exp)                                                                                  \
 		{                                                                                                                  \
 			static bool _ignore = false;                                                                                   \
 			if(!_ignore)                                                                                                   \
-				physx::PxGetAssertHandler()(exp, __FILE__, __LINE__, _ignore);                                             \
+augphysx::PxGetAssertHandler()(exp, __FILE__, __LINE__, _ignore);                                             \
 		}
 	#define PX_ASSERT_WITH_MESSAGE(exp, message)                                                                             \
 		{                                                                                                                    \
 			static bool _ignore = false;                                                                                     \
-			((void)((!!(exp)) || (!_ignore && (physx::PxGetAssertHandler()(message, __FILE__, __LINE__, _ignore), false)))); \
+			((void)((!!(exp)) || (!_ignore && (augphysx::PxGetAssertHandler()(message, __FILE__, __LINE__, _ignore), false)))); \
 			PX_CODE_ANALYSIS_ASSUME(exp);                                                                                    \
 		}
 #endif // !PX_ENABLE_ASSERTS

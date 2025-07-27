@@ -119,7 +119,7 @@ PX_FORCE_INLINE	PxVec3	getAngularMotionVelocity(PxReal dt, const PxsBodyCore* PX
 
 #include <stdio.h>
 #pragma warning(disable: 4313)
-namespace physx {
+namespace augphysx {
 
 static const char* gGeomTypes[PxGeometryType::eGEOMETRY_COUNT+1] = {
 	"sphere", "plane", "capsule", "box", "convex", "trimesh", "heightfield", "*"

@@ -45,7 +45,7 @@
 #define DEBUG_RENDER_CCD						0
 
 #if CCD_DEBUG_PRINTS
-namespace physx {
+namespace augphysx {
 	extern void printCCDDebug(const char* msg, const PxsRigidBody* atom0, PxGeometryType::Enum g0, bool printPtr = true);
 	extern void printShape(PxsRigidBody* atom0, PxGeometryType::Enum g0, const char* annotation, PxReal dt, PxU32 pass, bool printPtr = true);
 }

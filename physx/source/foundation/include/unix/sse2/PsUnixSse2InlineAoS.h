@@ -40,7 +40,7 @@
 
 #include "../../PsVecMathSSE.h"
 
-namespace physx
+namespace augphysx
 {
 namespace shdfnd
 {
